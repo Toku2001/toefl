@@ -1,0 +1,9 @@
+
+Modern Physical Anthropology
+```
+A major shift in the approach to physical anthropology occurred at the beginning of the 20th century with the discovery of genetic principles and of the ABO blood groups. Genetics was actually rediscovered. In 1865 an Austrian monk, Gregor J. Mendel, had formulated the first laws of heredity and laid the foundation of the science of genetics. His findings were almost entirely ignored at the time. In 1900 three other European botanists arrived at the same conclusions that Mendel had published 35 years earlier, and in researching the literature on the subject they found his work.
+
+Genes are the units within sex cells such as the sperm and egg that transmit specific hereditary traits from one generation to the next. The study of inherited traits has become essential to anthropologists in seeking to understand human variations and differences between races. Genetics has modified the theory of progressive evolution somewhat, because it has been shown by experiment that there may be genetic reversals-that is, reversions back to traits and characteristics thought to be discarded in the hereditary process.
+
+Early in the 20th century another Austrian, a physician named Karl Landsteiner, discovered the blood groups, or types, known as O, A, B, and AB. This led anthropologists to investigate blood differences among the races. They have noted that certain races and subraces have particula distributions of one or another blood type. This has enable scientists to categorize the races and, since blood types ar genetically determined, to trace early migration patterns
+```
