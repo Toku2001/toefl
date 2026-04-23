@@ -340,3 +340,12 @@
 **類義語:** farming, horticulture, cultivation
 
 </details>
+
+<details>
+<summary>as profitable as</summary>
+
+**意味:** ～と同じくらい利益がある、～と同じくらい採算が取れる
+
+**類義語:** as lucrative as, equally profitable as, as gainful as
+
+</details>
