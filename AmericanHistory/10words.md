@@ -209,13 +209,11 @@
 <details>
 <summary>putting</summary>
 
-**意味:** 置くこと；追い込むこと
+**意味:** 〜させる
 
 **基本形:** put
 
 **アクセント:** **PŬT**
-
-**類義語:** placing, setting, causing
 
 </details>
 
