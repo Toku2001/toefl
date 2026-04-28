@@ -84,24 +84,11 @@
 </details>
 
 <details>
-<summary>leaving financial</summary>
+<summary>leaving financial ruin</summary>
 
-**意味:** 財政的なものを残して
+**意味:** 金融破産が残った
 
-**アクセント:** **LĒV**-ĭng fə-**NÄN**-shəl
-
-**類義語:** resulting in economic, causing fiscal, creating monetary
-
-</details>
-
-<details>
-<summary>ruin</summary>
-
-**意味:** 破滅；破産；台無しにする
-
-**アクセント:** **RŪ**-ən
-
-**類義語:** destruction, bankruptcy, wreck
+**アクセント:** **LĒV**-ĭng fə-**NÄN**-shəl **RŪ**-ən
 
 </details>
 
