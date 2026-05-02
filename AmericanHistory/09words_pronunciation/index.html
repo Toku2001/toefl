@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Law 18words Pronunciation</title>
+  <style>
+    :root {
+      --bg1: #f2ece3;
+      --bg2: #e4d5c1;
+      --card: #fff8ee;
+      --ink: #2a1f16;
+      --accent: #9a3412;
+      --accent-2: #78350f;
+      --border: #d9c2a5;
+      --shadow: rgba(42, 31, 22, 0.15);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 15% 20%, rgba(255,255,255,0.6), transparent 35%),
+        radial-gradient(circle at 85% 80%, rgba(255,255,255,0.4), transparent 30%),
+        linear-gradient(135deg, var(--bg1), var(--bg2));
+      min-height: 100vh;
+      padding: 24px;
+    }
+
+    .wrap {
+      max-width: 900px;
+      margin: 0 auto;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 20px;
+      box-shadow: 0 10px 30px var(--shadow);
+    }
+
+    h1 {
+      margin: 0 0 8px;
+      font-size: clamp(1.5rem, 2.6vw, 2.2rem);
+      letter-spacing: 0.02em;
+    }
+
+    p {
+      margin: 0 0 20px;
+      line-height: 1.6;
+    }
+
+    .controls {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 14px;
+    }
+
+    button {
+      border: 1px solid var(--accent);
+      background: var(--accent);
+      color: #fff;
+      border-radius: 10px;
+      padding: 8px 12px;
+      font-size: 0.95rem;
+      cursor: pointer;
+      transition: transform 120ms ease, background 120ms ease;
+    }
+
+    button:hover { background: var(--accent-2); }
+    button:active { transform: translateY(1px); }
+
+    .word-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 10px;
+    }
+
+    .word-item {
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 10px;
+      background: #fff;
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      align-items: center;
+      gap: 8px;
+      opacity: 0;
+      transform: translateY(8px);
+      animation: reveal 360ms ease forwards;
+    }
+
+    .play-btn {
+      min-width: 56px;
+    }
+
+    .word-text {
+      background: none;
+      border: none;
+      color: var(--ink);
+      font: inherit;
+      text-align: left;
+      padding: 0;
+      margin: 0;
+      cursor: pointer;
+      line-height: 1.4;
+      flex: 1;
+    }
+
+    .word-text:hover {
+      text-decoration: underline;
+      text-decoration-thickness: 2px;
+      text-decoration-color: var(--accent);
+    }
+
+    .small {
+      font-size: 0.8rem;
+      color: #6e5a45;
+      min-width: 2.2em;
+      text-align: right;
+    }
+
+    .meaning {
+      grid-column: 1 / -1;
+      margin: 6px 0 0;
+      padding: 8px 10px;
+      border-radius: 8px;
+      background: #fbf3e8;
+      border: 1px dashed var(--border);
+      font-size: 0.92rem;
+      line-height: 1.5;
+    }
+
+    .meaning[hidden] {
+      display: none;
+    }
+
+    @keyframes reveal {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <h1>Law 18words Pronunciation</h1>
+    <p>単語をクリックすると、発音を再生しながら意味を表示します。Play ボタンは音声のみ再生します。</p>
+    <div class="controls">
+      <button type="button" id="playAll">Play All</button>
+      <button type="button" id="stopAll">Stop</button>
+    </div>
+    <ul class="word-list" id="wordList">
+      <li class="word-item" style="animation-delay: 25ms;">
+        <button type="button" class="play-btn" data-audio="audio/001_feared.mp3" aria-label="Play feared">Play</button>
+        <button type="button" class="word-text" data-audio="audio/001_feared.mp3" aria-expanded="false">feared</button>
+        <span class="small">#1</span>
+        <p class="meaning" hidden>意味: 恐れていた</p>
+      </li>
+      <li class="word-item" style="animation-delay: 50ms;">
+        <button type="button" class="play-btn" data-audio="audio/002_nation.mp3" aria-label="Play nation">Play</button>
+        <button type="button" class="word-text" data-audio="audio/002_nation.mp3" aria-expanded="false">nation</button>
+        <span class="small">#2</span>
+        <p class="meaning" hidden>意味: 国家；国民</p>
+      </li>
+      <li class="word-item" style="animation-delay: 75ms;">
+        <button type="button" class="play-btn" data-audio="audio/003_slaveholding.mp3" aria-label="Play slaveholding">Play</button>
+        <button type="button" class="word-text" data-audio="audio/003_slaveholding.mp3" aria-expanded="false">slaveholding</button>
+        <span class="small">#3</span>
+        <p class="meaning" hidden>意味: 奴隷所有の</p>
+      </li>
+      <li class="word-item" style="animation-delay: 100ms;">
+        <button type="button" class="play-btn" data-audio="audio/004_interests.mp3" aria-label="Play interests">Play</button>
+        <button type="button" class="word-text" data-audio="audio/004_interests.mp3" aria-expanded="false">interests</button>
+        <span class="small">#4</span>
+        <p class="meaning" hidden>意味: 利益；利害関係</p>
+      </li>
+      <li class="word-item" style="animation-delay: 125ms;">
+        <button type="button" class="play-btn" data-audio="audio/005_the_white_south.mp3" aria-label="Play the white South">Play</button>
+        <button type="button" class="word-text" data-audio="audio/005_the_white_south.mp3" aria-expanded="false">the white South</button>
+        <span class="small">#5</span>
+        <p class="meaning" hidden>意味: 白人の南部（社会）</p>
+      </li>
+      <li class="word-item" style="animation-delay: 150ms;">
+        <button type="button" class="play-btn" data-audio="audio/006_white_southerners.mp3" aria-label="Play White Southerners">Play</button>
+        <button type="button" class="word-text" data-audio="audio/006_white_southerners.mp3" aria-expanded="false">White Southerners</button>
+        <span class="small">#6</span>
+        <p class="meaning" hidden>意味: 南部の白人たち</p>
+      </li>
+      <li class="word-item" style="animation-delay: 175ms;">
+        <button type="button" class="play-btn" data-audio="audio/007_embittered.mp3" aria-label="Play embittered">Play</button>
+        <button type="button" class="word-text" data-audio="audio/007_embittered.mp3" aria-expanded="false">embittered</button>
+        <span class="small">#7</span>
+        <p class="meaning" hidden>意味: 憤りで苦々しくなった</p>
+      </li>
+      <li class="word-item" style="animation-delay: 200ms;">
+        <button type="button" class="play-btn" data-audio="audio/008_defiance.mp3" aria-label="Play defiance">Play</button>
+        <button type="button" class="word-text" data-audio="audio/008_defiance.mp3" aria-expanded="false">defiance</button>
+        <span class="small">#8</span>
+        <p class="meaning" hidden>意味: 反抗；挑戦的態度</p>
+      </li>
+      <li class="word-item" style="animation-delay: 225ms;">
+        <button type="button" class="play-btn" data-audio="audio/009_federal_fugitive_slave_act.mp3" aria-label="Play Federal Fugitive Slave Act">Play</button>
+        <button type="button" class="word-text" data-audio="audio/009_federal_fugitive_slave_act.mp3" aria-expanded="false">Federal Fugitive Slave Act</button>
+        <span class="small">#9</span>
+        <p class="meaning" hidden>意味: 連邦逃亡奴隷法</p>
+      </li>
+      <li class="word-item" style="animation-delay: 250ms;">
+        <button type="button" class="play-btn" data-audio="audio/010_alarmed.mp3" aria-label="Play alarmed">Play</button>
+        <button type="button" class="word-text" data-audio="audio/010_alarmed.mp3" aria-expanded="false">alarmed</button>
+        <span class="small">#10</span>
+        <p class="meaning" hidden>意味: 不安にさせられた；警戒した</p>
+      </li>
+      <li class="word-item" style="animation-delay: 275ms;">
+        <button type="button" class="play-btn" data-audio="audio/011_raid.mp3" aria-label="Play raid">Play</button>
+        <button type="button" class="word-text" data-audio="audio/011_raid.mp3" aria-expanded="false">raid</button>
+        <span class="small">#11</span>
+        <p class="meaning" hidden>意味: 襲撃；急襲する</p>
+      </li>
+      <li class="word-item" style="animation-delay: 300ms;">
+        <button type="button" class="play-btn" data-audio="audio/012_white_abolitionist.mp3" aria-label="Play white abolitionist">Play</button>
+        <button type="button" class="word-text" data-audio="audio/012_white_abolitionist.mp3" aria-expanded="false">white abolitionist</button>
+        <span class="small">#12</span>
+        <p class="meaning" hidden>意味: 白人の奴隷制度廃止論者</p>
+      </li>
+      <li class="word-item" style="animation-delay: 325ms;">
+        <button type="button" class="play-btn" data-audio="audio/013_antislavery_platform.mp3" aria-label="Play antislavery platform">Play</button>
+        <button type="button" class="word-text" data-audio="audio/013_antislavery_platform.mp3" aria-expanded="false">antislavery platform</button>
+        <span class="small">#13</span>
+        <p class="meaning" hidden>意味: 反奴隷制の政綱；政策方針</p>
+      </li>
+      <li class="word-item" style="animation-delay: 350ms;">
+        <button type="button" class="play-btn" data-audio="audio/014_republican_party.mp3" aria-label="Play Republican Party">Play</button>
+        <button type="button" class="word-text" data-audio="audio/014_republican_party.mp3" aria-expanded="false">Republican Party</button>
+        <span class="small">#14</span>
+        <p class="meaning" hidden>意味: 共和党</p>
+      </li>
+      <li class="word-item" style="animation-delay: 375ms;">
+        <button type="button" class="play-btn" data-audio="audio/015_seceded.mp3" aria-label="Play seceded">Play</button>
+        <button type="button" class="word-text" data-audio="audio/015_seceded.mp3" aria-expanded="false">seceded</button>
+        <span class="small">#15</span>
+        <p class="meaning" hidden>意味: 脱退した；分離した</p>
+      </li>
+      <li class="word-item" style="animation-delay: 400ms;">
+        <button type="button" class="play-btn" data-audio="audio/016_formed.mp3" aria-label="Play formed">Play</button>
+        <button type="button" class="word-text" data-audio="audio/016_formed.mp3" aria-expanded="false">formed</button>
+        <span class="small">#16</span>
+        <p class="meaning" hidden>意味: 結成した；形成した</p>
+      </li>
+      <li class="word-item" style="animation-delay: 425ms;">
+        <button type="button" class="play-btn" data-audio="audio/017_confederacy.mp3" aria-label="Play Confederacy">Play</button>
+        <button type="button" class="word-text" data-audio="audio/017_confederacy.mp3" aria-expanded="false">Confederacy</button>
+        <span class="small">#17</span>
+        <p class="meaning" hidden>意味: （米南部）連合国；連合体</p>
+      </li>
+      <li class="word-item" style="animation-delay: 450ms;">
+        <button type="button" class="play-btn" data-audio="audio/018_liberated.mp3" aria-label="Play liberated">Play</button>
+        <button type="button" class="word-text" data-audio="audio/018_liberated.mp3" aria-expanded="false">liberated</button>
+        <span class="small">#18</span>
+        <p class="meaning" hidden>意味: 解放した</p>
+      </li>
+      <li class="word-item" style="animation-delay: 475ms;">
+        <button type="button" class="play-btn" data-audio="audio/019_nation_s_slaves.mp3" aria-label="Play nation's slaves">Play</button>
+        <button type="button" class="word-text" data-audio="audio/019_nation_s_slaves.mp3" aria-expanded="false">nation's slaves</button>
+        <span class="small">#19</span>
+        <p class="meaning" hidden>意味: その国の奴隷たち</p>
+      </li>
+      <li class="word-item" style="animation-delay: 500ms;">
+        <button type="button" class="play-btn" data-audio="audio/020_preservation.mp3" aria-label="Play preservation">Play</button>
+        <button type="button" class="word-text" data-audio="audio/020_preservation.mp3" aria-expanded="false">preservation</button>
+        <span class="small">#20</span>
+        <p class="meaning" hidden>意味: 維持；保全</p>
+      </li>
+      <li class="word-item" style="animation-delay: 525ms;">
+        <button type="button" class="play-btn" data-audio="audio/021_abolition.mp3" aria-label="Play abolition">Play</button>
+        <button type="button" class="word-text" data-audio="audio/021_abolition.mp3" aria-expanded="false">abolition</button>
+        <span class="small">#21</span>
+        <p class="meaning" hidden>意味: 廃止</p>
+      </li>
+      <li class="word-item" style="animation-delay: 550ms;">
+        <button type="button" class="play-btn" data-audio="audio/022_the_initial_objective.mp3" aria-label="Play the initial objective">Play</button>
+        <button type="button" class="word-text" data-audio="audio/022_the_initial_objective.mp3" aria-expanded="false">the initial objective</button>
+        <span class="small">#22</span>
+        <p class="meaning" hidden>意味: 当初の目的</p>
+      </li>
+      <li class="word-item" style="animation-delay: 575ms;">
+        <button type="button" class="play-btn" data-audio="audio/023_gradual_emancipation.mp3" aria-label="Play gradual emancipation">Play</button>
+        <button type="button" class="word-text" data-audio="audio/023_gradual_emancipation.mp3" aria-expanded="false">gradual emancipation</button>
+        <span class="small">#23</span>
+        <p class="meaning" hidden>意味: 段階的解放</p>
+      </li>
+      <li class="word-item" style="animation-delay: 600ms;">
+        <button type="button" class="play-btn" data-audio="audio/024_federal.mp3" aria-label="Play federal">Play</button>
+        <button type="button" class="word-text" data-audio="audio/024_federal.mp3" aria-expanded="false">federal</button>
+        <span class="small">#24</span>
+        <p class="meaning" hidden>意味: 連邦の</p>
+      </li>
+      <li class="word-item" style="animation-delay: 625ms;">
+        <button type="button" class="play-btn" data-audio="audio/025_compensating.mp3" aria-label="Play compensating">Play</button>
+        <button type="button" class="word-text" data-audio="audio/025_compensating.mp3" aria-expanded="false">compensating</button>
+        <span class="small">#25</span>
+        <p class="meaning" hidden>意味: 補償すること；埋め合わせをすること</p>
+      </li>
+      <li class="word-item" style="animation-delay: 650ms;">
+        <button type="button" class="play-btn" data-audio="audio/026_slaveholders.mp3" aria-label="Play slaveholders">Play</button>
+        <button type="button" class="word-text" data-audio="audio/026_slaveholders.mp3" aria-expanded="false">slaveholders</button>
+        <span class="small">#26</span>
+        <p class="meaning" hidden>意味: 奴隷所有者たち</p>
+      </li>
+      <li class="word-item" style="animation-delay: 675ms;">
+        <button type="button" class="play-btn" data-audio="audio/027_property.mp3" aria-label="Play property">Play</button>
+        <button type="button" class="word-text" data-audio="audio/027_property.mp3" aria-expanded="false">property</button>
+        <span class="small">#27</span>
+        <p class="meaning" hidden>意味: 財産；所有物</p>
+      </li>
+      <li class="word-item" style="animation-delay: 700ms;">
+        <button type="button" class="play-btn" data-audio="audio/028_emancipation.mp3" aria-label="Play Emancipation">Play</button>
+        <button type="button" class="word-text" data-audio="audio/028_emancipation.mp3" aria-expanded="false">Emancipation</button>
+        <span class="small">#28</span>
+        <p class="meaning" hidden>意味: 解放</p>
+      </li>
+      <li class="word-item" style="animation-delay: 725ms;">
+        <button type="button" class="play-btn" data-audio="audio/029_proclamation.mp3" aria-label="Play Proclamation">Play</button>
+        <button type="button" class="word-text" data-audio="audio/029_proclamation.mp3" aria-expanded="false">Proclamation</button>
+        <span class="small">#29</span>
+        <p class="meaning" hidden>意味: 布告；宣言</p>
+      </li>
+      <li class="word-item" style="animation-delay: 750ms;">
+        <button type="button" class="play-btn" data-audio="audio/030_residing.mp3" aria-label="Play residing">Play</button>
+        <button type="button" class="word-text" data-audio="audio/030_residing.mp3" aria-expanded="false">residing</button>
+        <span class="small">#30</span>
+        <p class="meaning" hidden>意味: 居住している</p>
+      </li>
+      <li class="word-item" style="animation-delay: 775ms;">
+        <button type="button" class="play-btn" data-audio="audio/031_rebellion.mp3" aria-label="Play rebellion">Play</button>
+        <button type="button" class="word-text" data-audio="audio/031_rebellion.mp3" aria-expanded="false">rebellion</button>
+        <span class="small">#31</span>
+        <p class="meaning" hidden>意味: 反乱</p>
+      </li>
+      <li class="word-item" style="animation-delay: 800ms;">
+        <button type="button" class="play-btn" data-audio="audio/032_against.mp3" aria-label="Play against">Play</button>
+        <button type="button" class="word-text" data-audio="audio/032_against.mp3" aria-expanded="false">against</button>
+        <span class="small">#32</span>
+        <p class="meaning" hidden>意味: 〜に反して；〜に対して</p>
+      </li>
+      <li class="word-item" style="animation-delay: 825ms;">
+        <button type="button" class="play-btn" data-audio="audio/033_in_effect.mp3" aria-label="Play in effect">Play</button>
+        <button type="button" class="word-text" data-audio="audio/033_in_effect.mp3" aria-expanded="false">in effect</button>
+        <span class="small">#33</span>
+        <p class="meaning" hidden>意味: 実施中で；実質的に</p>
+      </li>
+      <li class="word-item" style="animation-delay: 850ms;">
+        <button type="button" class="play-btn" data-audio="audio/034_lvigorously.mp3" aria-label="Play lvigorously">Play</button>
+        <button type="button" class="word-text" data-audio="audio/034_lvigorously.mp3" aria-expanded="false">lvigorously</button>
+        <span class="small">#34</span>
+        <p class="meaning" hidden>意味: 精力的に；力強く</p>
+      </li>
+      <li class="word-item" style="animation-delay: 875ms;">
+        <button type="button" class="play-btn" data-audio="audio/035_recruited.mp3" aria-label="Play recruited">Play</button>
+        <button type="button" class="word-text" data-audio="audio/035_recruited.mp3" aria-expanded="false">recruited</button>
+        <span class="small">#35</span>
+        <p class="meaning" hidden>意味: 募兵した；採用した</p>
+      </li>
+      <li class="word-item" style="animation-delay: 900ms;">
+        <button type="button" class="play-btn" data-audio="audio/036_the_union_armed_forces.mp3" aria-label="Play the Union armed forces">Play</button>
+        <button type="button" class="word-text" data-audio="audio/036_the_union_armed_forces.mp3" aria-expanded="false">the Union armed forces</button>
+        <span class="small">#36</span>
+        <p class="meaning" hidden>意味: 北軍（合衆国軍）</p>
+      </li>
+      <li class="word-item" style="animation-delay: 925ms;">
+        <button type="button" class="play-btn" data-audio="audio/037_strike_the_blow.mp3" aria-label="Play strike the blow">Play</button>
+        <button type="button" class="word-text" data-audio="audio/037_strike_the_blow.mp3" aria-expanded="false">strike the blow</button>
+        <span class="small">#37</span>
+        <p class="meaning" hidden>意味: 一撃を加える；打撃を与える</p>
+      </li>
+      <li class="word-item" style="animation-delay: 950ms;">
+        <button type="button" class="play-btn" data-audio="audio/038_performed.mp3" aria-label="Play performed">Play</button>
+        <button type="button" class="word-text" data-audio="audio/038_performed.mp3" aria-expanded="false">performed</button>
+        <span class="small">#38</span>
+        <p class="meaning" hidden>意味: 遂行した；実行した</p>
+      </li>
+      <li class="word-item" style="animation-delay: 975ms;">
+        <button type="button" class="play-btn" data-audio="audio/039_heroically.mp3" aria-label="Play heroically">Play</button>
+        <button type="button" class="word-text" data-audio="audio/039_heroically.mp3" aria-expanded="false">heroically</button>
+        <span class="small">#39</span>
+        <p class="meaning" hidden>意味: 英雄的に</p>
+      </li>
+      <li class="word-item" style="animation-delay: 1000ms;">
+        <button type="button" class="play-btn" data-audio="audio/040_despite.mp3" aria-label="Play despite">Play</button>
+        <button type="button" class="word-text" data-audio="audio/040_despite.mp3" aria-expanded="false">despite</button>
+        <span class="small">#40</span>
+        <p class="meaning" hidden>意味: 〜にもかかわらず</p>
+      </li>
+      <li class="word-item" style="animation-delay: 1025ms;">
+        <button type="button" class="play-btn" data-audio="audio/041_discrimination.mp3" aria-label="Play discrimination">Play</button>
+        <button type="button" class="word-text" data-audio="audio/041_discrimination.mp3" aria-expanded="false">discrimination</button>
+        <span class="small">#41</span>
+        <p class="meaning" hidden>意味: 差別</p>
+      </li>
+      <li class="word-item" style="animation-delay: 1050ms;">
+        <button type="button" class="play-btn" data-audio="audio/042_in_pay.mp3" aria-label="Play in pay">Play</button>
+        <button type="button" class="word-text" data-audio="audio/042_in_pay.mp3" aria-expanded="false">in pay</button>
+        <span class="small">#42</span>
+        <p class="meaning" hidden>意味: 給与面で</p>
+      </li>
+      <li class="word-item" style="animation-delay: 1075ms;">
+        <button type="button" class="play-btn" data-audio="audio/043_rations.mp3" aria-label="Play rations">Play</button>
+        <button type="button" class="word-text" data-audio="audio/043_rations.mp3" aria-expanded="false">rations</button>
+        <span class="small">#43</span>
+        <p class="meaning" hidden>意味: 配給食糧；支給食</p>
+      </li>
+      <li class="word-item" style="animation-delay: 1100ms;">
+        <button type="button" class="play-btn" data-audio="audio/044_equipment.mp3" aria-label="Play equipment">Play</button>
+        <button type="button" class="word-text" data-audio="audio/044_equipment.mp3" aria-expanded="false">equipment</button>
+        <span class="small">#44</span>
+        <p class="meaning" hidden>意味: 装備；用具</p>
+      </li>
+      <li class="word-item" style="animation-delay: 1125ms;">
+        <button type="button" class="play-btn" data-audio="audio/045_assignments.mp3" aria-label="Play assignments">Play</button>
+        <button type="button" class="word-text" data-audio="audio/045_assignments.mp3" aria-expanded="false">assignments</button>
+        <span class="small">#45</span>
+        <p class="meaning" hidden>意味: 任務；配属</p>
+      </li>
+      <li class="word-item" style="animation-delay: 1150ms;">
+        <button type="button" class="play-btn" data-audio="audio/046_the_unrelenting_hostility.mp3" aria-label="Play the unrelenting hostility">Play</button>
+        <button type="button" class="word-text" data-audio="audio/046_the_unrelenting_hostility.mp3" aria-expanded="false">the unrelenting hostility</button>
+        <span class="small">#46</span>
+        <p class="meaning" hidden>意味: 容赦ない敵意</p>
+      </li>
+      <li class="word-item" style="animation-delay: 1175ms;">
+        <button type="button" class="play-btn" data-audio="audio/047_the_confederate_troops.mp3" aria-label="Play the Confederate troops">Play</button>
+        <button type="button" class="word-text" data-audio="audio/047_the_confederate_troops.mp3" aria-expanded="false">the Confederate troops</button>
+        <span class="small">#47</span>
+        <p class="meaning" hidden>意味: 南軍部隊</p>
+      </li>
+    </ul>
+  </main>
+
+  <script>
+    const list = document.getElementById('wordList');
+    const playAllButton = document.getElementById('playAll');
+    const stopAllButton = document.getElementById('stopAll');
+
+    let currentAudio = null;
+    let playQueue = [];
+    let queueIndex = 0;
+
+    function stopPlayback() {
+      playQueue = [];
+      queueIndex = 0;
+      if (currentAudio) {
+        currentAudio.pause();
+        currentAudio.currentTime = 0;
+        currentAudio = null;
+      }
+    }
+
+    function playSingle(src) {
+      stopPlayback();
+      currentAudio = new Audio(src);
+      currentAudio.play().catch((err) => {
+        console.error('Audio play failed:', err);
+      });
+    }
+
+    function playQueueNext() {
+      if (queueIndex >= playQueue.length) {
+        currentAudio = null;
+        return;
+      }
+      const src = playQueue[queueIndex++];
+      currentAudio = new Audio(src);
+      currentAudio.addEventListener('ended', playQueueNext);
+      currentAudio.play().catch((err) => {
+        console.error('Audio play failed:', err);
+        playQueueNext();
+      });
+    }
+
+    function closeAllMeanings() {
+      document.querySelectorAll('.meaning').forEach((el) => {
+        el.hidden = true;
+      });
+      document.querySelectorAll('.word-text').forEach((el) => {
+        el.setAttribute('aria-expanded', 'false');
+      });
+    }
+
+    list.addEventListener('click', (event) => {
+      const target = event.target;
+      if (!(target instanceof HTMLElement)) return;
+
+      const src = target.getAttribute('data-audio');
+      if (!src) return;
+
+      playSingle(src);
+
+      if (!target.classList.contains('word-text')) {
+        return;
+      }
+
+      const item = target.closest('.word-item');
+      if (!item) return;
+
+      const meaning = item.querySelector('.meaning');
+      if (!(meaning instanceof HTMLElement)) return;
+
+      const willOpen = meaning.hidden;
+      closeAllMeanings();
+      meaning.hidden = !willOpen;
+      target.setAttribute('aria-expanded', willOpen ? 'true' : 'false');
+    });
+
+    playAllButton.addEventListener('click', () => {
+      stopPlayback();
+      closeAllMeanings();
+      playQueue = Array.from(document.querySelectorAll('.play-btn[data-audio]'))
+        .map((el) => el.getAttribute('data-audio'))
+        .filter((src) => !!src);
+      queueIndex = 0;
+      playQueueNext();
+    });
+
+    stopAllButton.addEventListener('click', stopPlayback);
+  </script>
+</body>
+</html>

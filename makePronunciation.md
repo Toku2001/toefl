@@ -64,3 +64,12 @@ VOICE=Alex RATE=160 bash Law/generate_word_audio_and_html.sh Law/18words.md Law/
 ```bash
 bash Law/generate_word_audio_and_html.sh History/07words.md History/pronunciation
 ```
+
+## 7. README にプレビューリンクを追記する（運用ルール）
+
+今後、新しい音声ページを作成したら、`README.md` の「発音プレビュー一覧（番号連動）」に必ず追記します。
+
+- 追記する情報: 番号 / 元ファイル（`xxwords.md`） / `index.html` のリンク
+- 例: `14words.md` を作成した場合は、対応する `14words_pronunciation/index.html` を表に追加する
+
+これにより、README から番号ベースで各プレビューをすぐ開ける状態を維持できます。

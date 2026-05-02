@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Law 18words Pronunciation</title>
+  <style>
+    :root {
+      --bg1: #f2ece3;
+      --bg2: #e4d5c1;
+      --card: #fff8ee;
+      --ink: #2a1f16;
+      --accent: #9a3412;
+      --accent-2: #78350f;
+      --border: #d9c2a5;
+      --shadow: rgba(42, 31, 22, 0.15);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 15% 20%, rgba(255,255,255,0.6), transparent 35%),
+        radial-gradient(circle at 85% 80%, rgba(255,255,255,0.4), transparent 30%),
+        linear-gradient(135deg, var(--bg1), var(--bg2));
+      min-height: 100vh;
+      padding: 24px;
+    }
+
+    .wrap {
+      max-width: 900px;
+      margin: 0 auto;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 20px;
+      box-shadow: 0 10px 30px var(--shadow);
+    }
+
+    h1 {
+      margin: 0 0 8px;
+      font-size: clamp(1.5rem, 2.6vw, 2.2rem);
+      letter-spacing: 0.02em;
+    }
+
+    p {
+      margin: 0 0 20px;
+      line-height: 1.6;
+    }
+
+    .controls {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 14px;
+    }
+
+    button {
+      border: 1px solid var(--accent);
+      background: var(--accent);
+      color: #fff;
+      border-radius: 10px;
+      padding: 8px 12px;
+      font-size: 0.95rem;
+      cursor: pointer;
+      transition: transform 120ms ease, background 120ms ease;
+    }
+
+    button:hover { background: var(--accent-2); }
+    button:active { transform: translateY(1px); }
+
+    .word-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 10px;
+    }
+
+    .word-item {
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 10px;
+      background: #fff;
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      align-items: center;
+      gap: 8px;
+      opacity: 0;
+      transform: translateY(8px);
+      animation: reveal 360ms ease forwards;
+    }
+
+    .play-btn {
+      min-width: 56px;
+    }
+
+    .word-text {
+      background: none;
+      border: none;
+      color: var(--ink);
+      font: inherit;
+      text-align: left;
+      padding: 0;
+      margin: 0;
+      cursor: pointer;
+      line-height: 1.4;
+      flex: 1;
+    }
+
+    .word-text:hover {
+      text-decoration: underline;
+      text-decoration-thickness: 2px;
+      text-decoration-color: var(--accent);
+    }
+
+    .small {
+      font-size: 0.8rem;
+      color: #6e5a45;
+      min-width: 2.2em;
+      text-align: right;
+    }
+
+    .meaning {
+      grid-column: 1 / -1;
+      margin: 6px 0 0;
+      padding: 8px 10px;
+      border-radius: 8px;
+      background: #fbf3e8;
+      border: 1px dashed var(--border);
+      font-size: 0.92rem;
+      line-height: 1.5;
+    }
+
+    .meaning[hidden] {
+      display: none;
+    }
+
+    @keyframes reveal {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <h1>Law 18words Pronunciation</h1>
+    <p>単語をクリックすると、発音を再生しながら意味を表示します。Play ボタンは音声のみ再生します。</p>
+    <div class="controls">
+      <button type="button" id="playAll">Play All</button>
+      <button type="button" id="stopAll">Stop</button>
+    </div>
+    <ul class="word-list" id="wordList">
+      <li class="word-item" style="animation-delay: 25ms;">
+        <button type="button" class="play-btn" data-audio="audio/001_greece.mp3" aria-label="Play Greece">Play</button>
+        <button type="button" class="word-text" data-audio="audio/001_greece.mp3" aria-expanded="false">Greece</button>
+        <span class="small">#1</span>
+        <p class="meaning" hidden>意味: ギリシャ</p>
+      </li>
+      <li class="word-item" style="animation-delay: 50ms;">
+        <button type="button" class="play-btn" data-audio="audio/002_city_states.mp3" aria-label="Play city-states">Play</button>
+        <button type="button" class="word-text" data-audio="audio/002_city_states.mp3" aria-expanded="false">city-states</button>
+        <span class="small">#2</span>
+        <p class="meaning" hidden>意味: 都市国家</p>
+      </li>
+      <li class="word-item" style="animation-delay: 75ms;">
+        <button type="button" class="play-btn" data-audio="audio/003_poleis.mp3" aria-label="Play poleis">Play</button>
+        <button type="button" class="word-text" data-audio="audio/003_poleis.mp3" aria-expanded="false">poleis</button>
+        <span class="small">#3</span>
+        <p class="meaning" hidden>意味: ポリス、古代ギリシャの都市国家</p>
+      </li>
+      <li class="word-item" style="animation-delay: 100ms;">
+        <button type="button" class="play-btn" data-audio="audio/004_political.mp3" aria-label="Play political">Play</button>
+        <button type="button" class="word-text" data-audio="audio/004_political.mp3" aria-expanded="false">political</button>
+        <span class="small">#4</span>
+        <p class="meaning" hidden>意味: 政治の、政治的な</p>
+      </li>
+      <li class="word-item" style="animation-delay: 125ms;">
+        <button type="button" class="play-btn" data-audio="audio/005_although.mp3" aria-label="Play although">Play</button>
+        <button type="button" class="word-text" data-audio="audio/005_although.mp3" aria-expanded="false">although</button>
+        <span class="small">#5</span>
+        <p class="meaning" hidden>意味: ～にもかかわらず、～だけれども</p>
+      </li>
+      <li class="word-item" style="animation-delay: 150ms;">
+        <button type="button" class="play-btn" data-audio="audio/006_religion.mp3" aria-label="Play religion">Play</button>
+        <button type="button" class="word-text" data-audio="audio/006_religion.mp3" aria-expanded="false">religion</button>
+        <span class="small">#6</span>
+        <p class="meaning" hidden>意味: 宗教、信仰</p>
+      </li>
+      <li class="word-item" style="animation-delay: 175ms;">
+        <button type="button" class="play-btn" data-audio="audio/007_among_the_most.mp3" aria-label="Play Among the most">Play</button>
+        <button type="button" class="word-text" data-audio="audio/007_among_the_most.mp3" aria-expanded="false">Among the most</button>
+        <span class="small">#7</span>
+        <p class="meaning" hidden>意味: 最も〜なものの中で、特に際立って</p>
+      </li>
+      <li class="word-item" style="animation-delay: 200ms;">
+        <button type="button" class="play-btn" data-audio="audio/008_representing.mp3" aria-label="Play representing">Play</button>
+        <button type="button" class="word-text" data-audio="audio/008_representing.mp3" aria-expanded="false">representing</button>
+        <span class="small">#8</span>
+        <p class="meaning" hidden>意味: 表している、象徴している、代表している</p>
+      </li>
+      <li class="word-item" style="animation-delay: 225ms;">
+        <button type="button" class="play-btn" data-audio="audio/009_ideals.mp3" aria-label="Play ideals">Play</button>
+        <button type="button" class="word-text" data-audio="audio/009_ideals.mp3" aria-expanded="false">ideals</button>
+        <span class="small">#9</span>
+        <p class="meaning" hidden>意味: 理想、理想像、理念</p>
+      </li>
+      <li class="word-item" style="animation-delay: 250ms;">
+        <button type="button" class="play-btn" data-audio="audio/010_democracy.mp3" aria-label="Play democracy">Play</button>
+        <button type="button" class="word-text" data-audio="audio/010_democracy.mp3" aria-expanded="false">democracy</button>
+        <span class="small">#10</span>
+        <p class="meaning" hidden>意味: 民主主義、民主政</p>
+      </li>
+      <li class="word-item" style="animation-delay: 275ms;">
+        <button type="button" class="play-btn" data-audio="audio/011_gather.mp3" aria-label="Play gather">Play</button>
+        <button type="button" class="word-text" data-audio="audio/011_gather.mp3" aria-expanded="false">gather</button>
+        <span class="small">#11</span>
+        <p class="meaning" hidden>意味: 集まる、集める</p>
+      </li>
+      <li class="word-item" style="animation-delay: 300ms;">
+        <button type="button" class="play-btn" data-audio="audio/012_politics.mp3" aria-label="Play politics">Play</button>
+        <button type="button" class="word-text" data-audio="audio/012_politics.mp3" aria-expanded="false">politics</button>
+        <span class="small">#12</span>
+        <p class="meaning" hidden>意味: 政治、政治活動</p>
+      </li>
+      <li class="word-item" style="animation-delay: 325ms;">
+        <button type="button" class="play-btn" data-audio="audio/013_philosophy.mp3" aria-label="Play philosophy">Play</button>
+        <button type="button" class="word-text" data-audio="audio/013_philosophy.mp3" aria-expanded="false">philosophy</button>
+        <span class="small">#13</span>
+        <p class="meaning" hidden>意味: 哲学、思想</p>
+      </li>
+      <li class="word-item" style="animation-delay: 350ms;">
+        <button type="button" class="play-btn" data-audio="audio/014_thinkers.mp3" aria-label="Play Thinkers">Play</button>
+        <button type="button" class="word-text" data-audio="audio/014_thinkers.mp3" aria-expanded="false">Thinkers</button>
+        <span class="small">#14</span>
+        <p class="meaning" hidden>意味: 思想家たち、考える人々</p>
+      </li>
+      <li class="word-item" style="animation-delay: 375ms;">
+        <button type="button" class="play-btn" data-audio="audio/015_thought_for_centuries.mp3" aria-label="Play thought for centuries">Play</button>
+        <button type="button" class="word-text" data-audio="audio/015_thought_for_centuries.mp3" aria-expanded="false">thought for centuries</button>
+        <span class="small">#15</span>
+        <p class="meaning" hidden>意味: 何世紀にもわたって考えられてきた思想、長く影響した考え</p>
+      </li>
+      <li class="word-item" style="animation-delay: 400ms;">
+        <button type="button" class="play-btn" data-audio="audio/016_by_contrast.mp3" aria-label="Play by contrast">Play</button>
+        <button type="button" class="word-text" data-audio="audio/016_by_contrast.mp3" aria-expanded="false">by contrast</button>
+        <span class="small">#16</span>
+        <p class="meaning" hidden>意味: それに対して、対照的に</p>
+      </li>
+      <li class="word-item" style="animation-delay: 425ms;">
+        <button type="button" class="play-btn" data-audio="audio/017_a_militaristic.mp3" aria-label="Play a militaristic">Play</button>
+        <button type="button" class="word-text" data-audio="audio/017_a_militaristic.mp3" aria-expanded="false">a militaristic</button>
+        <span class="small">#17</span>
+        <p class="meaning" hidden>意味: 軍国主義的な、軍事重視の</p>
+      </li>
+      <li class="word-item" style="animation-delay: 450ms;">
+        <button type="button" class="play-btn" data-audio="audio/018_combined.mp3" aria-label="Play combined">Play</button>
+        <button type="button" class="word-text" data-audio="audio/018_combined.mp3" aria-expanded="false">combined</button>
+        <span class="small">#18</span>
+        <p class="meaning" hidden>意味: 組み合わせた、結合した</p>
+      </li>
+      <li class="word-item" style="animation-delay: 475ms;">
+        <button type="button" class="play-btn" data-audio="audio/019_monarchy.mp3" aria-label="Play monarchy">Play</button>
+        <button type="button" class="word-text" data-audio="audio/019_monarchy.mp3" aria-expanded="false">monarchy</button>
+        <span class="small">#19</span>
+        <p class="meaning" hidden>意味: 君主制、王政</p>
+      </li>
+      <li class="word-item" style="animation-delay: 500ms;">
+        <button type="button" class="play-btn" data-audio="audio/020_oligarchy.mp3" aria-label="Play oligarchy">Play</button>
+        <button type="button" class="word-text" data-audio="audio/020_oligarchy.mp3" aria-expanded="false">oligarchy</button>
+        <span class="small">#20</span>
+        <p class="meaning" hidden>意味: 寡頭政治、少数支配</p>
+      </li>
+      <li class="word-item" style="animation-delay: 525ms;">
+        <button type="button" class="play-btn" data-audio="audio/021_elements.mp3" aria-label="Play elements">Play</button>
+        <button type="button" class="word-text" data-audio="audio/021_elements.mp3" aria-expanded="false">elements</button>
+        <span class="small">#21</span>
+        <p class="meaning" hidden>意味: 要素、成分</p>
+      </li>
+      <li class="word-item" style="animation-delay: 550ms;">
+        <button type="button" class="play-btn" data-audio="audio/022_valued.mp3" aria-label="Play valued">Play</button>
+        <button type="button" class="word-text" data-audio="audio/022_valued.mp3" aria-expanded="false">valued</button>
+        <span class="small">#22</span>
+        <p class="meaning" hidden>意味: 重視した、大切にした</p>
+      </li>
+      <li class="word-item" style="animation-delay: 575ms;">
+        <button type="button" class="play-btn" data-audio="audio/023_discipline.mp3" aria-label="Play discipline">Play</button>
+        <button type="button" class="word-text" data-audio="audio/023_discipline.mp3" aria-expanded="false">discipline</button>
+        <span class="small">#23</span>
+        <p class="meaning" hidden>意味: 規律、訓練；しつける</p>
+      </li>
+      <li class="word-item" style="animation-delay: 600ms;">
+        <button type="button" class="play-btn" data-audio="audio/024_above.mp3" aria-label="Play above">Play</button>
+        <button type="button" class="word-text" data-audio="audio/024_above.mp3" aria-expanded="false">above</button>
+        <span class="small">#24</span>
+        <p class="meaning" hidden>意味: ～より上に；～より優先して</p>
+      </li>
+      <li class="word-item" style="animation-delay: 625ms;">
+        <button type="button" class="play-btn" data-audio="audio/025_individual.mp3" aria-label="Play individual">Play</button>
+        <button type="button" class="word-text" data-audio="audio/025_individual.mp3" aria-expanded="false">individual</button>
+        <span class="small">#25</span>
+        <p class="meaning" hidden>意味: 個人の；個人</p>
+      </li>
+      <li class="word-item" style="animation-delay: 650ms;">
+        <button type="button" class="play-btn" data-audio="audio/026_symbolizing.mp3" aria-label="Play symbolizing">Play</button>
+        <button type="button" class="word-text" data-audio="audio/026_symbolizing.mp3" aria-expanded="false">symbolizing</button>
+        <span class="small">#26</span>
+        <p class="meaning" hidden>意味: 象徴している、表している</p>
+      </li>
+      <li class="word-item" style="animation-delay: 675ms;">
+        <button type="button" class="play-btn" data-audio="audio/027_loyalty.mp3" aria-label="Play loyalty">Play</button>
+        <button type="button" class="word-text" data-audio="audio/027_loyalty.mp3" aria-expanded="false">loyalty</button>
+        <span class="small">#27</span>
+        <p class="meaning" hidden>意味: 忠誠、忠実さ</p>
+      </li>
+      <li class="word-item" style="animation-delay: 700ms;">
+        <button type="button" class="play-btn" data-audio="audio/028_endurance.mp3" aria-label="Play endurance">Play</button>
+        <button type="button" class="word-text" data-audio="audio/028_endurance.mp3" aria-expanded="false">endurance</button>
+        <span class="small">#28</span>
+        <p class="meaning" hidden>意味: 忍耐力、持久力</p>
+      </li>
+      <li class="word-item" style="animation-delay: 725ms;">
+        <button type="button" class="play-btn" data-audio="audio/029_despite.mp3" aria-label="Play Despite">Play</button>
+        <button type="button" class="word-text" data-audio="audio/029_despite.mp3" aria-expanded="false">Despite</button>
+        <span class="small">#29</span>
+        <p class="meaning" hidden>意味: ～にもかかわらず</p>
+      </li>
+      <li class="word-item" style="animation-delay: 750ms;">
+        <button type="button" class="play-btn" data-audio="audio/030_united.mp3" aria-label="Play united">Play</button>
+        <button type="button" class="word-text" data-audio="audio/030_united.mp3" aria-expanded="false">united</button>
+        <span class="small">#30</span>
+        <p class="meaning" hidden>意味: 団結した、結束した</p>
+      </li>
+      <li class="word-item" style="animation-delay: 775ms;">
+        <button type="button" class="play-btn" data-audio="audio/031_myths.mp3" aria-label="Play myths">Play</button>
+        <button type="button" class="word-text" data-audio="audio/031_myths.mp3" aria-expanded="false">myths</button>
+        <span class="small">#31</span>
+        <p class="meaning" hidden>意味: 神話、神話的物語</p>
+      </li>
+      <li class="word-item" style="animation-delay: 800ms;">
+        <button type="button" class="play-btn" data-audio="audio/032_celebrated.mp3" aria-label="Play celebrated">Play</button>
+        <button type="button" class="word-text" data-audio="audio/032_celebrated.mp3" aria-expanded="false">celebrated</button>
+        <span class="small">#32</span>
+        <p class="meaning" hidden>意味: たたえた、祝った；有名な</p>
+      </li>
+      <li class="word-item" style="animation-delay: 825ms;">
+        <button type="button" class="play-btn" data-audio="audio/033_rivalry.mp3" aria-label="Play rivalry">Play</button>
+        <button type="button" class="word-text" data-audio="audio/033_rivalry.mp3" aria-expanded="false">rivalry</button>
+        <span class="small">#33</span>
+        <p class="meaning" hidden>意味: 競争、対立関係</p>
+      </li>
+      <li class="word-item" style="animation-delay: 850ms;">
+        <button type="button" class="play-btn" data-audio="audio/034_among.mp3" aria-label="Play among">Play</button>
+        <button type="button" class="word-text" data-audio="audio/034_among.mp3" aria-expanded="false">among</button>
+        <span class="small">#34</span>
+        <p class="meaning" hidden>意味: ～の間で、～の中で</p>
+      </li>
+      <li class="word-item" style="animation-delay: 875ms;">
+        <button type="button" class="play-btn" data-audio="audio/035_led.mp3" aria-label="Play led">Play</button>
+        <button type="button" class="word-text" data-audio="audio/035_led.mp3" aria-expanded="false">led</button>
+        <span class="small">#35</span>
+        <p class="meaning" hidden>意味: 導いた、引き起こした</p>
+      </li>
+      <li class="word-item" style="animation-delay: 900ms;">
+        <button type="button" class="play-btn" data-audio="audio/036_conflicts.mp3" aria-label="Play conflicts">Play</button>
+        <button type="button" class="word-text" data-audio="audio/036_conflicts.mp3" aria-expanded="false">conflicts</button>
+        <span class="small">#36</span>
+        <p class="meaning" hidden>意味: 対立、争い、衝突</p>
+      </li>
+      <li class="word-item" style="animation-delay: 925ms;">
+        <button type="button" class="play-btn" data-audio="audio/037_notably.mp3" aria-label="Play notably">Play</button>
+        <button type="button" class="word-text" data-audio="audio/037_notably.mp3" aria-expanded="false">notably</button>
+        <span class="small">#37</span>
+        <p class="meaning" hidden>意味: 特に、著しく</p>
+      </li>
+      <li class="word-item" style="animation-delay: 950ms;">
+        <button type="button" class="play-btn" data-audio="audio/038_unity.mp3" aria-label="Play unity">Play</button>
+        <button type="button" class="word-text" data-audio="audio/038_unity.mp3" aria-expanded="false">unity</button>
+        <span class="small">#38</span>
+        <p class="meaning" hidden>意味: 統一、団結</p>
+      </li>
+      <li class="word-item" style="animation-delay: 975ms;">
+        <button type="button" class="play-btn" data-audio="audio/039_ultimately.mp3" aria-label="Play Ultimately">Play</button>
+        <button type="button" class="word-text" data-audio="audio/039_ultimately.mp3" aria-expanded="false">Ultimately</button>
+        <span class="small">#39</span>
+        <p class="meaning" hidden>意味: 最終的に、結局</p>
+      </li>
+      <li class="word-item" style="animation-delay: 1000ms;">
+        <button type="button" class="play-btn" data-audio="audio/040_independence.mp3" aria-label="Play independence">Play</button>
+        <button type="button" class="word-text" data-audio="audio/040_independence.mp3" aria-expanded="false">independence</button>
+        <span class="small">#40</span>
+        <p class="meaning" hidden>意味: 独立、自立</p>
+      </li>
+      <li class="word-item" style="animation-delay: 1025ms;">
+        <button type="button" class="play-btn" data-audio="audio/041_legacy.mp3" aria-label="Play legacy">Play</button>
+        <button type="button" class="word-text" data-audio="audio/041_legacy.mp3" aria-expanded="false">legacy</button>
+        <span class="small">#41</span>
+        <p class="meaning" hidden>意味: 遺産、後世への影響</p>
+      </li>
+      <li class="word-item" style="animation-delay: 1050ms;">
+        <button type="button" class="play-btn" data-audio="audio/042_modern.mp3" aria-label="Play modern">Play</button>
+        <button type="button" class="word-text" data-audio="audio/042_modern.mp3" aria-expanded="false">modern</button>
+        <span class="small">#42</span>
+        <p class="meaning" hidden>意味: 現代の、近代の</p>
+      </li>
+      <li class="word-item" style="animation-delay: 1075ms;">
+        <button type="button" class="play-btn" data-audio="audio/043_civilization.mp3" aria-label="Play civilization">Play</button>
+        <button type="button" class="word-text" data-audio="audio/043_civilization.mp3" aria-expanded="false">civilization</button>
+        <span class="small">#43</span>
+        <p class="meaning" hidden>意味: 文明、文明社会</p>
+      </li>
+      <li class="word-item" style="animation-delay: 1100ms;">
+        <button type="button" class="play-btn" data-audio="audio/044_quest.mp3" aria-label="Play quest">Play</button>
+        <button type="button" class="word-text" data-audio="audio/044_quest.mp3" aria-expanded="false">quest</button>
+        <span class="small">#44</span>
+        <p class="meaning" hidden>意味: 探求、追求</p>
+      </li>
+      <li class="word-item" style="animation-delay: 1125ms;">
+        <button type="button" class="play-btn" data-audio="audio/045_civic.mp3" aria-label="Play civic">Play</button>
+        <button type="button" class="word-text" data-audio="audio/045_civic.mp3" aria-expanded="false">civic</button>
+        <span class="small">#45</span>
+        <p class="meaning" hidden>意味: 市民の、公民の、都市の</p>
+      </li>
+    </ul>
+  </main>
+
+  <script>
+    const list = document.getElementById('wordList');
+    const playAllButton = document.getElementById('playAll');
+    const stopAllButton = document.getElementById('stopAll');
+
+    let currentAudio = null;
+    let playQueue = [];
+    let queueIndex = 0;
+
+    function stopPlayback() {
+      playQueue = [];
+      queueIndex = 0;
+      if (currentAudio) {
+        currentAudio.pause();
+        currentAudio.currentTime = 0;
+        currentAudio = null;
+      }
+    }
+
+    function playSingle(src) {
+      stopPlayback();
+      currentAudio = new Audio(src);
+      currentAudio.play().catch((err) => {
+        console.error('Audio play failed:', err);
+      });
+    }
+
+    function playQueueNext() {
+      if (queueIndex >= playQueue.length) {
+        currentAudio = null;
+        return;
+      }
+      const src = playQueue[queueIndex++];
+      currentAudio = new Audio(src);
+      currentAudio.addEventListener('ended', playQueueNext);
+      currentAudio.play().catch((err) => {
+        console.error('Audio play failed:', err);
+        playQueueNext();
+      });
+    }
+
+    function closeAllMeanings() {
+      document.querySelectorAll('.meaning').forEach((el) => {
+        el.hidden = true;
+      });
+      document.querySelectorAll('.word-text').forEach((el) => {
+        el.setAttribute('aria-expanded', 'false');
+      });
+    }
+
+    list.addEventListener('click', (event) => {
+      const target = event.target;
+      if (!(target instanceof HTMLElement)) return;
+
+      const src = target.getAttribute('data-audio');
+      if (!src) return;
+
+      playSingle(src);
+
+      if (!target.classList.contains('word-text')) {
+        return;
+      }
+
+      const item = target.closest('.word-item');
+      if (!item) return;
+
+      const meaning = item.querySelector('.meaning');
+      if (!(meaning instanceof HTMLElement)) return;
+
+      const willOpen = meaning.hidden;
+      closeAllMeanings();
+      meaning.hidden = !willOpen;
+      target.setAttribute('aria-expanded', willOpen ? 'true' : 'false');
+    });
+
+    playAllButton.addEventListener('click', () => {
+      stopPlayback();
+      closeAllMeanings();
+      playQueue = Array.from(document.querySelectorAll('.play-btn[data-audio]'))
+        .map((el) => el.getAttribute('data-audio'))
+        .filter((src) => !!src);
+      queueIndex = 0;
+      playQueueNext();
+    });
+
+    stopAllButton.addEventListener('click', stopPlayback);
+  </script>
+</body>
+</html>

@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Law 18words Pronunciation</title>
+  <style>
+    :root {
+      --bg1: #f2ece3;
+      --bg2: #e4d5c1;
+      --card: #fff8ee;
+      --ink: #2a1f16;
+      --accent: #9a3412;
+      --accent-2: #78350f;
+      --border: #d9c2a5;
+      --shadow: rgba(42, 31, 22, 0.15);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 15% 20%, rgba(255,255,255,0.6), transparent 35%),
+        radial-gradient(circle at 85% 80%, rgba(255,255,255,0.4), transparent 30%),
+        linear-gradient(135deg, var(--bg1), var(--bg2));
+      min-height: 100vh;
+      padding: 24px;
+    }
+
+    .wrap {
+      max-width: 900px;
+      margin: 0 auto;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 20px;
+      box-shadow: 0 10px 30px var(--shadow);
+    }
+
+    h1 {
+      margin: 0 0 8px;
+      font-size: clamp(1.5rem, 2.6vw, 2.2rem);
+      letter-spacing: 0.02em;
+    }
+
+    p {
+      margin: 0 0 20px;
+      line-height: 1.6;
+    }
+
+    .controls {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 14px;
+    }
+
+    button {
+      border: 1px solid var(--accent);
+      background: var(--accent);
+      color: #fff;
+      border-radius: 10px;
+      padding: 8px 12px;
+      font-size: 0.95rem;
+      cursor: pointer;
+      transition: transform 120ms ease, background 120ms ease;
+    }
+
+    button:hover { background: var(--accent-2); }
+    button:active { transform: translateY(1px); }
+
+    .word-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 10px;
+    }
+
+    .word-item {
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 10px;
+      background: #fff;
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      align-items: center;
+      gap: 8px;
+      opacity: 0;
+      transform: translateY(8px);
+      animation: reveal 360ms ease forwards;
+    }
+
+    .play-btn {
+      min-width: 56px;
+    }
+
+    .word-text {
+      background: none;
+      border: none;
+      color: var(--ink);
+      font: inherit;
+      text-align: left;
+      padding: 0;
+      margin: 0;
+      cursor: pointer;
+      line-height: 1.4;
+      flex: 1;
+    }
+
+    .word-text:hover {
+      text-decoration: underline;
+      text-decoration-thickness: 2px;
+      text-decoration-color: var(--accent);
+    }
+
+    .small {
+      font-size: 0.8rem;
+      color: #6e5a45;
+      min-width: 2.2em;
+      text-align: right;
+    }
+
+    .meaning {
+      grid-column: 1 / -1;
+      margin: 6px 0 0;
+      padding: 8px 10px;
+      border-radius: 8px;
+      background: #fbf3e8;
+      border: 1px dashed var(--border);
+      font-size: 0.92rem;
+      line-height: 1.5;
+    }
+
+    .meaning[hidden] {
+      display: none;
+    }
+
+    @keyframes reveal {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <h1>Law 18words Pronunciation</h1>
+    <p>単語をクリックすると、発音を再生しながら意味を表示します。Play ボタンは音声のみ再生します。</p>
+    <div class="controls">
+      <button type="button" id="playAll">Play All</button>
+      <button type="button" id="stopAll">Stop</button>
+    </div>
+    <ul class="word-list" id="wordList">
+      <li class="word-item" style="animation-delay: 25ms;">
+        <button type="button" class="play-btn" data-audio="audio/001_forts.mp3" aria-label="Play forts">Play</button>
+        <button type="button" class="word-text" data-audio="audio/001_forts.mp3" aria-expanded="false">forts</button>
+        <span class="small">#1</span>
+        <p class="meaning" hidden>意味: 要塞、砦（敵の攻撃から守るために建てられた軍事的な建造物）</p>
+      </li>
+      <li class="word-item" style="animation-delay: 50ms;">
+        <button type="button" class="play-btn" data-audio="audio/002_visible.mp3" aria-label="Play visible">Play</button>
+        <button type="button" class="word-text" data-audio="audio/002_visible.mp3" aria-expanded="false">visible</button>
+        <span class="small">#2</span>
+        <p class="meaning" hidden>意味: 目に見える、視認できる</p>
+      </li>
+      <li class="word-item" style="animation-delay: 75ms;">
+        <button type="button" class="play-btn" data-audio="audio/003_exploration.mp3" aria-label="Play exploration">Play</button>
+        <button type="button" class="word-text" data-audio="audio/003_exploration.mp3" aria-expanded="false">exploration</button>
+        <span class="small">#3</span>
+        <p class="meaning" hidden>意味: 探検、調査、探索</p>
+      </li>
+      <li class="word-item" style="animation-delay: 100ms;">
+        <button type="button" class="play-btn" data-audio="audio/004_individual.mp3" aria-label="Play individual">Play</button>
+        <button type="button" class="word-text" data-audio="audio/004_individual.mp3" aria-expanded="false">individual</button>
+        <span class="small">#4</span>
+        <p class="meaning" hidden>意味: 個人、個体；個々の</p>
+      </li>
+      <li class="word-item" style="animation-delay: 125ms;">
+        <button type="button" class="play-btn" data-audio="audio/005_mule.mp3" aria-label="Play mule">Play</button>
+        <button type="button" class="word-text" data-audio="audio/005_mule.mp3" aria-expanded="false">mule</button>
+        <span class="small">#5</span>
+        <p class="meaning" hidden>意味: ラバ（馬とロバの交配種）；荷物を運ぶために使われる動物</p>
+      </li>
+      <li class="word-item" style="animation-delay: 150ms;">
+        <button type="button" class="play-btn" data-audio="audio/006_survey.mp3" aria-label="Play survey">Play</button>
+        <button type="button" class="word-text" data-audio="audio/006_survey.mp3" aria-expanded="false">survey</button>
+        <span class="small">#6</span>
+        <p class="meaning" hidden>意味: 調査、測量；調査する</p>
+      </li>
+      <li class="word-item" style="animation-delay: 175ms;">
+        <button type="button" class="play-btn" data-audio="audio/007_comprehensive.mp3" aria-label="Play comprehensive">Play</button>
+        <button type="button" class="word-text" data-audio="audio/007_comprehensive.mp3" aria-expanded="false">comprehensive</button>
+        <span class="small">#7</span>
+        <p class="meaning" hidden>意味: 包括的な、総合的な、網羅的な</p>
+      </li>
+      <li class="word-item" style="animation-delay: 200ms;">
+        <button type="button" class="play-btn" data-audio="audio/008_entire.mp3" aria-label="Play entire">Play</button>
+        <button type="button" class="word-text" data-audio="audio/008_entire.mp3" aria-expanded="false">entire</button>
+        <span class="small">#8</span>
+        <p class="meaning" hidden>意味: 全体の、すべての、完全な</p>
+      </li>
+      <li class="word-item" style="animation-delay: 225ms;">
+        <button type="button" class="play-btn" data-audio="audio/009_involve.mp3" aria-label="Play involve">Play</button>
+        <button type="button" class="word-text" data-audio="audio/009_involve.mp3" aria-expanded="false">involve</button>
+        <span class="small">#9</span>
+        <p class="meaning" hidden>意味: 含む、関与する、伴う</p>
+      </li>
+      <li class="word-item" style="animation-delay: 250ms;">
+        <button type="button" class="play-btn" data-audio="audio/010_passage.mp3" aria-label="Play passage">Play</button>
+        <button type="button" class="word-text" data-audio="audio/010_passage.mp3" aria-expanded="false">passage</button>
+        <span class="small">#10</span>
+        <p class="meaning" hidden>意味: 通路、回廊；通過、経過</p>
+      </li>
+      <li class="word-item" style="animation-delay: 275ms;">
+        <button type="button" class="play-btn" data-audio="audio/011_protection.mp3" aria-label="Play protection">Play</button>
+        <button type="button" class="word-text" data-audio="audio/011_protection.mp3" aria-expanded="false">protection</button>
+        <span class="small">#11</span>
+        <p class="meaning" hidden>意味: 保護、防護</p>
+      </li>
+      <li class="word-item" style="animation-delay: 300ms;">
+        <button type="button" class="play-btn" data-audio="audio/012_remains.mp3" aria-label="Play remains">Play</button>
+        <button type="button" class="word-text" data-audio="audio/012_remains.mp3" aria-expanded="false">remains</button>
+        <span class="small">#12</span>
+        <p class="meaning" hidden>意味: 遺跡、遺骨、残骸；残る</p>
+      </li>
+      <li class="word-item" style="animation-delay: 325ms;">
+        <button type="button" class="play-btn" data-audio="audio/013_construction.mp3" aria-label="Play construction">Play</button>
+        <button type="button" class="word-text" data-audio="audio/013_construction.mp3" aria-expanded="false">construction</button>
+        <span class="small">#13</span>
+        <p class="meaning" hidden>意味: 建設、建造；構造</p>
+      </li>
+      <li class="word-item" style="animation-delay: 350ms;">
+        <button type="button" class="play-btn" data-audio="audio/014_growth.mp3" aria-label="Play growth">Play</button>
+        <button type="button" class="word-text" data-audio="audio/014_growth.mp3" aria-expanded="false">growth</button>
+        <span class="small">#14</span>
+        <p class="meaning" hidden>意味: 成長、発育；増加</p>
+      </li>
+      <li class="word-item" style="animation-delay: 375ms;">
+        <button type="button" class="play-btn" data-audio="audio/015_infrared.mp3" aria-label="Play infrared">Play</button>
+        <button type="button" class="word-text" data-audio="audio/015_infrared.mp3" aria-expanded="false">infrared</button>
+        <span class="small">#15</span>
+        <p class="meaning" hidden>意味: 赤外線（の）</p>
+      </li>
+      <li class="word-item" style="animation-delay: 400ms;">
+        <button type="button" class="play-btn" data-audio="audio/016_satellites.mp3" aria-label="Play satellites">Play</button>
+        <button type="button" class="word-text" data-audio="audio/016_satellites.mp3" aria-expanded="false">satellites</button>
+        <span class="small">#16</span>
+        <p class="meaning" hidden>意味: 衛星、人工衛星</p>
+      </li>
+      <li class="word-item" style="animation-delay: 425ms;">
+        <button type="button" class="play-btn" data-audio="audio/017_clues.mp3" aria-label="Play clues">Play</button>
+        <button type="button" class="word-text" data-audio="audio/017_clues.mp3" aria-expanded="false">clues</button>
+        <span class="small">#17</span>
+        <p class="meaning" hidden>意味: 手がかり、ヒント</p>
+      </li>
+      <li class="word-item" style="animation-delay: 450ms;">
+        <button type="button" class="play-btn" data-audio="audio/018_soil.mp3" aria-label="Play soil">Play</button>
+        <button type="button" class="word-text" data-audio="audio/018_soil.mp3" aria-expanded="false">soil</button>
+        <span class="small">#18</span>
+        <p class="meaning" hidden>意味: 土壌、土</p>
+      </li>
+      <li class="word-item" style="animation-delay: 475ms;">
+        <button type="button" class="play-btn" data-audio="audio/019_crop.mp3" aria-label="Play crop">Play</button>
+        <button type="button" class="word-text" data-audio="audio/019_crop.mp3" aria-expanded="false">crop</button>
+        <span class="small">#19</span>
+        <p class="meaning" hidden>意味: 作物、農作物；切り取る</p>
+      </li>
+      <li class="word-item" style="animation-delay: 500ms;">
+        <button type="button" class="play-btn" data-audio="audio/020_density.mp3" aria-label="Play density">Play</button>
+        <button type="button" class="word-text" data-audio="audio/020_density.mp3" aria-expanded="false">density</button>
+        <span class="small">#20</span>
+        <p class="meaning" hidden>意味: 密度、濃度</p>
+      </li>
+      <li class="word-item" style="animation-delay: 525ms;">
+        <button type="button" class="play-btn" data-audio="audio/021_indicate.mp3" aria-label="Play indicate">Play</button>
+        <button type="button" class="word-text" data-audio="audio/021_indicate.mp3" aria-expanded="false">indicate</button>
+        <span class="small">#21</span>
+        <p class="meaning" hidden>意味: 示す、指示する、指摘する</p>
+      </li>
+      <li class="word-item" style="animation-delay: 550ms;">
+        <button type="button" class="play-btn" data-audio="audio/022_existence.mp3" aria-label="Play existence">Play</button>
+        <button type="button" class="word-text" data-audio="audio/022_existence.mp3" aria-expanded="false">existence</button>
+        <span class="small">#22</span>
+        <p class="meaning" hidden>意味: 存在、実在</p>
+      </li>
+      <li class="word-item" style="animation-delay: 575ms;">
+        <button type="button" class="play-btn" data-audio="audio/023_reflection.mp3" aria-label="Play reflection">Play</button>
+        <button type="button" class="word-text" data-audio="audio/023_reflection.mp3" aria-expanded="false">reflection</button>
+        <span class="small">#23</span>
+        <p class="meaning" hidden>意味: 反射、反映；熟考</p>
+      </li>
+      <li class="word-item" style="animation-delay: 600ms;">
+        <button type="button" class="play-btn" data-audio="audio/024_presence.mp3" aria-label="Play presence">Play</button>
+        <button type="button" class="word-text" data-audio="audio/024_presence.mp3" aria-expanded="false">presence</button>
+        <span class="small">#24</span>
+        <p class="meaning" hidden>意味: 存在、出席；存在感</p>
+      </li>
+      <li class="word-item" style="animation-delay: 625ms;">
+        <button type="button" class="play-btn" data-audio="audio/025_structures.mp3" aria-label="Play structures">Play</button>
+        <button type="button" class="word-text" data-audio="audio/025_structures.mp3" aria-expanded="false">structures</button>
+        <span class="small">#25</span>
+        <p class="meaning" hidden>意味: 構造物、建造物；構造</p>
+      </li>
+      <li class="word-item" style="animation-delay: 650ms;">
+        <button type="button" class="play-btn" data-audio="audio/026_hollows.mp3" aria-label="Play hollows">Play</button>
+        <button type="button" class="word-text" data-audio="audio/026_hollows.mp3" aria-expanded="false">hollows</button>
+        <span class="small">#26</span>
+        <p class="meaning" hidden>意味: 窪み、くぼ地；空洞</p>
+      </li>
+    </ul>
+  </main>
+
+  <script>
+    const list = document.getElementById('wordList');
+    const playAllButton = document.getElementById('playAll');
+    const stopAllButton = document.getElementById('stopAll');
+
+    let currentAudio = null;
+    let playQueue = [];
+    let queueIndex = 0;
+
+    function stopPlayback() {
+      playQueue = [];
+      queueIndex = 0;
+      if (currentAudio) {
+        currentAudio.pause();
+        currentAudio.currentTime = 0;
+        currentAudio = null;
+      }
+    }
+
+    function playSingle(src) {
+      stopPlayback();
+      currentAudio = new Audio(src);
+      currentAudio.play().catch((err) => {
+        console.error('Audio play failed:', err);
+      });
+    }
+
+    function playQueueNext() {
+      if (queueIndex >= playQueue.length) {
+        currentAudio = null;
+        return;
+      }
+      const src = playQueue[queueIndex++];
+      currentAudio = new Audio(src);
+      currentAudio.addEventListener('ended', playQueueNext);
+      currentAudio.play().catch((err) => {
+        console.error('Audio play failed:', err);
+        playQueueNext();
+      });
+    }
+
+    function closeAllMeanings() {
+      document.querySelectorAll('.meaning').forEach((el) => {
+        el.hidden = true;
+      });
+      document.querySelectorAll('.word-text').forEach((el) => {
+        el.setAttribute('aria-expanded', 'false');
+      });
+    }
+
+    list.addEventListener('click', (event) => {
+      const target = event.target;
+      if (!(target instanceof HTMLElement)) return;
+
+      const src = target.getAttribute('data-audio');
+      if (!src) return;
+
+      playSingle(src);
+
+      if (!target.classList.contains('word-text')) {
+        return;
+      }
+
+      const item = target.closest('.word-item');
+      if (!item) return;
+
+      const meaning = item.querySelector('.meaning');
+      if (!(meaning instanceof HTMLElement)) return;
+
+      const willOpen = meaning.hidden;
+      closeAllMeanings();
+      meaning.hidden = !willOpen;
+      target.setAttribute('aria-expanded', willOpen ? 'true' : 'false');
+    });
+
+    playAllButton.addEventListener('click', () => {
+      stopPlayback();
+      closeAllMeanings();
+      playQueue = Array.from(document.querySelectorAll('.play-btn[data-audio]'))
+        .map((el) => el.getAttribute('data-audio'))
+        .filter((src) => !!src);
+      queueIndex = 0;
+      playQueueNext();
+    });
+
+    stopAllButton.addEventListener('click', stopPlayback);
+  </script>
+</body>
+</html>
