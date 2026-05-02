@@ -1,74 +1,66 @@
 # 単語リストから発音音声を作成する手順
 
-この手順は、[Law/18words.md](Law/18words.md) のように `<summary>単語</summary>` が並んだ単語リストから、発音練習用の MP3 を作る方法です。
+この手順は、[Law/18words.md](Law/18words.md) のように `<summary>単語</summary>` が並ぶファイルから、
+1単語ずつの発音 MP3 と、クリック再生できるページを作成する方法です。
 
 ## 1. 前提コマンドの確認
 
-macOS 標準の `say` と、MP3 変換用の `ffmpeg` を使います。
+macOS の `say` と、MP3 変換用の `ffmpeg` を使用します。
 
 ```bash
 command -v say
 command -v ffmpeg
 ```
 
-`ffmpeg` がない場合はインストールします。
+`ffmpeg` が未インストールなら以下を実行します。
 
 ```bash
 brew install ffmpeg
 ```
 
-## 2. 単語を抽出する
+## 2. 生成スクリプトを実行
 
-以下は [Law/18words.md](Law/18words.md) から単語だけを順番通りに取り出す例です。
-
-```bash
-grep -o '<summary>.*</summary>' Law/18words.md \
-| sed -E 's#<summary>(.*)</summary>#\1#' \
-> Law/18words_words.txt
-```
-
-## 3. 読み上げ用テキストを作る
-
-単語の間に少し間を作るため、末尾に `...` を付けます。
+以下のコマンドで、対象ファイルから単語抽出、単語ごとの MP3 作成、再生ページ生成までを一括実行できます。
 
 ```bash
-awk '{print $0 "..."}' Law/18words_words.txt > Law/18words_tts_script.txt
+bash Law/generate_word_audio_and_html.sh Law/18words.md Law/pronunciation
 ```
 
-## 4. 音声を生成する
+引数の意味:
 
-`say` で AIFF を作成します。声は好みで変更できます（例: `Samantha`, `Alex`）。
+- 第1引数: 入力ファイル（例: `Law/18words.md`）
+- 第2引数: 出力先ディレクトリ（例: `Law/pronunciation`）
+
+## 3. 生成されるファイル
+
+- `Law/pronunciation/index.html` : 単語クリック再生ページ
+- `Law/pronunciation/audio/*.mp3` : 単語ごとの音声ファイル
+- `Law/pronunciation/words.txt` : 抽出した単語一覧
+- `Law/pronunciation/word_map.tsv` : 単語と音声ファイルの対応表
+
+## 4. 再生ページを開く
 
 ```bash
-say -v Samantha -f Law/18words_tts_script.txt -o Law/18words.aiff
+open Law/pronunciation/index.html
 ```
 
-## 5. MP3 に変換する
+ページ内で、各単語を押すと発音再生と意味表示、Play ボタンを押すと発音のみ再生されます。
+
+## 5. 読み上げ音声や速度を変更する
+
+環境変数で声と速度を変更できます。
 
 ```bash
-ffmpeg -y -i Law/18words.aiff -codec:a libmp3lame -b:a 128k Law/18words.mp3
+VOICE=Alex RATE=160 bash Law/generate_word_audio_and_html.sh Law/18words.md Law/pronunciation
 ```
 
-## 6. 出力確認
+- `VOICE` 例: `Samantha`, `Alex`
+- `RATE` は読み上げ速度（大きいほど速い）
+
+## 6. 他の単語ファイルへ適用する
+
+入力ファイルと出力フォルダを変更すれば、同じ手順を流用できます。
 
 ```bash
-ls -lh Law/18words.mp3
-afinfo Law/18words.mp3 | head -n 20
+bash Law/generate_word_audio_and_html.sh History/07words.md History/pronunciation
 ```
-
-## 7. 1コマンドで実行する例
-
-```bash
-grep -o '<summary>.*</summary>' Law/18words.md \
-| sed -E 's#<summary>(.*)</summary>#\1#' \
-> Law/18words_words.txt \
-&& awk '{print $0 "..."}' Law/18words_words.txt > Law/18words_tts_script.txt \
-&& say -v Samantha -f Law/18words_tts_script.txt -o Law/18words.aiff \
-&& ffmpeg -y -i Law/18words.aiff -codec:a libmp3lame -b:a 128k Law/18words.mp3
-```
-
-## 補足
-
-- 発音速度を落としたい場合: `say` 実行時に `-r 160` のように読み上げ速度を指定できます。
-- 間隔をさらに空けたい場合: `awk` の `"..."` を `"......"` に増やします。
-- 他ファイルに適用する場合: `Law/18words` の部分を対象パスに置き換えてください。
