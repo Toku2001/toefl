@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>32words.md Pronunciation</title>
+  <style>
+    :root {
+      --bg1: #f2ece3;
+      --bg2: #e4d5c1;
+      --card: #fff8ee;
+      --ink: #2a1f16;
+      --accent: #9a3412;
+      --accent-2: #78350f;
+      --border: #d9c2a5;
+      --shadow: rgba(42, 31, 22, 0.15);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 15% 20%, rgba(255,255,255,0.6), transparent 35%),
+        radial-gradient(circle at 85% 80%, rgba(255,255,255,0.4), transparent 30%),
+        linear-gradient(135deg, var(--bg1), var(--bg2));
+      min-height: 100vh;
+      padding: 24px;
+    }
+
+    .wrap {
+      max-width: 900px;
+      margin: 0 auto;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 20px;
+      box-shadow: 0 10px 30px var(--shadow);
+    }
+
+    h1 {
+      margin: 0 0 8px;
+      font-size: clamp(1.5rem, 2.6vw, 2.2rem);
+      letter-spacing: 0.02em;
+    }
+
+    p {
+      margin: 0 0 20px;
+      line-height: 1.6;
+    }
+
+    .controls {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 14px;
+    }
+
+    button {
+      border: 1px solid var(--accent);
+      background: var(--accent);
+      color: #fff;
+      border-radius: 10px;
+      padding: 8px 12px;
+      font-size: 0.95rem;
+      cursor: pointer;
+      transition: transform 120ms ease, background 120ms ease;
+    }
+
+    button:hover { background: var(--accent-2); }
+    button:active { transform: translateY(1px); }
+
+    .word-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 10px;
+    }
+
+    .word-item {
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 10px;
+      background: #fff;
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      align-items: center;
+      gap: 8px;
+      opacity: 0;
+      transform: translateY(8px);
+      animation: reveal 360ms ease forwards;
+    }
+
+    .play-btn {
+      min-width: 56px;
+    }
+
+    .word-text {
+      background: none;
+      border: none;
+      color: var(--ink);
+      font: inherit;
+      text-align: left;
+      padding: 0;
+      margin: 0;
+      cursor: pointer;
+      line-height: 1.4;
+      flex: 1;
+    }
+
+    .word-text:hover {
+      text-decoration: underline;
+      text-decoration-thickness: 2px;
+      text-decoration-color: var(--accent);
+    }
+
+    .small {
+      font-size: 0.8rem;
+      color: #6e5a45;
+      min-width: 2.2em;
+      text-align: right;
+    }
+
+    .meaning {
+      grid-column: 1 / -1;
+      margin: 6px 0 0;
+      padding: 8px 10px;
+      border-radius: 8px;
+      background: #fbf3e8;
+      border: 1px dashed var(--border);
+      font-size: 0.92rem;
+      line-height: 1.5;
+    }
+
+    .meaning[hidden] {
+      display: none;
+    }
+
+    @keyframes reveal {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <h1>32words.md Pronunciation</h1>
+    <p>単語をクリックすると意味を表示します。Play ボタンは発音のみ再生します。</p>
+    <div class="controls">
+      <button type="button" id="playAll">Play All</button>
+      <button type="button" id="stopAll">Stop</button>
+    </div>
+    <ul class="word-list" id="wordList">
+      <li class="word-item" style="animation-delay: 25ms;">
+        <button type="button" class="play-btn" data-audio="audio/001_well_be_the_one.mp3" aria-label="Play well be the one">Play</button>
+        <button type="button" class="word-text" data-audio="audio/001_well_be_the_one.mp3" aria-expanded="false">well be the one</button>
+        <span class="small">#1</span>
+        <p class="meaning" hidden>意味: おそらく〜だろう；〜である可能性が高い<br>類義語: likely be, probably be, might well be</p>
+      </li>
+      <li class="word-item" style="animation-delay: 50ms;">
+        <button type="button" class="play-btn" data-audio="audio/002_historians.mp3" aria-label="Play historians">Play</button>
+        <button type="button" class="word-text" data-audio="audio/002_historians.mp3" aria-expanded="false">historians</button>
+        <span class="small">#2</span>
+        <p class="meaning" hidden>意味: 歴史家；歴史学者<br>基本形: historian<br>アクセント: hĭ-STÔR-ē-ənz<br>類義語: scholars, chroniclers, researchers</p>
+      </li>
+      <li class="word-item" style="animation-delay: 75ms;">
+        <button type="button" class="play-btn" data-audio="audio/003_dramatic.mp3" aria-label="Play dramatic">Play</button>
+        <button type="button" class="word-text" data-audio="audio/003_dramatic.mp3" aria-expanded="false">dramatic</button>
+        <span class="small">#3</span>
+        <p class="meaning" hidden>意味: 劇的な；目覚ましい；印象的な<br>アクセント: drə-MĂT-ĭk<br>類義語: striking, significant, remarkable</p>
+      </li>
+      <li class="word-item" style="animation-delay: 100ms;">
+        <button type="button" class="play-btn" data-audio="audio/004_far_reaching.mp3" aria-label="Play far-reaching">Play</button>
+        <button type="button" class="word-text" data-audio="audio/004_far_reaching.mp3" aria-expanded="false">far-reaching</button>
+        <span class="small">#4</span>
+        <p class="meaning" hidden>意味: 広範囲にわたる；遠大な影響を持つ<br>アクセント: fär-RĒ-chĭng<br>類義語: wide-ranging, extensive, sweeping</p>
+      </li>
+      <li class="word-item" style="animation-delay: 125ms;">
+        <button type="button" class="play-btn" data-audio="audio/005_no_sooner.mp3" aria-label="Play no sooner">Play</button>
+        <button type="button" class="word-text" data-audio="audio/005_no_sooner.mp3" aria-expanded="false">no sooner</button>
+        <span class="small">#5</span>
+        <p class="meaning" hidden>意味: 〜するやいなや；〜した途端に<br>類義語: as soon as, immediately when, the moment</p>
+      </li>
+      <li class="word-item" style="animation-delay: 150ms;">
+        <button type="button" class="play-btn" data-audio="audio/006_the_public_was_seized.mp3" aria-label="Play the public was seized">Play</button>
+        <button type="button" class="word-text" data-audio="audio/006_the_public_was_seized.mp3" aria-expanded="false">the public was seized</button>
+        <span class="small">#6</span>
+        <p class="meaning" hidden>意味: 大衆は魅了された；人々は熱狂した<br>類義語: the public was captivated, people were gripped, society was overcome</p>
+      </li>
+      <li class="word-item" style="animation-delay: 175ms;">
+        <button type="button" class="play-btn" data-audio="audio/007_source_of_astonishment.mp3" aria-label="Play source of astonishment">Play</button>
+        <button type="button" class="word-text" data-audio="audio/007_source_of_astonishment.mp3" aria-expanded="false">source of astonishment</button>
+        <span class="small">#7</span>
+        <p class="meaning" hidden>意味: 驚きの源；驚嘆をもたらすもの<br>アクセント: ə-STŎN-ĭsh-mənt<br>類義語: cause of amazement, origin of wonder, occasion of surprise</p>
+      </li>
+      <li class="word-item" style="animation-delay: 200ms;">
+        <button type="button" class="play-btn" data-audio="audio/008_pull.mp3" aria-label="Play pull">Play</button>
+        <button type="button" class="word-text" data-audio="audio/008_pull.mp3" aria-expanded="false">pull</button>
+        <span class="small">#8</span>
+        <p class="meaning" hidden>意味: 引っ張る；引力；牽引力<br>アクセント: pul<br>類義語: draw, attract, tug</p>
+      </li>
+      <li class="word-item" style="animation-delay: 225ms;">
+        <button type="button" class="play-btn" data-audio="audio/009_mechanically.mp3" aria-label="Play mechanically">Play</button>
+        <button type="button" class="word-text" data-audio="audio/009_mechanically.mp3" aria-expanded="false">mechanically</button>
+        <span class="small">#9</span>
+        <p class="meaning" hidden>意味: 機械的に；自動的に<br>アクセント: mĭ-KĂN-ĭk-ə-lē<br>類義語: automatically, without thought, by machine</p>
+      </li>
+      <li class="word-item" style="animation-delay: 250ms;">
+        <button type="button" class="play-btn" data-audio="audio/010_visually_arresting.mp3" aria-label="Play visually arresting">Play</button>
+        <button type="button" class="word-text" data-audio="audio/010_visually_arresting.mp3" aria-expanded="false">visually arresting</button>
+        <span class="small">#10</span>
+        <p class="meaning" hidden>意味: 視覚的に目を引く；見た目に強烈な<br>アクセント: ə-RĔST-ĭng<br>類義語: visually striking, eye-catching, visually compelling</p>
+      </li>
+      <li class="word-item" style="animation-delay: 275ms;">
+        <button type="button" class="play-btn" data-audio="audio/011_immediately.mp3" aria-label="Play immediately">Play</button>
+        <button type="button" class="word-text" data-audio="audio/011_immediately.mp3" aria-expanded="false">immediately</button>
+        <span class="small">#11</span>
+        <p class="meaning" hidden>意味: 即座に；すぐに；直ちに<br>アクセント: ĭ-MĒ-dē-ĭt-lē<br>類義語: instantly, at once, right away</p>
+      </li>
+      <li class="word-item" style="animation-delay: 300ms;">
+        <button type="button" class="play-btn" data-audio="audio/012_evoked_a_widely_shared_sense.mp3" aria-label="Play evoked a widely shared sense">Play</button>
+        <button type="button" class="word-text" data-audio="audio/012_evoked_a_widely_shared_sense.mp3" aria-expanded="false">evoked a widely shared sense</button>
+        <span class="small">#12</span>
+        <p class="meaning" hidden>意味: 広く共有された感覚を呼び起こした<br>アクセント: ĭ-VŌKT<br>類義語: stirred a common feeling, aroused a shared emotion, inspired a collective sense</p>
+      </li>
+      <li class="word-item" style="animation-delay: 325ms;">
+        <button type="button" class="play-btn" data-audio="audio/013_magical_enhancement_of_human_power.mp3" aria-label="Play magical enhancement of human power">Play</button>
+        <button type="button" class="word-text" data-audio="audio/013_magical_enhancement_of_human_power.mp3" aria-expanded="false">magical enhancement of human power</button>
+        <span class="small">#13</span>
+        <p class="meaning" hidden>意味: 人間の力の魔法のような増大<br>類義語: miraculous amplification of human capability, extraordinary boost to human ability</p>
+      </li>
+      <li class="word-item" style="animation-delay: 350ms;">
+        <button type="button" class="play-btn" data-audio="audio/014_at_least_understandable.mp3" aria-label="Play at least understandable">Play</button>
+        <button type="button" class="word-text" data-audio="audio/014_at_least_understandable.mp3" aria-expanded="false">at least understandable</button>
+        <span class="small">#14</span>
+        <p class="meaning" hidden>意味: 少なくとも理解できる<br>類義語: somewhat comprehensible, at minimum explainable, at least conceivable</p>
+      </li>
+      <li class="word-item" style="animation-delay: 375ms;">
+        <button type="button" class="play-btn" data-audio="audio/015_initial_mania.mp3" aria-label="Play initial mania">Play</button>
+        <button type="button" class="word-text" data-audio="audio/015_initial_mania.mp3" aria-expanded="false">initial mania</button>
+        <span class="small">#15</span>
+        <p class="meaning" hidden>意味: 最初の熱狂；初期の熱中<br>アクセント: MĀ-nē-ə<br>類義語: early craze, initial enthusiasm, first excitement</p>
+      </li>
+      <li class="word-item" style="animation-delay: 400ms;">
+        <button type="button" class="play-btn" data-audio="audio/016_come_to_seem.mp3" aria-label="Play come to seem">Play</button>
+        <button type="button" class="word-text" data-audio="audio/016_come_to_seem.mp3" aria-expanded="false">come to seem</button>
+        <span class="small">#16</span>
+        <p class="meaning" hidden>意味: 〜のように見えるようになる；〜に思えてくる<br>類義語: begin to appear, gradually seem, start to look like</p>
+      </li>
+      <li class="word-item" style="animation-delay: 425ms;">
+        <button type="button" class="play-btn" data-audio="audio/017_the_steam_powered_locomotive.mp3" aria-label="Play the steam-powered locomotive">Play</button>
+        <button type="button" class="word-text" data-audio="audio/017_the_steam_powered_locomotive.mp3" aria-expanded="false">the steam-powered locomotive</button>
+        <span class="small">#17</span>
+        <p class="meaning" hidden>意味: 蒸気機関車<br>アクセント: LŌ-kə-mō-tĭv<br>類義語: steam engine, railway engine, steam train</p>
+      </li>
+      <li class="word-item" style="animation-delay: 450ms;">
+        <button type="button" class="play-btn" data-audio="audio/018_innovation_in_overland_transportation.mp3" aria-label="Play innovation in overland transportation">Play</button>
+        <button type="button" class="word-text" data-audio="audio/018_innovation_in_overland_transportation.mp3" aria-expanded="false">innovation in overland transportation</button>
+        <span class="small">#18</span>
+        <p class="meaning" hidden>意味: 陸上輸送における革新<br>アクセント: ĭn-ō-VĀ-shən<br>類義語: advancement in land transport, breakthrough in overland travel</p>
+      </li>
+      <li class="word-item" style="animation-delay: 475ms;">
+        <button type="button" class="play-btn" data-audio="audio/019_described.mp3" aria-label="Play described">Play</button>
+        <button type="button" class="word-text" data-audio="audio/019_described.mp3" aria-expanded="false">described</button>
+        <span class="small">#19</span>
+        <p class="meaning" hidden>意味: 説明された；描写された<br>基本形: describe<br>アクセント: dĭ-SKRĪBD<br>類義語: characterized, portrayed, depicted</p>
+      </li>
+      <li class="word-item" style="animation-delay: 500ms;">
+        <button type="button" class="play-btn" data-audio="audio/020_the_chief_pivots.mp3" aria-label="Play the chief pivots">Play</button>
+        <button type="button" class="word-text" data-audio="audio/020_the_chief_pivots.mp3" aria-expanded="false">the chief pivots</button>
+        <span class="small">#20</span>
+        <p class="meaning" hidden>意味: 主要な転換点；中心的な軸<br>アクセント: PĬV-əts<br>類義語: the main turning points, the central axes, the key factors</p>
+      </li>
+      <li class="word-item" style="animation-delay: 525ms;">
+        <button type="button" class="play-btn" data-audio="audio/021_large_scale.mp3" aria-label="Play large-scale">Play</button>
+        <button type="button" class="word-text" data-audio="audio/021_large_scale.mp3" aria-expanded="false">large-scale</button>
+        <span class="small">#21</span>
+        <p class="meaning" hidden>意味: 大規模な；大掛かりな<br>類義語: extensive, massive, widespread</p>
+      </li>
+      <li class="word-item" style="animation-delay: 550ms;">
+        <button type="button" class="play-btn" data-audio="audio/022_profitable.mp3" aria-label="Play profitable">Play</button>
+        <button type="button" class="word-text" data-audio="audio/022_profitable.mp3" aria-expanded="false">profitable</button>
+        <span class="small">#22</span>
+        <p class="meaning" hidden>意味: 利益になる；採算のとれる<br>アクセント: PRŎF-ĭ-tə-bəl<br>類義語: lucrative, rewarding, beneficial</p>
+      </li>
+      <li class="word-item" style="animation-delay: 575ms;">
+        <button type="button" class="play-btn" data-audio="audio/023_made_it_feasible_to_ship_goods.mp3" aria-label="Play made it feasible to ship goods">Play</button>
+        <button type="button" class="word-text" data-audio="audio/023_made_it_feasible_to_ship_goods.mp3" aria-expanded="false">made it feasible to ship goods</button>
+        <span class="small">#23</span>
+        <p class="meaning" hidden>意味: 物品を輸送することを実現可能にした<br>アクセント: FĒ-zə-bəl<br>類義語: made it possible to transport goods, enabled the shipment of products</p>
+      </li>
+      <li class="word-item" style="animation-delay: 600ms;">
+        <button type="button" class="play-btn" data-audio="audio/024_over_land.mp3" aria-label="Play over land">Play</button>
+        <button type="button" class="word-text" data-audio="audio/024_over_land.mp3" aria-expanded="false">over land</button>
+        <span class="small">#24</span>
+        <p class="meaning" hidden>意味: 陸路で；陸上を通じて<br>類義語: by land, on land, through land routes</p>
+      </li>
+    </ul>
+  </main>
+
+  <script>
+    const list = document.getElementById('wordList');
+    const playAllButton = document.getElementById('playAll');
+    const stopAllButton = document.getElementById('stopAll');
+
+    let currentAudio = null;
+    let playQueue = [];
+    let queueIndex = 0;
+
+    function stopPlayback() {
+      playQueue = [];
+      queueIndex = 0;
+      if (currentAudio) {
+        currentAudio.pause();
+        currentAudio.currentTime = 0;
+        currentAudio = null;
+      }
+    }
+
+    function playSingle(src) {
+      stopPlayback();
+      currentAudio = new Audio(src);
+      currentAudio.play().catch((err) => {
+        console.error('Audio play failed:', err);
+      });
+    }
+
+    function playQueueNext() {
+      if (queueIndex >= playQueue.length) {
+        currentAudio = null;
+        return;
+      }
+      const src = playQueue[queueIndex++];
+      currentAudio = new Audio(src);
+      currentAudio.addEventListener('ended', playQueueNext);
+      currentAudio.play().catch((err) => {
+        console.error('Audio play failed:', err);
+        playQueueNext();
+      });
+    }
+
+    function closeAllMeanings() {
+      document.querySelectorAll('.meaning').forEach((el) => {
+        el.hidden = true;
+      });
+      document.querySelectorAll('.word-text').forEach((el) => {
+        el.setAttribute('aria-expanded', 'false');
+      });
+    }
+
+    list.addEventListener('click', (event) => {
+      const target = event.target;
+      if (!(target instanceof HTMLElement)) return;
+
+      if (target.classList.contains('play-btn')) {
+        const src = target.getAttribute('data-audio');
+        if (src) {
+          playSingle(src);
+        }
+        return;
+      }
+
+      if (!target.classList.contains('word-text')) {
+        return;
+      }
+
+      const item = target.closest('.word-item');
+      if (!item) return;
+
+      const meaning = item.querySelector('.meaning');
+      if (!(meaning instanceof HTMLElement)) return;
+
+      const willOpen = meaning.hidden;
+      closeAllMeanings();
+      meaning.hidden = !willOpen;
+      target.setAttribute('aria-expanded', willOpen ? 'true' : 'false');
+    });
+
+    playAllButton.addEventListener('click', () => {
+      stopPlayback();
+      closeAllMeanings();
+      playQueue = Array.from(document.querySelectorAll('.play-btn[data-audio]'))
+        .map((el) => el.getAttribute('data-audio'))
+        .filter((src) => !!src);
+      queueIndex = 0;
+      playQueueNext();
+    });
+
+    stopAllButton.addEventListener('click', stopPlayback);
+  </script>
+</body>
+</html>

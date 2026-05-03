@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>20words.md Pronunciation</title>
+  <style>
+    :root {
+      --bg1: #f2ece3;
+      --bg2: #e4d5c1;
+      --card: #fff8ee;
+      --ink: #2a1f16;
+      --accent: #9a3412;
+      --accent-2: #78350f;
+      --border: #d9c2a5;
+      --shadow: rgba(42, 31, 22, 0.15);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 15% 20%, rgba(255,255,255,0.6), transparent 35%),
+        radial-gradient(circle at 85% 80%, rgba(255,255,255,0.4), transparent 30%),
+        linear-gradient(135deg, var(--bg1), var(--bg2));
+      min-height: 100vh;
+      padding: 24px;
+    }
+
+    .wrap {
+      max-width: 900px;
+      margin: 0 auto;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 20px;
+      box-shadow: 0 10px 30px var(--shadow);
+    }
+
+    h1 {
+      margin: 0 0 8px;
+      font-size: clamp(1.5rem, 2.6vw, 2.2rem);
+      letter-spacing: 0.02em;
+    }
+
+    p {
+      margin: 0 0 20px;
+      line-height: 1.6;
+    }
+
+    .controls {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 14px;
+    }
+
+    button {
+      border: 1px solid var(--accent);
+      background: var(--accent);
+      color: #fff;
+      border-radius: 10px;
+      padding: 8px 12px;
+      font-size: 0.95rem;
+      cursor: pointer;
+      transition: transform 120ms ease, background 120ms ease;
+    }
+
+    button:hover { background: var(--accent-2); }
+    button:active { transform: translateY(1px); }
+
+    .word-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 10px;
+    }
+
+    .word-item {
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 10px;
+      background: #fff;
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      align-items: center;
+      gap: 8px;
+      opacity: 0;
+      transform: translateY(8px);
+      animation: reveal 360ms ease forwards;
+    }
+
+    .play-btn {
+      min-width: 56px;
+    }
+
+    .word-text {
+      background: none;
+      border: none;
+      color: var(--ink);
+      font: inherit;
+      text-align: left;
+      padding: 0;
+      margin: 0;
+      cursor: pointer;
+      line-height: 1.4;
+      flex: 1;
+    }
+
+    .word-text:hover {
+      text-decoration: underline;
+      text-decoration-thickness: 2px;
+      text-decoration-color: var(--accent);
+    }
+
+    .small {
+      font-size: 0.8rem;
+      color: #6e5a45;
+      min-width: 2.2em;
+      text-align: right;
+    }
+
+    .meaning {
+      grid-column: 1 / -1;
+      margin: 6px 0 0;
+      padding: 8px 10px;
+      border-radius: 8px;
+      background: #fbf3e8;
+      border: 1px dashed var(--border);
+      font-size: 0.92rem;
+      line-height: 1.5;
+    }
+
+    .meaning[hidden] {
+      display: none;
+    }
+
+    @keyframes reveal {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <h1>20words.md Pronunciation</h1>
+    <p>単語をクリックすると意味を表示します。Play ボタンは発音のみ再生します。</p>
+    <div class="controls">
+      <button type="button" id="playAll">Play All</button>
+      <button type="button" id="stopAll">Stop</button>
+    </div>
+    <ul class="word-list" id="wordList">
+      <li class="word-item" style="animation-delay: 25ms;">
+        <button type="button" class="play-btn" data-audio="audio/001_apes.mp3" aria-label="Play apes">Play</button>
+        <button type="button" class="word-text" data-audio="audio/001_apes.mp3" aria-expanded="false">apes</button>
+        <span class="small">#1</span>
+        <p class="meaning" hidden>意味: 類人猿（チンパンジー・ゴリラなど）<br>基本形: ape<br>アクセント: āps<br>類義語: primates, chimpanzees, great apes</p>
+      </li>
+      <li class="word-item" style="animation-delay: 50ms;">
+        <button type="button" class="play-btn" data-audio="audio/002_capable_of.mp3" aria-label="Play capable of">Play</button>
+        <button type="button" class="word-text" data-audio="audio/002_capable_of.mp3" aria-expanded="false">capable of</button>
+        <span class="small">#2</span>
+        <p class="meaning" hidden>意味: 〜することができる；〜の能力がある<br>類義語: able to, competent in, having the ability to</p>
+      </li>
+      <li class="word-item" style="animation-delay: 75ms;">
+        <button type="button" class="play-btn" data-audio="audio/003_communicate_with_one_another.mp3" aria-label="Play communicate with one another">Play</button>
+        <button type="button" class="word-text" data-audio="audio/003_communicate_with_one_another.mp3" aria-expanded="false">communicate with one another</button>
+        <span class="small">#3</span>
+        <p class="meaning" hidden>意味: 互いにコミュニケーションをとる<br>類義語: interact with each other, exchange information, converse</p>
+      </li>
+      <li class="word-item" style="animation-delay: 100ms;">
+        <button type="button" class="play-btn" data-audio="audio/004_abstract_concepts.mp3" aria-label="Play abstract concepts">Play</button>
+        <button type="button" class="word-text" data-audio="audio/004_abstract_concepts.mp3" aria-expanded="false">abstract concepts</button>
+        <span class="small">#4</span>
+        <p class="meaning" hidden>意味: 抽象的な概念<br>アクセント: ĂB-străkt KŎN-sĕpts<br>類義語: intangible ideas, theoretical notions, non-concrete ideas</p>
+      </li>
+      <li class="word-item" style="animation-delay: 125ms;">
+        <button type="button" class="play-btn" data-audio="audio/005_immediate.mp3" aria-label="Play immediate">Play</button>
+        <button type="button" class="word-text" data-audio="audio/005_immediate.mp3" aria-expanded="false">immediate</button>
+        <span class="small">#5</span>
+        <p class="meaning" hidden>意味: 直接の；即座の；現在の<br>アクセント: ĭ-MĒ-dē-ĭt<br>類義語: direct, instant, present</p>
+      </li>
+      <li class="word-item" style="animation-delay: 150ms;">
+        <button type="button" class="play-btn" data-audio="audio/006_apparatus.mp3" aria-label="Play apparatus">Play</button>
+        <button type="button" class="word-text" data-audio="audio/006_apparatus.mp3" aria-expanded="false">apparatus</button>
+        <span class="small">#6</span>
+        <p class="meaning" hidden>意味: 器官；装置；機器<br>アクセント: ăp-ə-RĀ-təs<br>類義語: mechanism, equipment, system</p>
+      </li>
+      <li class="word-item" style="animation-delay: 175ms;">
+        <button type="button" class="play-btn" data-audio="audio/007_a_very_limited_range_of_vocal_utterances.mp3" aria-label="Play a very limited range of vocal utterances">Play</button>
+        <button type="button" class="word-text" data-audio="audio/007_a_very_limited_range_of_vocal_utterances.mp3" aria-expanded="false">a very limited range of vocal utterances</button>
+        <span class="small">#7</span>
+        <p class="meaning" hidden>意味: 非常に限られた範囲の発声；わずかな音声表現<br>類義語: restricted vocalizations, narrow range of sounds, limited vocal repertoire</p>
+      </li>
+      <li class="word-item" style="animation-delay: 200ms;">
+        <button type="button" class="play-btn" data-audio="audio/008_primarily.mp3" aria-label="Play primarily">Play</button>
+        <button type="button" class="word-text" data-audio="audio/008_primarily.mp3" aria-expanded="false">primarily</button>
+        <span class="small">#8</span>
+        <p class="meaning" hidden>意味: 主に；最初に；根本的に<br>アクセント: prī-MĔR-ə-lē<br>類義語: mainly, chiefly, predominantly</p>
+      </li>
+      <li class="word-item" style="animation-delay: 225ms;">
+        <button type="button" class="play-btn" data-audio="audio/009_pitch.mp3" aria-label="Play pitch">Play</button>
+        <button type="button" class="word-text" data-audio="audio/009_pitch.mp3" aria-expanded="false">pitch</button>
+        <span class="small">#9</span>
+        <p class="meaning" hidden>意味: 音の高さ；ピッチ；音程<br>アクセント: pĭch<br>類義語: tone, frequency, sound level</p>
+      </li>
+      <li class="word-item" style="animation-delay: 250ms;">
+        <button type="button" class="play-btn" data-audio="audio/010_volume.mp3" aria-label="Play volume">Play</button>
+        <button type="button" class="word-text" data-audio="audio/010_volume.mp3" aria-expanded="false">volume</button>
+        <span class="small">#10</span>
+        <p class="meaning" hidden>意味: 音量；量；体積<br>アクセント: VŎL-yəm<br>類義語: loudness, intensity, level</p>
+      </li>
+      <li class="word-item" style="animation-delay: 275ms;">
+        <button type="button" class="play-btn" data-audio="audio/011_variety_of_units.mp3" aria-label="Play variety of units">Play</button>
+        <button type="button" class="word-text" data-audio="audio/011_variety_of_units.mp3" aria-expanded="false">variety of units</button>
+        <span class="small">#11</span>
+        <p class="meaning" hidden>意味: さまざまな単位；多様な要素<br>類義語: range of elements, diverse components, multiple units</p>
+      </li>
+      <li class="word-item" style="animation-delay: 300ms;">
+        <button type="button" class="play-btn" data-audio="audio/012_loosely.mp3" aria-label="Play loosely">Play</button>
+        <button type="button" class="word-text" data-audio="audio/012_loosely.mp3" aria-expanded="false">loosely</button>
+        <span class="small">#12</span>
+        <p class="meaning" hidden>意味: おおまかに；ゆるく；大まかに<br>アクセント: LŪS-lē<br>類義語: approximately, roughly, vaguely</p>
+      </li>
+      <li class="word-item" style="animation-delay: 325ms;">
+        <button type="button" class="play-btn" data-audio="audio/013_correspond.mp3" aria-label="Play correspond">Play</button>
+        <button type="button" class="word-text" data-audio="audio/013_correspond.mp3" aria-expanded="false">correspond</button>
+        <span class="small">#13</span>
+        <p class="meaning" hidden>意味: 対応する；一致する；文通する<br>アクセント: kôr-ĭ-SPŎND<br>類義語: match, relate, agree</p>
+      </li>
+      <li class="word-item" style="animation-delay: 350ms;">
+        <button type="button" class="play-btn" data-audio="audio/014_vowel.mp3" aria-label="Play vowel">Play</button>
+        <button type="button" class="word-text" data-audio="audio/014_vowel.mp3" aria-expanded="false">vowel</button>
+        <span class="small">#14</span>
+        <p class="meaning" hidden>意味: 母音<br>アクセント: VOW-əl<br>類義語: vowel sound, open sound, vocal sound</p>
+      </li>
+      <li class="word-item" style="animation-delay: 375ms;">
+        <button type="button" class="play-btn" data-audio="audio/015_consonant_sounds.mp3" aria-label="Play consonant sounds">Play</button>
+        <button type="button" class="word-text" data-audio="audio/015_consonant_sounds.mp3" aria-expanded="false">consonant sounds</button>
+        <span class="small">#15</span>
+        <p class="meaning" hidden>意味: 子音の音<br>アクセント: KŎN-sə-nənt<br>類義語: consonants, non-vowel sounds, fricatives and stops</p>
+      </li>
+      <li class="word-item" style="animation-delay: 400ms;">
+        <button type="button" class="play-btn" data-audio="audio/016_inherited.mp3" aria-label="Play inherited">Play</button>
+        <button type="button" class="word-text" data-audio="audio/016_inherited.mp3" aria-expanded="false">inherited</button>
+        <span class="small">#16</span>
+        <p class="meaning" hidden>意味: 受け継がれた；遺伝的な；継承された<br>基本形: inherit<br>アクセント: ĭn-HĔR-ĭ-tĭd<br>類義語: innate, inborn, genetically transmitted</p>
+      </li>
+      <li class="word-item" style="animation-delay: 425ms;">
+        <button type="button" class="play-btn" data-audio="audio/017_at_birth.mp3" aria-label="Play at birth">Play</button>
+        <button type="button" class="word-text" data-audio="audio/017_at_birth.mp3" aria-expanded="false">at birth</button>
+        <span class="small">#17</span>
+        <p class="meaning" hidden>意味: 生まれたときに；誕生時に<br>類義語: from birth, upon being born, innately</p>
+      </li>
+      <li class="word-item" style="animation-delay: 450ms;">
+        <button type="button" class="play-btn" data-audio="audio/018_interaction.mp3" aria-label="Play interaction">Play</button>
+        <button type="button" class="word-text" data-audio="audio/018_interaction.mp3" aria-expanded="false">interaction</button>
+        <span class="small">#18</span>
+        <p class="meaning" hidden>意味: 相互作用；交流；やり取り<br>アクセント: ĭn-tər-ĂK-shən<br>類義語: exchange, communication, engagement</p>
+      </li>
+      <li class="word-item" style="animation-delay: 475ms;">
+        <button type="button" class="play-btn" data-audio="audio/019_raised.mp3" aria-label="Play raised">Play</button>
+        <button type="button" class="word-text" data-audio="audio/019_raised.mp3" aria-expanded="false">raised</button>
+        <span class="small">#19</span>
+        <p class="meaning" hidden>意味: 育てられた；育った<br>基本形: raise<br>アクセント: rāzd<br>類義語: brought up, nurtured, reared</p>
+      </li>
+      <li class="word-item" style="animation-delay: 500ms;">
+        <button type="button" class="play-btn" data-audio="audio/020_fortunately.mp3" aria-label="Play fortunately">Play</button>
+        <button type="button" class="word-text" data-audio="audio/020_fortunately.mp3" aria-expanded="false">fortunately</button>
+        <span class="small">#20</span>
+        <p class="meaning" hidden>意味: 幸いにも；幸運にも<br>アクセント: FÔR-chə-nĭt-lē<br>類義語: luckily, thankfully, happily</p>
+      </li>
+      <li class="word-item" style="animation-delay: 525ms;">
+        <button type="button" class="play-btn" data-audio="audio/021_brought_up.mp3" aria-label="Play brought up">Play</button>
+        <button type="button" class="word-text" data-audio="audio/021_brought_up.mp3" aria-expanded="false">brought up</button>
+        <span class="small">#21</span>
+        <p class="meaning" hidden>意味: 育てられた；養育された<br>類義語: raised, nurtured, reared</p>
+      </li>
+      <li class="word-item" style="animation-delay: 550ms;">
+        <button type="button" class="play-btn" data-audio="audio/022_language_rich.mp3" aria-label="Play language-rich">Play</button>
+        <button type="button" class="word-text" data-audio="audio/022_language_rich.mp3" aria-expanded="false">language-rich</button>
+        <span class="small">#22</span>
+        <p class="meaning" hidden>意味: 言語が豊かな；言語刺激の多い<br>類義語: linguistically stimulating, verbally enriched, communication-rich</p>
+      </li>
+      <li class="word-item" style="animation-delay: 575ms;">
+        <button type="button" class="play-btn" data-audio="audio/023_acquire.mp3" aria-label="Play acquire">Play</button>
+        <button type="button" class="word-text" data-audio="audio/023_acquire.mp3" aria-expanded="false">acquire</button>
+        <span class="small">#23</span>
+        <p class="meaning" hidden>意味: 習得する；身につける；取得する<br>アクセント: ə-KWĪR<br>類義語: learn, obtain, master</p>
+      </li>
+      <li class="word-item" style="animation-delay: 600ms;">
+        <button type="button" class="play-btn" data-audio="audio/024_precisely.mp3" aria-label="Play precisely">Play</button>
+        <button type="button" class="word-text" data-audio="audio/024_precisely.mp3" aria-expanded="false">precisely</button>
+        <span class="small">#24</span>
+        <p class="meaning" hidden>意味: 正確に；まさに；厳密に<br>アクセント: prĭ-SĪS-lē<br>類義語: exactly, accurately, specifically</p>
+      </li>
+      <li class="word-item" style="animation-delay: 625ms;">
+        <button type="button" class="play-btn" data-audio="audio/025_conventional.mp3" aria-label="Play conventional">Play</button>
+        <button type="button" class="word-text" data-audio="audio/025_conventional.mp3" aria-expanded="false">conventional</button>
+        <span class="small">#25</span>
+        <p class="meaning" hidden>意味: 慣習的な；従来の；一般的な<br>アクセント: kən-VĔN-shən-əl<br>類義語: traditional, customary, standard</p>
+      </li>
+      <li class="word-item" style="animation-delay: 650ms;">
+        <button type="button" class="play-btn" data-audio="audio/026_defined.mp3" aria-label="Play defined">Play</button>
+        <button type="button" class="word-text" data-audio="audio/026_defined.mp3" aria-expanded="false">defined</button>
+        <span class="small">#26</span>
+        <p class="meaning" hidden>意味: 定義された；明確な<br>基本形: define<br>アクセント: dĭ-FĪND<br>類義語: specified, established, determined</p>
+      </li>
+      <li class="word-item" style="animation-delay: 675ms;">
+        <button type="button" class="play-btn" data-audio="audio/027_within.mp3" aria-label="Play within">Play</button>
+        <button type="button" class="word-text" data-audio="audio/027_within.mp3" aria-expanded="false">within</button>
+        <span class="small">#27</span>
+        <p class="meaning" hidden>意味: 〜の中で；〜の範囲内で<br>アクセント: wĭth-ĬN<br>類義語: inside, in, among</p>
+      </li>
+      <li class="word-item" style="animation-delay: 700ms;">
+        <button type="button" class="play-btn" data-audio="audio/028_accept.mp3" aria-label="Play accept">Play</button>
+        <button type="button" class="word-text" data-audio="audio/028_accept.mp3" aria-expanded="false">accept</button>
+        <span class="small">#28</span>
+        <p class="meaning" hidden>意味: 受け入れる；承認する；認める<br>アクセント: ăk-SĔPT<br>類義語: acknowledge, embrace, approve</p>
+      </li>
+    </ul>
+  </main>
+
+  <script>
+    const list = document.getElementById('wordList');
+    const playAllButton = document.getElementById('playAll');
+    const stopAllButton = document.getElementById('stopAll');
+
+    let currentAudio = null;
+    let playQueue = [];
+    let queueIndex = 0;
+
+    function stopPlayback() {
+      playQueue = [];
+      queueIndex = 0;
+      if (currentAudio) {
+        currentAudio.pause();
+        currentAudio.currentTime = 0;
+        currentAudio = null;
+      }
+    }
+
+    function playSingle(src) {
+      stopPlayback();
+      currentAudio = new Audio(src);
+      currentAudio.play().catch((err) => {
+        console.error('Audio play failed:', err);
+      });
+    }
+
+    function playQueueNext() {
+      if (queueIndex >= playQueue.length) {
+        currentAudio = null;
+        return;
+      }
+      const src = playQueue[queueIndex++];
+      currentAudio = new Audio(src);
+      currentAudio.addEventListener('ended', playQueueNext);
+      currentAudio.play().catch((err) => {
+        console.error('Audio play failed:', err);
+        playQueueNext();
+      });
+    }
+
+    function closeAllMeanings() {
+      document.querySelectorAll('.meaning').forEach((el) => {
+        el.hidden = true;
+      });
+      document.querySelectorAll('.word-text').forEach((el) => {
+        el.setAttribute('aria-expanded', 'false');
+      });
+    }
+
+    list.addEventListener('click', (event) => {
+      const target = event.target;
+      if (!(target instanceof HTMLElement)) return;
+
+      if (target.classList.contains('play-btn')) {
+        const src = target.getAttribute('data-audio');
+        if (src) {
+          playSingle(src);
+        }
+        return;
+      }
+
+      if (!target.classList.contains('word-text')) {
+        return;
+      }
+
+      const item = target.closest('.word-item');
+      if (!item) return;
+
+      const meaning = item.querySelector('.meaning');
+      if (!(meaning instanceof HTMLElement)) return;
+
+      const willOpen = meaning.hidden;
+      closeAllMeanings();
+      meaning.hidden = !willOpen;
+      target.setAttribute('aria-expanded', willOpen ? 'true' : 'false');
+    });
+
+    playAllButton.addEventListener('click', () => {
+      stopPlayback();
+      closeAllMeanings();
+      playQueue = Array.from(document.querySelectorAll('.play-btn[data-audio]'))
+        .map((el) => el.getAttribute('data-audio'))
+        .filter((src) => !!src);
+      queueIndex = 0;
+      playQueueNext();
+    });
+
+    stopAllButton.addEventListener('click', stopPlayback);
+  </script>
+</body>
+</html>

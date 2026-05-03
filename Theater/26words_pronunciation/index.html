@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>26words.md Pronunciation</title>
+  <style>
+    :root {
+      --bg1: #f2ece3;
+      --bg2: #e4d5c1;
+      --card: #fff8ee;
+      --ink: #2a1f16;
+      --accent: #9a3412;
+      --accent-2: #78350f;
+      --border: #d9c2a5;
+      --shadow: rgba(42, 31, 22, 0.15);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 15% 20%, rgba(255,255,255,0.6), transparent 35%),
+        radial-gradient(circle at 85% 80%, rgba(255,255,255,0.4), transparent 30%),
+        linear-gradient(135deg, var(--bg1), var(--bg2));
+      min-height: 100vh;
+      padding: 24px;
+    }
+
+    .wrap {
+      max-width: 900px;
+      margin: 0 auto;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 20px;
+      box-shadow: 0 10px 30px var(--shadow);
+    }
+
+    h1 {
+      margin: 0 0 8px;
+      font-size: clamp(1.5rem, 2.6vw, 2.2rem);
+      letter-spacing: 0.02em;
+    }
+
+    p {
+      margin: 0 0 20px;
+      line-height: 1.6;
+    }
+
+    .controls {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 14px;
+    }
+
+    button {
+      border: 1px solid var(--accent);
+      background: var(--accent);
+      color: #fff;
+      border-radius: 10px;
+      padding: 8px 12px;
+      font-size: 0.95rem;
+      cursor: pointer;
+      transition: transform 120ms ease, background 120ms ease;
+    }
+
+    button:hover { background: var(--accent-2); }
+    button:active { transform: translateY(1px); }
+
+    .word-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 10px;
+    }
+
+    .word-item {
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 10px;
+      background: #fff;
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      align-items: center;
+      gap: 8px;
+      opacity: 0;
+      transform: translateY(8px);
+      animation: reveal 360ms ease forwards;
+    }
+
+    .play-btn {
+      min-width: 56px;
+    }
+
+    .word-text {
+      background: none;
+      border: none;
+      color: var(--ink);
+      font: inherit;
+      text-align: left;
+      padding: 0;
+      margin: 0;
+      cursor: pointer;
+      line-height: 1.4;
+      flex: 1;
+    }
+
+    .word-text:hover {
+      text-decoration: underline;
+      text-decoration-thickness: 2px;
+      text-decoration-color: var(--accent);
+    }
+
+    .small {
+      font-size: 0.8rem;
+      color: #6e5a45;
+      min-width: 2.2em;
+      text-align: right;
+    }
+
+    .meaning {
+      grid-column: 1 / -1;
+      margin: 6px 0 0;
+      padding: 8px 10px;
+      border-radius: 8px;
+      background: #fbf3e8;
+      border: 1px dashed var(--border);
+      font-size: 0.92rem;
+      line-height: 1.5;
+    }
+
+    .meaning[hidden] {
+      display: none;
+    }
+
+    @keyframes reveal {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <h1>26words.md Pronunciation</h1>
+    <p>単語をクリックすると意味を表示します。Play ボタンは発音のみ再生します。</p>
+    <div class="controls">
+      <button type="button" id="playAll">Play All</button>
+      <button type="button" id="stopAll">Stop</button>
+    </div>
+    <ul class="word-list" id="wordList">
+      <li class="word-item" style="animation-delay: 25ms;">
+        <button type="button" class="play-btn" data-audio="audio/001_the_secular_theater.mp3" aria-label="Play the secular theater">Play</button>
+        <button type="button" class="word-text" data-audio="audio/001_the_secular_theater.mp3" aria-expanded="false">the secular theater</button>
+        <span class="small">#1</span>
+        <p class="meaning" hidden>意味: 世俗的な演劇；宗教に関係しない劇場<br>アクセント: SĔK-yə-lər<br>類義語: non-religious theater, lay theater, civil drama</p>
+      </li>
+      <li class="word-item" style="animation-delay: 50ms;">
+        <button type="button" class="play-btn" data-audio="audio/002_either_as_lighthearted_interludes.mp3" aria-label="Play either as lighthearted interludes">Play</button>
+        <button type="button" class="word-text" data-audio="audio/002_either_as_lighthearted_interludes.mp3" aria-expanded="false">either as lighthearted interludes</button>
+        <span class="small">#2</span>
+        <p class="meaning" hidden>意味: 軽快な幕間劇として；気楽な余興として<br>アクセント: ĬN-tər-lūdz<br>類義語: as comic intermissions, as playful interludes, as lighthearted breaks</p>
+      </li>
+      <li class="word-item" style="animation-delay: 75ms;">
+        <button type="button" class="play-btn" data-audio="audio/003_in_serious_moralities.mp3" aria-label="Play in serious moralities">Play</button>
+        <button type="button" class="word-text" data-audio="audio/003_in_serious_moralities.mp3" aria-expanded="false">in serious moralities</button>
+        <span class="small">#3</span>
+        <p class="meaning" hidden>意味: 真剣な道徳劇の中で<br>アクセント: mə-RĂL-ĭ-tēz<br>類義語: within moral plays, in didactic dramas, in religious morality plays</p>
+      </li>
+      <li class="word-item" style="animation-delay: 100ms;">
+        <button type="button" class="play-btn" data-audio="audio/004_deliberate_parody_tolerated_by_the_church.mp3" aria-label="Play deliberate parody tolerated by the church">Play</button>
+        <button type="button" class="word-text" data-audio="audio/004_deliberate_parody_tolerated_by_the_church.mp3" aria-expanded="false">deliberate parody tolerated by the church</button>
+        <span class="small">#4</span>
+        <p class="meaning" hidden>意味: 教会によって容認された意図的なパロディ<br>アクセント: PĂR-ə-dē<br>類義語: intentional mockery accepted by the church, calculated parody permitted by clergy</p>
+      </li>
+      <li class="word-item" style="animation-delay: 125ms;">
+        <button type="button" class="play-btn" data-audio="audio/005_a_safety_valve_to_consistent_piety.mp3" aria-label="Play a safety valve to consistent piety">Play</button>
+        <button type="button" class="word-text" data-audio="audio/005_a_safety_valve_to_consistent_piety.mp3" aria-expanded="false">a safety valve to consistent piety</button>
+        <span class="small">#5</span>
+        <p class="meaning" hidden>意味: 変わらぬ敬虔さへの安全弁；信仰の圧力を和らげるもの<br>アクセント: PĪ-ĭ-tē<br>類義語: a release for religious tension, an outlet for devout pressure</p>
+      </li>
+      <li class="word-item" style="animation-delay: 150ms;">
+        <button type="button" class="play-btn" data-audio="audio/006_the_annual_feast_of_fools.mp3" aria-label="Play the annual feast of fools">Play</button>
+        <button type="button" class="word-text" data-audio="audio/006_the_annual_feast_of_fools.mp3" aria-expanded="false">the annual feast of fools</button>
+        <span class="small">#6</span>
+        <p class="meaning" hidden>意味: 年に一度の愚者の祭（中世の祝祭）<br>類義語: the yearly fools' festival, the annual fool's celebration</p>
+      </li>
+      <li class="word-item" style="animation-delay: 175ms;">
+        <button type="button" class="play-btn" data-audio="audio/007_incorporated_as_obscene_parody_of_the_mass.mp3" aria-label="Play incorporated as obscene parody of the mass">Play</button>
+        <button type="button" class="word-text" data-audio="audio/007_incorporated_as_obscene_parody_of_the_mass.mp3" aria-expanded="false">incorporated as obscene parody of the mass</button>
+        <span class="small">#7</span>
+        <p class="meaning" hidden>意味: ミサの猥褻なパロディとして取り込まれた<br>アクセント: ĭn-KÔR-pər-āt-ĭd<br>類義語: included as vulgar mockery of the liturgy, added as bawdy parody of the service</p>
+      </li>
+      <li class="word-item" style="animation-delay: 200ms;">
+        <button type="button" class="play-btn" data-audio="audio/008_performed.mp3" aria-label="Play performed">Play</button>
+        <button type="button" class="word-text" data-audio="audio/008_performed.mp3" aria-expanded="false">performed</button>
+        <span class="small">#8</span>
+        <p class="meaning" hidden>意味: 上演された；演じられた；実行された<br>基本形: perform<br>アクセント: pər-FÔRMD<br>類義語: staged, enacted, executed</p>
+      </li>
+      <li class="word-item" style="animation-delay: 225ms;">
+        <button type="button" class="play-btn" data-audio="audio/009_numerous.mp3" aria-label="Play numerous">Play</button>
+        <button type="button" class="word-text" data-audio="audio/009_numerous.mp3" aria-expanded="false">numerous</button>
+        <span class="small">#9</span>
+        <p class="meaning" hidden>意味: 多数の；たくさんの<br>アクセント: NŪ-mər-əs<br>類義語: many, countless, abundant</p>
+      </li>
+      <li class="word-item" style="animation-delay: 250ms;">
+        <button type="button" class="play-btn" data-audio="audio/010_farces.mp3" aria-label="Play farces">Play</button>
+        <button type="button" class="word-text" data-audio="audio/010_farces.mp3" aria-expanded="false">farces</button>
+        <span class="small">#10</span>
+        <p class="meaning" hidden>意味: 笑劇；茶番劇；ファルス<br>基本形: farce<br>アクセント: FÄR-sĭz<br>類義語: comedies, burlesques, slapstick plays</p>
+      </li>
+      <li class="word-item" style="animation-delay: 275ms;">
+        <button type="button" class="play-btn" data-audio="audio/011_appeared.mp3" aria-label="Play appeared">Play</button>
+        <button type="button" class="word-text" data-audio="audio/011_appeared.mp3" aria-expanded="false">appeared</button>
+        <span class="small">#11</span>
+        <p class="meaning" hidden>意味: 現れた；登場した；出演した<br>基本形: appear<br>アクセント: ə-PĪRD<br>類義語: emerged, showed up, came forth</p>
+      </li>
+      <li class="word-item" style="animation-delay: 300ms;">
+        <button type="button" class="play-btn" data-audio="audio/012_occasions.mp3" aria-label="Play occasions">Play</button>
+        <button type="button" class="word-text" data-audio="audio/012_occasions.mp3" aria-expanded="false">occasions</button>
+        <span class="small">#12</span>
+        <p class="meaning" hidden>意味: 機会；行事；催し<br>基本形: occasion<br>アクセント: ə-KĀ-zhənz<br>類義語: events, opportunities, instances</p>
+      </li>
+      <li class="word-item" style="animation-delay: 325ms;">
+        <button type="button" class="play-btn" data-audio="audio/013_aristocratic_houses.mp3" aria-label="Play aristocratic houses">Play</button>
+        <button type="button" class="word-text" data-audio="audio/013_aristocratic_houses.mp3" aria-expanded="false">aristocratic houses</button>
+        <span class="small">#13</span>
+        <p class="meaning" hidden>意味: 貴族の館；上流階級の邸宅<br>アクセント: ăr-ĭ-stə-KRĂT-ĭk<br>類義語: noble residences, lordly estates, patrician homes</p>
+      </li>
+      <li class="word-item" style="animation-delay: 350ms;">
+        <button type="button" class="play-btn" data-audio="audio/014_municipal_squares.mp3" aria-label="Play municipal squares">Play</button>
+        <button type="button" class="word-text" data-audio="audio/014_municipal_squares.mp3" aria-expanded="false">municipal squares</button>
+        <span class="small">#14</span>
+        <p class="meaning" hidden>意味: 市の広場；公共の広場<br>アクセント: myū-NĬS-ĭ-pəl<br>類義語: town squares, public plazas, civic spaces</p>
+      </li>
+      <li class="word-item" style="animation-delay: 375ms;">
+        <button type="button" class="play-btn" data-audio="audio/015_employed.mp3" aria-label="Play employed">Play</button>
+        <button type="button" class="word-text" data-audio="audio/015_employed.mp3" aria-expanded="false">employed</button>
+        <span class="small">#15</span>
+        <p class="meaning" hidden>意味: 雇用した；使用した<br>基本形: employ<br>アクセント: ĕm-PLÔYD<br>類義語: hired, used, engaged</p>
+      </li>
+      <li class="word-item" style="animation-delay: 400ms;">
+        <button type="button" class="play-btn" data-audio="audio/016_musical_forces.mp3" aria-label="Play musical forces">Play</button>
+        <button type="button" class="word-text" data-audio="audio/016_musical_forces.mp3" aria-expanded="false">musical forces</button>
+        <span class="small">#16</span>
+        <p class="meaning" hidden>意味: 音楽的手段；楽器や歌声などの音楽要素<br>類義語: musical resources, musical elements, musical personnel</p>
+      </li>
+      <li class="word-item" style="animation-delay: 425ms;">
+        <button type="button" class="play-btn" data-audio="audio/017_choirboys.mp3" aria-label="Play choirboys">Play</button>
+        <button type="button" class="word-text" data-audio="audio/017_choirboys.mp3" aria-expanded="false">choirboys</button>
+        <span class="small">#17</span>
+        <p class="meaning" hidden>意味: 少年聖歌隊員；聖歌隊の少年<br>基本形: choirboy<br>アクセント: KWĪR-bôyz<br>類義語: choir members, boy singers, treble singers</p>
+      </li>
+      <li class="word-item" style="animation-delay: 450ms;">
+        <button type="button" class="play-btn" data-audio="audio/018_surviving.mp3" aria-label="Play surviving">Play</button>
+        <button type="button" class="word-text" data-audio="audio/018_surviving.mp3" aria-expanded="false">surviving</button>
+        <span class="small">#18</span>
+        <p class="meaning" hidden>意味: 現存する；生き残っている<br>基本形: survive<br>アクセント: sər-VĪV-ĭng<br>類義語: extant, remaining, preserved</p>
+      </li>
+      <li class="word-item" style="animation-delay: 475ms;">
+        <button type="button" class="play-btn" data-audio="audio/019_suggest.mp3" aria-label="Play suggest">Play</button>
+        <button type="button" class="word-text" data-audio="audio/019_suggest.mp3" aria-expanded="false">suggest</button>
+        <span class="small">#19</span>
+        <p class="meaning" hidden>意味: 示唆する；提案する；暗示する<br>アクセント: sə-JĔST<br>類義語: indicate, imply, recommend</p>
+      </li>
+      <li class="word-item" style="animation-delay: 500ms;">
+        <button type="button" class="play-btn" data-audio="audio/020_choral_music.mp3" aria-label="Play choral music">Play</button>
+        <button type="button" class="word-text" data-audio="audio/020_choral_music.mp3" aria-expanded="false">choral music</button>
+        <span class="small">#20</span>
+        <p class="meaning" hidden>意味: 合唱音楽；コーラル音楽<br>アクセント: KÔR-əl<br>類義語: choir music, chorus compositions, polyphonic music</p>
+      </li>
+      <li class="word-item" style="animation-delay: 525ms;">
+        <button type="button" class="play-btn" data-audio="audio/021_incorporated.mp3" aria-label="Play incorporated">Play</button>
+        <button type="button" class="word-text" data-audio="audio/021_incorporated.mp3" aria-expanded="false">incorporated</button>
+        <span class="small">#21</span>
+        <p class="meaning" hidden>意味: 取り込まれた；組み込まれた<br>基本形: incorporate<br>アクセント: ĭn-KÔR-pər-āt-ĭd<br>類義語: included, integrated, embedded</p>
+      </li>
+      <li class="word-item" style="animation-delay: 550ms;">
+        <button type="button" class="play-btn" data-audio="audio/022_chanted_monophonically.mp3" aria-label="Play chanted monophonically">Play</button>
+        <button type="button" class="word-text" data-audio="audio/022_chanted_monophonically.mp3" aria-expanded="false">chanted monophonically</button>
+        <span class="small">#22</span>
+        <p class="meaning" hidden>意味: 単音で唱えられた；単旋律で詠唱された<br>アクセント: CHĂNT-ĭd mŏn-ə-FŎN-ĭk-ə-lē<br>類義語: sung in unison, performed in single melody, intoned monaurally</p>
+      </li>
+      <li class="word-item" style="animation-delay: 575ms;">
+        <button type="button" class="play-btn" data-audio="audio/023_embellish.mp3" aria-label="Play embellish">Play</button>
+        <button type="button" class="word-text" data-audio="audio/023_embellish.mp3" aria-expanded="false">embellish</button>
+        <span class="small">#23</span>
+        <p class="meaning" hidden>意味: 装飾する；飾り立てる；美化する<br>アクセント: ĕm-BĔL-ĭsh<br>類義語: adorn, decorate, ornament</p>
+      </li>
+      <li class="word-item" style="animation-delay: 600ms;">
+        <button type="button" class="play-btn" data-audio="audio/024_heighten.mp3" aria-label="Play heighten">Play</button>
+        <button type="button" class="word-text" data-audio="audio/024_heighten.mp3" aria-expanded="false">heighten</button>
+        <span class="small">#24</span>
+        <p class="meaning" hidden>意味: 高める；強める；増加させる<br>アクセント: HĪT-ən<br>類義語: intensify, enhance, increase</p>
+      </li>
+      <li class="word-item" style="animation-delay: 625ms;">
+        <button type="button" class="play-btn" data-audio="audio/025_dramatic_effect.mp3" aria-label="Play dramatic effect">Play</button>
+        <button type="button" class="word-text" data-audio="audio/025_dramatic_effect.mp3" aria-expanded="false">dramatic effect</button>
+        <span class="small">#25</span>
+        <p class="meaning" hidden>意味: 劇的効果；演劇的な効果<br>類義語: theatrical impact, stage effect, performance impact</p>
+      </li>
+      <li class="word-item" style="animation-delay: 650ms;">
+        <button type="button" class="play-btn" data-audio="audio/026_be_hired.mp3" aria-label="Play be hired">Play</button>
+        <button type="button" class="word-text" data-audio="audio/026_be_hired.mp3" aria-expanded="false">be hired</button>
+        <span class="small">#26</span>
+        <p class="meaning" hidden>意味: 雇われる；採用される<br>類義語: be employed, be engaged, be taken on</p>
+      </li>
+      <li class="word-item" style="animation-delay: 675ms;">
+        <button type="button" class="play-btn" data-audio="audio/027_the_constituent_parts_of_the_entertainment.mp3" aria-label="Play the constituent parts of the entertainment">Play</button>
+        <button type="button" class="word-text" data-audio="audio/027_the_constituent_parts_of_the_entertainment.mp3" aria-expanded="false">the constituent parts of the entertainment</button>
+        <span class="small">#27</span>
+        <p class="meaning" hidden>意味: 娯楽の構成要素<br>アクセント: kən-STĬCH-ū-ənt<br>類義語: the elements of the entertainment, the components of the show</p>
+      </li>
+      <li class="word-item" style="animation-delay: 700ms;">
+        <button type="button" class="play-btn" data-audio="audio/028_varied.mp3" aria-label="Play varied">Play</button>
+        <button type="button" class="word-text" data-audio="audio/028_varied.mp3" aria-expanded="false">varied</button>
+        <span class="small">#28</span>
+        <p class="meaning" hidden>意味: 多様な；様々な；変化に富んだ<br>アクセント: VĔR-ēd<br>類義語: diverse, different, various</p>
+      </li>
+      <li class="word-item" style="animation-delay: 725ms;">
+        <button type="button" class="play-btn" data-audio="audio/029_the_fact.mp3" aria-label="Play the fact">Play</button>
+        <button type="button" class="word-text" data-audio="audio/029_the_fact.mp3" aria-expanded="false">the fact</button>
+        <span class="small">#29</span>
+        <p class="meaning" hidden>意味: 事実；実態<br>類義語: the reality, the truth, the evidence</p>
+      </li>
+      <li class="word-item" style="animation-delay: 750ms;">
+        <button type="button" class="play-btn" data-audio="audio/030_except.mp3" aria-label="Play except">Play</button>
+        <button type="button" class="word-text" data-audio="audio/030_except.mp3" aria-expanded="false">except</button>
+        <span class="small">#30</span>
+        <p class="meaning" hidden>意味: 〜を除いて；〜以外は<br>アクセント: ĕk-SĔPT<br>類義語: excluding, apart from, other than</p>
+      </li>
+      <li class="word-item" style="animation-delay: 775ms;">
+        <button type="button" class="play-btn" data-audio="audio/031_indicate.mp3" aria-label="Play indicate">Play</button>
+        <button type="button" class="word-text" data-audio="audio/031_indicate.mp3" aria-expanded="false">indicate</button>
+        <span class="small">#31</span>
+        <p class="meaning" hidden>意味: 示す；指示する；指摘する<br>アクセント: ĬN-dĭ-kāt<br>類義語: show, suggest, point to</p>
+      </li>
+      <li class="word-item" style="animation-delay: 800ms;">
+        <button type="button" class="play-btn" data-audio="audio/032_theatrical.mp3" aria-label="Play theatrical">Play</button>
+        <button type="button" class="word-text" data-audio="audio/032_theatrical.mp3" aria-expanded="false">theatrical</button>
+        <span class="small">#32</span>
+        <p class="meaning" hidden>意味: 演劇の；舞台の；芝居がかった<br>アクセント: thē-ĂT-rĭ-kəl<br>類義語: dramatic, stage-related, performative</p>
+      </li>
+      <li class="word-item" style="animation-delay: 825ms;">
+        <button type="button" class="play-btn" data-audio="audio/033_banquets.mp3" aria-label="Play banquets">Play</button>
+        <button type="button" class="word-text" data-audio="audio/033_banquets.mp3" aria-expanded="false">banquets</button>
+        <span class="small">#33</span>
+        <p class="meaning" hidden>意味: 宴会；饗宴；祝宴<br>基本形: banquet<br>アクセント: BĂNG-kwĭts<br>類義語: feasts, formal dinners, celebrations</p>
+      </li>
+      <li class="word-item" style="animation-delay: 850ms;">
+        <button type="button" class="play-btn" data-audio="audio/034_feasts.mp3" aria-label="Play feasts">Play</button>
+        <button type="button" class="word-text" data-audio="audio/034_feasts.mp3" aria-expanded="false">feasts</button>
+        <span class="small">#34</span>
+        <p class="meaning" hidden>意味: 祝宴；ごちそう；祭り<br>基本形: feast<br>アクセント: fēsts<br>類義語: banquets, celebrations, festivals</p>
+      </li>
+      <li class="word-item" style="animation-delay: 875ms;">
+        <button type="button" class="play-btn" data-audio="audio/035_no_acquaintance_with_musical_notation.mp3" aria-label="Play no acquaintance with musical notation">Play</button>
+        <button type="button" class="word-text" data-audio="audio/035_no_acquaintance_with_musical_notation.mp3" aria-expanded="false">no acquaintance with musical notation</button>
+        <span class="small">#35</span>
+        <p class="meaning" hidden>意味: 楽譜の知識がない；音楽記譜法を知らない<br>アクセント: ə-KWĀNT-əns<br>類義語: no familiarity with sheet music, without knowledge of musical notation</p>
+      </li>
+      <li class="word-item" style="animation-delay: 900ms;">
+        <button type="button" class="play-btn" data-audio="audio/036_pieces_from_their_regular_repertory.mp3" aria-label="Play pieces from their regular repertory">Play</button>
+        <button type="button" class="word-text" data-audio="audio/036_pieces_from_their_regular_repertory.mp3" aria-expanded="false">pieces from their regular repertory</button>
+        <span class="small">#36</span>
+        <p class="meaning" hidden>意味: 通常のレパートリーからの曲<br>アクセント: RĔP-ər-tôr-ē<br>類義語: selections from their usual repertoire, songs from their standard program</p>
+      </li>
+    </ul>
+  </main>
+
+  <script>
+    const list = document.getElementById('wordList');
+    const playAllButton = document.getElementById('playAll');
+    const stopAllButton = document.getElementById('stopAll');
+
+    let currentAudio = null;
+    let playQueue = [];
+    let queueIndex = 0;
+
+    function stopPlayback() {
+      playQueue = [];
+      queueIndex = 0;
+      if (currentAudio) {
+        currentAudio.pause();
+        currentAudio.currentTime = 0;
+        currentAudio = null;
+      }
+    }
+
+    function playSingle(src) {
+      stopPlayback();
+      currentAudio = new Audio(src);
+      currentAudio.play().catch((err) => {
+        console.error('Audio play failed:', err);
+      });
+    }
+
+    function playQueueNext() {
+      if (queueIndex >= playQueue.length) {
+        currentAudio = null;
+        return;
+      }
+      const src = playQueue[queueIndex++];
+      currentAudio = new Audio(src);
+      currentAudio.addEventListener('ended', playQueueNext);
+      currentAudio.play().catch((err) => {
+        console.error('Audio play failed:', err);
+        playQueueNext();
+      });
+    }
+
+    function closeAllMeanings() {
+      document.querySelectorAll('.meaning').forEach((el) => {
+        el.hidden = true;
+      });
+      document.querySelectorAll('.word-text').forEach((el) => {
+        el.setAttribute('aria-expanded', 'false');
+      });
+    }
+
+    list.addEventListener('click', (event) => {
+      const target = event.target;
+      if (!(target instanceof HTMLElement)) return;
+
+      if (target.classList.contains('play-btn')) {
+        const src = target.getAttribute('data-audio');
+        if (src) {
+          playSingle(src);
+        }
+        return;
+      }
+
+      if (!target.classList.contains('word-text')) {
+        return;
+      }
+
+      const item = target.closest('.word-item');
+      if (!item) return;
+
+      const meaning = item.querySelector('.meaning');
+      if (!(meaning instanceof HTMLElement)) return;
+
+      const willOpen = meaning.hidden;
+      closeAllMeanings();
+      meaning.hidden = !willOpen;
+      target.setAttribute('aria-expanded', willOpen ? 'true' : 'false');
+    });
+
+    playAllButton.addEventListener('click', () => {
+      stopPlayback();
+      closeAllMeanings();
+      playQueue = Array.from(document.querySelectorAll('.play-btn[data-audio]'))
+        .map((el) => el.getAttribute('data-audio'))
+        .filter((src) => !!src);
+      queueIndex = 0;
+      playQueueNext();
+    });
+
+    stopAllButton.addEventListener('click', stopPlayback);
+  </script>
+</body>
+</html>

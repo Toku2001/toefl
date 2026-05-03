@@ -36,6 +36,17 @@
 | 12 | `Economics/12words.md` | [Economics/12words_pronunciation/index.html](Economics/12words_pronunciation/index.html) |
 | 13 | `Environmentology/13words.md` | [Environmentology/13words_pronunciation/index.html](Environmentology/13words_pronunciation/index.html) |
 | 18 | `Law/18words.md` | [Law/18words_pronunciation/index.html](Law/18words_pronunciation/index.html) |
+| 19 | `Crimiinology/19words.md` | [Crimiinology/19words_pronunciation/index.html](Crimiinology/19words_pronunciation/index.html) |
+| 20 | `Linguistics/20words.md` | [Linguistics/20words_pronunciation/index.html](Linguistics/20words_pronunciation/index.html) |
+| 21 | `Linguistics/21words.md` | [Linguistics/21words_pronunciation/index.html](Linguistics/21words_pronunciation/index.html) |
+| 23 | `Art/23words.md` | [Art/23words_pronunciation/index.html](Art/23words_pronunciation/index.html) |
+| 25 | `Literature/25words.md` | [Literature/25words_pronunciation/index.html](Literature/25words_pronunciation/index.html) |
+| 26 | `Theater/26words.md` | [Theater/26words_pronunciation/index.html](Theater/26words_pronunciation/index.html) |
+| 27 | `Philosophy/27words.md` | [Philosophy/27words_pronunciation/index.html](Philosophy/27words_pronunciation/index.html) |
+| 29 | `Psychology/29words.md` | [Psychology/29words_pronunciation/index.html](Psychology/29words_pronunciation/index.html) |
+| 30 | `PoliticalScience/30words.md` | [PoliticalScience/30words_pronunciation/index.html](PoliticalScience/30words_pronunciation/index.html) |
+| 31 | `Women'sStudy/31words.md` | [Women'sStudy/31words_pronunciation/index.html](Women'sStudy/31words_pronunciation/index.html) |
+| 32 | `Sociology/32words.md` | [Sociology/32words_pronunciation/index.html](Sociology/32words_pronunciation/index.html) |
 
 ### 追記ルール
 
