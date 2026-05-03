@@ -10,6 +10,7 @@ SOURCE_MD="${1:-Law/18words.md}"
 OUT_DIR="${2:-Law/pronunciation}"
 VOICE="${VOICE:-Samantha}"
 RATE="${RATE:-170}"
+SKIP_AUDIO="${SKIP_AUDIO:-0}"
 
 AUDIO_DIR="$OUT_DIR/audio"
 WORDS_FILE="$OUT_DIR/words.txt"
@@ -17,23 +18,25 @@ WORD_MEANINGS_FILE="$OUT_DIR/word_meanings.tsv"
 MAP_FILE="$OUT_DIR/word_map.tsv"
 HTML_FILE="$OUT_DIR/index.html"
 
-command -v say >/dev/null 2>&1 || { echo "Error: say not found" >&2; exit 1; }
-command -v ffmpeg >/dev/null 2>&1 || { echo "Error: ffmpeg not found" >&2; exit 1; }
+if [[ "$SKIP_AUDIO" != "1" ]]; then
+  command -v say >/dev/null 2>&1 || { echo "Error: say not found" >&2; exit 1; }
+  command -v ffmpeg >/dev/null 2>&1 || { echo "Error: ffmpeg not found" >&2; exit 1; }
+fi
 
 mkdir -p "$AUDIO_DIR"
 
-# Extract word and meaning from each <details> block.
+# Extract word and full detail lines from each <details> block.
 awk -v words_out="$WORDS_FILE" -v pair_out="$WORD_MEANINGS_FILE" '
   BEGIN {
     in_details = 0
     word = ""
-    meaning = ""
+    details = ""
   }
 
   /<details>/ {
     in_details = 1
     word = ""
-    meaning = ""
+    details = ""
     next
   }
 
@@ -45,21 +48,30 @@ awk -v words_out="$WORDS_FILE" -v pair_out="$WORD_MEANINGS_FILE" '
     next
   }
 
-  in_details && /^\*\*意味:\*\*/ {
-    line = $0
-    sub(/^\*\*意味:\*\*[[:space:]]*/, "", line)
-    meaning = line
-    next
-  }
-
   /<\/details>/ {
     if (in_details && word != "") {
       print word >> words_out
-      print word "\t" meaning >> pair_out
+      print word "\t" details >> pair_out
     }
     in_details = 0
     word = ""
-    meaning = ""
+    details = ""
+    next
+  }
+
+  in_details && word != "" {
+    line = $0
+    gsub(/^[[:space:]]+|[[:space:]]+$/, "", line)
+    if (line == "" || line ~ /^<summary>/ || line ~ /<\/summary>/) {
+      next
+    }
+
+    gsub(/\*\*/, "", line)
+    if (details == "") {
+      details = line
+    } else {
+      details = details "\\n" line
+    }
   }
 ' "$SOURCE_MD"
 
@@ -69,14 +81,14 @@ if [[ ! -s "$WORDS_FILE" ]]; then
 fi
 
 if [[ ! -s "$WORD_MEANINGS_FILE" ]]; then
-  echo "Error: no meanings found in $SOURCE_MD" >&2
+  echo "Error: no detail lines found in $SOURCE_MD" >&2
   exit 1
 fi
 
 : > "$MAP_FILE"
 
 idx=0
-while IFS=$'\t' read -r word meaning; do
+while IFS=$'\t' read -r word details; do
   idx=$((idx + 1))
 
   # Create a safe slug for file names. Keep letters, numbers and underscores.
@@ -92,21 +104,25 @@ while IFS=$'\t' read -r word meaning; do
   aiff_path="$AUDIO_DIR/$base.aiff"
   mp3_path="$AUDIO_DIR/$base.mp3"
 
-  # Generate one pronunciation file per word.
-  say -v "$VOICE" -r "$RATE" "$word" -o "$aiff_path"
-  ffmpeg -y -loglevel error -i "$aiff_path" -codec:a libmp3lame -b:a 128k "$mp3_path"
-  rm -f "$aiff_path"
+  # Generate one pronunciation file per word unless skip mode is enabled.
+  if [[ "$SKIP_AUDIO" != "1" || ! -f "$mp3_path" ]]; then
+    say -v "$VOICE" -r "$RATE" "$word" -o "$aiff_path"
+    ffmpeg -y -loglevel error -i "$aiff_path" -codec:a libmp3lame -b:a 128k "$mp3_path"
+    rm -f "$aiff_path"
+  fi
 
-  printf "%s\t%s\t%s\taudio/%s.mp3\n" "$idx" "$word" "$meaning" "$base" >> "$MAP_FILE"
+  printf "%s\t%s\t%s\taudio/%s.mp3\n" "$idx" "$word" "$details" "$base" >> "$MAP_FILE"
 done < "$WORD_MEANINGS_FILE"
 
-cat > "$HTML_FILE" <<'HTML_HEAD'
+SOURCE_LABEL=$(basename "$SOURCE_MD")
+
+cat > "$HTML_FILE" <<HTML_HEAD
 <!DOCTYPE html>
 <html lang="ja">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Law 18words Pronunciation</title>
+  <title>${SOURCE_LABEL} Pronunciation</title>
   <style>
     :root {
       --bg1: #f2ece3;
@@ -253,8 +269,8 @@ cat > "$HTML_FILE" <<'HTML_HEAD'
 </head>
 <body>
   <main class="wrap">
-    <h1>Law 18words Pronunciation</h1>
-    <p>単語をクリックすると、発音を再生しながら意味を表示します。Play ボタンは音声のみ再生します。</p>
+    <h1>${SOURCE_LABEL} Pronunciation</h1>
+    <p>単語をクリックすると意味を表示します。Play ボタンは発音のみ再生します。</p>
     <div class="controls">
       <button type="button" id="playAll">Play All</button>
       <button type="button" id="stopAll">Stop</button>
@@ -263,20 +279,21 @@ cat > "$HTML_FILE" <<'HTML_HEAD'
 HTML_HEAD
 
 line_no=0
-while IFS=$'\t' read -r n word meaning relpath; do
+while IFS=$'\t' read -r n word details relpath; do
   line_no=$((line_no + 1))
   delay=$((line_no * 25))
   safe_word=$(printf '%s' "$word" \
     | sed -e 's/&/\&amp;/g' -e 's/</\&lt;/g' -e 's/>/\&gt;/g' -e 's/"/\&quot;/g')
-  safe_meaning=$(printf '%s' "$meaning" \
+  safe_details=$(printf '%s' "$details" \
     | sed -e 's/&/\&amp;/g' -e 's/</\&lt;/g' -e 's/>/\&gt;/g' -e 's/"/\&quot;/g')
+  safe_details=${safe_details//\\n/<br>}
 
   cat >> "$HTML_FILE" <<HTML_ROW
       <li class="word-item" style="animation-delay: ${delay}ms;">
         <button type="button" class="play-btn" data-audio="$relpath" aria-label="Play ${safe_word}">Play</button>
         <button type="button" class="word-text" data-audio="$relpath" aria-expanded="false">${safe_word}</button>
         <span class="small">#${n}</span>
-        <p class="meaning" hidden>意味: ${safe_meaning}</p>
+        <p class="meaning" hidden>${safe_details}</p>
       </li>
 HTML_ROW
 done < "$MAP_FILE"
@@ -339,10 +356,13 @@ cat >> "$HTML_FILE" <<'HTML_TAIL'
       const target = event.target;
       if (!(target instanceof HTMLElement)) return;
 
-      const src = target.getAttribute('data-audio');
-      if (!src) return;
-
-      playSingle(src);
+      if (target.classList.contains('play-btn')) {
+        const src = target.getAttribute('data-audio');
+        if (src) {
+          playSingle(src);
+        }
+        return;
+      }
 
       if (!target.classList.contains('word-text')) {
         return;
@@ -378,7 +398,7 @@ HTML_TAIL
 
 echo "Generated:"
 echo "  Words: $WORDS_FILE"
-echo "  Word+Meanings: $WORD_MEANINGS_FILE"
+echo "  Word+Details: $WORD_MEANINGS_FILE"
 echo "  Map:   $MAP_FILE"
 echo "  Audio: $AUDIO_DIR"
 echo "  HTML:  $HTML_FILE"

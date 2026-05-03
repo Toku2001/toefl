@@ -1,26 +1,26 @@
-1	forts	要塞、砦（敵の攻撃から守るために建てられた軍事的な建造物）	audio/001_forts.mp3
-2	visible	目に見える、視認できる	audio/002_visible.mp3
-3	exploration	探検、調査、探索	audio/003_exploration.mp3
-4	individual	個人、個体；個々の	audio/004_individual.mp3
-5	mule	ラバ（馬とロバの交配種）；荷物を運ぶために使われる動物	audio/005_mule.mp3
-6	survey	調査、測量；調査する	audio/006_survey.mp3
-7	comprehensive	包括的な、総合的な、網羅的な	audio/007_comprehensive.mp3
-8	entire	全体の、すべての、完全な	audio/008_entire.mp3
-9	involve	含む、関与する、伴う	audio/009_involve.mp3
-10	passage	通路、回廊；通過、経過	audio/010_passage.mp3
-11	protection	保護、防護	audio/011_protection.mp3
-12	remains	遺跡、遺骨、残骸；残る	audio/012_remains.mp3
-13	construction	建設、建造；構造	audio/013_construction.mp3
-14	growth	成長、発育；増加	audio/014_growth.mp3
-15	infrared	赤外線（の）	audio/015_infrared.mp3
-16	satellites	衛星、人工衛星	audio/016_satellites.mp3
-17	clues	手がかり、ヒント	audio/017_clues.mp3
-18	soil	土壌、土	audio/018_soil.mp3
-19	crop	作物、農作物；切り取る	audio/019_crop.mp3
-20	density	密度、濃度	audio/020_density.mp3
-21	indicate	示す、指示する、指摘する	audio/021_indicate.mp3
-22	existence	存在、実在	audio/022_existence.mp3
-23	reflection	反射、反映；熟考	audio/023_reflection.mp3
-24	presence	存在、出席；存在感	audio/024_presence.mp3
-25	structures	構造物、建造物；構造	audio/025_structures.mp3
-26	hollows	窪み、くぼ地；空洞	audio/026_hollows.mp3
+1	forts	意味: 要塞、砦（敵の攻撃から守るために建てられた軍事的な建造物）\n基本形: fort\nアクセント: fôrt\n類義語: fortresses, strongholds, citadels	audio/001_forts.mp3
+2	visible	意味: 目に見える、視認できる\nアクセント: VĬZ-ĭ-bəl\n類義語: apparent, observable, noticeable	audio/002_visible.mp3
+3	exploration	意味: 探検、調査、探索\nアクセント: èk-splə-RĀ-shən\n類義語: investigation, examination, expedition	audio/003_exploration.mp3
+4	individual	意味: 個人、個体；個々の\nアクセント: ìn-də-VĬJ-oo-əl\n類義語: single, particular, distinct	audio/004_individual.mp3
+5	mule	意味: ラバ（馬とロバの交配種）；荷物を運ぶために使われる動物\nアクセント: myūl\n類義語: pack animal, beast of burden, donkey	audio/005_mule.mp3
+6	survey	意味: 調査、測量；調査する\nアクセント: SÛ R-vā\n類義語: examination, assessment, investigation	audio/006_survey.mp3
+7	comprehensive	意味: 包括的な、総合的な、網羅的な\nアクセント: kòm-prə-HĔN-sĭv\n類義語: thorough, extensive, exhaustive	audio/007_comprehensive.mp3
+8	entire	意味: 全体の、すべての、完全な\nアクセント: ĕn-TĪR\n類義語: whole, complete, total	audio/008_entire.mp3
+9	involve	意味: 含む、関与する、伴う\nアクセント: īn-VÔLV\n類義語: include, entail, require	audio/009_involve.mp3
+10	passage	意味: 通路、回廊；通過、経過\nアクセント: PÄS-ĭj\n類義語: corridor, hallway, channel	audio/010_passage.mp3
+11	protection	意味: 保護、防護\nアクセント: prə-TĔK-shən\n類義語: preservation, defense, shelter	audio/011_protection.mp3
+12	remains	意味: 遺跡、遺骨、残骸；残る\n基本形: remain（動詞）/ remains（名詞・複数形）\nアクセント: rī-MĀN\n類義語: ruins, relics, remnants	audio/012_remains.mp3
+13	construction	意味: 建設、建造；構造\nアクセント: kən-STRÔK-shən\n類義語: building, assembly, fabrication	audio/013_construction.mp3
+14	growth	意味: 成長、発育；増加\nアクセント: grōth\n類義語: expansion, development, increase	audio/014_growth.mp3
+15	infrared	意味: 赤外線（の）\nアクセント: ÌN-frə-rèd\n類義語: thermal, heat radiation, near-infrared	audio/015_infrared.mp3
+16	satellites	意味: 衛星、人工衛星\n基本形: satellite\nアクセント: SÄT-əl-līt\n類義語: spacecraft, orbiters, space probes	audio/016_satellites.mp3
+17	clues	意味: 手がかり、ヒント\n基本形: clue\nアクセント: klū\n類義語: hints, signs, evidence	audio/017_clues.mp3
+18	soil	意味: 土壌、土\nアクセント: soil\n類義語: earth, ground, dirt	audio/018_soil.mp3
+19	crop	意味: 作物、農作物；切り取る\nアクセント: kräp\n類義語: harvest, produce, yield	audio/019_crop.mp3
+20	density	意味: 密度、濃度\nアクセント: DĔN-sə-tē\n類義語: concentration, thickness, compactness	audio/020_density.mp3
+21	indicate	意味: 示す、指示する、指摘する\nアクセント: ÌN-də-kāt\n類義語: show, suggest, demonstrate	audio/021_indicate.mp3
+22	existence	意味: 存在、実在\nアクセント: īg-ZÌS-təns\n類義語: being, presence, reality	audio/022_existence.mp3
+23	reflection	意味: 反射、反映；熟考\nアクセント: rī-FLĔK-shən\n類義語: rebound, echo, image	audio/023_reflection.mp3
+24	presence	意味: 存在、出席；存在感\nアクセント: PRĔZ-əns\n類義語: existence, attendance, occurrence	audio/024_presence.mp3
+25	structures	意味: 構造物、建造物；構造\n基本形: structure\nアクセント: STRÔK-chər\n類義語: buildings, constructions, frameworks	audio/025_structures.mp3
+26	hollows	意味: 窪み、くぼ地；空洞\n基本形: hollow\nアクセント: HÔL-ō\n類義語: cavities, depressions, pits	audio/026_hollows.mp3
