@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>36words.md Pronunciation</title>
+  <style>
+    :root {
+      --bg1: #f2ece3;
+      --bg2: #e4d5c1;
+      --card: #fff8ee;
+      --ink: #2a1f16;
+      --accent: #9a3412;
+      --accent-2: #78350f;
+      --border: #d9c2a5;
+      --shadow: rgba(42, 31, 22, 0.15);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 15% 20%, rgba(255,255,255,0.6), transparent 35%),
+        radial-gradient(circle at 85% 80%, rgba(255,255,255,0.4), transparent 30%),
+        linear-gradient(135deg, var(--bg1), var(--bg2));
+      min-height: 100vh;
+      padding: 24px;
+    }
+
+    .wrap {
+      max-width: 900px;
+      margin: 0 auto;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 20px;
+      box-shadow: 0 10px 30px var(--shadow);
+    }
+
+    h1 {
+      margin: 0 0 8px;
+      font-size: clamp(1.5rem, 2.6vw, 2.2rem);
+      letter-spacing: 0.02em;
+    }
+
+    p {
+      margin: 0 0 20px;
+      line-height: 1.6;
+    }
+
+    .controls {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 14px;
+    }
+
+    button {
+      border: 1px solid var(--accent);
+      background: var(--accent);
+      color: #fff;
+      border-radius: 10px;
+      padding: 8px 12px;
+      font-size: 0.95rem;
+      cursor: pointer;
+      transition: transform 120ms ease, background 120ms ease;
+    }
+
+    button:hover { background: var(--accent-2); }
+    button:active { transform: translateY(1px); }
+
+    .word-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 10px;
+    }
+
+    .word-item {
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 10px;
+      background: #fff;
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      align-items: center;
+      gap: 8px;
+      opacity: 0;
+      transform: translateY(8px);
+      animation: reveal 360ms ease forwards;
+    }
+
+    .play-btn {
+      min-width: 56px;
+    }
+
+    .word-text {
+      background: none;
+      border: none;
+      color: var(--ink);
+      font: inherit;
+      text-align: left;
+      padding: 0;
+      margin: 0;
+      cursor: pointer;
+      line-height: 1.4;
+      flex: 1;
+    }
+
+    .word-text:hover {
+      text-decoration: underline;
+      text-decoration-thickness: 2px;
+      text-decoration-color: var(--accent);
+    }
+
+    .small {
+      font-size: 0.8rem;
+      color: #6e5a45;
+      min-width: 2.2em;
+      text-align: right;
+    }
+
+    .meaning {
+      grid-column: 1 / -1;
+      margin: 6px 0 0;
+      padding: 8px 10px;
+      border-radius: 8px;
+      background: #fbf3e8;
+      border: 1px dashed var(--border);
+      font-size: 0.92rem;
+      line-height: 1.5;
+    }
+
+    .meaning[hidden] {
+      display: none;
+    }
+
+    @keyframes reveal {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <h1>36words.md Pronunciation</h1>
+    <p>単語をクリックすると意味を表示します。Play ボタンは発音のみ再生します。</p>
+    <div class="controls">
+      <button type="button" id="playAll">Play All</button>
+      <button type="button" id="stopAll">Stop</button>
+    </div>
+    <ul class="word-list" id="wordList">
+      <li class="word-item" style="animation-delay: 25ms;">
+        <button type="button" class="play-btn" data-audio="" aria-label="Play Upper respiratory infections">Play</button>
+        <button type="button" class="word-text" data-audio="" aria-expanded="false">Upper respiratory infections</button>
+        <span class="small">#1</span>
+        <p class="meaning" hidden>audio/001_upper_respiratory_infections.mp3</p>
+      </li>
+      <li class="word-item" style="animation-delay: 50ms;">
+        <button type="button" class="play-btn" data-audio="" aria-label="Play exceedingly common">Play</button>
+        <button type="button" class="word-text" data-audio="" aria-expanded="false">exceedingly common</button>
+        <span class="small">#2</span>
+        <p class="meaning" hidden>audio/002_exceedingly_common.mp3</p>
+      </li>
+      <li class="word-item" style="animation-delay: 75ms;">
+        <button type="button" class="play-btn" data-audio="" aria-label="Play pneumonitis">Play</button>
+        <button type="button" class="word-text" data-audio="" aria-expanded="false">pneumonitis</button>
+        <span class="small">#3</span>
+        <p class="meaning" hidden>audio/003_pneumonitis.mp3</p>
+      </li>
+      <li class="word-item" style="animation-delay: 100ms;">
+        <button type="button" class="play-btn" data-audio="" aria-label="Play rhinotracheitis">Play</button>
+        <button type="button" class="word-text" data-audio="" aria-expanded="false">rhinotracheitis</button>
+        <span class="small">#4</span>
+        <p class="meaning" hidden>audio/004_rhinotracheitis.mp3</p>
+      </li>
+      <li class="word-item" style="animation-delay: 125ms;">
+        <button type="button" class="play-btn" data-audio="" aria-label="Play Sysmp-toms">Play</button>
+        <button type="button" class="word-text" data-audio="" aria-expanded="false">Sysmp-toms</button>
+        <span class="small">#5</span>
+        <p class="meaning" hidden>audio/005_sysmp_toms.mp3</p>
+      </li>
+      <li class="word-item" style="animation-delay: 150ms;">
+        <button type="button" class="play-btn" data-audio="" aria-label="Play resemble">Play</button>
+        <button type="button" class="word-text" data-audio="" aria-expanded="false">resemble</button>
+        <span class="small">#6</span>
+        <p class="meaning" hidden>audio/006_resemble.mp3</p>
+      </li>
+      <li class="word-item" style="animation-delay: 175ms;">
+        <button type="button" class="play-btn" data-audio="" aria-label="Play distemper">Play</button>
+        <button type="button" class="word-text" data-audio="" aria-expanded="false">distemper</button>
+        <span class="small">#7</span>
+        <p class="meaning" hidden>audio/007_distemper.mp3</p>
+      </li>
+      <li class="word-item" style="animation-delay: 200ms;">
+        <button type="button" class="play-btn" data-audio="" aria-label="Play be passed on">Play</button>
+        <button type="button" class="word-text" data-audio="" aria-expanded="false">be passed on</button>
+        <span class="small">#8</span>
+        <p class="meaning" hidden>audio/008_be_passed_on.mp3</p>
+      </li>
+      <li class="word-item" style="animation-delay: 225ms;">
+        <button type="button" class="play-btn" data-audio="" aria-label="Play infectious for">Play</button>
+        <button type="button" class="word-text" data-audio="" aria-expanded="false">infectious for</button>
+        <span class="small">#9</span>
+        <p class="meaning" hidden>audio/009_infectious_for.mp3</p>
+      </li>
+      <li class="word-item" style="animation-delay: 250ms;">
+        <button type="button" class="play-btn" data-audio="" aria-label="Play Rabies">Play</button>
+        <button type="button" class="word-text" data-audio="" aria-expanded="false">Rabies</button>
+        <span class="small">#10</span>
+        <p class="meaning" hidden>audio/010_rabies.mp3</p>
+      </li>
+      <li class="word-item" style="animation-delay: 275ms;">
+        <button type="button" class="play-btn" data-audio="" aria-label="Play an invariably fatal viral disease">Play</button>
+        <button type="button" class="word-text" data-audio="" aria-expanded="false">an invariably fatal viral disease</button>
+        <span class="small">#11</span>
+        <p class="meaning" hidden>audio/011_an_invariably_fatal_viral_disease.mp3</p>
+      </li>
+      <li class="word-item" style="animation-delay: 300ms;">
+        <button type="button" class="play-btn" data-audio="" aria-label="Play the bite of a rabid animal">Play</button>
+        <button type="button" class="word-text" data-audio="" aria-expanded="false">the bite of a rabid animal</button>
+        <span class="small">#12</span>
+        <p class="meaning" hidden>audio/012_the_bite_of_a_rabid_animal.mp3</p>
+      </li>
+      <li class="word-item" style="animation-delay: 325ms;">
+        <button type="button" class="play-btn" data-audio="" aria-label="Play roams outdoors">Play</button>
+        <button type="button" class="word-text" data-audio="" aria-expanded="false">roams outdoors</button>
+        <span class="small">#13</span>
+        <p class="meaning" hidden>audio/013_roams_outdoors.mp3</p>
+      </li>
+      <li class="word-item" style="animation-delay: 350ms;">
+        <button type="button" class="play-btn" data-audio="" aria-label="Play be bitten">Play</button>
+        <button type="button" class="word-text" data-audio="" aria-expanded="false">be bitten</button>
+        <span class="small">#14</span>
+        <p class="meaning" hidden>audio/014_be_bitten.mp3</p>
+      </li>
+      <li class="word-item" style="animation-delay: 375ms;">
+        <button type="button" class="play-btn" data-audio="" aria-label="Play advisable">Play</button>
+        <button type="button" class="word-text" data-audio="" aria-expanded="false">advisable</button>
+        <span class="small">#15</span>
+        <p class="meaning" hidden>audio/015_advisable.mp3</p>
+      </li>
+      <li class="word-item" style="animation-delay: 400ms;">
+        <button type="button" class="play-btn" data-audio="" aria-label="Play preventive vaccinations">Play</button>
+        <button type="button" class="word-text" data-audio="" aria-expanded="false">preventive vaccinations</button>
+        <span class="small">#16</span>
+        <p class="meaning" hidden>audio/016_preventive_vaccinations.mp3</p>
+      </li>
+      <li class="word-item" style="animation-delay: 425ms;">
+        <button type="button" class="play-btn" data-audio="" aria-label="Play swallows">Play</button>
+        <button type="button" class="word-text" data-audio="" aria-expanded="false">swallows</button>
+        <span class="small">#17</span>
+        <p class="meaning" hidden>audio/017_swallows.mp3</p>
+      </li>
+      <li class="word-item" style="animation-delay: 450ms;">
+        <button type="button" class="play-btn" data-audio="" aria-label="Play fur">Play</button>
+        <button type="button" class="word-text" data-audio="" aria-expanded="false">fur</button>
+        <span class="small">#18</span>
+        <p class="meaning" hidden>audio/018_fur.mp3</p>
+      </li>
+      <li class="word-item" style="animation-delay: 475ms;">
+        <button type="button" class="play-btn" data-audio="" aria-label="Play grooming">Play</button>
+        <button type="button" class="word-text" data-audio="" aria-expanded="false">grooming</button>
+        <span class="small">#19</span>
+        <p class="meaning" hidden>audio/019_grooming.mp3</p>
+      </li>
+      <li class="word-item" style="animation-delay: 500ms;">
+        <button type="button" class="play-btn" data-audio="" aria-label="Play fur balls">Play</button>
+        <button type="button" class="word-text" data-audio="" aria-expanded="false">fur balls</button>
+        <span class="small">#20</span>
+        <p class="meaning" hidden>audio/020_fur_balls.mp3</p>
+      </li>
+      <li class="word-item" style="animation-delay: 525ms;">
+        <button type="button" class="play-btn" data-audio="" aria-label="Play hair balls">Play</button>
+        <button type="button" class="word-text" data-audio="" aria-expanded="false">hair balls</button>
+        <span class="small">#21</span>
+        <p class="meaning" hidden>audio/021_hair_balls.mp3</p>
+      </li>
+      <li class="word-item" style="animation-delay: 550ms;">
+        <button type="button" class="play-btn" data-audio="" aria-label="Play occasionally">Play</button>
+        <button type="button" class="word-text" data-audio="" aria-expanded="false">occasionally</button>
+        <span class="small">#22</span>
+        <p class="meaning" hidden>audio/022_occasionally.mp3</p>
+      </li>
+      <li class="word-item" style="animation-delay: 575ms;">
+        <button type="button" class="play-btn" data-audio="" aria-label="Play cause ulcers">Play</button>
+        <button type="button" class="word-text" data-audio="" aria-expanded="false">cause ulcers</button>
+        <span class="small">#23</span>
+        <p class="meaning" hidden>audio/023_cause_ulcers.mp3</p>
+      </li>
+      <li class="word-item" style="animation-delay: 600ms;">
+        <button type="button" class="play-btn" data-audio="" aria-label="Play obstruct the digistive tract">Play</button>
+        <button type="button" class="word-text" data-audio="" aria-expanded="false">obstruct the digistive tract</button>
+        <span class="small">#24</span>
+        <p class="meaning" hidden>audio/024_obstruct_the_digistive_tract.mp3</p>
+      </li>
+      <li class="word-item" style="animation-delay: 625ms;">
+        <button type="button" class="play-btn" data-audio="" aria-label="Play prevention">Play</button>
+        <button type="button" class="word-text" data-audio="" aria-expanded="false">prevention</button>
+        <span class="small">#25</span>
+        <p class="meaning" hidden>audio/025_prevention.mp3</p>
+      </li>
+      <li class="word-item" style="animation-delay: 650ms;">
+        <button type="button" class="play-btn" data-audio="" aria-label="Play form of frequent">Play</button>
+        <button type="button" class="word-text" data-audio="" aria-expanded="false">form of frequent</button>
+        <span class="small">#26</span>
+        <p class="meaning" hidden>audio/026_form_of_frequent.mp3</p>
+      </li>
+      <li class="word-item" style="animation-delay: 675ms;">
+        <button type="button" class="play-btn" data-audio="" aria-label="Play combing">Play</button>
+        <button type="button" class="word-text" data-audio="" aria-expanded="false">combing</button>
+        <span class="small">#27</span>
+        <p class="meaning" hidden>audio/027_combing.mp3</p>
+      </li>
+      <li class="word-item" style="animation-delay: 700ms;">
+        <button type="button" class="play-btn" data-audio="" aria-label="Play spite">Play</button>
+        <button type="button" class="word-text" data-audio="" aria-expanded="false">spite</button>
+        <span class="small">#28</span>
+        <p class="meaning" hidden>audio/028_spite.mp3</p>
+      </li>
+      <li class="word-item" style="animation-delay: 725ms;">
+        <button type="button" class="play-btn" data-audio="" aria-label="Play teaspoonful">Play</button>
+        <button type="button" class="word-text" data-audio="" aria-expanded="false">teaspoonful</button>
+        <span class="small">#29</span>
+        <p class="meaning" hidden>audio/029_teaspoonful.mp3</p>
+      </li>
+      <li class="word-item" style="animation-delay: 750ms;">
+        <button type="button" class="play-btn" data-audio="" aria-label="Play a dab of petroleum jelly">Play</button>
+        <button type="button" class="word-text" data-audio="" aria-expanded="false">a dab of petroleum jelly</button>
+        <span class="small">#30</span>
+        <p class="meaning" hidden>audio/030_a_dab_of_petroleum_jelly.mp3</p>
+      </li>
+      <li class="word-item" style="animation-delay: 775ms;">
+        <button type="button" class="play-btn" data-audio="" aria-label="Play pawas">Play</button>
+        <button type="button" class="word-text" data-audio="" aria-expanded="false">pawas</button>
+        <span class="small">#31</span>
+        <p class="meaning" hidden>audio/031_pawas.mp3</p>
+      </li>
+      <li class="word-item" style="animation-delay: 800ms;">
+        <button type="button" class="play-btn" data-audio="" aria-label="Play bite wounds">Play</button>
+        <button type="button" class="word-text" data-audio="" aria-expanded="false">bite wounds</button>
+        <span class="small">#32</span>
+        <p class="meaning" hidden>audio/032_bite_wounds.mp3</p>
+      </li>
+      <li class="word-item" style="animation-delay: 825ms;">
+        <button type="button" class="play-btn" data-audio="" aria-label="Play become infected">Play</button>
+        <button type="button" class="word-text" data-audio="" aria-expanded="false">become infected</button>
+        <span class="small">#33</span>
+        <p class="meaning" hidden>audio/033_become_infected.mp3</p>
+      </li>
+      <li class="word-item" style="animation-delay: 850ms;">
+        <button type="button" class="play-btn" data-audio="" aria-label="Play heal the wound by licking it">Play</button>
+        <button type="button" class="word-text" data-audio="" aria-expanded="false">heal the wound by licking it</button>
+        <span class="small">#34</span>
+        <p class="meaning" hidden>audio/034_heal_the_wound_by_licking_it.mp3</p>
+      </li>
+      <li class="word-item" style="animation-delay: 875ms;">
+        <button type="button" class="play-btn" data-audio="" aria-label="Play veterinary">Play</button>
+        <button type="button" class="word-text" data-audio="" aria-expanded="false">veterinary</button>
+        <span class="small">#35</span>
+        <p class="meaning" hidden>audio/035_veterinary.mp3</p>
+      </li>
+      <li class="word-item" style="animation-delay: 900ms;">
+        <button type="button" class="play-btn" data-audio="" aria-label="Play as soonas possible">Play</button>
+        <button type="button" class="word-text" data-audio="" aria-expanded="false">as soonas possible</button>
+        <span class="small">#36</span>
+        <p class="meaning" hidden>audio/036_as_soonas_possible.mp3</p>
+      </li>
+      <li class="word-item" style="animation-delay: 925ms;">
+        <button type="button" class="play-btn" data-audio="" aria-label="Play many apparently normal cats">Play</button>
+        <button type="button" class="word-text" data-audio="" aria-expanded="false">many apparently normal cats</button>
+        <span class="small">#37</span>
+        <p class="meaning" hidden>audio/037_many_apparently_normal_cats.mp3</p>
+      </li>
+      <li class="word-item" style="animation-delay: 950ms;">
+        <button type="button" class="play-btn" data-audio="" aria-label="Play tiny mineral crystals in their urine">Play</button>
+        <button type="button" class="word-text" data-audio="" aria-expanded="false">tiny mineral crystals in their urine</button>
+        <span class="small">#38</span>
+        <p class="meaning" hidden>audio/038_tiny_mineral_crystals_in_their_urine.mp3</p>
+      </li>
+      <li class="word-item" style="animation-delay: 975ms;">
+        <button type="button" class="play-btn" data-audio="" aria-label="Play crystals">Play</button>
+        <button type="button" class="word-text" data-audio="" aria-expanded="false">crystals</button>
+        <span class="small">#39</span>
+        <p class="meaning" hidden>audio/039_crystals.mp3</p>
+      </li>
+      <li class="word-item" style="animation-delay: 1000ms;">
+        <button type="button" class="play-btn" data-audio="" aria-label="Play clump">Play</button>
+        <button type="button" class="word-text" data-audio="" aria-expanded="false">clump</button>
+        <span class="small">#40</span>
+        <p class="meaning" hidden>audio/040_clump.mp3</p>
+      </li>
+      <li class="word-item" style="animation-delay: 1025ms;">
+        <button type="button" class="play-btn" data-audio="" aria-label="Play form sand">Play</button>
+        <button type="button" class="word-text" data-audio="" aria-expanded="false">form sand</button>
+        <span class="small">#41</span>
+        <p class="meaning" hidden>audio/041_form_sand.mp3</p>
+      </li>
+      <li class="word-item" style="animation-delay: 1050ms;">
+        <button type="button" class="play-btn" data-audio="" aria-label="Play particles">Play</button>
+        <button type="button" class="word-text" data-audio="" aria-expanded="false">particles</button>
+        <span class="small">#42</span>
+        <p class="meaning" hidden>audio/042_particles.mp3</p>
+      </li>
+      <li class="word-item" style="animation-delay: 1075ms;">
+        <button type="button" class="play-btn" data-audio="" aria-label="Play irritation">Play</button>
+        <button type="button" class="word-text" data-audio="" aria-expanded="false">irritation</button>
+        <span class="small">#43</span>
+        <p class="meaning" hidden>audio/043_irritation.mp3</p>
+      </li>
+      <li class="word-item" style="animation-delay: 1100ms;">
+        <button type="button" class="play-btn" data-audio="" aria-label="Play obstruction">Play</button>
+        <button type="button" class="word-text" data-audio="" aria-expanded="false">obstruction</button>
+        <span class="small">#44</span>
+        <p class="meaning" hidden>audio/044_obstruction.mp3</p>
+      </li>
+      <li class="word-item" style="animation-delay: 1125ms;">
+        <button type="button" class="play-btn" data-audio="" aria-label="Play the urinary passages">Play</button>
+        <button type="button" class="word-text" data-audio="" aria-expanded="false">the urinary passages</button>
+        <span class="small">#45</span>
+        <p class="meaning" hidden>audio/045_the_urinary_passages.mp3</p>
+      </li>
+      <li class="word-item" style="animation-delay: 1150ms;">
+        <button type="button" class="play-btn" data-audio="" aria-label="Play a urinary obstruction">Play</button>
+        <button type="button" class="word-text" data-audio="" aria-expanded="false">a urinary obstruction</button>
+        <span class="small">#46</span>
+        <p class="meaning" hidden>audio/046_a_urinary_obstruction.mp3</p>
+      </li>
+      <li class="word-item" style="animation-delay: 1175ms;">
+        <button type="button" class="play-btn" data-audio="" aria-label="Play a gave emergency immediately">Play</button>
+        <button type="button" class="word-text" data-audio="" aria-expanded="false">a gave emergency immediately</button>
+        <span class="small">#47</span>
+        <p class="meaning" hidden>audio/047_a_gave_emergency_immediately.mp3</p>
+      </li>
+      <li class="word-item" style="animation-delay: 1200ms;">
+        <button type="button" class="play-btn" data-audio="" aria-label="Play veterinarian">Play</button>
+        <button type="button" class="word-text" data-audio="" aria-expanded="false">veterinarian</button>
+        <span class="small">#48</span>
+        <p class="meaning" hidden>audio/048_veterinarian.mp3</p>
+      </li>
+    </ul>
+  </main>
+
+  <script>
+    const list = document.getElementById('wordList');
+    const playAllButton = document.getElementById('playAll');
+    const stopAllButton = document.getElementById('stopAll');
+
+    let currentAudio = null;
+    let playQueue = [];
+    let queueIndex = 0;
+
+    function stopPlayback() {
+      playQueue = [];
+      queueIndex = 0;
+      if (currentAudio) {
+        currentAudio.pause();
+        currentAudio.currentTime = 0;
+        currentAudio = null;
+      }
+    }
+
+    function playSingle(src) {
+      stopPlayback();
+      currentAudio = new Audio(src);
+      currentAudio.play().catch((err) => {
+        console.error('Audio play failed:', err);
+      });
+    }
+
+    function playQueueNext() {
+      if (queueIndex >= playQueue.length) {
+        currentAudio = null;
+        return;
+      }
+      const src = playQueue[queueIndex++];
+      currentAudio = new Audio(src);
+      currentAudio.addEventListener('ended', playQueueNext);
+      currentAudio.play().catch((err) => {
+        console.error('Audio play failed:', err);
+        playQueueNext();
+      });
+    }
+
+    function closeAllMeanings() {
+      document.querySelectorAll('.meaning').forEach((el) => {
+        el.hidden = true;
+      });
+      document.querySelectorAll('.word-text').forEach((el) => {
+        el.setAttribute('aria-expanded', 'false');
+      });
+    }
+
+    list.addEventListener('click', (event) => {
+      const target = event.target;
+      if (!(target instanceof HTMLElement)) return;
+
+      if (target.classList.contains('play-btn')) {
+        const src = target.getAttribute('data-audio');
+        if (src) {
+          playSingle(src);
+        }
+        return;
+      }
+
+      if (!target.classList.contains('word-text')) {
+        return;
+      }
+
+      const item = target.closest('.word-item');
+      if (!item) return;
+
+      const meaning = item.querySelector('.meaning');
+      if (!(meaning instanceof HTMLElement)) return;
+
+      const willOpen = meaning.hidden;
+      closeAllMeanings();
+      meaning.hidden = !willOpen;
+      target.setAttribute('aria-expanded', willOpen ? 'true' : 'false');
+    });
+
+    playAllButton.addEventListener('click', () => {
+      stopPlayback();
+      closeAllMeanings();
+      playQueue = Array.from(document.querySelectorAll('.play-btn[data-audio]'))
+        .map((el) => el.getAttribute('data-audio'))
+        .filter((src) => !!src);
+      queueIndex = 0;
+      playQueueNext();
+    });
+
+    stopAllButton.addEventListener('click', stopPlayback);
+  </script>
+</body>
+</html>

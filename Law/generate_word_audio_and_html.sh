@@ -25,63 +25,79 @@ fi
 
 mkdir -p "$AUDIO_DIR"
 
-# Extract word and full detail lines from each <details> block.
-awk -v words_out="$WORDS_FILE" -v pair_out="$WORD_MEANINGS_FILE" '
-  BEGIN {
-    in_details = 0
-    word = ""
-    details = ""
-  }
-
-  /<details>/ {
-    in_details = 1
-    word = ""
-    details = ""
-    next
-  }
-
-  in_details && /<summary>/ {
-    line = $0
-    sub(/^.*<summary>/, "", line)
-    sub(/<\/summary>.*$/, "", line)
-    word = line
-    next
-  }
-
-  /<\/details>/ {
-    if (in_details && word != "") {
-      print word >> words_out
-      print word "\t" details >> pair_out
+# Detect format: <details>/<summary> block or simple bullet list (- word).
+if grep -q '<details>' "$SOURCE_MD"; then
+  # Extract word and full detail lines from each <details> block.
+  awk -v words_out="$WORDS_FILE" -v pair_out="$WORD_MEANINGS_FILE" '
+    BEGIN {
+      in_details = 0
+      word = ""
+      details = ""
     }
-    in_details = 0
-    word = ""
-    details = ""
-    next
-  }
 
-  in_details && word != "" {
-    line = $0
-    gsub(/^[[:space:]]+|[[:space:]]+$/, "", line)
-    if (line == "" || line ~ /^<summary>/ || line ~ /<\/summary>/) {
+    /<details>/ {
+      in_details = 1
+      word = ""
+      details = ""
       next
     }
 
-    gsub(/\*\*/, "", line)
-    if (details == "") {
-      details = line
-    } else {
-      details = details "\\n" line
+    in_details && /<summary>/ {
+      line = $0
+      sub(/^.*<summary>/, "", line)
+      sub(/<\/summary>.*$/, "", line)
+      word = line
+      next
     }
-  }
-' "$SOURCE_MD"
+
+    /<\/details>/ {
+      if (in_details && word != "") {
+        print word >> words_out
+        print word "\t" details >> pair_out
+      }
+      in_details = 0
+      word = ""
+      details = ""
+      next
+    }
+
+    in_details && word != "" {
+      line = $0
+      gsub(/^[[:space:]]+|[[:space:]]+$/, "", line)
+      if (line == "" || line ~ /^<summary>/ || line ~ /<\/summary>/) {
+        next
+      }
+
+      gsub(/\*\*/, "", line)
+      if (details == "") {
+        details = line
+      } else {
+        details = details "\\n" line
+      }
+    }
+  ' "$SOURCE_MD"
+
+  if [[ ! -s "$WORD_MEANINGS_FILE" ]]; then
+    echo "Error: no detail lines found in $SOURCE_MD" >&2
+    exit 1
+  fi
+else
+  # Simple bullet list format: lines starting with optional spaces then "- " are words.
+  awk -v words_out="$WORDS_FILE" -v pair_out="$WORD_MEANINGS_FILE" '
+    /^[[:space:]]*- / {
+      line = $0
+      sub(/^[[:space:]]*- /, "", line)
+      gsub(/^[[:space:]]+|[[:space:]]+$/, "", line)
+      if (line != "") {
+        print line >> words_out
+        print line "\t" >> pair_out
+      }
+    }
+  ' "$SOURCE_MD"
+fi
 
 if [[ ! -s "$WORDS_FILE" ]]; then
   echo "Error: no words found in $SOURCE_MD" >&2
-  exit 1
-fi
-
-if [[ ! -s "$WORD_MEANINGS_FILE" ]]; then
-  echo "Error: no detail lines found in $SOURCE_MD" >&2
   exit 1
 fi
 

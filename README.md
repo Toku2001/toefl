@@ -47,6 +47,16 @@
 | 30 | `PoliticalScience/30words.md` | [PoliticalScience/30words_pronunciation/index.html](PoliticalScience/30words_pronunciation/index.html) |
 | 31 | `Women'sStudy/31words.md` | [Women'sStudy/31words_pronunciation/index.html](Women'sStudy/31words_pronunciation/index.html) |
 | 32 | `Sociology/32words.md` | [Sociology/32words_pronunciation/index.html](Sociology/32words_pronunciation/index.html) |
+| 33 | `Astronomy/33words.md` | [Astronomy/33words_pronunciation/index.html](Astronomy/33words_pronunciation/index.html) |
+| 34 | `Astronomy/34words.md` | [Astronomy/34words_pronunciation/index.html](Astronomy/34words_pronunciation/index.html) |
+| 36 | `VeterinaryStudy/36words.md` | [VeterinaryStudy/36words_pronunciation/index.html](VeterinaryStudy/36words_pronunciation/index.html) |
+| 37 | `Biology/37words.md` | [Biology/37words_pronunciation/index.html](Biology/37words_pronunciation/index.html) |
+| 38 | `Biology/38words.md` | [Biology/38words_pronunciation/index.html](Biology/38words_pronunciation/index.html) |
+| 39 | `Biology/39words.md` | [Biology/39words_pronunciation/index.html](Biology/39words_pronunciation/index.html) |
+| 40 | `Biology/40words.md` | [Biology/40words_pronunciation/index.html](Biology/40words_pronunciation/index.html) |
+| 41 | `Biology/41words.md` | [Biology/41words_pronunciation/index.html](Biology/41words_pronunciation/index.html) |
+| 42 | `Biology/42words.md` | [Biology/42words_pronunciation/index.html](Biology/42words_pronunciation/index.html) |
+| 43 | `Biology/43words.md` | [Biology/43words_pronunciation/index.html](Biology/43words_pronunciation/index.html) |
 
 ### 追記ルール
 

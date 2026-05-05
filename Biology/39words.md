@@ -1,0 +1,27 @@
+- human aggression
+- nevertheless 
+- define
+- dividing line
+- depore
+- disown
+- rebals against authority
+- manifesting a drive towatds independence
+- valuable part
+- the desire for power
+- extreme foem
+- diasastrous aspects 
+- acknowledge
+- the dtive to conquer difficulties
+- mastery
+- achievements
+- necessary safeguard against savage attack
+- intellectual
+- attainment
+- independence
+- amongst
+- fellows
+- obvious
+- attained
+- present dominance
+- unless
+- inborn aggressiveness

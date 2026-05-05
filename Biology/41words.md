@@ -1,0 +1,21 @@
+- certain
+- the tatitid
+- the ostrich, rhea, emum cassowarum, and kiei
+- two ectinct ratites
+- accoeding to r¥theoty
+- be descended ftom pseudosuchians, reptiles
+- with the passage of time
+- scaldes 
+- accompanied
+- by the gradual modification of the forelimvs into membrannous eings
+- leap 
+- glide
+- archaeipteryc
+- appeared
+- descended
+- puzzled
+- two common andestors instead of one
+- descent representing te mahority
+- attained flight
+- reject
+- survive
