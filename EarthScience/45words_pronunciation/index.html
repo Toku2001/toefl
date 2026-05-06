@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>45words.md Pronunciation</title>
+  <style>
+    :root {
+      --bg1: #f2ece3;
+      --bg2: #e4d5c1;
+      --card: #fff8ee;
+      --ink: #2a1f16;
+      --accent: #9a3412;
+      --accent-2: #78350f;
+      --border: #d9c2a5;
+      --shadow: rgba(42, 31, 22, 0.15);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 15% 20%, rgba(255,255,255,0.6), transparent 35%),
+        radial-gradient(circle at 85% 80%, rgba(255,255,255,0.4), transparent 30%),
+        linear-gradient(135deg, var(--bg1), var(--bg2));
+      min-height: 100vh;
+      padding: 24px;
+    }
+
+    .wrap {
+      max-width: 900px;
+      margin: 0 auto;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 20px;
+      box-shadow: 0 10px 30px var(--shadow);
+    }
+
+    h1 {
+      margin: 0 0 8px;
+      font-size: clamp(1.5rem, 2.6vw, 2.2rem);
+      letter-spacing: 0.02em;
+    }
+
+    p {
+      margin: 0 0 20px;
+      line-height: 1.6;
+    }
+
+    .controls {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 14px;
+    }
+
+    button {
+      border: 1px solid var(--accent);
+      background: var(--accent);
+      color: #fff;
+      border-radius: 10px;
+      padding: 8px 12px;
+      font-size: 0.95rem;
+      cursor: pointer;
+      transition: transform 120ms ease, background 120ms ease;
+    }
+
+    button:hover { background: var(--accent-2); }
+    button:active { transform: translateY(1px); }
+
+    .word-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 10px;
+    }
+
+    .word-item {
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 10px;
+      background: #fff;
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      align-items: center;
+      gap: 8px;
+      opacity: 0;
+      transform: translateY(8px);
+      animation: reveal 360ms ease forwards;
+    }
+
+    .play-btn {
+      min-width: 56px;
+    }
+
+    .word-text {
+      background: none;
+      border: none;
+      color: var(--ink);
+      font: inherit;
+      text-align: left;
+      padding: 0;
+      margin: 0;
+      cursor: pointer;
+      line-height: 1.4;
+      flex: 1;
+    }
+
+    .word-text:hover {
+      text-decoration: underline;
+      text-decoration-thickness: 2px;
+      text-decoration-color: var(--accent);
+    }
+
+    .small {
+      font-size: 0.8rem;
+      color: #6e5a45;
+      min-width: 2.2em;
+      text-align: right;
+    }
+
+    .meaning {
+      grid-column: 1 / -1;
+      margin: 6px 0 0;
+      padding: 8px 10px;
+      border-radius: 8px;
+      background: #fbf3e8;
+      border: 1px dashed var(--border);
+      font-size: 0.92rem;
+      line-height: 1.5;
+    }
+
+    .meaning[hidden] {
+      display: none;
+    }
+
+    @keyframes reveal {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <h1>45words.md Pronunciation</h1>
+    <p>単語をクリックすると意味を表示します。Play ボタンは発音のみ再生します。</p>
+    <div class="controls">
+      <button type="button" id="playAll">Play All</button>
+      <button type="button" id="stopAll">Stop</button>
+    </div>
+    <ul class="word-list" id="wordList">
+      <li class="word-item" style="animation-delay: 25ms;">
+        <button type="button" class="play-btn" data-audio="audio/001_latitudinal_variations.mp3" aria-label="Play Latitudinal variations">Play</button>
+        <button type="button" class="word-text" data-audio="audio/001_latitudinal_variations.mp3" aria-expanded="false">Latitudinal variations</button>
+        <span class="small">#1</span>
+        <p class="meaning" hidden>意味: 緯度による変動<br>アクセント: LĂT-ə-tōō-dĭ-nəl vâr-ē-Ā-shənz<br>類義語: latitude differences, zonal variation, north-south variation</p>
+      </li>
+      <li class="word-item" style="animation-delay: 50ms;">
+        <button type="button" class="play-btn" data-audio="audio/002_factors.mp3" aria-label="Play factors">Play</button>
+        <button type="button" class="word-text" data-audio="audio/002_factors.mp3" aria-expanded="false">factors</button>
+        <span class="small">#2</span>
+        <p class="meaning" hidden>意味: 要因<br>基本形: factor<br>アクセント: FĂK-tərz<br>類義語: elements, causes, determinants</p>
+      </li>
+      <li class="word-item" style="animation-delay: 75ms;">
+        <button type="button" class="play-btn" data-audio="audio/003_sphere.mp3" aria-label="Play sphere">Play</button>
+        <button type="button" class="word-text" data-audio="audio/003_sphere.mp3" aria-expanded="false">sphere</button>
+        <span class="small">#3</span>
+        <p class="meaning" hidden>意味: 球体；地球<br>アクセント: sfĭr<br>類義語: globe, orb, ball</p>
+      </li>
+      <li class="word-item" style="animation-delay: 100ms;">
+        <button type="button" class="play-btn" data-audio="audio/004_the_sun_s_rays.mp3" aria-label="Play the sun's rays">Play</button>
+        <button type="button" class="word-text" data-audio="audio/004_the_sun_s_rays.mp3" aria-expanded="false">the sun's rays</button>
+        <span class="small">#4</span>
+        <p class="meaning" hidden>意味: 太陽光線<br>アクセント: thə sŭnz rāz<br>類義語: sunlight, solar rays, solar radiation</p>
+      </li>
+      <li class="word-item" style="animation-delay: 125ms;">
+        <button type="button" class="play-btn" data-audio="audio/005_vertical.mp3" aria-label="Play vertical">Play</button>
+        <button type="button" class="word-text" data-audio="audio/005_vertical.mp3" aria-expanded="false">vertical</button>
+        <span class="small">#5</span>
+        <p class="meaning" hidden>意味: 垂直の<br>アクセント: VÛR-tĭ-kəl<br>類義語: upright, perpendicular, straight up-and-down</p>
+      </li>
+      <li class="word-item" style="animation-delay: 150ms;">
+        <button type="button" class="play-btn" data-audio="audio/006_the_equator_to.mp3" aria-label="Play the equator to">Play</button>
+        <button type="button" class="word-text" data-audio="audio/006_the_equator_to.mp3" aria-expanded="false">the equator to</button>
+        <span class="small">#6</span>
+        <p class="meaning" hidden>意味: 赤道から〜へ<br>アクセント: thē ē-KWĀ-tər tə<br>類義語: from the equator to, equator toward, starting at the equator</p>
+      </li>
+      <li class="word-item" style="animation-delay: 175ms;">
+        <button type="button" class="play-btn" data-audio="audio/007_horizontal.mp3" aria-label="Play horizontal">Play</button>
+        <button type="button" class="word-text" data-audio="audio/007_horizontal.mp3" aria-expanded="false">horizontal</button>
+        <span class="small">#7</span>
+        <p class="meaning" hidden>意味: 水平の<br>アクセント: hôr-ə-ZŎN-təl<br>類義語: level, flat, parallel to the ground</p>
+      </li>
+      <li class="word-item" style="animation-delay: 200ms;">
+        <button type="button" class="play-btn" data-audio="audio/008_poles.mp3" aria-label="Play poles">Play</button>
+        <button type="button" class="word-text" data-audio="audio/008_poles.mp3" aria-expanded="false">poles</button>
+        <span class="small">#8</span>
+        <p class="meaning" hidden>意味: 極地；両極<br>基本形: pole<br>アクセント: pōlz<br>類義語: polar regions, extremities, north and south poles</p>
+      </li>
+      <li class="word-item" style="animation-delay: 225ms;">
+        <button type="button" class="play-btn" data-audio="audio/009_amount_of_radiation.mp3" aria-label="Play amount of radiation">Play</button>
+        <button type="button" class="word-text" data-audio="audio/009_amount_of_radiation.mp3" aria-expanded="false">amount of radiation</button>
+        <span class="small">#9</span>
+        <p class="meaning" hidden>意味: 放射量<br>アクセント: ə-MOUNT əv rā-dē-Ā-shən<br>類義語: radiation level, radiant energy amount, solar input</p>
+      </li>
+      <li class="word-item" style="animation-delay: 250ms;">
+        <button type="button" class="play-btn" data-audio="audio/010_high_latitudes.mp3" aria-label="Play high latitudes">Play</button>
+        <button type="button" class="word-text" data-audio="audio/010_high_latitudes.mp3" aria-expanded="false">high latitudes</button>
+        <span class="small">#10</span>
+        <p class="meaning" hidden>意味: 高緯度地域<br>基本形: high latitude<br>アクセント: hī LĂT-ə-tōōdz<br>類義語: polar latitudes, far-north/south regions, upper latitudes</p>
+      </li>
+      <li class="word-item" style="animation-delay: 275ms;">
+        <button type="button" class="play-btn" data-audio="audio/011_travel_through.mp3" aria-label="Play travel through">Play</button>
+        <button type="button" class="word-text" data-audio="audio/011_travel_through.mp3" aria-expanded="false">travel through</button>
+        <span class="small">#11</span>
+        <p class="meaning" hidden>意味: 〜を通過する<br>アクセント: TRĂV-əl thrōō<br>類義語: pass through, move across, go through</p>
+      </li>
+      <li class="word-item" style="animation-delay: 300ms;">
+        <button type="button" class="play-btn" data-audio="audio/012_thickness_of_atmosphere.mp3" aria-label="Play thickness of atmosphere">Play</button>
+        <button type="button" class="word-text" data-audio="audio/012_thickness_of_atmosphere.mp3" aria-expanded="false">thickness of atmosphere</button>
+        <span class="small">#12</span>
+        <p class="meaning" hidden>意味: 大気の厚さ<br>アクセント: THĬK-nĭs əv ĂT-mə-sfĭr<br>類義語: atmospheric depth, air-layer thickness, atmospheric extent</p>
+      </li>
+      <li class="word-item" style="animation-delay: 325ms;">
+        <button type="button" class="play-btn" data-audio="audio/013_absorption.mp3" aria-label="Play absorption">Play</button>
+        <button type="button" class="word-text" data-audio="audio/013_absorption.mp3" aria-expanded="false">absorption</button>
+        <span class="small">#13</span>
+        <p class="meaning" hidden>意味: 吸収<br>アクセント: əb-ZÔRP-shən<br>類義語: uptake, assimilation, intake</p>
+      </li>
+      <li class="word-item" style="animation-delay: 350ms;">
+        <button type="button" class="play-btn" data-audio="audio/014_affecting.mp3" aria-label="Play affecting">Play</button>
+        <button type="button" class="word-text" data-audio="audio/014_affecting.mp3" aria-expanded="false">affecting</button>
+        <span class="small">#14</span>
+        <p class="meaning" hidden>意味: 影響を与えること<br>基本形: affect<br>アクセント: ə-FĔK-tĭng<br>類義語: influencing, impacting, altering</p>
+      </li>
+      <li class="word-item" style="animation-delay: 375ms;">
+        <button type="button" class="play-btn" data-audio="audio/015_the_duration_of_daylight.mp3" aria-label="Play the duration of daylight">Play</button>
+        <button type="button" class="word-text" data-audio="audio/015_the_duration_of_daylight.mp3" aria-expanded="false">the duration of daylight</button>
+        <span class="small">#15</span>
+        <p class="meaning" hidden>意味: 日照時間の長さ<br>アクセント: thə dōō-RĀ-shən əv DĀ-līt<br>類義語: length of daytime, daylight period, hours of sunlight</p>
+      </li>
+      <li class="word-item" style="animation-delay: 400ms;">
+        <button type="button" class="play-btn" data-audio="audio/016_axis.mp3" aria-label="Play axis">Play</button>
+        <button type="button" class="word-text" data-audio="audio/016_axis.mp3" aria-expanded="false">axis</button>
+        <span class="small">#16</span>
+        <p class="meaning" hidden>意味: 軸；地軸<br>アクセント: ĂK-sĭs<br>類義語: central line, rotational axis, pivot line</p>
+      </li>
+      <li class="word-item" style="animation-delay: 425ms;">
+        <button type="button" class="play-btn" data-audio="audio/017_tilted_at_an_angle_of.mp3" aria-label="Play tilted at an angle of">Play</button>
+        <button type="button" class="word-text" data-audio="audio/017_tilted_at_an_angle_of.mp3" aria-expanded="false">tilted at an angle of</button>
+        <span class="small">#17</span>
+        <p class="meaning" hidden>意味: 〜の角度で傾いた<br>アクセント: TĬL-tĭd ăt ăn ĂNG-gəl əv<br>類義語: inclined by, slanted at, leaned at</p>
+      </li>
+      <li class="word-item" style="animation-delay: 450ms;">
+        <button type="button" class="play-btn" data-audio="audio/018_ecliptic.mp3" aria-label="Play ecliptic">Play</button>
+        <button type="button" class="word-text" data-audio="audio/018_ecliptic.mp3" aria-expanded="false">ecliptic</button>
+        <span class="small">#18</span>
+        <p class="meaning" hidden>意味: 黄道<br>アクセント: ĭ-KLĬP-tĭk<br>類義語: sun's apparent path, ecliptic plane, solar path line</p>
+      </li>
+      <li class="word-item" style="animation-delay: 475ms;">
+        <button type="button" class="play-btn" data-audio="audio/019_progression.mp3" aria-label="Play progression">Play</button>
+        <button type="button" class="word-text" data-audio="audio/019_progression.mp3" aria-expanded="false">progression</button>
+        <span class="small">#19</span>
+        <p class="meaning" hidden>意味: 進行；進展<br>アクセント: prə-GRĔSH-ən<br>類義語: advance, development, sequence</p>
+      </li>
+      <li class="word-item" style="animation-delay: 500ms;">
+        <button type="button" class="play-btn" data-audio="audio/020_striking.mp3" aria-label="Play striking">Play</button>
+        <button type="button" class="word-text" data-audio="audio/020_striking.mp3" aria-expanded="false">striking</button>
+        <span class="small">#20</span>
+        <p class="meaning" hidden>意味: 当たること；打つこと<br>基本形: strike<br>アクセント: STRĪ-kĭng<br>類義語: hitting, impacting, contacting</p>
+      </li>
+      <li class="word-item" style="animation-delay: 525ms;">
+        <button type="button" class="play-btn" data-audio="audio/021_rotation_of.mp3" aria-label="Play rotation of">Play</button>
+        <button type="button" class="word-text" data-audio="audio/021_rotation_of.mp3" aria-expanded="false">rotation of</button>
+        <span class="small">#21</span>
+        <p class="meaning" hidden>意味: 〜の自転；回転<br>アクセント: rō-TĀ-shən əv<br>類義語: spinning of, turning of, revolution of</p>
+      </li>
+      <li class="word-item" style="animation-delay: 550ms;">
+        <button type="button" class="play-btn" data-audio="audio/022_conversely.mp3" aria-label="Play Conversely">Play</button>
+        <button type="button" class="word-text" data-audio="audio/022_conversely.mp3" aria-expanded="false">Conversely</button>
+        <span class="small">#22</span>
+        <p class="meaning" hidden>意味: 逆に言えば<br>アクセント: kən-VÛRS-lē<br>類義語: on the contrary, inversely, in contrast</p>
+      </li>
+      <li class="word-item" style="animation-delay: 575ms;">
+        <button type="button" class="play-btn" data-audio="audio/023_the_northern_hemisphere.mp3" aria-label="Play the Northern Hemisphere">Play</button>
+        <button type="button" class="word-text" data-audio="audio/023_the_northern_hemisphere.mp3" aria-expanded="false">the Northern Hemisphere</button>
+        <span class="small">#23</span>
+        <p class="meaning" hidden>意味: 北半球<br>アクセント: thə NÔR-thərn HĔM-ə-sfĭr<br>類義語: north half of Earth, northern half, boreal hemisphere</p>
+      </li>
+      <li class="word-item" style="animation-delay: 600ms;">
+        <button type="button" class="play-btn" data-audio="audio/024_eventually.mp3" aria-label="Play eventually">Play</button>
+        <button type="button" class="word-text" data-audio="audio/024_eventually.mp3" aria-expanded="false">eventually</button>
+        <span class="small">#24</span>
+        <p class="meaning" hidden>意味: 最終的に；やがて<br>アクセント: ĭ-VĔN-chōō-ə-lē<br>類義語: ultimately, finally, in the end</p>
+      </li>
+      <li class="word-item" style="animation-delay: 625ms;">
+        <button type="button" class="play-btn" data-audio="audio/025_equator.mp3" aria-label="Play equator">Play</button>
+        <button type="button" class="word-text" data-audio="audio/025_equator.mp3" aria-expanded="false">equator</button>
+        <span class="small">#25</span>
+        <p class="meaning" hidden>意味: 赤道<br>アクセント: ē-KWĀ-tər<br>類義語: equatorial line, zero latitude, middle latitude line</p>
+      </li>
+      <li class="word-item" style="animation-delay: 650ms;">
+        <button type="button" class="play-btn" data-audio="audio/026_undergo.mp3" aria-label="Play undergo">Play</button>
+        <button type="button" class="word-text" data-audio="audio/026_undergo.mp3" aria-expanded="false">undergo</button>
+        <span class="small">#26</span>
+        <p class="meaning" hidden>意味: 経験する；受ける<br>アクセント: ŭn-dər-GŌ<br>類義語: experience, go through, be subjected to</p>
+      </li>
+      <li class="word-item" style="animation-delay: 675ms;">
+        <button type="button" class="play-btn" data-audio="audio/027_whereas.mp3" aria-label="Play whereas">Play</button>
+        <button type="button" class="word-text" data-audio="audio/027_whereas.mp3" aria-expanded="false">whereas</button>
+        <span class="small">#27</span>
+        <p class="meaning" hidden>意味: 一方で；〜なのに対して<br>アクセント: hwĕr-ĂZ<br>類義語: while, in contrast, although</p>
+      </li>
+      <li class="word-item" style="animation-delay: 700ms;">
+        <button type="button" class="play-btn" data-audio="audio/028_intermediate.mp3" aria-label="Play intermediate">Play</button>
+        <button type="button" class="word-text" data-audio="audio/028_intermediate.mp3" aria-expanded="false">intermediate</button>
+        <span class="small">#28</span>
+        <p class="meaning" hidden>意味: 中間の<br>アクセント: ĭn-tər-MĒ-dē-ĭt<br>類義語: middle, moderate, transitional</p>
+      </li>
+      <li class="word-item" style="animation-delay: 725ms;">
+        <button type="button" class="play-btn" data-audio="audio/029_subjected.mp3" aria-label="Play subjected">Play</button>
+        <button type="button" class="word-text" data-audio="audio/029_subjected.mp3" aria-expanded="false">subjected</button>
+        <span class="small">#29</span>
+        <p class="meaning" hidden>意味: さらされた；受けた<br>基本形: subject<br>アクセント: səb-JĔK-tĭd<br>類義語: exposed, submitted, made to undergo</p>
+      </li>
+      <li class="word-item" style="animation-delay: 750ms;">
+        <button type="button" class="play-btn" data-audio="audio/030_more_annual_radiation.mp3" aria-label="Play more annual radiation">Play</button>
+        <button type="button" class="word-text" data-audio="audio/030_more_annual_radiation.mp3" aria-expanded="false">more annual radiation</button>
+        <span class="small">#30</span>
+        <p class="meaning" hidden>意味: より多い年間放射量<br>アクセント: môr ĂN-yōō-əl rā-dē-Ā-shən<br>類義語: greater yearly radiation, higher annual solar input, increased yearly insolation</p>
+      </li>
+    </ul>
+  </main>
+
+  <script>
+    const list = document.getElementById('wordList');
+    const playAllButton = document.getElementById('playAll');
+    const stopAllButton = document.getElementById('stopAll');
+
+    let currentAudio = null;
+    let playQueue = [];
+    let queueIndex = 0;
+
+    function stopPlayback() {
+      playQueue = [];
+      queueIndex = 0;
+      if (currentAudio) {
+        currentAudio.pause();
+        currentAudio.currentTime = 0;
+        currentAudio = null;
+      }
+    }
+
+    function playSingle(src) {
+      stopPlayback();
+      currentAudio = new Audio(src);
+      currentAudio.play().catch((err) => {
+        console.error('Audio play failed:', err);
+      });
+    }
+
+    function playQueueNext() {
+      if (queueIndex >= playQueue.length) {
+        currentAudio = null;
+        return;
+      }
+      const src = playQueue[queueIndex++];
+      currentAudio = new Audio(src);
+      currentAudio.addEventListener('ended', playQueueNext);
+      currentAudio.play().catch((err) => {
+        console.error('Audio play failed:', err);
+        playQueueNext();
+      });
+    }
+
+    function closeAllMeanings() {
+      document.querySelectorAll('.meaning').forEach((el) => {
+        el.hidden = true;
+      });
+      document.querySelectorAll('.word-text').forEach((el) => {
+        el.setAttribute('aria-expanded', 'false');
+      });
+    }
+
+    list.addEventListener('click', (event) => {
+      const target = event.target;
+      if (!(target instanceof HTMLElement)) return;
+
+      if (target.classList.contains('play-btn')) {
+        const src = target.getAttribute('data-audio');
+        if (src) {
+          playSingle(src);
+        }
+        return;
+      }
+
+      if (!target.classList.contains('word-text')) {
+        return;
+      }
+
+      const item = target.closest('.word-item');
+      if (!item) return;
+
+      const meaning = item.querySelector('.meaning');
+      if (!(meaning instanceof HTMLElement)) return;
+
+      const willOpen = meaning.hidden;
+      closeAllMeanings();
+      meaning.hidden = !willOpen;
+      target.setAttribute('aria-expanded', willOpen ? 'true' : 'false');
+    });
+
+    playAllButton.addEventListener('click', () => {
+      stopPlayback();
+      closeAllMeanings();
+      playQueue = Array.from(document.querySelectorAll('.play-btn[data-audio]'))
+        .map((el) => el.getAttribute('data-audio'))
+        .filter((src) => !!src);
+      queueIndex = 0;
+      playQueueNext();
+    });
+
+    stopAllButton.addEventListener('click', stopPlayback);
+  </script>
+</body>
+</html>

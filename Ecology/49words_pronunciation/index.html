@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>49words.md Pronunciation</title>
+  <style>
+    :root {
+      --bg1: #f2ece3;
+      --bg2: #e4d5c1;
+      --card: #fff8ee;
+      --ink: #2a1f16;
+      --accent: #9a3412;
+      --accent-2: #78350f;
+      --border: #d9c2a5;
+      --shadow: rgba(42, 31, 22, 0.15);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 15% 20%, rgba(255,255,255,0.6), transparent 35%),
+        radial-gradient(circle at 85% 80%, rgba(255,255,255,0.4), transparent 30%),
+        linear-gradient(135deg, var(--bg1), var(--bg2));
+      min-height: 100vh;
+      padding: 24px;
+    }
+
+    .wrap {
+      max-width: 900px;
+      margin: 0 auto;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 20px;
+      box-shadow: 0 10px 30px var(--shadow);
+    }
+
+    h1 {
+      margin: 0 0 8px;
+      font-size: clamp(1.5rem, 2.6vw, 2.2rem);
+      letter-spacing: 0.02em;
+    }
+
+    p {
+      margin: 0 0 20px;
+      line-height: 1.6;
+    }
+
+    .controls {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 14px;
+    }
+
+    button {
+      border: 1px solid var(--accent);
+      background: var(--accent);
+      color: #fff;
+      border-radius: 10px;
+      padding: 8px 12px;
+      font-size: 0.95rem;
+      cursor: pointer;
+      transition: transform 120ms ease, background 120ms ease;
+    }
+
+    button:hover { background: var(--accent-2); }
+    button:active { transform: translateY(1px); }
+
+    .word-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 10px;
+    }
+
+    .word-item {
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 10px;
+      background: #fff;
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      align-items: center;
+      gap: 8px;
+      opacity: 0;
+      transform: translateY(8px);
+      animation: reveal 360ms ease forwards;
+    }
+
+    .play-btn {
+      min-width: 56px;
+    }
+
+    .word-text {
+      background: none;
+      border: none;
+      color: var(--ink);
+      font: inherit;
+      text-align: left;
+      padding: 0;
+      margin: 0;
+      cursor: pointer;
+      line-height: 1.4;
+      flex: 1;
+    }
+
+    .word-text:hover {
+      text-decoration: underline;
+      text-decoration-thickness: 2px;
+      text-decoration-color: var(--accent);
+    }
+
+    .small {
+      font-size: 0.8rem;
+      color: #6e5a45;
+      min-width: 2.2em;
+      text-align: right;
+    }
+
+    .meaning {
+      grid-column: 1 / -1;
+      margin: 6px 0 0;
+      padding: 8px 10px;
+      border-radius: 8px;
+      background: #fbf3e8;
+      border: 1px dashed var(--border);
+      font-size: 0.92rem;
+      line-height: 1.5;
+    }
+
+    .meaning[hidden] {
+      display: none;
+    }
+
+    @keyframes reveal {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <h1>49words.md Pronunciation</h1>
+    <p>単語をクリックすると意味を表示します。Play ボタンは発音のみ再生します。</p>
+    <div class="controls">
+      <button type="button" id="playAll">Play All</button>
+      <button type="button" id="stopAll">Stop</button>
+    </div>
+    <ul class="word-list" id="wordList">
+      <li class="word-item" style="animation-delay: 25ms;">
+        <button type="button" class="play-btn" data-audio="audio/001_disturbing.mp3" aria-label="Play disturbing">Play</button>
+        <button type="button" class="word-text" data-audio="audio/001_disturbing.mp3" aria-expanded="false">disturbing</button>
+        <span class="small">#1</span>
+        <p class="meaning" hidden>意味: 懸念を生む；不安を与える<br>アクセント: dĭ-STÛR-bĭng<br>類義語: alarming, troubling, unsettling</p>
+      </li>
+      <li class="word-item" style="animation-delay: 50ms;">
+        <button type="button" class="play-btn" data-audio="audio/002_unintended_consequence.mp3" aria-label="Play unintended consequence">Play</button>
+        <button type="button" class="word-text" data-audio="audio/002_unintended_consequence.mp3" aria-expanded="false">unintended consequence</button>
+        <span class="small">#2</span>
+        <p class="meaning" hidden>意味: 意図しない結果<br>アクセント: ŭn-ĭn-TĔN-dĭd KŎN-sĭ-kwĕns<br>類義語: unexpected outcome, side effect, unintended result</p>
+      </li>
+      <li class="word-item" style="animation-delay: 75ms;">
+        <button type="button" class="play-btn" data-audio="audio/003_genetic_engineering.mp3" aria-label="Play genetic engineering">Play</button>
+        <button type="button" class="word-text" data-audio="audio/003_genetic_engineering.mp3" aria-expanded="false">genetic engineering</button>
+        <span class="small">#3</span>
+        <p class="meaning" hidden>意味: 遺伝子工学<br>アクセント: jə-NĔT-ĭk ĕn-jə-NĬR-ĭng<br>類義語: gene manipulation, biotechnology, genetic modification</p>
+      </li>
+      <li class="word-item" style="animation-delay: 100ms;">
+        <button type="button" class="play-btn" data-audio="audio/004_laboratory_designed.mp3" aria-label="Play laboratory-designed">Play</button>
+        <button type="button" class="word-text" data-audio="audio/004_laboratory_designed.mp3" aria-expanded="false">laboratory-designed</button>
+        <span class="small">#4</span>
+        <p class="meaning" hidden>意味: 実験室で設計された<br>アクセント: LĂB-rə-tôr-ē dĭ-ZĪND<br>類義語: lab-made, engineered, artificially developed</p>
+      </li>
+      <li class="word-item" style="animation-delay: 125ms;">
+        <button type="button" class="play-btn" data-audio="audio/005_strain.mp3" aria-label="Play strain">Play</button>
+        <button type="button" class="word-text" data-audio="audio/005_strain.mp3" aria-expanded="false">strain</button>
+        <span class="small">#5</span>
+        <p class="meaning" hidden>意味: 品種；系統<br>アクセント: strān<br>類義語: variety, type, lineage</p>
+      </li>
+      <li class="word-item" style="animation-delay: 150ms;">
+        <button type="button" class="play-btn" data-audio="audio/006_corn.mp3" aria-label="Play corn">Play</button>
+        <button type="button" class="word-text" data-audio="audio/006_corn.mp3" aria-expanded="false">corn</button>
+        <span class="small">#6</span>
+        <p class="meaning" hidden>意味: トウモロコシ<br>アクセント: kôrn<br>類義語: maize, grain corn, crop corn</p>
+      </li>
+      <li class="word-item" style="animation-delay: 175ms;">
+        <button type="button" class="play-btn" data-audio="audio/007_monarch.mp3" aria-label="Play monarch">Play</button>
+        <button type="button" class="word-text" data-audio="audio/007_monarch.mp3" aria-expanded="false">monarch</button>
+        <span class="small">#7</span>
+        <p class="meaning" hidden>意味: オオカバマダラ（チョウ）<br>アクセント: MŎN-ərk<br>類義語: monarch butterfly, Danaus plexippus, migratory butterfly</p>
+      </li>
+      <li class="word-item" style="animation-delay: 200ms;">
+        <button type="button" class="play-btn" data-audio="audio/008_butterflies.mp3" aria-label="Play butterflies">Play</button>
+        <button type="button" class="word-text" data-audio="audio/008_butterflies.mp3" aria-expanded="false">butterflies</button>
+        <span class="small">#8</span>
+        <p class="meaning" hidden>意味: チョウ類<br>基本形: butterfly<br>アクセント: BŬT-ər-flīz<br>類義語: lepidopterans, butterflies, winged insects</p>
+      </li>
+      <li class="word-item" style="animation-delay: 225ms;">
+        <button type="button" class="play-btn" data-audio="audio/009_caterpillars.mp3" aria-label="Play caterpillars">Play</button>
+        <button type="button" class="word-text" data-audio="audio/009_caterpillars.mp3" aria-expanded="false">caterpillars</button>
+        <span class="small">#9</span>
+        <p class="meaning" hidden>意味: イモムシ；幼虫<br>基本形: caterpillar<br>アクセント: KĂT-ər-pĭ-lərz<br>類義語: larvae, grubs, wormlike larvae</p>
+      </li>
+      <li class="word-item" style="animation-delay: 250ms;">
+        <button type="button" class="play-btn" data-audio="audio/010_milkweed.mp3" aria-label="Play milkweed">Play</button>
+        <button type="button" class="word-text" data-audio="audio/010_milkweed.mp3" aria-expanded="false">milkweed</button>
+        <span class="small">#10</span>
+        <p class="meaning" hidden>意味: トウワタ（ミルクウィード）<br>アクセント: MĬLK-wēd<br>類義語: Asclepias, monarch host plant, wild milkweed</p>
+      </li>
+      <li class="word-item" style="animation-delay: 275ms;">
+        <button type="button" class="play-btn" data-audio="audio/011_dusted.mp3" aria-label="Play dusted">Play</button>
+        <button type="button" class="word-text" data-audio="audio/011_dusted.mp3" aria-expanded="false">dusted</button>
+        <span class="small">#11</span>
+        <p class="meaning" hidden>意味: 粉をかけられた；薄く覆われた<br>基本形: dust<br>アクセント: DŬS-tĭd<br>類義語: powdered, coated, sprinkled</p>
+      </li>
+      <li class="word-item" style="animation-delay: 300ms;">
+        <button type="button" class="play-btn" data-audio="audio/012_altered.mp3" aria-label="Play altered">Play</button>
+        <button type="button" class="word-text" data-audio="audio/012_altered.mp3" aria-expanded="false">altered</button>
+        <span class="small">#12</span>
+        <p class="meaning" hidden>意味: 変更された；改変された<br>基本形: alter<br>アクセント: ÔL-tərd<br>類義語: modified, changed, transformed</p>
+      </li>
+      <li class="word-item" style="animation-delay: 325ms;">
+        <button type="button" class="play-btn" data-audio="audio/013_versus_none.mp3" aria-label="Play versus none">Play</button>
+        <button type="button" class="word-text" data-audio="audio/013_versus_none.mp3" aria-expanded="false">versus none</button>
+        <span class="small">#13</span>
+        <p class="meaning" hidden>意味: ある場合と全くない場合の比較<br>アクセント: VÛR-səs nŭn<br>類義語: compared with none, against zero, in contrast to none</p>
+      </li>
+      <li class="word-item" style="animation-delay: 350ms;">
+        <button type="button" class="play-btn" data-audio="audio/014_an_endangered_species.mp3" aria-label="Play an endangered species">Play</button>
+        <button type="button" class="word-text" data-audio="audio/014_an_endangered_species.mp3" aria-expanded="false">an endangered species</button>
+        <span class="small">#14</span>
+        <p class="meaning" hidden>意味: 絶滅危惧種<br>アクセント: ăn ĭn-DĀN-jərd SPĒ-shēz<br>類義語: threatened species, at-risk species, vulnerable species</p>
+      </li>
+      <li class="word-item" style="animation-delay: 375ms;">
+        <button type="button" class="play-btn" data-audio="audio/015_fear.mp3" aria-label="Play fear">Play</button>
+        <button type="button" class="word-text" data-audio="audio/015_fear.mp3" aria-expanded="false">fear</button>
+        <span class="small">#15</span>
+        <p class="meaning" hidden>意味: 恐れ；懸念<br>アクセント: fĭr<br>類義語: concern, anxiety, apprehension</p>
+      </li>
+      <li class="word-item" style="animation-delay: 400ms;">
+        <button type="button" class="play-btn" data-audio="audio/016_the_orange_and_black_butterflies.mp3" aria-label="Play the orange-and-black butterflies">Play</button>
+        <button type="button" class="word-text" data-audio="audio/016_the_orange_and_black_butterflies.mp3" aria-expanded="false">the orange-and-black butterflies</button>
+        <span class="small">#16</span>
+        <p class="meaning" hidden>意味: オレンジと黒のチョウ<br>基本形: orange-and-black butterfly<br>アクセント: thē ÔR-ĭnj-ănd-blăk BŬT-ər-flīz<br>類義語: monarchs, orange-black butterflies, colored butterflies</p>
+      </li>
+      <li class="word-item" style="animation-delay: 425ms;">
+        <button type="button" class="play-btn" data-audio="audio/017_insects.mp3" aria-label="Play insects">Play</button>
+        <button type="button" class="word-text" data-audio="audio/017_insects.mp3" aria-expanded="false">insects</button>
+        <span class="small">#17</span>
+        <p class="meaning" hidden>意味: 昆虫<br>基本形: insect<br>アクセント: ĬN-sĕkts<br>類義語: bugs, arthropods, hexapods</p>
+      </li>
+      <li class="word-item" style="animation-delay: 450ms;">
+        <button type="button" class="play-btn" data-audio="audio/018_unseen.mp3" aria-label="Play unseen">Play</button>
+        <button type="button" class="word-text" data-audio="audio/018_unseen.mp3" aria-expanded="false">unseen</button>
+        <span class="small">#18</span>
+        <p class="meaning" hidden>意味: 見えない；気づかれない<br>アクセント: ŭn-SĒN<br>類義語: invisible, unnoticed, hidden</p>
+      </li>
+      <li class="word-item" style="animation-delay: 475ms;">
+        <button type="button" class="play-btn" data-audio="audio/019_strain.mp3" aria-label="Play strain">Play</button>
+        <button type="button" class="word-text" data-audio="audio/019_strain.mp3" aria-expanded="false">strain</button>
+        <span class="small">#19</span>
+        <p class="meaning" hidden>意味: 品種；系統<br>アクセント: strān<br>類義語: variety, type, lineage</p>
+      </li>
+      <li class="word-item" style="animation-delay: 500ms;">
+        <button type="button" class="play-btn" data-audio="audio/020_a_natural_pesticide.mp3" aria-label="Play a natural pesticide">Play</button>
+        <button type="button" class="word-text" data-audio="audio/020_a_natural_pesticide.mp3" aria-expanded="false">a natural pesticide</button>
+        <span class="small">#20</span>
+        <p class="meaning" hidden>意味: 天然の殺虫剤<br>アクセント: ə NĂCH-ər-əl PĔS-tə-sīd<br>類義語: biological pesticide, natural insecticide, eco pesticide</p>
+      </li>
+      <li class="word-item" style="animation-delay: 525ms;">
+        <button type="button" class="play-btn" data-audio="audio/021_borer.mp3" aria-label="Play borer">Play</button>
+        <button type="button" class="word-text" data-audio="audio/021_borer.mp3" aria-expanded="false">borer</button>
+        <span class="small">#21</span>
+        <p class="meaning" hidden>意味: 食入害虫<br>アクセント: BÔR-ər<br>類義語: pest larva, stem borer, boring insect</p>
+      </li>
+      <li class="word-item" style="animation-delay: 550ms;">
+        <button type="button" class="play-btn" data-audio="audio/022_drug.mp3" aria-label="Play Drug">Play</button>
+        <button type="button" class="word-text" data-audio="audio/022_drug.mp3" aria-expanded="false">Drug</button>
+        <span class="small">#22</span>
+        <p class="meaning" hidden>意味: 医薬品；薬剤<br>アクセント: drŭg<br>類義語: medicine, pharmaceutical, medication</p>
+      </li>
+      <li class="word-item" style="animation-delay: 575ms;">
+        <button type="button" class="play-btn" data-audio="audio/023_administration.mp3" aria-label="Play Administration">Play</button>
+        <button type="button" class="word-text" data-audio="audio/023_administration.mp3" aria-expanded="false">Administration</button>
+        <span class="small">#23</span>
+        <p class="meaning" hidden>意味: 行政機関；管理<br>アクセント: ăd-mĭn-ĭ-STRĀ-shən<br>類義語: authority, agency, governance</p>
+      </li>
+      <li class="word-item" style="animation-delay: 600ms;">
+        <button type="button" class="play-btn" data-audio="audio/024_accounted_for.mp3" aria-label="Play accounted for">Play</button>
+        <button type="button" class="word-text" data-audio="audio/024_accounted_for.mp3" aria-expanded="false">accounted for</button>
+        <span class="small">#24</span>
+        <p class="meaning" hidden>意味: 〜を占めた；説明された<br>基本形: account for<br>アクセント: ə-KOUN-tĭd fôr<br>類義語: made up, represented, explained</p>
+      </li>
+      <li class="word-item" style="animation-delay: 625ms;">
+        <button type="button" class="play-btn" data-audio="audio/025_planted.mp3" aria-label="Play planted">Play</button>
+        <button type="button" class="word-text" data-audio="audio/025_planted.mp3" aria-expanded="false">planted</button>
+        <span class="small">#25</span>
+        <p class="meaning" hidden>意味: 植えられた<br>基本形: plant<br>アクセント: PLĂN-tĭd<br>類義語: sown, cultivated, grown</p>
+      </li>
+      <li class="word-item" style="animation-delay: 650ms;">
+        <button type="button" class="play-btn" data-audio="audio/026_touted_by_the_industry.mp3" aria-label="Play touted by the industry">Play</button>
+        <button type="button" class="word-text" data-audio="audio/026_touted_by_the_industry.mp3" aria-expanded="false">touted by the industry</button>
+        <span class="small">#26</span>
+        <p class="meaning" hidden>意味: 業界によって宣伝された<br>アクセント: TOU-tĭd bī thē ĬN-də-strē<br>類義語: promoted by companies, marketed by the industry, praised commercially</p>
+      </li>
+      <li class="word-item" style="animation-delay: 675ms;">
+        <button type="button" class="play-btn" data-audio="audio/027_major_pest.mp3" aria-label="Play major pest">Play</button>
+        <button type="button" class="word-text" data-audio="audio/027_major_pest.mp3" aria-expanded="false">major pest</button>
+        <span class="small">#27</span>
+        <p class="meaning" hidden>意味: 主要害虫<br>アクセント: MĀ-jər pĕst<br>類義語: principal pest, key agricultural pest, primary crop pest</p>
+      </li>
+    </ul>
+  </main>
+
+  <script>
+    const list = document.getElementById('wordList');
+    const playAllButton = document.getElementById('playAll');
+    const stopAllButton = document.getElementById('stopAll');
+
+    let currentAudio = null;
+    let playQueue = [];
+    let queueIndex = 0;
+
+    function stopPlayback() {
+      playQueue = [];
+      queueIndex = 0;
+      if (currentAudio) {
+        currentAudio.pause();
+        currentAudio.currentTime = 0;
+        currentAudio = null;
+      }
+    }
+
+    function playSingle(src) {
+      stopPlayback();
+      currentAudio = new Audio(src);
+      currentAudio.play().catch((err) => {
+        console.error('Audio play failed:', err);
+      });
+    }
+
+    function playQueueNext() {
+      if (queueIndex >= playQueue.length) {
+        currentAudio = null;
+        return;
+      }
+      const src = playQueue[queueIndex++];
+      currentAudio = new Audio(src);
+      currentAudio.addEventListener('ended', playQueueNext);
+      currentAudio.play().catch((err) => {
+        console.error('Audio play failed:', err);
+        playQueueNext();
+      });
+    }
+
+    function closeAllMeanings() {
+      document.querySelectorAll('.meaning').forEach((el) => {
+        el.hidden = true;
+      });
+      document.querySelectorAll('.word-text').forEach((el) => {
+        el.setAttribute('aria-expanded', 'false');
+      });
+    }
+
+    list.addEventListener('click', (event) => {
+      const target = event.target;
+      if (!(target instanceof HTMLElement)) return;
+
+      if (target.classList.contains('play-btn')) {
+        const src = target.getAttribute('data-audio');
+        if (src) {
+          playSingle(src);
+        }
+        return;
+      }
+
+      if (!target.classList.contains('word-text')) {
+        return;
+      }
+
+      const item = target.closest('.word-item');
+      if (!item) return;
+
+      const meaning = item.querySelector('.meaning');
+      if (!(meaning instanceof HTMLElement)) return;
+
+      const willOpen = meaning.hidden;
+      closeAllMeanings();
+      meaning.hidden = !willOpen;
+      target.setAttribute('aria-expanded', willOpen ? 'true' : 'false');
+    });
+
+    playAllButton.addEventListener('click', () => {
+      stopPlayback();
+      closeAllMeanings();
+      playQueue = Array.from(document.querySelectorAll('.play-btn[data-audio]'))
+        .map((el) => el.getAttribute('data-audio'))
+        .filter((src) => !!src);
+      queueIndex = 0;
+      playQueueNext();
+    });
+
+    stopAllButton.addEventListener('click', stopPlayback);
+  </script>
+</body>
+</html>

@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>44words.md Pronunciation</title>
+  <style>
+    :root {
+      --bg1: #f2ece3;
+      --bg2: #e4d5c1;
+      --card: #fff8ee;
+      --ink: #2a1f16;
+      --accent: #9a3412;
+      --accent-2: #78350f;
+      --border: #d9c2a5;
+      --shadow: rgba(42, 31, 22, 0.15);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 15% 20%, rgba(255,255,255,0.6), transparent 35%),
+        radial-gradient(circle at 85% 80%, rgba(255,255,255,0.4), transparent 30%),
+        linear-gradient(135deg, var(--bg1), var(--bg2));
+      min-height: 100vh;
+      padding: 24px;
+    }
+
+    .wrap {
+      max-width: 900px;
+      margin: 0 auto;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 20px;
+      box-shadow: 0 10px 30px var(--shadow);
+    }
+
+    h1 {
+      margin: 0 0 8px;
+      font-size: clamp(1.5rem, 2.6vw, 2.2rem);
+      letter-spacing: 0.02em;
+    }
+
+    p {
+      margin: 0 0 20px;
+      line-height: 1.6;
+    }
+
+    .controls {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 14px;
+    }
+
+    button {
+      border: 1px solid var(--accent);
+      background: var(--accent);
+      color: #fff;
+      border-radius: 10px;
+      padding: 8px 12px;
+      font-size: 0.95rem;
+      cursor: pointer;
+      transition: transform 120ms ease, background 120ms ease;
+    }
+
+    button:hover { background: var(--accent-2); }
+    button:active { transform: translateY(1px); }
+
+    .word-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 10px;
+    }
+
+    .word-item {
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 10px;
+      background: #fff;
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      align-items: center;
+      gap: 8px;
+      opacity: 0;
+      transform: translateY(8px);
+      animation: reveal 360ms ease forwards;
+    }
+
+    .play-btn {
+      min-width: 56px;
+    }
+
+    .word-text {
+      background: none;
+      border: none;
+      color: var(--ink);
+      font: inherit;
+      text-align: left;
+      padding: 0;
+      margin: 0;
+      cursor: pointer;
+      line-height: 1.4;
+      flex: 1;
+    }
+
+    .word-text:hover {
+      text-decoration: underline;
+      text-decoration-thickness: 2px;
+      text-decoration-color: var(--accent);
+    }
+
+    .small {
+      font-size: 0.8rem;
+      color: #6e5a45;
+      min-width: 2.2em;
+      text-align: right;
+    }
+
+    .meaning {
+      grid-column: 1 / -1;
+      margin: 6px 0 0;
+      padding: 8px 10px;
+      border-radius: 8px;
+      background: #fbf3e8;
+      border: 1px dashed var(--border);
+      font-size: 0.92rem;
+      line-height: 1.5;
+    }
+
+    .meaning[hidden] {
+      display: none;
+    }
+
+    @keyframes reveal {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <h1>44words.md Pronunciation</h1>
+    <p>単語をクリックすると意味を表示します。Play ボタンは発音のみ再生します。</p>
+    <div class="controls">
+      <button type="button" id="playAll">Play All</button>
+      <button type="button" id="stopAll">Stop</button>
+    </div>
+    <ul class="word-list" id="wordList">
+      <li class="word-item" style="animation-delay: 25ms;">
+        <button type="button" class="play-btn" data-audio="audio/001_transformative.mp3" aria-label="Play transformative">Play</button>
+        <button type="button" class="word-text" data-audio="audio/001_transformative.mp3" aria-expanded="false">transformative</button>
+        <span class="small">#1</span>
+        <p class="meaning" hidden>意味: 変革的な；大きく変える<br>アクセント: trăns-FÔR-mə-tĭv<br>類義語: revolutionary, groundbreaking, game-changing</p>
+      </li>
+      <li class="word-item" style="animation-delay: 50ms;">
+        <button type="button" class="play-btn" data-audio="audio/002_at_its_core.mp3" aria-label="Play at its core">Play</button>
+        <button type="button" class="word-text" data-audio="audio/002_at_its_core.mp3" aria-expanded="false">at its core</button>
+        <span class="small">#2</span>
+        <p class="meaning" hidden>意味: 本質的には；核心では<br>アクセント: ăt ĭts kôr<br>類義語: fundamentally, essentially, basically</p>
+      </li>
+      <li class="word-item" style="animation-delay: 75ms;">
+        <button type="button" class="play-btn" data-audio="audio/003_refers.mp3" aria-label="Play refers">Play</button>
+        <button type="button" class="word-text" data-audio="audio/003_refers.mp3" aria-expanded="false">refers</button>
+        <span class="small">#3</span>
+        <p class="meaning" hidden>意味: 言及する；指す<br>基本形: refer<br>アクセント: rĭ-FÛR<br>類義語: denotes, points to, indicates</p>
+      </li>
+      <li class="word-item" style="animation-delay: 100ms;">
+        <button type="button" class="play-btn" data-audio="audio/004_intelligence.mp3" aria-label="Play intelligence">Play</button>
+        <button type="button" class="word-text" data-audio="audio/004_intelligence.mp3" aria-expanded="false">intelligence</button>
+        <span class="small">#4</span>
+        <p class="meaning" hidden>意味: 知能；知性<br>アクセント: ĭn-TĔL-ə-jəns<br>類義語: intellect, cognition, smartness</p>
+      </li>
+      <li class="word-item" style="animation-delay: 125ms;">
+        <button type="button" class="play-btn" data-audio="audio/005_problem_solving.mp3" aria-label="Play problem-solving">Play</button>
+        <button type="button" class="word-text" data-audio="audio/005_problem_solving.mp3" aria-expanded="false">problem-solving</button>
+        <span class="small">#5</span>
+        <p class="meaning" hidden>意味: 問題解決<br>アクセント: PRŎB-ləm sŏl-vĭng<br>類義語: troubleshooting, solution finding, resolution</p>
+      </li>
+      <li class="word-item" style="animation-delay: 150ms;">
+        <button type="button" class="play-btn" data-audio="audio/006_sophisticated.mp3" aria-label="Play sophisticated">Play</button>
+        <button type="button" class="word-text" data-audio="audio/006_sophisticated.mp3" aria-expanded="false">sophisticated</button>
+        <span class="small">#6</span>
+        <p class="meaning" hidden>意味: 高度な；洗練された<br>アクセント: sə-FĬS-tə-kā-tĭd<br>類義語: advanced, refined, complex</p>
+      </li>
+      <li class="word-item" style="animation-delay: 175ms;">
+        <button type="button" class="play-btn" data-audio="audio/007_recognize_speech.mp3" aria-label="Play recognize speech">Play</button>
+        <button type="button" class="word-text" data-audio="audio/007_recognize_speech.mp3" aria-expanded="false">recognize speech</button>
+        <span class="small">#7</span>
+        <p class="meaning" hidden>意味: 音声を認識する<br>アクセント: RĔK-əg-nīz spēch<br>類義語: identify spoken words, process voice, understand speech</p>
+      </li>
+      <li class="word-item" style="animation-delay: 200ms;">
+        <button type="button" class="play-btn" data-audio="audio/008_intertwined.mp3" aria-label="Play intertwined">Play</button>
+        <button type="button" class="word-text" data-audio="audio/008_intertwined.mp3" aria-expanded="false">intertwined</button>
+        <span class="small">#8</span>
+        <p class="meaning" hidden>意味: 密接に結びついた<br>基本形: intertwine<br>アクセント: ĭn-tər-TWĪND<br>類義語: interconnected, linked, entangled</p>
+      </li>
+      <li class="word-item" style="animation-delay: 225ms;">
+        <button type="button" class="play-btn" data-audio="audio/009_vast_memory.mp3" aria-label="Play vast memory">Play</button>
+        <button type="button" class="word-text" data-audio="audio/009_vast_memory.mp3" aria-expanded="false">vast memory</button>
+        <span class="small">#9</span>
+        <p class="meaning" hidden>意味: 膨大な記憶容量<br>アクセント: văst MĔM-ə-rē<br>類義語: huge storage, extensive memory, large capacity</p>
+      </li>
+      <li class="word-item" style="animation-delay: 250ms;">
+        <button type="button" class="play-btn" data-audio="audio/010_efficiently.mp3" aria-label="Play efficiently">Play</button>
+        <button type="button" class="word-text" data-audio="audio/010_efficiently.mp3" aria-expanded="false">efficiently</button>
+        <span class="small">#10</span>
+        <p class="meaning" hidden>意味: 効率的に<br>アクセント: ĭ-FĬSH-ənt-lē<br>類義語: effectively, productively, smoothly</p>
+      </li>
+      <li class="word-item" style="animation-delay: 275ms;">
+        <button type="button" class="play-btn" data-audio="audio/011_likewise.mp3" aria-label="Play Likewise">Play</button>
+        <button type="button" class="word-text" data-audio="audio/011_likewise.mp3" aria-expanded="false">Likewise</button>
+        <span class="small">#11</span>
+        <p class="meaning" hidden>意味: 同様に；同じく<br>アクセント: LĪK-wīz<br>類義語: similarly, likewise, in the same way</p>
+      </li>
+      <li class="word-item" style="animation-delay: 300ms;">
+        <button type="button" class="play-btn" data-audio="audio/012_enabling.mp3" aria-label="Play enabling">Play</button>
+        <button type="button" class="word-text" data-audio="audio/012_enabling.mp3" aria-expanded="false">enabling</button>
+        <span class="small">#12</span>
+        <p class="meaning" hidden>意味: 可能にすること；実現させること<br>基本形: enable<br>アクセント: ĭ-NĀ-bəl-ĭng<br>類義語: allowing, empowering, facilitating</p>
+      </li>
+      <li class="word-item" style="animation-delay: 325ms;">
+        <button type="button" class="play-btn" data-audio="audio/013_optimize.mp3" aria-label="Play optimize">Play</button>
+        <button type="button" class="word-text" data-audio="audio/013_optimize.mp3" aria-expanded="false">optimize</button>
+        <span class="small">#13</span>
+        <p class="meaning" hidden>意味: 最適化する<br>アクセント: ŎP-tə-mīz<br>類義語: improve, refine, maximize</p>
+      </li>
+      <li class="word-item" style="animation-delay: 350ms;">
+        <button type="button" class="play-btn" data-audio="audio/014_detect_errors_automatically.mp3" aria-label="Play detect errors automatically">Play</button>
+        <button type="button" class="word-text" data-audio="audio/014_detect_errors_automatically.mp3" aria-expanded="false">detect errors automatically</button>
+        <span class="small">#14</span>
+        <p class="meaning" hidden>意味: エラーを自動的に検出する<br>アクセント: dĭ-TĔKT ĔR-ərz ô-tə-MĂT-ĭ-kəl-lē<br>類義語: find mistakes automatically, auto-diagnose errors, identify faults automatically</p>
+      </li>
+      <li class="word-item" style="animation-delay: 375ms;">
+        <button type="button" class="play-btn" data-audio="audio/015_predict.mp3" aria-label="Play predict">Play</button>
+        <button type="button" class="word-text" data-audio="audio/015_predict.mp3" aria-expanded="false">predict</button>
+        <span class="small">#15</span>
+        <p class="meaning" hidden>意味: 予測する<br>アクセント: prĭ-DĬKT<br>類義語: forecast, anticipate, project</p>
+      </li>
+      <li class="word-item" style="animation-delay: 400ms;">
+        <button type="button" class="play-btn" data-audio="audio/016_a_branch_of_ai.mp3" aria-label="Play a branch of AI">Play</button>
+        <button type="button" class="word-text" data-audio="audio/016_a_branch_of_ai.mp3" aria-expanded="false">a branch of AI</button>
+        <span class="small">#16</span>
+        <p class="meaning" hidden>意味: AIの一分野<br>アクセント: ə brănch əv ā-ī<br>類義語: AI subfield, domain of AI, AI discipline</p>
+      </li>
+      <li class="word-item" style="animation-delay: 425ms;">
+        <button type="button" class="play-btn" data-audio="audio/017_analyze_patterns.mp3" aria-label="Play analyze patterns">Play</button>
+        <button type="button" class="word-text" data-audio="audio/017_analyze_patterns.mp3" aria-expanded="false">analyze patterns</button>
+        <span class="small">#17</span>
+        <p class="meaning" hidden>意味: パターンを分析する<br>アクセント: ĂN-ə-līz PĂT-ərnz<br>類義語: identify trends, examine regularities, detect structures</p>
+      </li>
+      <li class="word-item" style="animation-delay: 450ms;">
+        <button type="button" class="play-btn" data-audio="audio/018_massive.mp3" aria-label="Play massive">Play</button>
+        <button type="button" class="word-text" data-audio="audio/018_massive.mp3" aria-expanded="false">massive</button>
+        <span class="small">#18</span>
+        <p class="meaning" hidden>意味: 大規模な；非常に大きい<br>アクセント: MĂS-ĭv<br>類義語: enormous, huge, vast</p>
+      </li>
+      <li class="word-item" style="animation-delay: 475ms;">
+        <button type="button" class="play-btn" data-audio="audio/019_decisions.mp3" aria-label="Play decisions">Play</button>
+        <button type="button" class="word-text" data-audio="audio/019_decisions.mp3" aria-expanded="false">decisions</button>
+        <span class="small">#19</span>
+        <p class="meaning" hidden>意味: 決定；判断<br>基本形: decision<br>アクセント: dĭ-SĬZH-ənz<br>類義語: choices, judgments, determinations</p>
+      </li>
+      <li class="word-item" style="animation-delay: 500ms;">
+        <button type="button" class="play-btn" data-audio="audio/020_explicit_programming.mp3" aria-label="Play explicit programming">Play</button>
+        <button type="button" class="word-text" data-audio="audio/020_explicit_programming.mp3" aria-expanded="false">explicit programming</button>
+        <span class="small">#20</span>
+        <p class="meaning" hidden>意味: 明示的なプログラミング<br>アクセント: ĭk-SPLĬS-ĭt PRŌ-grăm-ĭng<br>類義語: hard-coded programming, manual coding, direct instruction coding</p>
+      </li>
+      <li class="word-item" style="animation-delay: 525ms;">
+        <button type="button" class="play-btn" data-audio="audio/021_revolutionizing.mp3" aria-label="Play revolutionizing">Play</button>
+        <button type="button" class="word-text" data-audio="audio/021_revolutionizing.mp3" aria-expanded="false">revolutionizing</button>
+        <span class="small">#21</span>
+        <p class="meaning" hidden>意味: 革命を起こしている；一新している<br>基本形: revolutionize<br>アクセント: rĕv-ə-LŪ-shə-nī-zĭng<br>類義語: transforming, reshaping, disrupting</p>
+      </li>
+      <li class="word-item" style="animation-delay: 550ms;">
+        <button type="button" class="play-btn" data-audio="audio/022_efficiency.mp3" aria-label="Play efficiency">Play</button>
+        <button type="button" class="word-text" data-audio="audio/022_efficiency.mp3" aria-expanded="false">efficiency</button>
+        <span class="small">#22</span>
+        <p class="meaning" hidden>意味: 効率；能率<br>アクセント: ĭ-FĬSH-ən-sē<br>類義語: productivity, effectiveness, performance</p>
+      </li>
+      <li class="word-item" style="animation-delay: 575ms;">
+        <button type="button" class="play-btn" data-audio="audio/023_accuracy.mp3" aria-label="Play accuracy">Play</button>
+        <button type="button" class="word-text" data-audio="audio/023_accuracy.mp3" aria-expanded="false">accuracy</button>
+        <span class="small">#23</span>
+        <p class="meaning" hidden>意味: 正確さ；精度<br>アクセント: ĂK-yə-rə-sē<br>類義語: precision, exactness, correctness</p>
+      </li>
+      <li class="word-item" style="animation-delay: 600ms;">
+        <button type="button" class="play-btn" data-audio="audio/024_virtual_assistants.mp3" aria-label="Play Virtual assistants">Play</button>
+        <button type="button" class="word-text" data-audio="audio/024_virtual_assistants.mp3" aria-expanded="false">Virtual assistants</button>
+        <span class="small">#24</span>
+        <p class="meaning" hidden>意味: 仮想アシスタント<br>基本形: virtual assistant<br>アクセント: VÛR-chōō-əl ə-SĬS-tənts<br>類義語: digital helpers, AI assistants, smart assistants</p>
+      </li>
+      <li class="word-item" style="animation-delay: 625ms;">
+        <button type="button" class="play-btn" data-audio="audio/025_autonomous.mp3" aria-label="Play autonomous">Play</button>
+        <button type="button" class="word-text" data-audio="audio/025_autonomous.mp3" aria-expanded="false">autonomous</button>
+        <span class="small">#25</span>
+        <p class="meaning" hidden>意味: 自律的な；自動運転の<br>アクセント: ô-TŎN-ə-məs<br>類義語: self-driving, independent, self-governing</p>
+      </li>
+      <li class="word-item" style="animation-delay: 650ms;">
+        <button type="button" class="play-btn" data-audio="audio/026_vehicles.mp3" aria-label="Play vehicles">Play</button>
+        <button type="button" class="word-text" data-audio="audio/026_vehicles.mp3" aria-expanded="false">vehicles</button>
+        <span class="small">#26</span>
+        <p class="meaning" hidden>意味: 車両；乗り物<br>基本形: vehicle<br>アクセント: VĒ-ĭ-kəlz<br>類義語: cars, transports, automobiles</p>
+      </li>
+      <li class="word-item" style="animation-delay: 675ms;">
+        <button type="button" class="play-btn" data-audio="audio/027_ethics.mp3" aria-label="Play ethics">Play</button>
+        <button type="button" class="word-text" data-audio="audio/027_ethics.mp3" aria-expanded="false">ethics</button>
+        <span class="small">#27</span>
+        <p class="meaning" hidden>意味: 倫理；倫理学<br>アクセント: ĔTH-ĭks<br>類義語: morality, moral principles, values</p>
+      </li>
+      <li class="word-item" style="animation-delay: 700ms;">
+        <button type="button" class="play-btn" data-audio="audio/028_consider.mp3" aria-label="Play consider">Play</button>
+        <button type="button" class="word-text" data-audio="audio/028_consider.mp3" aria-expanded="false">consider</button>
+        <span class="small">#28</span>
+        <p class="meaning" hidden>意味: 考慮する；検討する<br>アクセント: kən-SĬD-ər<br>類義語: examine, take into account, contemplate</p>
+      </li>
+      <li class="word-item" style="animation-delay: 725ms;">
+        <button type="button" class="play-btn" data-audio="audio/029_responsibility.mp3" aria-label="Play responsibility">Play</button>
+        <button type="button" class="word-text" data-audio="audio/029_responsibility.mp3" aria-expanded="false">responsibility</button>
+        <span class="small">#29</span>
+        <p class="meaning" hidden>意味: 責任<br>アクセント: rĭ-spŏn-sə-BĬL-ə-tē<br>類義語: accountability, duty, obligation</p>
+      </li>
+      <li class="word-item" style="animation-delay: 750ms;">
+        <button type="button" class="play-btn" data-audio="audio/030_reshape.mp3" aria-label="Play reshape">Play</button>
+        <button type="button" class="word-text" data-audio="audio/030_reshape.mp3" aria-expanded="false">reshape</button>
+        <span class="small">#30</span>
+        <p class="meaning" hidden>意味: 作り直す；形を変える<br>アクセント: rē-SHĀP<br>類義語: transform, remold, redesign</p>
+      </li>
+      <li class="word-item" style="animation-delay: 775ms;">
+        <button type="button" class="play-btn" data-audio="audio/031_combined.mp3" aria-label="Play combined">Play</button>
+        <button type="button" class="word-text" data-audio="audio/031_combined.mp3" aria-expanded="false">combined</button>
+        <span class="small">#31</span>
+        <p class="meaning" hidden>意味: 結合した；組み合わせた<br>基本形: combine<br>アクセント: kəm-BĪND<br>類義語: merged, integrated, united</p>
+      </li>
+      <li class="word-item" style="animation-delay: 800ms;">
+        <button type="button" class="play-btn" data-audio="audio/032_but_also.mp3" aria-label="Play but also">Play</button>
+        <button type="button" class="word-text" data-audio="audio/032_but_also.mp3" aria-expanded="false">but also</button>
+        <span class="small">#32</span>
+        <p class="meaning" hidden>意味: だけでなく〜も<br>アクセント: bət ÔL-sō<br>類義語: and also, as well as, not only</p>
+      </li>
+      <li class="word-item" style="animation-delay: 825ms;">
+        <button type="button" class="play-btn" data-audio="audio/033_redefine.mp3" aria-label="Play redefine">Play</button>
+        <button type="button" class="word-text" data-audio="audio/033_redefine.mp3" aria-expanded="false">redefine</button>
+        <span class="small">#33</span>
+        <p class="meaning" hidden>意味: 再定義する<br>アクセント: rē-dĭ-FĪN<br>類義語: reinterpret, reframe, recharacterize</p>
+      </li>
+      <li class="word-item" style="animation-delay: 850ms;">
+        <button type="button" class="play-btn" data-audio="audio/034_boundaries.mp3" aria-label="Play boundaries">Play</button>
+        <button type="button" class="word-text" data-audio="audio/034_boundaries.mp3" aria-expanded="false">boundaries</button>
+        <span class="small">#34</span>
+        <p class="meaning" hidden>意味: 境界；限界<br>基本形: boundary<br>アクセント: BOUND-ə-rēz<br>類義語: limits, borders, frontiers</p>
+      </li>
+    </ul>
+  </main>
+
+  <script>
+    const list = document.getElementById('wordList');
+    const playAllButton = document.getElementById('playAll');
+    const stopAllButton = document.getElementById('stopAll');
+
+    let currentAudio = null;
+    let playQueue = [];
+    let queueIndex = 0;
+
+    function stopPlayback() {
+      playQueue = [];
+      queueIndex = 0;
+      if (currentAudio) {
+        currentAudio.pause();
+        currentAudio.currentTime = 0;
+        currentAudio = null;
+      }
+    }
+
+    function playSingle(src) {
+      stopPlayback();
+      currentAudio = new Audio(src);
+      currentAudio.play().catch((err) => {
+        console.error('Audio play failed:', err);
+      });
+    }
+
+    function playQueueNext() {
+      if (queueIndex >= playQueue.length) {
+        currentAudio = null;
+        return;
+      }
+      const src = playQueue[queueIndex++];
+      currentAudio = new Audio(src);
+      currentAudio.addEventListener('ended', playQueueNext);
+      currentAudio.play().catch((err) => {
+        console.error('Audio play failed:', err);
+        playQueueNext();
+      });
+    }
+
+    function closeAllMeanings() {
+      document.querySelectorAll('.meaning').forEach((el) => {
+        el.hidden = true;
+      });
+      document.querySelectorAll('.word-text').forEach((el) => {
+        el.setAttribute('aria-expanded', 'false');
+      });
+    }
+
+    list.addEventListener('click', (event) => {
+      const target = event.target;
+      if (!(target instanceof HTMLElement)) return;
+
+      if (target.classList.contains('play-btn')) {
+        const src = target.getAttribute('data-audio');
+        if (src) {
+          playSingle(src);
+        }
+        return;
+      }
+
+      if (!target.classList.contains('word-text')) {
+        return;
+      }
+
+      const item = target.closest('.word-item');
+      if (!item) return;
+
+      const meaning = item.querySelector('.meaning');
+      if (!(meaning instanceof HTMLElement)) return;
+
+      const willOpen = meaning.hidden;
+      closeAllMeanings();
+      meaning.hidden = !willOpen;
+      target.setAttribute('aria-expanded', willOpen ? 'true' : 'false');
+    });
+
+    playAllButton.addEventListener('click', () => {
+      stopPlayback();
+      closeAllMeanings();
+      playQueue = Array.from(document.querySelectorAll('.play-btn[data-audio]'))
+        .map((el) => el.getAttribute('data-audio'))
+        .filter((src) => !!src);
+      queueIndex = 0;
+      playQueueNext();
+    });
+
+    stopAllButton.addEventListener('click', stopPlayback);
+  </script>
+</body>
+</html>

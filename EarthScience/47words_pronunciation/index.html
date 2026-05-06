@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>47words.md Pronunciation</title>
+  <style>
+    :root {
+      --bg1: #f2ece3;
+      --bg2: #e4d5c1;
+      --card: #fff8ee;
+      --ink: #2a1f16;
+      --accent: #9a3412;
+      --accent-2: #78350f;
+      --border: #d9c2a5;
+      --shadow: rgba(42, 31, 22, 0.15);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 15% 20%, rgba(255,255,255,0.6), transparent 35%),
+        radial-gradient(circle at 85% 80%, rgba(255,255,255,0.4), transparent 30%),
+        linear-gradient(135deg, var(--bg1), var(--bg2));
+      min-height: 100vh;
+      padding: 24px;
+    }
+
+    .wrap {
+      max-width: 900px;
+      margin: 0 auto;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 20px;
+      box-shadow: 0 10px 30px var(--shadow);
+    }
+
+    h1 {
+      margin: 0 0 8px;
+      font-size: clamp(1.5rem, 2.6vw, 2.2rem);
+      letter-spacing: 0.02em;
+    }
+
+    p {
+      margin: 0 0 20px;
+      line-height: 1.6;
+    }
+
+    .controls {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 14px;
+    }
+
+    button {
+      border: 1px solid var(--accent);
+      background: var(--accent);
+      color: #fff;
+      border-radius: 10px;
+      padding: 8px 12px;
+      font-size: 0.95rem;
+      cursor: pointer;
+      transition: transform 120ms ease, background 120ms ease;
+    }
+
+    button:hover { background: var(--accent-2); }
+    button:active { transform: translateY(1px); }
+
+    .word-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 10px;
+    }
+
+    .word-item {
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 10px;
+      background: #fff;
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      align-items: center;
+      gap: 8px;
+      opacity: 0;
+      transform: translateY(8px);
+      animation: reveal 360ms ease forwards;
+    }
+
+    .play-btn {
+      min-width: 56px;
+    }
+
+    .word-text {
+      background: none;
+      border: none;
+      color: var(--ink);
+      font: inherit;
+      text-align: left;
+      padding: 0;
+      margin: 0;
+      cursor: pointer;
+      line-height: 1.4;
+      flex: 1;
+    }
+
+    .word-text:hover {
+      text-decoration: underline;
+      text-decoration-thickness: 2px;
+      text-decoration-color: var(--accent);
+    }
+
+    .small {
+      font-size: 0.8rem;
+      color: #6e5a45;
+      min-width: 2.2em;
+      text-align: right;
+    }
+
+    .meaning {
+      grid-column: 1 / -1;
+      margin: 6px 0 0;
+      padding: 8px 10px;
+      border-radius: 8px;
+      background: #fbf3e8;
+      border: 1px dashed var(--border);
+      font-size: 0.92rem;
+      line-height: 1.5;
+    }
+
+    .meaning[hidden] {
+      display: none;
+    }
+
+    @keyframes reveal {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <h1>47words.md Pronunciation</h1>
+    <p>単語をクリックすると意味を表示します。Play ボタンは発音のみ再生します。</p>
+    <div class="controls">
+      <button type="button" id="playAll">Play All</button>
+      <button type="button" id="stopAll">Stop</button>
+    </div>
+    <ul class="word-list" id="wordList">
+      <li class="word-item" style="animation-delay: 25ms;">
+        <button type="button" class="play-btn" data-audio="audio/001_the_chief_source.mp3" aria-label="Play the chief source">Play</button>
+        <button type="button" class="word-text" data-audio="audio/001_the_chief_source.mp3" aria-expanded="false">the chief source</button>
+        <span class="small">#1</span>
+        <p class="meaning" hidden>意味: 主な供給源<br>アクセント: thə chēf sôrs<br>類義語: main source, primary origin, principal supply</p>
+      </li>
+      <li class="word-item" style="animation-delay: 50ms;">
+        <button type="button" class="play-btn" data-audio="audio/002_evaporated.mp3" aria-label="Play evaporated">Play</button>
+        <button type="button" class="word-text" data-audio="audio/002_evaporated.mp3" aria-expanded="false">evaporated</button>
+        <span class="small">#2</span>
+        <p class="meaning" hidden>意味: 蒸発した<br>基本形: evaporate<br>アクセント: ĭ-VĂP-ə-rā-tĭd<br>類義語: vaporized, turned to vapor, dried up</p>
+      </li>
+      <li class="word-item" style="animation-delay: 75ms;">
+        <button type="button" class="play-btn" data-audio="audio/003_invisible_vapor.mp3" aria-label="Play invisible vapor">Play</button>
+        <button type="button" class="word-text" data-audio="audio/003_invisible_vapor.mp3" aria-expanded="false">invisible vapor</button>
+        <span class="small">#3</span>
+        <p class="meaning" hidden>意味: 目に見えない水蒸気<br>アクセント: ĭn-VĬZ-ə-bəl VĀ-pər<br>類義語: unseen moisture, water vapor, gaseous water</p>
+      </li>
+      <li class="word-item" style="animation-delay: 100ms;">
+        <button type="button" class="play-btn" data-audio="audio/004_condenses.mp3" aria-label="Play condenses">Play</button>
+        <button type="button" class="word-text" data-audio="audio/004_condenses.mp3" aria-expanded="false">condenses</button>
+        <span class="small">#4</span>
+        <p class="meaning" hidden>意味: 凝結する<br>基本形: condense<br>アクセント: kən-DĔNS-ĭz<br>類義語: liquefies, forms droplets, turns into liquid</p>
+      </li>
+      <li class="word-item" style="animation-delay: 125ms;">
+        <button type="button" class="play-btn" data-audio="audio/005_raindrops.mp3" aria-label="Play raindrops">Play</button>
+        <button type="button" class="word-text" data-audio="audio/005_raindrops.mp3" aria-expanded="false">raindrops</button>
+        <span class="small">#5</span>
+        <p class="meaning" hidden>意味: 雨粒<br>基本形: raindrop<br>アクセント: RĀN-drŏps<br>類義語: droplets, rain beads, precipitation drops</p>
+      </li>
+      <li class="word-item" style="animation-delay: 150ms;">
+        <button type="button" class="play-btn" data-audio="audio/006_condensation.mp3" aria-label="Play Condensation">Play</button>
+        <button type="button" class="word-text" data-audio="audio/006_condensation.mp3" aria-expanded="false">Condensation</button>
+        <span class="small">#6</span>
+        <p class="meaning" hidden>意味: 凝結<br>アクセント: kŏn-dĕn-SĀ-shən<br>類義語: liquefaction, moisture formation, vapor-to-liquid change</p>
+      </li>
+      <li class="word-item" style="animation-delay: 175ms;">
+        <button type="button" class="play-btn" data-audio="audio/007_the_air_is_cooled.mp3" aria-label="Play the air is cooled">Play</button>
+        <button type="button" class="word-text" data-audio="audio/007_the_air_is_cooled.mp3" aria-expanded="false">the air is cooled</button>
+        <span class="small">#7</span>
+        <p class="meaning" hidden>意味: 空気が冷やされる<br>アクセント: thē âr ĭz kōōld<br>類義語: air temperature drops, air becomes cooler, air chills</p>
+      </li>
+      <li class="word-item" style="animation-delay: 200ms;">
+        <button type="button" class="play-btn" data-audio="audio/008_air_cools.mp3" aria-label="Play Air cools">Play</button>
+        <button type="button" class="word-text" data-audio="audio/008_air_cools.mp3" aria-expanded="false">Air cools</button>
+        <span class="small">#8</span>
+        <p class="meaning" hidden>意味: 空気が冷える<br>アクセント: âr kōōlz<br>類義語: air chills, air loses heat, temperature decreases</p>
+      </li>
+      <li class="word-item" style="animation-delay: 225ms;">
+        <button type="button" class="play-btn" data-audio="audio/009_either.mp3" aria-label="Play either">Play</button>
+        <button type="button" class="word-text" data-audio="audio/009_either.mp3" aria-expanded="false">either</button>
+        <span class="small">#9</span>
+        <p class="meaning" hidden>意味: どちらか<br>アクセント: Ē-thər<br>類義語: one or the other, any one, whichever</p>
+      </li>
+      <li class="word-item" style="animation-delay: 250ms;">
+        <button type="button" class="play-btn" data-audio="audio/010_expansion.mp3" aria-label="Play expansion">Play</button>
+        <button type="button" class="word-text" data-audio="audio/010_expansion.mp3" aria-expanded="false">expansion</button>
+        <span class="small">#10</span>
+        <p class="meaning" hidden>意味: 膨張；拡大<br>アクセント: ĭk-SPĂN-shən<br>類義語: enlargement, spreading, increase in volume</p>
+      </li>
+      <li class="word-item" style="animation-delay: 275ms;">
+        <button type="button" class="play-btn" data-audio="audio/011_landmass.mp3" aria-label="Play landmass">Play</button>
+        <button type="button" class="word-text" data-audio="audio/011_landmass.mp3" aria-expanded="false">landmass</button>
+        <span class="small">#11</span>
+        <p class="meaning" hidden>意味: 陸塊<br>アクセント: LĂND-măs<br>類義語: large land area, continent, terrestrial mass</p>
+      </li>
+      <li class="word-item" style="animation-delay: 300ms;">
+        <button type="button" class="play-btn" data-audio="audio/012_ice_covered_expanse.mp3" aria-label="Play ice-covered expanse">Play</button>
+        <button type="button" class="word-text" data-audio="audio/012_ice_covered_expanse.mp3" aria-expanded="false">ice-covered expanse</button>
+        <span class="small">#12</span>
+        <p class="meaning" hidden>意味: 氷に覆われた広大な地域<br>アクセント: īs-KŬV-ərd ĭk-SPĂNS<br>類義語: frozen stretch, icy area, glaciated region</p>
+      </li>
+      <li class="word-item" style="animation-delay: 325ms;">
+        <button type="button" class="play-btn" data-audio="audio/013_passes.mp3" aria-label="Play passes">Play</button>
+        <button type="button" class="word-text" data-audio="audio/013_passes.mp3" aria-expanded="false">passes</button>
+        <span class="small">#13</span>
+        <p class="meaning" hidden>意味: 通過する<br>基本形: pass<br>アクセント: PĂS-ĭz<br>類義語: moves through, goes by, travels across</p>
+      </li>
+      <li class="word-item" style="animation-delay: 350ms;">
+        <button type="button" class="play-btn" data-audio="audio/014_moisture.mp3" aria-label="Play moisture">Play</button>
+        <button type="button" class="word-text" data-audio="audio/014_moisture.mp3" aria-expanded="false">moisture</button>
+        <span class="small">#14</span>
+        <p class="meaning" hidden>意味: 湿気；水分<br>アクセント: MOIS-chər<br>類義語: humidity, dampness, water content</p>
+      </li>
+      <li class="word-item" style="animation-delay: 375ms;">
+        <button type="button" class="play-btn" data-audio="audio/015_condenses.mp3" aria-label="Play condenses">Play</button>
+        <button type="button" class="word-text" data-audio="audio/015_condenses.mp3" aria-expanded="false">condenses</button>
+        <span class="small">#15</span>
+        <p class="meaning" hidden>意味: 凝結する<br>基本形: condense<br>アクセント: kən-DĔNS-ĭz<br>類義語: liquefies, forms droplets, turns into liquid</p>
+      </li>
+      <li class="word-item" style="animation-delay: 400ms;">
+        <button type="button" class="play-btn" data-audio="audio/016_fog.mp3" aria-label="Play fog">Play</button>
+        <button type="button" class="word-text" data-audio="audio/016_fog.mp3" aria-expanded="false">fog</button>
+        <span class="small">#16</span>
+        <p class="meaning" hidden>意味: 霧<br>アクセント: fôg<br>類義語: mist, haze, low cloud</p>
+      </li>
+      <li class="word-item" style="animation-delay: 425ms;">
+        <button type="button" class="play-btn" data-audio="audio/017_dew.mp3" aria-label="Play dew">Play</button>
+        <button type="button" class="word-text" data-audio="audio/017_dew.mp3" aria-expanded="false">dew</button>
+        <span class="small">#17</span>
+        <p class="meaning" hidden>意味: 露<br>アクセント: dū<br>類義語: moisture droplets, condensation drops, morning moisture</p>
+      </li>
+      <li class="word-item" style="animation-delay: 450ms;">
+        <button type="button" class="play-btn" data-audio="audio/018_frost.mp3" aria-label="Play frost">Play</button>
+        <button type="button" class="word-text" data-audio="audio/018_frost.mp3" aria-expanded="false">frost</button>
+        <span class="small">#18</span>
+        <p class="meaning" hidden>意味: 霜<br>アクセント: frôst<br>類義語: hoarfrost, ice crystals, frozen dew</p>
+      </li>
+      <li class="word-item" style="animation-delay: 475ms;">
+        <button type="button" class="play-btn" data-audio="audio/019_rises_and_expands.mp3" aria-label="Play rises and expands">Play</button>
+        <button type="button" class="word-text" data-audio="audio/019_rises_and_expands.mp3" aria-expanded="false">rises and expands</button>
+        <span class="small">#19</span>
+        <p class="meaning" hidden>意味: 上昇して膨張する<br>アクセント: RĪ-zĭz ănd ĭk-SPĂNDZ<br>類義語: ascends and spreads, moves upward and enlarges, rises and dilates</p>
+      </li>
+      <li class="word-item" style="animation-delay: 500ms;">
+        <button type="button" class="play-btn" data-audio="audio/020_vapor.mp3" aria-label="Play vapor">Play</button>
+        <button type="button" class="word-text" data-audio="audio/020_vapor.mp3" aria-expanded="false">vapor</button>
+        <span class="small">#20</span>
+        <p class="meaning" hidden>意味: 蒸気；水蒸気<br>アクセント: VĀ-pər<br>類義語: gas, steam, moisture in air</p>
+      </li>
+      <li class="word-item" style="animation-delay: 525ms;">
+        <button type="button" class="play-btn" data-audio="audio/021_condenses_to_form_clouds.mp3" aria-label="Play condenses to form clouds">Play</button>
+        <button type="button" class="word-text" data-audio="audio/021_condenses_to_form_clouds.mp3" aria-expanded="false">condenses to form clouds</button>
+        <span class="small">#21</span>
+        <p class="meaning" hidden>意味: 凝結して雲を形成する<br>アクセント: kən-DĔNS-ĭz tə fôrm kloudz<br>類義語: forms clouds by condensation, turns into clouds, cloud formation occurs</p>
+      </li>
+      <li class="word-item" style="animation-delay: 550ms;">
+        <button type="button" class="play-btn" data-audio="audio/022_air_rises_for_several_reasons.mp3" aria-label="Play Air rises for several reasons">Play</button>
+        <button type="button" class="word-text" data-audio="audio/022_air_rises_for_several_reasons.mp3" aria-expanded="false">Air rises for several reasons</button>
+        <span class="small">#22</span>
+        <p class="meaning" hidden>意味: 空気は複数の理由で上昇する<br>アクセント: âr RĪ-zĭz fôr SĔV-ər-əl rē-zənz<br>類義語: air ascends for many causes, multiple uplift mechanisms, various reasons for rising air</p>
+      </li>
+      <li class="word-item" style="animation-delay: 575ms;">
+        <button type="button" class="play-btn" data-audio="audio/023_convergent.mp3" aria-label="Play Convergent">Play</button>
+        <button type="button" class="word-text" data-audio="audio/023_convergent.mp3" aria-expanded="false">Convergent</button>
+        <span class="small">#23</span>
+        <p class="meaning" hidden>意味: 収束する；集中する<br>アクセント: kən-VÛR-jənt<br>類義語: meeting, coming together, converging</p>
+      </li>
+      <li class="word-item" style="animation-delay: 600ms;">
+        <button type="button" class="play-btn" data-audio="audio/024_whirling_toward.mp3" aria-label="Play whirling toward">Play</button>
+        <button type="button" class="word-text" data-audio="audio/024_whirling_toward.mp3" aria-expanded="false">whirling toward</button>
+        <span class="small">#24</span>
+        <p class="meaning" hidden>意味: 〜へ渦巻きながら向かう<br>アクセント: HWÛR-lĭng tə-WÔRD<br>類義語: spiraling toward, rotating toward, swirling to</p>
+      </li>
+      <li class="word-item" style="animation-delay: 625ms;">
+        <button type="button" class="play-btn" data-audio="audio/025_collides.mp3" aria-label="Play collides">Play</button>
+        <button type="button" class="word-text" data-audio="audio/025_collides.mp3" aria-expanded="false">collides</button>
+        <span class="small">#25</span>
+        <p class="meaning" hidden>意味: 衝突する<br>基本形: collide<br>アクセント: kə-LĪDZ<br>類義語: crashes, bumps into, impacts</p>
+      </li>
+      <li class="word-item" style="animation-delay: 650ms;">
+        <button type="button" class="play-btn" data-audio="audio/026_upward.mp3" aria-label="Play upward">Play</button>
+        <button type="button" class="word-text" data-audio="audio/026_upward.mp3" aria-expanded="false">upward</button>
+        <span class="small">#26</span>
+        <p class="meaning" hidden>意味: 上向きに；上方へ<br>アクセント: ŬP-wərd<br>類義語: upwardly, above, higher</p>
+      </li>
+      <li class="word-item" style="animation-delay: 675ms;">
+        <button type="button" class="play-btn" data-audio="audio/027_in_convective_lift.mp3" aria-label="Play In convective lift">Play</button>
+        <button type="button" class="word-text" data-audio="audio/027_in_convective_lift.mp3" aria-expanded="false">In convective lift</button>
+        <span class="small">#27</span>
+        <p class="meaning" hidden>意味: 対流性上昇では<br>アクセント: ĭn kən-VĔK-tĭv lĭft<br>類義語: in convectional uplift, during convective rise, under convective motion</p>
+      </li>
+      <li class="word-item" style="animation-delay: 700ms;">
+        <button type="button" class="play-btn" data-audio="audio/028_buoyant.mp3" aria-label="Play buoyant">Play</button>
+        <button type="button" class="word-text" data-audio="audio/028_buoyant.mp3" aria-expanded="false">buoyant</button>
+        <span class="small">#28</span>
+        <p class="meaning" hidden>意味: 浮力のある；浮きやすい<br>アクセント: BOI-ənt<br>類義語: floating, light, uplifted</p>
+      </li>
+      <li class="word-item" style="animation-delay: 725ms;">
+        <button type="button" class="play-btn" data-audio="audio/029_the_surrounding_air.mp3" aria-label="Play the surrounding air">Play</button>
+        <button type="button" class="word-text" data-audio="audio/029_the_surrounding_air.mp3" aria-expanded="false">the surrounding air</button>
+        <span class="small">#29</span>
+        <p class="meaning" hidden>意味: 周囲の空気<br>アクセント: thə sə-ROUND-ĭng âr<br>類義語: nearby air, ambient air, surrounding atmosphere</p>
+      </li>
+      <li class="word-item" style="animation-delay: 750ms;">
+        <button type="button" class="play-btn" data-audio="audio/030_in_orographic_lift.mp3" aria-label="Play In orographic lift">Play</button>
+        <button type="button" class="word-text" data-audio="audio/030_in_orographic_lift.mp3" aria-expanded="false">In orographic lift</button>
+        <span class="small">#30</span>
+        <p class="meaning" hidden>意味: 地形性上昇では<br>アクセント: ĭn ôr-ə-GRĂF-ĭk lĭft<br>類義語: in topographic uplift, during mountain lifting, in terrain-forced ascent</p>
+      </li>
+      <li class="word-item" style="animation-delay: 775ms;">
+        <button type="button" class="play-btn" data-audio="audio/031_encounters.mp3" aria-label="Play encounters">Play</button>
+        <button type="button" class="word-text" data-audio="audio/031_encounters.mp3" aria-expanded="false">encounters</button>
+        <span class="small">#31</span>
+        <p class="meaning" hidden>意味: 遭遇する；ぶつかる<br>基本形: encounter<br>アクセント: ĭn-KOUN-tərz<br>類義語: meets, faces, runs into</p>
+      </li>
+      <li class="word-item" style="animation-delay: 800ms;">
+        <button type="button" class="play-btn" data-audio="audio/032_denser_body.mp3" aria-label="Play denser body">Play</button>
+        <button type="button" class="word-text" data-audio="audio/032_denser_body.mp3" aria-expanded="false">denser body</button>
+        <span class="small">#32</span>
+        <p class="meaning" hidden>意味: より密度の高い塊<br>アクセント: dĕn-sər BŎD-ē<br>類義語: heavier mass, compact body, more concentrated mass</p>
+      </li>
+      <li class="word-item" style="animation-delay: 825ms;">
+        <button type="button" class="play-btn" data-audio="audio/033_dust.mp3" aria-label="Play dust">Play</button>
+        <button type="button" class="word-text" data-audio="audio/033_dust.mp3" aria-expanded="false">dust</button>
+        <span class="small">#33</span>
+        <p class="meaning" hidden>意味: ちり；ほこり<br>アクセント: dŭst<br>類義語: particles, fine dirt, powder</p>
+      </li>
+      <li class="word-item" style="animation-delay: 850ms;">
+        <button type="button" class="play-btn" data-audio="audio/034_above.mp3" aria-label="Play above">Play</button>
+        <button type="button" class="word-text" data-audio="audio/034_above.mp3" aria-expanded="false">above</button>
+        <span class="small">#34</span>
+        <p class="meaning" hidden>意味: 上に；上方で<br>アクセント: ə-BŬV<br>類義語: over, higher than, on top of</p>
+      </li>
+      <li class="word-item" style="animation-delay: 875ms;">
+        <button type="button" class="play-btn" data-audio="audio/035_condensation_nuclei.mp3" aria-label="Play condensation nuclei">Play</button>
+        <button type="button" class="word-text" data-audio="audio/035_condensation_nuclei.mp3" aria-expanded="false">condensation nuclei</button>
+        <span class="small">#35</span>
+        <p class="meaning" hidden>意味: 凝結核<br>基本形: condensation nucleus<br>アクセント: kŏn-dĕn-SĀ-shən NŪ-klē-ī<br>類義語: cloud nuclei, particle seeds, droplet seeds</p>
+      </li>
+      <li class="word-item" style="animation-delay: 900ms;">
+        <button type="button" class="play-btn" data-audio="audio/036_layers.mp3" aria-label="Play layers">Play</button>
+        <button type="button" class="word-text" data-audio="audio/036_layers.mp3" aria-expanded="false">layers</button>
+        <span class="small">#36</span>
+        <p class="meaning" hidden>意味: 層<br>基本形: layer<br>アクセント: LĀ-ərz<br>類義語: strata, levels, sheets</p>
+      </li>
+      <li class="word-item" style="animation-delay: 925ms;">
+        <button type="button" class="play-btn" data-audio="audio/037_resist.mp3" aria-label="Play resist">Play</button>
+        <button type="button" class="word-text" data-audio="audio/037_resist.mp3" aria-expanded="false">resist</button>
+        <span class="small">#37</span>
+        <p class="meaning" hidden>意味: 抵抗する；妨げる<br>アクセント: rĭ-ZĬST<br>類義語: oppose, hinder, counteract</p>
+      </li>
+      <li class="word-item" style="animation-delay: 950ms;">
+        <button type="button" class="play-btn" data-audio="audio/038_updrafts.mp3" aria-label="Play updrafts">Play</button>
+        <button type="button" class="word-text" data-audio="audio/038_updrafts.mp3" aria-expanded="false">updrafts</button>
+        <span class="small">#38</span>
+        <p class="meaning" hidden>意味: 上昇気流<br>基本形: updraft<br>アクセント: ŬP-drăfts<br>類義語: rising air currents, ascending currents, uplift flows</p>
+      </li>
+      <li class="word-item" style="animation-delay: 975ms;">
+        <button type="button" class="play-btn" data-audio="audio/039_the_precipitation_falls.mp3" aria-label="Play the precipitation falls">Play</button>
+        <button type="button" class="word-text" data-audio="audio/039_the_precipitation_falls.mp3" aria-expanded="false">the precipitation falls</button>
+        <span class="small">#39</span>
+        <p class="meaning" hidden>意味: 降水が降る<br>アクセント: thə prĭ-sĭp-ĭ-TĀ-shən fôlz<br>類義語: rain falls, precipitation occurs, moisture drops</p>
+      </li>
+    </ul>
+  </main>
+
+  <script>
+    const list = document.getElementById('wordList');
+    const playAllButton = document.getElementById('playAll');
+    const stopAllButton = document.getElementById('stopAll');
+
+    let currentAudio = null;
+    let playQueue = [];
+    let queueIndex = 0;
+
+    function stopPlayback() {
+      playQueue = [];
+      queueIndex = 0;
+      if (currentAudio) {
+        currentAudio.pause();
+        currentAudio.currentTime = 0;
+        currentAudio = null;
+      }
+    }
+
+    function playSingle(src) {
+      stopPlayback();
+      currentAudio = new Audio(src);
+      currentAudio.play().catch((err) => {
+        console.error('Audio play failed:', err);
+      });
+    }
+
+    function playQueueNext() {
+      if (queueIndex >= playQueue.length) {
+        currentAudio = null;
+        return;
+      }
+      const src = playQueue[queueIndex++];
+      currentAudio = new Audio(src);
+      currentAudio.addEventListener('ended', playQueueNext);
+      currentAudio.play().catch((err) => {
+        console.error('Audio play failed:', err);
+        playQueueNext();
+      });
+    }
+
+    function closeAllMeanings() {
+      document.querySelectorAll('.meaning').forEach((el) => {
+        el.hidden = true;
+      });
+      document.querySelectorAll('.word-text').forEach((el) => {
+        el.setAttribute('aria-expanded', 'false');
+      });
+    }
+
+    list.addEventListener('click', (event) => {
+      const target = event.target;
+      if (!(target instanceof HTMLElement)) return;
+
+      if (target.classList.contains('play-btn')) {
+        const src = target.getAttribute('data-audio');
+        if (src) {
+          playSingle(src);
+        }
+        return;
+      }
+
+      if (!target.classList.contains('word-text')) {
+        return;
+      }
+
+      const item = target.closest('.word-item');
+      if (!item) return;
+
+      const meaning = item.querySelector('.meaning');
+      if (!(meaning instanceof HTMLElement)) return;
+
+      const willOpen = meaning.hidden;
+      closeAllMeanings();
+      meaning.hidden = !willOpen;
+      target.setAttribute('aria-expanded', willOpen ? 'true' : 'false');
+    });
+
+    playAllButton.addEventListener('click', () => {
+      stopPlayback();
+      closeAllMeanings();
+      playQueue = Array.from(document.querySelectorAll('.play-btn[data-audio]'))
+        .map((el) => el.getAttribute('data-audio'))
+        .filter((src) => !!src);
+      queueIndex = 0;
+      playQueueNext();
+    });
+
+    stopAllButton.addEventListener('click', stopPlayback);
+  </script>
+</body>
+</html>
