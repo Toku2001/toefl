@@ -4,11 +4,11 @@ organisms
 lies
 intersection
 aiming
-molecular structures sucj as proteins, carbogydrates, lipids. and nucleic acids
-constribute
+molecular structures such as proteins, carbohydrates, lipids, and nucleic acids
+contribute
 tissues
 molecules
-boichemists
+biochemists
 sustained
 theme
 metabolism
@@ -17,15 +17,15 @@ enzymes
 act
 catalysts
 accelerate
-moleculat genetixs
-investifates
+molecular genetics
+investigates
 encoded
 described
-moleculat biolegy
-assential
+molecular biology
+essential
 heredity
-patactical applications
-deseases
+practical applications
+diseases
 insights into
 rely heavily
 recombinant

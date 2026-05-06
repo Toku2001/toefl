@@ -25,6 +25,10 @@ fi
 
 mkdir -p "$AUDIO_DIR"
 
+# Always regenerate extracted text files from scratch to avoid stale rows.
+: > "$WORDS_FILE"
+: > "$WORD_MEANINGS_FILE"
+
 # Detect format: <details>/<summary> block or simple bullet list (- word).
 if grep -q '<details>' "$SOURCE_MD"; then
   # Extract word and full detail lines from each <details> block.
