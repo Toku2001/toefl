@@ -57,6 +57,13 @@
 | 41 | `Biology/41words.md` | [Biology/41words_pronunciation/index.html](Biology/41words_pronunciation/index.html) |
 | 42 | `Biology/42words.md` | [Biology/42words_pronunciation/index.html](Biology/42words_pronunciation/index.html) |
 | 43 | `Biology/43words.md` | [Biology/43words_pronunciation/index.html](Biology/43words_pronunciation/index.html) |
+| 44 | `ComputerScience/44words.md` | [ComputerScience/44words_pronunciation/index.html](ComputerScience/44words_pronunciation/index.html) |
+| 45 | `EarthScience/45words.md` | [EarthScience/45words_pronunciation/index.html](EarthScience/45words_pronunciation/index.html) |
+| 47 | `EarthScience/47words.md` | [EarthScience/47words_pronunciation/index.html](EarthScience/47words_pronunciation/index.html) |
+| 49 | `Ecology/49words.md` | [Ecology/49words_pronunciation/index.html](Ecology/49words_pronunciation/index.html) |
+| 51 | `Optics/51words.md` | [Optics/51words_pronunciation/index.html](Optics/51words_pronunciation/index.html) |
+| 52 | `MediaStudies/52words.md` | [MediaStudies/52words_pronunciation/index.html](MediaStudies/52words_pronunciation/index.html) |
+| 53 | `Geology/53words.md` | [Geology/53words_pronunciation/index.html](Geology/53words_pronunciation/index.html) |
 
 ### 追記ルール
 
