@@ -1,0 +1,27 @@
+- wildlife biologists
+- conservation groups fostered a movement to restore the gray wolf
+- considered
+- a nuisance
+- the carcass of a downed elk
+- attempt to decrease
+- the wild canine population
+- A bounty was placed
+- reintroduction
+- protested
+- local ranchers
+- decimate area livestock
+- Despite
+- protests
+- restoration
+- thrived
+- approximately
+- In doing so
+- wildlife biodiversity
+- In the absence
+- extremely stable
+- jaws
+- a boon for rodent species
+- ground squirrels
+- voles
+- pocket gophers
+- constituted
