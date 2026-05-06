@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>52words.md Pronunciation</title>
+  <style>
+    :root {
+      --bg1: #f2ece3;
+      --bg2: #e4d5c1;
+      --card: #fff8ee;
+      --ink: #2a1f16;
+      --accent: #9a3412;
+      --accent-2: #78350f;
+      --border: #d9c2a5;
+      --shadow: rgba(42, 31, 22, 0.15);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 15% 20%, rgba(255,255,255,0.6), transparent 35%),
+        radial-gradient(circle at 85% 80%, rgba(255,255,255,0.4), transparent 30%),
+        linear-gradient(135deg, var(--bg1), var(--bg2));
+      min-height: 100vh;
+      padding: 24px;
+    }
+
+    .wrap {
+      max-width: 900px;
+      margin: 0 auto;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 20px;
+      box-shadow: 0 10px 30px var(--shadow);
+    }
+
+    h1 {
+      margin: 0 0 8px;
+      font-size: clamp(1.5rem, 2.6vw, 2.2rem);
+      letter-spacing: 0.02em;
+    }
+
+    p {
+      margin: 0 0 20px;
+      line-height: 1.6;
+    }
+
+    .controls {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 14px;
+    }
+
+    button {
+      border: 1px solid var(--accent);
+      background: var(--accent);
+      color: #fff;
+      border-radius: 10px;
+      padding: 8px 12px;
+      font-size: 0.95rem;
+      cursor: pointer;
+      transition: transform 120ms ease, background 120ms ease;
+    }
+
+    button:hover { background: var(--accent-2); }
+    button:active { transform: translateY(1px); }
+
+    .word-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 10px;
+    }
+
+    .word-item {
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 10px;
+      background: #fff;
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      align-items: center;
+      gap: 8px;
+      opacity: 0;
+      transform: translateY(8px);
+      animation: reveal 360ms ease forwards;
+    }
+
+    .play-btn {
+      min-width: 56px;
+    }
+
+    .word-text {
+      background: none;
+      border: none;
+      color: var(--ink);
+      font: inherit;
+      text-align: left;
+      padding: 0;
+      margin: 0;
+      cursor: pointer;
+      line-height: 1.4;
+      flex: 1;
+    }
+
+    .word-text:hover {
+      text-decoration: underline;
+      text-decoration-thickness: 2px;
+      text-decoration-color: var(--accent);
+    }
+
+    .small {
+      font-size: 0.8rem;
+      color: #6e5a45;
+      min-width: 2.2em;
+      text-align: right;
+    }
+
+    .meaning {
+      grid-column: 1 / -1;
+      margin: 6px 0 0;
+      padding: 8px 10px;
+      border-radius: 8px;
+      background: #fbf3e8;
+      border: 1px dashed var(--border);
+      font-size: 0.92rem;
+      line-height: 1.5;
+    }
+
+    .meaning[hidden] {
+      display: none;
+    }
+
+    @keyframes reveal {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <h1>52words.md Pronunciation</h1>
+    <p>単語をクリックすると意味を表示します。Play ボタンは発音のみ再生します。</p>
+    <div class="controls">
+      <button type="button" id="playAll">Play All</button>
+      <button type="button" id="stopAll">Stop</button>
+    </div>
+    <ul class="word-list" id="wordList">
+      <li class="word-item" style="animation-delay: 25ms;">
+        <button type="button" class="play-btn" data-audio="audio/001_encyclopedias.mp3" aria-label="Play encyclopedias">Play</button>
+        <button type="button" class="word-text" data-audio="audio/001_encyclopedias.mp3" aria-expanded="false">encyclopedias</button>
+        <span class="small">#1</span>
+        <p class="meaning" hidden>意味: 百科事典<br>基本形: encyclopedia<br>アクセント: ĕn-sī-klə-PĒ-dē-əz<br>類義語: reference books, compendiums, knowledge collections</p>
+      </li>
+      <li class="word-item" style="animation-delay: 50ms;">
+        <button type="button" class="play-btn" data-audio="audio/002_offering_instant.mp3" aria-label="Play offering instant">Play</button>
+        <button type="button" class="word-text" data-audio="audio/002_offering_instant.mp3" aria-expanded="false">offering instant</button>
+        <span class="small">#2</span>
+        <p class="meaning" hidden>意味: 即時提供する<br>アクセント: ÔF-ər-ĭng ĬN-stənt<br>類義語: providing immediately, giving instant access, delivering quickly</p>
+      </li>
+      <li class="word-item" style="animation-delay: 75ms;">
+        <button type="button" class="play-btn" data-audio="audio/003_unlike.mp3" aria-label="Play Unlike">Play</button>
+        <button type="button" class="word-text" data-audio="audio/003_unlike.mp3" aria-expanded="false">Unlike</button>
+        <span class="small">#3</span>
+        <p class="meaning" hidden>意味: 〜とは異なり<br>アクセント: ŭn-LĪK<br>類義語: in contrast to, different from, as opposed to</p>
+      </li>
+      <li class="word-item" style="animation-delay: 100ms;">
+        <button type="button" class="play-btn" data-audio="audio/004_filled_shelves.mp3" aria-label="Play filled shelves">Play</button>
+        <button type="button" class="word-text" data-audio="audio/004_filled_shelves.mp3" aria-expanded="false">filled shelves</button>
+        <span class="small">#4</span>
+        <p class="meaning" hidden>意味: 埋め尽くされた棚<br>アクセント: fĭld shĕlvz<br>類義語: packed shelves, crowded bookcases, loaded racks</p>
+      </li>
+      <li class="word-item" style="animation-delay: 125ms;">
+        <button type="button" class="play-btn" data-audio="audio/005_face_challenges.mp3" aria-label="Play face challenges">Play</button>
+        <button type="button" class="word-text" data-audio="audio/005_face_challenges.mp3" aria-expanded="false">face challenges</button>
+        <span class="small">#5</span>
+        <p class="meaning" hidden>意味: 課題に直面する<br>アクセント: fās CHĂL-ən-jĭz<br>類義語: confront difficulties, encounter problems, deal with obstacles</p>
+      </li>
+      <li class="word-item" style="animation-delay: 150ms;">
+        <button type="button" class="play-btn" data-audio="audio/006_print_volumes.mp3" aria-label="Play print volumes">Play</button>
+        <button type="button" class="word-text" data-audio="audio/006_print_volumes.mp3" aria-expanded="false">print volumes</button>
+        <span class="small">#6</span>
+        <p class="meaning" hidden>意味: 印刷版の巻<br>アクセント: prĭnt VŎL-yōōmz<br>類義語: printed books, physical volumes, hardcopy editions</p>
+      </li>
+      <li class="word-item" style="animation-delay: 175ms;">
+        <button type="button" class="play-btn" data-audio="audio/007_rarely_encountered.mp3" aria-label="Play rarely encountered">Play</button>
+        <button type="button" class="word-text" data-audio="audio/007_rarely_encountered.mp3" aria-expanded="false">rarely encountered</button>
+        <span class="small">#7</span>
+        <p class="meaning" hidden>意味: めったに見られない<br>基本形: rarely encounter<br>アクセント: RĔR-lē ĭn-KOUN-tərd<br>類義語: seldom seen, infrequently found, uncommon</p>
+      </li>
+      <li class="word-item" style="animation-delay: 200ms;">
+        <button type="button" class="play-btn" data-audio="audio/008_leads_to_inaccuracies.mp3" aria-label="Play leads to inaccuracies">Play</button>
+        <button type="button" class="word-text" data-audio="audio/008_leads_to_inaccuracies.mp3" aria-expanded="false">leads to inaccuracies</button>
+        <span class="small">#8</span>
+        <p class="meaning" hidden>意味: 不正確さにつながる<br>アクセント: lēdz tə ĭn-ĂK-yə-rə-sēz<br>類義語: causes errors, results in mistakes, creates inaccuracies</p>
+      </li>
+      <li class="word-item" style="animation-delay: 225ms;">
+        <button type="button" class="play-btn" data-audio="audio/009_biased_content.mp3" aria-label="Play biased content">Play</button>
+        <button type="button" class="word-text" data-audio="audio/009_biased_content.mp3" aria-expanded="false">biased content</button>
+        <span class="small">#9</span>
+        <p class="meaning" hidden>意味: 偏った内容<br>アクセント: BĪ-əst KŎN-tĕnt<br>類義語: slanted information, partial content, one-sided material</p>
+      </li>
+      <li class="word-item" style="animation-delay: 250ms;">
+        <button type="button" class="play-btn" data-audio="audio/010_vulnerable.mp3" aria-label="Play vulnerable">Play</button>
+        <button type="button" class="word-text" data-audio="audio/010_vulnerable.mp3" aria-expanded="false">vulnerable</button>
+        <span class="small">#10</span>
+        <p class="meaning" hidden>意味: 脆弱な；影響を受けやすい<br>アクセント: VŬL-nər-ə-bəl<br>類義語: susceptible, exposed, fragile</p>
+      </li>
+      <li class="word-item" style="animation-delay: 275ms;">
+        <button type="button" class="play-btn" data-audio="audio/011_alter.mp3" aria-label="Play alter">Play</button>
+        <button type="button" class="word-text" data-audio="audio/011_alter.mp3" aria-expanded="false">alter</button>
+        <span class="small">#11</span>
+        <p class="meaning" hidden>意味: 変更する；改変する<br>アクセント: ÔL-tər<br>類義語: modify, change, adjust</p>
+      </li>
+      <li class="word-item" style="animation-delay: 300ms;">
+        <button type="button" class="play-btn" data-audio="audio/012_chaos.mp3" aria-label="Play chaos">Play</button>
+        <button type="button" class="word-text" data-audio="audio/012_chaos.mp3" aria-expanded="false">chaos</button>
+        <span class="small">#12</span>
+        <p class="meaning" hidden>意味: 混乱<br>アクセント: KĀ-ŏs<br>類義語: disorder, confusion, turmoil</p>
+      </li>
+      <li class="word-item" style="animation-delay: 325ms;">
+        <button type="button" class="play-btn" data-audio="audio/013_rely_on_accuracy.mp3" aria-label="Play rely on accuracy">Play</button>
+        <button type="button" class="word-text" data-audio="audio/013_rely_on_accuracy.mp3" aria-expanded="false">rely on accuracy</button>
+        <span class="small">#13</span>
+        <p class="meaning" hidden>意味: 正確性に依存する<br>アクセント: rĭ-LĪ ŏn ĂK-yə-rə-sē<br>類義語: depend on precision, require correctness, rely on exactness</p>
+      </li>
+      <li class="word-item" style="animation-delay: 350ms;">
+        <button type="button" class="play-btn" data-audio="audio/014_underwent.mp3" aria-label="Play underwent">Play</button>
+        <button type="button" class="word-text" data-audio="audio/014_underwent.mp3" aria-expanded="false">underwent</button>
+        <span class="small">#14</span>
+        <p class="meaning" hidden>意味: 経た；受けた<br>基本形: undergo<br>アクセント: ŭn-dər-WĔNT<br>類義語: experienced, went through, was subjected to</p>
+      </li>
+      <li class="word-item" style="animation-delay: 375ms;">
+        <button type="button" class="play-btn" data-audio="audio/015_experts.mp3" aria-label="Play experts">Play</button>
+        <button type="button" class="word-text" data-audio="audio/015_experts.mp3" aria-expanded="false">experts</button>
+        <span class="small">#15</span>
+        <p class="meaning" hidden>意味: 専門家<br>基本形: expert<br>アクセント: ĔK-spûrts<br>類義語: specialists, professionals, authorities</p>
+      </li>
+      <li class="word-item" style="animation-delay: 400ms;">
+        <button type="button" class="play-btn" data-audio="audio/016_reliable.mp3" aria-label="Play reliable">Play</button>
+        <button type="button" class="word-text" data-audio="audio/016_reliable.mp3" aria-expanded="false">reliable</button>
+        <span class="small">#16</span>
+        <p class="meaning" hidden>意味: 信頼できる<br>アクセント: rĭ-LĪ-ə-bəl<br>類義語: dependable, trustworthy, credible</p>
+      </li>
+      <li class="word-item" style="animation-delay: 425ms;">
+        <button type="button" class="play-btn" data-audio="audio/017_despite.mp3" aria-label="Play Despite">Play</button>
+        <button type="button" class="word-text" data-audio="audio/017_despite.mp3" aria-expanded="false">Despite</button>
+        <span class="small">#17</span>
+        <p class="meaning" hidden>意味: 〜にもかかわらず<br>アクセント: dĭ-SPĪT<br>類義語: in spite of, regardless of, notwithstanding</p>
+      </li>
+      <li class="word-item" style="animation-delay: 450ms;">
+        <button type="button" class="play-btn" data-audio="audio/018_serve.mp3" aria-label="Play serve">Play</button>
+        <button type="button" class="word-text" data-audio="audio/018_serve.mp3" aria-expanded="false">serve</button>
+        <span class="small">#18</span>
+        <p class="meaning" hidden>意味: 役立つ；機能する<br>アクセント: sûrv<br>類義語: function, assist, support</p>
+      </li>
+      <li class="word-item" style="animation-delay: 475ms;">
+        <button type="button" class="play-btn" data-audio="audio/019_traditional_volumes.mp3" aria-label="Play Traditional volumes">Play</button>
+        <button type="button" class="word-text" data-audio="audio/019_traditional_volumes.mp3" aria-expanded="false">Traditional volumes</button>
+        <span class="small">#19</span>
+        <p class="meaning" hidden>意味: 伝統的な冊子版<br>アクセント: trə-DĬSH-ə-nəl VŎL-yōōmz<br>類義語: conventional books, printed tomes, classic volumes</p>
+      </li>
+      <li class="word-item" style="animation-delay: 500ms;">
+        <button type="button" class="play-btn" data-audio="audio/020_scholarship_while.mp3" aria-label="Play scholarship while">Play</button>
+        <button type="button" class="word-text" data-audio="audio/020_scholarship_while.mp3" aria-expanded="false">scholarship while</button>
+        <span class="small">#20</span>
+        <p class="meaning" hidden>意味: 学術性を保ちながら<br>アクセント: SKŎL-ər-shĭp hwīl<br>類義語: academic rigor while, scholarly depth while, learned quality while</p>
+      </li>
+      <li class="word-item" style="animation-delay: 525ms;">
+        <button type="button" class="play-btn" data-audio="audio/021_highlight.mp3" aria-label="Play highlight">Play</button>
+        <button type="button" class="word-text" data-audio="audio/021_highlight.mp3" aria-expanded="false">highlight</button>
+        <span class="small">#21</span>
+        <p class="meaning" hidden>意味: 強調する；際立たせる<br>アクセント: HĪ-līt<br>類義語: emphasize, underscore, spotlight</p>
+      </li>
+      <li class="word-item" style="animation-delay: 550ms;">
+        <button type="button" class="play-btn" data-audio="audio/022_together.mp3" aria-label="Play Together,">Play</button>
+        <button type="button" class="word-text" data-audio="audio/022_together.mp3" aria-expanded="false">Together,</button>
+        <span class="small">#22</span>
+        <p class="meaning" hidden>意味: 共に；合わせて<br>アクセント: tə-GĔTH-ər<br>類義語: jointly, collectively, in combination</p>
+      </li>
+      <li class="word-item" style="animation-delay: 575ms;">
+        <button type="button" class="play-btn" data-audio="audio/023_pursuit_of.mp3" aria-label="Play pursuit of">Play</button>
+        <button type="button" class="word-text" data-audio="audio/023_pursuit_of.mp3" aria-expanded="false">pursuit of</button>
+        <span class="small">#23</span>
+        <p class="meaning" hidden>意味: 〜の追求<br>アクセント: pər-SŪT əv<br>類義語: quest for, search for, striving for</p>
+      </li>
+      <li class="word-item" style="animation-delay: 600ms;">
+        <button type="button" class="play-btn" data-audio="audio/024_facing.mp3" aria-label="Play facing">Play</button>
+        <button type="button" class="word-text" data-audio="audio/024_facing.mp3" aria-expanded="false">facing</button>
+        <span class="small">#24</span>
+        <p class="meaning" hidden>意味: 直面している<br>基本形: face<br>アクセント: FĀ-sĭng<br>類義語: confronting, dealing with, encountering</p>
+      </li>
+    </ul>
+  </main>
+
+  <script>
+    const list = document.getElementById('wordList');
+    const playAllButton = document.getElementById('playAll');
+    const stopAllButton = document.getElementById('stopAll');
+
+    let currentAudio = null;
+    let playQueue = [];
+    let queueIndex = 0;
+
+    function stopPlayback() {
+      playQueue = [];
+      queueIndex = 0;
+      if (currentAudio) {
+        currentAudio.pause();
+        currentAudio.currentTime = 0;
+        currentAudio = null;
+      }
+    }
+
+    function playSingle(src) {
+      stopPlayback();
+      currentAudio = new Audio(src);
+      currentAudio.play().catch((err) => {
+        console.error('Audio play failed:', err);
+      });
+    }
+
+    function playQueueNext() {
+      if (queueIndex >= playQueue.length) {
+        currentAudio = null;
+        return;
+      }
+      const src = playQueue[queueIndex++];
+      currentAudio = new Audio(src);
+      currentAudio.addEventListener('ended', playQueueNext);
+      currentAudio.play().catch((err) => {
+        console.error('Audio play failed:', err);
+        playQueueNext();
+      });
+    }
+
+    function closeAllMeanings() {
+      document.querySelectorAll('.meaning').forEach((el) => {
+        el.hidden = true;
+      });
+      document.querySelectorAll('.word-text').forEach((el) => {
+        el.setAttribute('aria-expanded', 'false');
+      });
+    }
+
+    list.addEventListener('click', (event) => {
+      const target = event.target;
+      if (!(target instanceof HTMLElement)) return;
+
+      if (target.classList.contains('play-btn')) {
+        const src = target.getAttribute('data-audio');
+        if (src) {
+          playSingle(src);
+        }
+        return;
+      }
+
+      if (!target.classList.contains('word-text')) {
+        return;
+      }
+
+      const item = target.closest('.word-item');
+      if (!item) return;
+
+      const meaning = item.querySelector('.meaning');
+      if (!(meaning instanceof HTMLElement)) return;
+
+      const willOpen = meaning.hidden;
+      closeAllMeanings();
+      meaning.hidden = !willOpen;
+      target.setAttribute('aria-expanded', willOpen ? 'true' : 'false');
+    });
+
+    playAllButton.addEventListener('click', () => {
+      stopPlayback();
+      closeAllMeanings();
+      playQueue = Array.from(document.querySelectorAll('.play-btn[data-audio]'))
+        .map((el) => el.getAttribute('data-audio'))
+        .filter((src) => !!src);
+      queueIndex = 0;
+      playQueueNext();
+    });
+
+    stopAllButton.addEventListener('click', stopPlayback);
+  </script>
+</body>
+</html>
