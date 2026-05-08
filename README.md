@@ -64,6 +64,13 @@
 | 51 | `Optics/51words.md` | [Optics/51words_pronunciation/index.html](Optics/51words_pronunciation/index.html) |
 | 52 | `MediaStudies/52words.md` | [MediaStudies/52words_pronunciation/index.html](MediaStudies/52words_pronunciation/index.html) |
 | 53 | `Geology/53words.md` | [Geology/53words_pronunciation/index.html](Geology/53words_pronunciation/index.html) |
+| 54 | `Geology/54words.md` | [Geology/54words_pronunciation/index.html](Geology/54words_pronunciation/index.html) |
+| 55 | `Geology/55words.md` | [Geology/55words_pronunciation/index.html](Geology/55words_pronunciation/index.html) |
+| 56 | `Medicine/56words.md` | [Medicine/56words_pronunciation/index.html](Medicine/56words_pronunciation/index.html) |
+| 57 | `Medicine/57words.md` | [Medicine/57words_pronunciation/index.html](Medicine/57words_pronunciation/index.html) |
+| 58 | `Medicine/58words.md` | [Medicine/58words_pronunciation/index.html](Medicine/58words_pronunciation/index.html) |
+| 59 | `Physics/59words.md` | [Physics/59words_pronunciation/index.html](Physics/59words_pronunciation/index.html) |
+| 60 | `Physics/60words.md` | [Physics/60words_pronunciation/index.html](Physics/60words_pronunciation/index.html) |
 
 ### 追記ルール
 

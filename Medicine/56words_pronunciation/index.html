@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>56words.md Pronunciation</title>
+  <style>
+    :root {
+      --bg1: #f2ece3;
+      --bg2: #e4d5c1;
+      --card: #fff8ee;
+      --ink: #2a1f16;
+      --accent: #9a3412;
+      --accent-2: #78350f;
+      --border: #d9c2a5;
+      --shadow: rgba(42, 31, 22, 0.15);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 15% 20%, rgba(255,255,255,0.6), transparent 35%),
+        radial-gradient(circle at 85% 80%, rgba(255,255,255,0.4), transparent 30%),
+        linear-gradient(135deg, var(--bg1), var(--bg2));
+      min-height: 100vh;
+      padding: 24px;
+    }
+
+    .wrap {
+      max-width: 900px;
+      margin: 0 auto;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 20px;
+      box-shadow: 0 10px 30px var(--shadow);
+    }
+
+    h1 {
+      margin: 0 0 8px;
+      font-size: clamp(1.5rem, 2.6vw, 2.2rem);
+      letter-spacing: 0.02em;
+    }
+
+    p {
+      margin: 0 0 20px;
+      line-height: 1.6;
+    }
+
+    .controls {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 14px;
+    }
+
+    button {
+      border: 1px solid var(--accent);
+      background: var(--accent);
+      color: #fff;
+      border-radius: 10px;
+      padding: 8px 12px;
+      font-size: 0.95rem;
+      cursor: pointer;
+      transition: transform 120ms ease, background 120ms ease;
+    }
+
+    button:hover { background: var(--accent-2); }
+    button:active { transform: translateY(1px); }
+
+    .word-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 10px;
+    }
+
+    .word-item {
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 10px;
+      background: #fff;
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      align-items: center;
+      gap: 8px;
+      opacity: 0;
+      transform: translateY(8px);
+      animation: reveal 360ms ease forwards;
+    }
+
+    .play-btn {
+      min-width: 56px;
+    }
+
+    .word-text {
+      background: none;
+      border: none;
+      color: var(--ink);
+      font: inherit;
+      text-align: left;
+      padding: 0;
+      margin: 0;
+      cursor: pointer;
+      line-height: 1.4;
+      flex: 1;
+    }
+
+    .word-text:hover {
+      text-decoration: underline;
+      text-decoration-thickness: 2px;
+      text-decoration-color: var(--accent);
+    }
+
+    .small {
+      font-size: 0.8rem;
+      color: #6e5a45;
+      min-width: 2.2em;
+      text-align: right;
+    }
+
+    .meaning {
+      grid-column: 1 / -1;
+      margin: 6px 0 0;
+      padding: 8px 10px;
+      border-radius: 8px;
+      background: #fbf3e8;
+      border: 1px dashed var(--border);
+      font-size: 0.92rem;
+      line-height: 1.5;
+    }
+
+    .meaning[hidden] {
+      display: none;
+    }
+
+    @keyframes reveal {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <h1>56words.md Pronunciation</h1>
+    <p>単語をクリックすると意味を表示します。Play ボタンは発音のみ再生します。</p>
+    <div class="controls">
+      <button type="button" id="playAll">Play All</button>
+      <button type="button" id="stopAll">Stop</button>
+    </div>
+    <ul class="word-list" id="wordList">
+      <li class="word-item" style="animation-delay: 25ms;">
+        <button type="button" class="play-btn" data-audio="audio/001_a_proven.mp3" aria-label="Play a proven">Play</button>
+        <button type="button" class="word-text" data-audio="audio/001_a_proven.mp3" aria-expanded="false">a proven</button>
+        <span class="small">#1</span>
+        <p class="meaning" hidden>意味: 実証済みの<br>アクセント: ə PRŪ-vən<br>類義語: verified, established, confirmed</p>
+      </li>
+      <li class="word-item" style="animation-delay: 50ms;">
+        <button type="button" class="play-btn" data-audio="audio/002_cure_to.mp3" aria-label="Play cure to">Play</button>
+        <button type="button" class="word-text" data-audio="audio/002_cure_to.mp3" aria-expanded="false">cure to</button>
+        <span class="small">#2</span>
+        <p class="meaning" hidden>意味: ～に対する治療法<br>アクセント: kyŏŏr tū<br>類義語: remedy for, treatment for, solution to</p>
+      </li>
+      <li class="word-item" style="animation-delay: 75ms;">
+        <button type="button" class="play-btn" data-audio="audio/003_precisely.mp3" aria-label="Play precisely">Play</button>
+        <button type="button" class="word-text" data-audio="audio/003_precisely.mp3" aria-expanded="false">precisely</button>
+        <span class="small">#3</span>
+        <p class="meaning" hidden>意味: 正確に；厳密に<br>アクセント: pri-SĪS-lē<br>類義語: exactly, accurately, strictly</p>
+      </li>
+      <li class="word-item" style="animation-delay: 100ms;">
+        <button type="button" class="play-btn" data-audio="audio/004_quiets.mp3" aria-label="Play quiets">Play</button>
+        <button type="button" class="word-text" data-audio="audio/004_quiets.mp3" aria-expanded="false">quiets</button>
+        <span class="small">#4</span>
+        <p class="meaning" hidden>意味: 静める；和らげる<br>基本形: quiet<br>アクセント: KWĪ-ət<br>類義語: calms, soothes, eases</p>
+      </li>
+      <li class="word-item" style="animation-delay: 125ms;">
+        <button type="button" class="play-btn" data-audio="audio/005_dramatic.mp3" aria-label="Play dramatic">Play</button>
+        <button type="button" class="word-text" data-audio="audio/005_dramatic.mp3" aria-expanded="false">dramatic</button>
+        <span class="small">#5</span>
+        <p class="meaning" hidden>意味: 劇的な；顕著な<br>アクセント: drə-MAT-ik<br>類義語: striking, remarkable, significant</p>
+      </li>
+      <li class="word-item" style="animation-delay: 150ms;">
+        <button type="button" class="play-btn" data-audio="audio/006_psychologist.mp3" aria-label="Play psychologist">Play</button>
+        <button type="button" class="word-text" data-audio="audio/006_psychologist.mp3" aria-expanded="false">psychologist</button>
+        <span class="small">#6</span>
+        <p class="meaning" hidden>意味: 心理学者<br>アクセント: sī-KÄ-lə-jist<br>類義語: therapist, behavioral scientist, clinician</p>
+      </li>
+      <li class="word-item" style="animation-delay: 175ms;">
+        <button type="button" class="play-btn" data-audio="audio/007_institute.mp3" aria-label="Play Institute">Play</button>
+        <button type="button" class="word-text" data-audio="audio/007_institute.mp3" aria-expanded="false">Institute</button>
+        <span class="small">#7</span>
+        <p class="meaning" hidden>意味: 研究所；学会<br>アクセント: IN-stə-tūt<br>類義語: organization, academy, research center</p>
+      </li>
+      <li class="word-item" style="animation-delay: 200ms;">
+        <button type="button" class="play-btn" data-audio="audio/008_suggesting.mp3" aria-label="Play suggesting">Play</button>
+        <button type="button" class="word-text" data-audio="audio/008_suggesting.mp3" aria-expanded="false">suggesting</button>
+        <span class="small">#8</span>
+        <p class="meaning" hidden>意味: 示唆している<br>基本形: suggest<br>アクセント: sə-JEST<br>類義語: indicating, implying, proposing</p>
+      </li>
+      <li class="word-item" style="animation-delay: 225ms;">
+        <button type="button" class="play-btn" data-audio="audio/009_lung_function.mp3" aria-label="Play lung function">Play</button>
+        <button type="button" class="word-text" data-audio="audio/009_lung_function.mp3" aria-expanded="false">lung function</button>
+        <span class="small">#9</span>
+        <p class="meaning" hidden>意味: 肺機能<br>アクセント: LUNG FUNGK-shən<br>類義語: pulmonary function, respiratory capacity, breathing function</p>
+      </li>
+      <li class="word-item" style="animation-delay: 250ms;">
+        <button type="button" class="play-btn" data-audio="audio/010_asthmatics.mp3" aria-label="Play asthmatics">Play</button>
+        <button type="button" class="word-text" data-audio="audio/010_asthmatics.mp3" aria-expanded="false">asthmatics</button>
+        <span class="small">#10</span>
+        <p class="meaning" hidden>意味: 喘息患者（複数）<br>基本形: asthmatic<br>アクセント: az-MÄT-ik<br>類義語: asthma patients, wheezers, sufferers</p>
+      </li>
+      <li class="word-item" style="animation-delay: 275ms;">
+        <button type="button" class="play-btn" data-audio="audio/011_the_immune_function.mp3" aria-label="Play the immune function">Play</button>
+        <button type="button" class="word-text" data-audio="audio/011_the_immune_function.mp3" aria-expanded="false">the immune function</button>
+        <span class="small">#11</span>
+        <p class="meaning" hidden>意味: 免疫機能<br>アクセント: thē i-MYŪN FUNGK-shən<br>類義語: immune response, immunological function, defense function</p>
+      </li>
+      <li class="word-item" style="animation-delay: 300ms;">
+        <button type="button" class="play-btn" data-audio="audio/012_biweekly.mp3" aria-label="Play biweekly">Play</button>
+        <button type="button" class="word-text" data-audio="audio/012_biweekly.mp3" aria-expanded="false">biweekly</button>
+        <span class="small">#12</span>
+        <p class="meaning" hidden>意味: 隔週の；週2回の<br>アクセント: bī-WĒK-lē<br>類義語: every two weeks, twice-weekly, fortnightly</p>
+      </li>
+      <li class="word-item" style="animation-delay: 325ms;">
+        <button type="button" class="play-btn" data-audio="audio/013_outscored.mp3" aria-label="Play outscored">Play</button>
+        <button type="button" class="word-text" data-audio="audio/013_outscored.mp3" aria-expanded="false">outscored</button>
+        <span class="small">#13</span>
+        <p class="meaning" hidden>意味: 得点で上回った<br>基本形: outscore<br>アクセント: out-SKÔR<br>類義語: surpassed, beat, outperformed</p>
+      </li>
+      <li class="word-item" style="animation-delay: 350ms;">
+        <button type="button" class="play-btn" data-audio="audio/014_colleagues.mp3" aria-label="Play colleagues">Play</button>
+        <button type="button" class="word-text" data-audio="audio/014_colleagues.mp3" aria-expanded="false">colleagues</button>
+        <span class="small">#14</span>
+        <p class="meaning" hidden>意味: 同僚（複数）<br>基本形: colleague<br>アクセント: KÄ-lēgz<br>類義語: coworkers, peers, associates</p>
+      </li>
+      <li class="word-item" style="animation-delay: 375ms;">
+        <button type="button" class="play-btn" data-audio="audio/015_on_timed.mp3" aria-label="Play on timed">Play</button>
+        <button type="button" class="word-text" data-audio="audio/015_on_timed.mp3" aria-expanded="false">on timed</button>
+        <span class="small">#15</span>
+        <p class="meaning" hidden>意味: 時間制限付きで<br>アクセント: on tīmd<br>類義語: under time pressure, in timed conditions, against the clock</p>
+      </li>
+      <li class="word-item" style="animation-delay: 400ms;">
+        <button type="button" class="play-btn" data-audio="audio/016_biofeedback.mp3" aria-label="Play biofeedback">Play</button>
+        <button type="button" class="word-text" data-audio="audio/016_biofeedback.mp3" aria-expanded="false">biofeedback</button>
+        <span class="small">#16</span>
+        <p class="meaning" hidden>意味: バイオフィードバック<br>アクセント: bī-ō-FĒD-bak<br>類義語: physiological feedback, self-regulation training, mind-body feedback</p>
+      </li>
+      <li class="word-item" style="animation-delay: 425ms;">
+        <button type="button" class="play-btn" data-audio="audio/017_none_of.mp3" aria-label="Play none of">Play</button>
+        <button type="button" class="word-text" data-audio="audio/017_none_of.mp3" aria-expanded="false">none of</button>
+        <span class="small">#17</span>
+        <p class="meaning" hidden>意味: ～のどれも～ない<br>アクセント: nŭn əv<br>類義語: not any of, no part of, neither of</p>
+      </li>
+      <li class="word-item" style="animation-delay: 450ms;">
+        <button type="button" class="play-btn" data-audio="audio/018_excludes.mp3" aria-label="Play excludes">Play</button>
+        <button type="button" class="word-text" data-audio="audio/018_excludes.mp3" aria-expanded="false">excludes</button>
+        <span class="small">#18</span>
+        <p class="meaning" hidden>意味: 除外する<br>基本形: exclude<br>アクセント: ik-SKLŪD<br>類義語: omits, leaves out, rules out</p>
+      </li>
+      <li class="word-item" style="animation-delay: 475ms;">
+        <button type="button" class="play-btn" data-audio="audio/019_whether.mp3" aria-label="Play whether">Play</button>
+        <button type="button" class="word-text" data-audio="audio/019_whether.mp3" aria-expanded="false">whether</button>
+        <span class="small">#19</span>
+        <p class="meaning" hidden>意味: ～かどうか<br>アクセント: HWETH-ər<br>類義語: if, whether or not, in case</p>
+      </li>
+      <li class="word-item" style="animation-delay: 500ms;">
+        <button type="button" class="play-btn" data-audio="audio/020_suggest.mp3" aria-label="Play suggest">Play</button>
+        <button type="button" class="word-text" data-audio="audio/020_suggest.mp3" aria-expanded="false">suggest</button>
+        <span class="small">#20</span>
+        <p class="meaning" hidden>意味: 提案する；示唆する<br>アクセント: sə-JEST<br>類義語: propose, indicate, imply</p>
+      </li>
+      <li class="word-item" style="animation-delay: 525ms;">
+        <button type="button" class="play-btn" data-audio="audio/021_extend.mp3" aria-label="Play extend">Play</button>
+        <button type="button" class="word-text" data-audio="audio/021_extend.mp3" aria-expanded="false">extend</button>
+        <span class="small">#21</span>
+        <p class="meaning" hidden>意味: 延ばす；拡張する<br>アクセント: ik-STEND<br>類義語: lengthen, prolong, expand</p>
+      </li>
+      <li class="word-item" style="animation-delay: 550ms;">
+        <button type="button" class="play-btn" data-audio="audio/022_breast.mp3" aria-label="Play breast">Play</button>
+        <button type="button" class="word-text" data-audio="audio/022_breast.mp3" aria-expanded="false">breast</button>
+        <span class="small">#22</span>
+        <p class="meaning" hidden>意味: 乳房；胸部<br>アクセント: BREST<br>類義語: chest, bosom, mammary gland</p>
+      </li>
+      <li class="word-item" style="animation-delay: 575ms;">
+        <button type="button" class="play-btn" data-audio="audio/023_cancer.mp3" aria-label="Play cancer">Play</button>
+        <button type="button" class="word-text" data-audio="audio/023_cancer.mp3" aria-expanded="false">cancer</button>
+        <span class="small">#23</span>
+        <p class="meaning" hidden>意味: がん<br>アクセント: KAN-sər<br>類義語: malignancy, carcinoma, tumor</p>
+      </li>
+      <li class="word-item" style="animation-delay: 600ms;">
+        <button type="button" class="play-btn" data-audio="audio/024_asthma.mp3" aria-label="Play asthma">Play</button>
+        <button type="button" class="word-text" data-audio="audio/024_asthma.mp3" aria-expanded="false">asthma</button>
+        <span class="small">#24</span>
+        <p class="meaning" hidden>意味: 喘息<br>アクセント: AZ-mə<br>類義語: bronchial asthma, airway disease, respiratory disorder</p>
+      </li>
+      <li class="word-item" style="animation-delay: 625ms;">
+        <button type="button" class="play-btn" data-audio="audio/025_rheumatoid.mp3" aria-label="Play rheumatoid">Play</button>
+        <button type="button" class="word-text" data-audio="audio/025_rheumatoid.mp3" aria-expanded="false">rheumatoid</button>
+        <span class="small">#25</span>
+        <p class="meaning" hidden>意味: リウマチ性の<br>アクセント: RŪ-mə-toid<br>類義語: inflammatory, autoimmune, arthritic</p>
+      </li>
+      <li class="word-item" style="animation-delay: 650ms;">
+        <button type="button" class="play-btn" data-audio="audio/026_arthritis.mp3" aria-label="Play arthritis">Play</button>
+        <button type="button" class="word-text" data-audio="audio/026_arthritis.mp3" aria-expanded="false">arthritis</button>
+        <span class="small">#26</span>
+        <p class="meaning" hidden>意味: 関節炎<br>アクセント: är-THRĪ-təs<br>類義語: joint inflammation, rheumatism, arthropathy</p>
+      </li>
+      <li class="word-item" style="animation-delay: 675ms;">
+        <button type="button" class="play-btn" data-audio="audio/027_ease.mp3" aria-label="Play ease">Play</button>
+        <button type="button" class="word-text" data-audio="audio/027_ease.mp3" aria-expanded="false">ease</button>
+        <span class="small">#27</span>
+        <p class="meaning" hidden>意味: 和らげる；緩和する<br>アクセント: ĒZ<br>類義語: relieve, alleviate, lessen</p>
+      </li>
+      <li class="word-item" style="animation-delay: 700ms;">
+        <button type="button" class="play-btn" data-audio="audio/028_experts_agree.mp3" aria-label="Play experts agree">Play</button>
+        <button type="button" class="word-text" data-audio="audio/028_experts_agree.mp3" aria-expanded="false">experts agree</button>
+        <span class="small">#28</span>
+        <p class="meaning" hidden>意味: 専門家は同意する<br>アクセント: EKS-pərts ə-GRĒ<br>類義語: specialists concur, authorities agree, professionals are in accord</p>
+      </li>
+      <li class="word-item" style="animation-delay: 725ms;">
+        <button type="button" class="play-btn" data-audio="audio/029_encourages.mp3" aria-label="Play encourages">Play</button>
+        <button type="button" class="word-text" data-audio="audio/029_encourages.mp3" aria-expanded="false">encourages</button>
+        <span class="small">#29</span>
+        <p class="meaning" hidden>意味: 促す；励ます<br>基本形: encourage<br>アクセント: en-KUR-ij<br>類義語: promotes, motivates, supports</p>
+      </li>
+      <li class="word-item" style="animation-delay: 750ms;">
+        <button type="button" class="play-btn" data-audio="audio/030_terrible.mp3" aria-label="Play terrible">Play</button>
+        <button type="button" class="word-text" data-audio="audio/030_terrible.mp3" aria-expanded="false">terrible</button>
+        <span class="small">#30</span>
+        <p class="meaning" hidden>意味: ひどい；恐ろしい<br>アクセント: TER-ə-bəl<br>類義語: awful, dreadful, horrible</p>
+      </li>
+      <li class="word-item" style="animation-delay: 775ms;">
+        <button type="button" class="play-btn" data-audio="audio/031_funeral.mp3" aria-label="Play funeral">Play</button>
+        <button type="button" class="word-text" data-audio="audio/031_funeral.mp3" aria-expanded="false">funeral</button>
+        <span class="small">#31</span>
+        <p class="meaning" hidden>意味: 葬式<br>アクセント: FYŪ-nə-rəl<br>類義語: burial service, memorial service, obsequies</p>
+      </li>
+      <li class="word-item" style="animation-delay: 800ms;">
+        <button type="button" class="play-btn" data-audio="audio/032_lets_you.mp3" aria-label="Play lets you">Play</button>
+        <button type="button" class="word-text" data-audio="audio/032_lets_you.mp3" aria-expanded="false">lets you</button>
+        <span class="small">#32</span>
+        <p class="meaning" hidden>意味: あなたに～させる<br>アクセント: lets yū<br>類義語: allows you, enables you, permits you</p>
+      </li>
+      <li class="word-item" style="animation-delay: 825ms;">
+        <button type="button" class="play-btn" data-audio="audio/033_victim.mp3" aria-label="Play victim">Play</button>
+        <button type="button" class="word-text" data-audio="audio/033_victim.mp3" aria-expanded="false">victim</button>
+        <span class="small">#33</span>
+        <p class="meaning" hidden>意味: 犠牲者；被害者<br>アクセント: VIK-təm<br>類義語: sufferer, casualty, target</p>
+      </li>
+    </ul>
+  </main>
+
+  <script>
+    const list = document.getElementById('wordList');
+    const playAllButton = document.getElementById('playAll');
+    const stopAllButton = document.getElementById('stopAll');
+
+    let currentAudio = null;
+    let playQueue = [];
+    let queueIndex = 0;
+
+    function stopPlayback() {
+      playQueue = [];
+      queueIndex = 0;
+      if (currentAudio) {
+        currentAudio.pause();
+        currentAudio.currentTime = 0;
+        currentAudio = null;
+      }
+    }
+
+    function playSingle(src) {
+      stopPlayback();
+      currentAudio = new Audio(src);
+      currentAudio.play().catch((err) => {
+        console.error('Audio play failed:', err);
+      });
+    }
+
+    function playQueueNext() {
+      if (queueIndex >= playQueue.length) {
+        currentAudio = null;
+        return;
+      }
+      const src = playQueue[queueIndex++];
+      currentAudio = new Audio(src);
+      currentAudio.addEventListener('ended', playQueueNext);
+      currentAudio.play().catch((err) => {
+        console.error('Audio play failed:', err);
+        playQueueNext();
+      });
+    }
+
+    function closeAllMeanings() {
+      document.querySelectorAll('.meaning').forEach((el) => {
+        el.hidden = true;
+      });
+      document.querySelectorAll('.word-text').forEach((el) => {
+        el.setAttribute('aria-expanded', 'false');
+      });
+    }
+
+    list.addEventListener('click', (event) => {
+      const target = event.target;
+      if (!(target instanceof HTMLElement)) return;
+
+      if (target.classList.contains('play-btn')) {
+        const src = target.getAttribute('data-audio');
+        if (src) {
+          playSingle(src);
+        }
+        return;
+      }
+
+      if (!target.classList.contains('word-text')) {
+        return;
+      }
+
+      const item = target.closest('.word-item');
+      if (!item) return;
+
+      const meaning = item.querySelector('.meaning');
+      if (!(meaning instanceof HTMLElement)) return;
+
+      const willOpen = meaning.hidden;
+      closeAllMeanings();
+      meaning.hidden = !willOpen;
+      target.setAttribute('aria-expanded', willOpen ? 'true' : 'false');
+    });
+
+    playAllButton.addEventListener('click', () => {
+      stopPlayback();
+      closeAllMeanings();
+      playQueue = Array.from(document.querySelectorAll('.play-btn[data-audio]'))
+        .map((el) => el.getAttribute('data-audio'))
+        .filter((src) => !!src);
+      queueIndex = 0;
+      playQueueNext();
+    });
+
+    stopAllButton.addEventListener('click', stopPlayback);
+  </script>
+</body>
+</html>
