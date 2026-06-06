@@ -1,92 +1,91 @@
 # テンプレート作成
 
-## 解答例
-To: IT Department
-Subject: Laptop Performance Issues After Update
+## 方針
 
-Dear IT Department,
-
-I am writing to report that my laptop has been running significantly slower since the recent software update. 
-Applications take much longer to open, and the system occasionally freezes, forcing me to restart and interrupting my workflow. 
-This slowdown makes it difficult to complete my daily work, especially when I need to participate in video meetings or use multiple programs at once. B
-ecause I depend on my laptop for nearly all my tasks, my overall productivity has decreased.
-
-I would appreciate it if you could examine my laptop and provide technical support to resolve this issue as soon as possible. 
-Thank you very much for your assistance.
+- 満点だった [6月度/06.md](SantaAI/Email/6月度/06.md) の文構成をベースにする
+- Subject/To は採点対象外として、本文の完成度を優先する
+- どのトピックにも使える差し替え式テンプレートにする
 
 
 
 ## 満点回答の構成フロー
 
-1. 宛先と件名を明確に書く
-2. 冒頭でメールの目的を1文で示す
-3. 問題の具体例を2-3個書く
-4. その問題が自分に与える影響を書く
-5. 相手にしてほしい対応を明確に依頼する
-6. 感謝と丁寧な締めで終える
+1. 宛名を書く（Dear + 名前/役職）
+2. 欠席・問題の理由を明確に説明する
+3. 重要事項を逃した懸念を述べる
+4. 追いつくための具体的な指示を依頼する
+5. 感謝して締める（Sincerely + Name）
 
 ## 使い回せる汎用フレーズ
 
-### 1) 目的を伝える
-- I am writing to report that ...
-- I am writing to inform you that ...
-- I am writing to request ...
-- I am writing regarding ...
+### 1) 導入（目的）
+- I hope you are doing well.
+- I am writing to explain why I [was absent/missed ...].
+- I am writing regarding [the class/the assignment/the task] I missed.
 
-### 2) 問題を説明する
-- I have been experiencing ...
-- Since the recent update, ...
-- ... has become significantly slower.
-- The system occasionally freezes/crashes.
+### 2) 理由説明
+- I was absent because [reason].
+- I could not attend because [reason].
+- My [doctor/parent/supervisor] advised me to [rest/stay home].
 
-### 3) 具体例を示す
-- For example, ...
-- Applications take much longer to ...
-- I often need to restart the system.
-- This issue occurs when I ...
+### 3) 懸念を述べる
+- I am concerned that I may have missed important [homework/information].
+- I do not want to fall behind.
+- I would like to catch up as soon as possible.
 
-### 4) 影響を述べる
-- This makes it difficult to ...
-- As a result, my productivity has decreased.
-- This issue is affecting my ability to ...
-- It is disrupting my daily workflow.
+### 4) 依頼する
+- Could you please let me know what assignments were given?
+- Could you please tell me how I should complete them?
+- If there are any [worksheets/textbook pages/online tasks], I would appreciate your instructions.
 
-### 5) 依頼する
-- I would appreciate it if you could ...
-- Could you please look into this issue?
-- I would be grateful if you could ...
-- Please let me know if you need any additional information.
-
-### 6) 締める
-- Thank you for your time and assistance.
-- Thank you in advance for your support.
-- Best regards,
+### 5) 締める
+- Thank you for your time and understanding.
+- Thank you for your support.
 - Sincerely,
+- [Your Name]
 
 ## TOEFLメール用 汎用テンプレート
 
-To: ------
-Subject: ------
+Dear Mr./Ms. [Name],
 
-Dear ------,
+I hope you are doing well.
+I am writing to explain why I [was absent/missed] [class or event] on [date/day].
+I was [absent/unable to attend] because [reason].
 
-I am writing to [report/request/inform] that [main issue].
+I am concerned that I may have missed important [homework/instructions/information].
+I do not want to fall behind, so I would like to catch up as soon as possible.
 
-[具体的な出来事1]. [具体的な出来事2]. [必要なら発生頻度や条件].
+Could you please let me know what [assignments/tasks] were given and how I should complete them?
+If there are any [worksheets/textbook pages/online tasks], I would appreciate your instructions.
 
-This issue makes it difficult for me to [task], and as a result, [impact].
+Thank you for your time and understanding.
 
-I would appreciate it if you could [specific request] as soon as possible.
+Sincerely,
+[Your Name]
 
-Thank you for your time and assistance.
+## 06.mdベースの当てはめ例（病欠 + 課題確認）
 
-Best regards,
+Dear Mr. Harris,
+
+I hope you are doing well.
+I am writing to explain why I was absent from biology class yesterday.
+I was absent because I had a high fever and a bad sore throat, and my doctor advised me to stay home and rest.
+
+I am concerned that I may have missed important homework.
+I do not want to fall behind, so I would like to catch up as soon as possible.
+
+Could you please let me know what assignments were given and how I should complete them?
+If there are any worksheets, textbook pages, or online tasks, I would appreciate your instructions.
+
+Thank you for your time and understanding.
+
+Sincerely,
 [Your Name]
 
 ## 書くときのポイント
 
-- 1段落1役割で書く (目的 -> 事実 -> 影響 -> 要望)
-- 事実は2-3個入れて説得力を出す
-- 依頼は曖昧にせず、相手の行動を具体的な動詞で書く
-- 丁寧さを保ちつつ、長く書きすぎない
+- 1段落1役割で書く（理由 -> 懸念 -> 依頼）
+- 設問の3要件（理由・懸念・依頼）を必ず明示する
+- 依頼は「何を」「どう提出するか」まで具体化する
+- Subject/To は不要なら省き、本文の正確さを優先する
 
