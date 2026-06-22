@@ -111,12 +111,15 @@ def preview_path_from_source(source_file: str) -> str:
     return str(candidate) if (REPO_ROOT / candidate).exists() else source_file
 
 
-def audio_path_from_entry(word: str, source_file: str) -> str:
-    """Find the audio file for a given word in its pronunciation directory."""
-    audio_dir = Path(source_file).parent / f"{Path(source_file).stem}_pronunciation" / "audio"
-    if not (REPO_ROOT / audio_dir).exists():
-        return ""
-
+def audio_path_from_entry(word: str, source_file: str, subjects: list[str] = None) -> str:
+    """Find the audio file for a given word in its pronunciation directory.
+    
+    Searches in multiple locations:
+    1. The same directory as source_file (original behavior)
+    2. Subject-level pronunciation directories (new)
+    
+    Returns a relative path (relative to REPO_ROOT).
+    """
     slug = (
         word.lower()
         .replace(" ", "_")
@@ -127,17 +130,46 @@ def audio_path_from_entry(word: str, source_file: str) -> str:
     )
     slug = re.sub(r"[^a-z0-9_-]", "", slug)
     slug = re.sub(r"_+", "_", slug).strip("_")
-
-    # Try to find matching audio file with pattern like 001_*.mp3, 002_*.mp3, etc.
-    audio_root = REPO_ROOT / audio_dir
-    if not audio_root.exists():
-        return ""
-
-    for audio_file in audio_root.glob("*.mp3"):
-        # Match by filename containing the slug
-        if slug and slug in audio_file.stem.lower():
-            return str(audio_dir / audio_file.name)
-
+    
+    search_dirs = []
+    
+    # Method 1: Original - source file's parent directory
+    original_dir = Path(source_file).parent / f"{Path(source_file).stem}_pronunciation" / "audio"
+    search_dirs.append(original_dir)
+    
+    # Method 2: Subject-level pronunciation directories
+    if subjects:
+        for subject in subjects:
+            subject_path = REPO_ROOT / subject
+            if subject_path.exists():
+                # Look for *_pronunciation directories in subject folder
+                for pron_dir in subject_path.glob("*_pronunciation"):
+                    audio_dir = pron_dir / "audio"
+                    # Make it relative for comparison
+                    try:
+                        rel_audio_dir = audio_dir.relative_to(REPO_ROOT)
+                        if rel_audio_dir not in search_dirs:
+                            search_dirs.append(rel_audio_dir)
+                    except ValueError:
+                        # If path is not relative to REPO_ROOT, use absolute
+                        if audio_dir not in search_dirs:
+                            search_dirs.append(audio_dir)
+    
+    # Try to find matching audio file in any of the search directories
+    for audio_dir in search_dirs:
+        audio_root = REPO_ROOT / audio_dir
+        if not audio_root.exists():
+            continue
+        
+        for audio_file in audio_root.glob("*.mp3"):
+            # Match by filename containing the slug
+            if slug and slug in audio_file.stem.lower():
+                # Return relative path
+                try:
+                    return str((audio_dir / audio_file.name).relative_to(REPO_ROOT))
+                except ValueError:
+                    return str(audio_dir / audio_file.name)
+    
     return ""
 
 
@@ -220,7 +252,7 @@ def build_rankings(entries: list[Entry]) -> list[dict[str, object]]:
                 "files": sorted({entry.source_file for entry in group}),
                 "first_seen": first.source_file,
                 "preview_path": preview_path_from_source(first.source_file),
-                "audio_path": audio_path_from_entry(first.word, first.source_file),
+                "audio_path": audio_path_from_entry(first.word, first.source_file, sorted({entry.subject for entry in group})),
                 "meaning": first.meaning,
                 "basic_form": first.basic_form,
                 "accent": first.accent,
@@ -400,7 +432,7 @@ def main() -> int:
     # Update missing_audio list after generation attempt
     # (Re-detect audio files after generation)
     for item in missing_audio[:]:
-        audio_path = audio_path_from_entry(item["word"], item["first_seen"])
+        audio_path = audio_path_from_entry(item["word"], item["first_seen"], item.get("subjects", []))
         if audio_path:
             missing_audio.remove(item)
             item["audio_path"] = audio_path
