@@ -466,7 +466,6 @@
               </div>
               <div class="meta" id="metaText">頻出語をもとに意味を当てる 4 択問題です。</div>
             </div>
-            <a class="tag" id="previewLink" href="#" target="_self" rel="noopener" hidden>発音ページへ</a>
           </div>
 
           <div class="choices" id="choices"></div>
@@ -501,7 +500,6 @@
     const metaTextEl = document.getElementById("metaText");
     const audioBtn = document.getElementById("audioBtn");
     const quizTagEl = document.getElementById("quizTag");
-    const previewLinkEl = document.getElementById("previewLink");
     const choicesEl = document.getElementById("choices");
     const feedbackEl = document.getElementById("feedback");
     const rankingListEl = document.getElementById("rankingList");
@@ -734,9 +732,6 @@
       quizTagEl.textContent = `${modeSelect.options[modeSelect.selectedIndex].text} / Q${state.quizCount}`;
       promptEl.textContent = item.word;
       metaTextEl.textContent = `累計${item.count}回 / ${prettySubjects(item.subjects)}`;
-      previewLinkEl.hidden = true;
-      previewLinkEl.href = buildPreviewHref(item);
-      previewLinkEl.textContent = item.preview_path === item.first_seen ? "元ファイル" : "発音ページへ";
 
       const audioHref = buildAudioHref(item);
       audioBtn.hidden = !audioHref;
@@ -801,7 +796,6 @@
         quizTagEl.textContent = "対象なし";
         promptEl.textContent = "条件に合う単語がありません。";
         metaTextEl.textContent = "フィルタ条件を見直してください。";
-        previewLinkEl.hidden = true;
         audioBtn.hidden = true;
         nextBtn.hidden = true;
         choicesEl.innerHTML = "";
