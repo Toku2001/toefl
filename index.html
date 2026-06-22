@@ -440,11 +440,11 @@
           <label>
             問題数
             <select id="problemCountInput">
+              <option value="5">5問</option>
               <option value="10">10問</option>
+              <option value="15">15問</option>
               <option value="20">20問</option>
               <option value="30">30問</option>
-              <option value="50">50問</option>
-              <option value="100">100問</option>
             </select>
           </label>
         </div>
@@ -591,7 +591,7 @@
       if (/^(https?:)?\/\//.test(audioPath) || audioPath.startsWith("/")) {
         return audioPath;
       }
-      return `../${audioPath}`;
+      return audioPath;
     }
 
     async function playAudio(href) {
@@ -793,6 +793,26 @@
     function startQuiz() {
       const next = pickQuestion();
       if (!next) {
+        // Check if all questions were answered or no questions match
+        if (state.quizCount > 0 && state.quizCount >= state.filtered.length) {
+          // All questions completed - show summary
+          const correctTotal = state.filtered.reduce((sum, item) => sum + (getStat(item.normalized_word).correct || 0), 0);
+          const totalQuestions = state.filtered.length;
+          const accuracy = totalQuestions > 0 ? Math.round((correctTotal / totalQuestions) * 100) : 0;
+          
+          quizTagEl.textContent = "完了";
+          promptEl.textContent = "全問が終了しました！";
+          metaTextEl.textContent = `正答率: ${correctTotal}/${totalQuestions} (${accuracy}%)`;
+          audioBtn.hidden = true;
+          nextBtn.hidden = true;
+          choicesEl.innerHTML = "";
+          feedbackEl.className = "feedback good";
+          feedbackEl.textContent = `おめでとう! ${accuracy}% の正答率です。`;
+          nextBtn.disabled = true;
+          return;
+        }
+        
+        // No matching questions
         quizTagEl.textContent = "対象なし";
         promptEl.textContent = "条件に合う単語がありません。";
         metaTextEl.textContent = "フィルタ条件を見直してください。";
