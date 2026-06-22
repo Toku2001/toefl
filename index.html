@@ -3,305 +3,878 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>TOEFL Word Pronunciation Index</title>
+  <title>TOEFL Frequency Quiz</title>
   <style>
     :root {
-      --ink: #102a43;
-      --muted: #486581;
-      --paper: #f8fbff;
-      --card: #ffffff;
-      --line: #d9e2ec;
-      --accent: #0f766e;
-      --accent-2: #115e59;
-      --accent-soft: #ccfbf1;
-      --shadow: rgba(16, 42, 67, 0.12);
+      --bg1: #f5efe6;
+      --bg2: #ead7bf;
+      --card: #fffaf3;
+      --ink: #2d241c;
+      --muted: #6d5c49;
+      --accent: #8f3d17;
+      --accent-2: #5f2810;
+      --success: #0f7b3f;
+      --danger: #b42318;
+      --border: #d8c2a6;
+      --shadow: rgba(45, 36, 28, 0.14);
     }
 
     * { box-sizing: border-box; }
 
     body {
       margin: 0;
-      color: var(--ink);
-      font-family: "Palatino", "Times New Roman", serif;
-      background:
-        radial-gradient(circle at 12% 18%, rgba(34, 197, 94, 0.12), transparent 34%),
-        radial-gradient(circle at 88% 10%, rgba(20, 184, 166, 0.14), transparent 30%),
-        radial-gradient(circle at 88% 82%, rgba(14, 116, 144, 0.1), transparent 28%),
-        linear-gradient(135deg, #f7fbff, #edf7f7 45%, #eefaf2);
       min-height: 100vh;
-      padding: 26px 16px 40px;
-    }
-
-    .wrap {
-      max-width: 1060px;
-      margin: 0 auto;
-    }
-
-    .hero {
-      background: linear-gradient(160deg, #ffffff, #f2fbf9);
-      border: 1px solid #dcece8;
-      border-radius: 18px;
-      box-shadow: 0 12px 32px var(--shadow);
+      color: var(--ink);
+      font-family: Georgia, "Times New Roman", serif;
+      background:
+        radial-gradient(circle at 15% 15%, rgba(255,255,255,0.55), transparent 30%),
+        radial-gradient(circle at 85% 80%, rgba(255,255,255,0.35), transparent 28%),
+        linear-gradient(135deg, var(--bg1), var(--bg2));
       padding: 24px;
-      margin-bottom: 16px;
     }
 
-    h1 {
-      margin: 0;
-      font-size: clamp(1.7rem, 2.4vw, 2.5rem);
-      letter-spacing: 0.01em;
-    }
-
-    .sub {
-      margin: 10px 0 0;
-      color: var(--muted);
-      line-height: 1.6;
-      font-size: 0.98rem;
-    }
-
-    .meta {
-      margin-top: 14px;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      color: #1f2937;
-      font-size: 0.9rem;
-    }
-
-    .chip {
-      background: var(--accent-soft);
-      border: 1px solid #99f6e4;
-      border-radius: 999px;
-      padding: 5px 10px;
-      font-weight: 600;
+    .shell {
+      max-width: 1280px;
+      margin: 0 auto;
+      display: grid;
+      gap: 18px;
+      grid-template-columns: minmax(0, 1.6fr) minmax(320px, 0.9fr);
+      align-items: start;
     }
 
     .panel {
       background: var(--card);
-      border: 1px solid var(--line);
-      border-radius: 14px;
-      box-shadow: 0 8px 24px rgba(16, 42, 67, 0.08);
-      padding: 14px;
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      box-shadow: 0 18px 36px var(--shadow);
+      overflow: hidden;
     }
 
-    .controls {
+    .hero {
+      padding: 24px 24px 18px;
+      border-bottom: 1px solid var(--border);
+      background: linear-gradient(135deg, rgba(143,61,23,0.09), rgba(255,255,255,0.45));
+    }
+
+    h1 {
+      margin: 0 0 10px;
+      font-size: clamp(1.6rem, 3vw, 2.6rem);
+      letter-spacing: 0.03em;
+    }
+
+    .sub {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    .stats {
       display: flex;
       flex-wrap: wrap;
       gap: 10px;
-      margin-bottom: 14px;
+      margin-top: 14px;
     }
 
-    input[type="search"] {
-      width: min(520px, 100%);
-      border: 1px solid #b7c5d3;
-      border-radius: 10px;
-      padding: 10px 12px;
-      font-size: 0.96rem;
-      font-family: inherit;
-      color: var(--ink);
-      background: #fbfdff;
+    .chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: rgba(143,61,23,0.08);
+      border: 1px solid rgba(143,61,23,0.14);
+      font-size: 0.92rem;
     }
 
-    input[type="search"]:focus {
-      outline: 2px solid #0ea5a3;
-      outline-offset: 1px;
-      border-color: #14b8a6;
-    }
-
-    .list {
-      list-style: none;
-      margin: 0;
-      padding: 0;
+    .controls {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 12px;
+      padding: 18px 24px 16px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .control-row {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
       gap: 10px;
     }
 
-    .item {
-      opacity: 0;
-      transform: translateY(8px);
-      animation: reveal 320ms ease forwards;
+    .control-row.secondary {
+      grid-template-columns: 1.2fr 0.8fr 0.8fr 0.8fr;
     }
 
-    .item a {
-      display: block;
-      text-decoration: none;
-      color: var(--ink);
-      border: 1px solid var(--line);
-      border-radius: 10px;
-      padding: 11px 12px;
-      background: #ffffff;
-      transition: transform 110ms ease, border-color 110ms ease, box-shadow 110ms ease;
-      line-height: 1.45;
-    }
-
-    .item a:hover {
-      transform: translateY(-1px);
-      border-color: #14b8a6;
-      box-shadow: 0 8px 16px rgba(20, 184, 166, 0.15);
-    }
-
-    .label {
-      font-weight: 700;
-      display: block;
-    }
-
-    .path {
+    label {
+      display: grid;
+      gap: 6px;
+      font-size: 0.85rem;
       color: var(--muted);
+    }
+
+    input,
+    select,
+    button {
+      font: inherit;
+    }
+
+    input,
+    select {
+      width: 100%;
+      border: 1px solid var(--border);
+      background: #fff;
+      color: var(--ink);
+      border-radius: 12px;
+      padding: 11px 12px;
+      outline: none;
+    }
+
+    input:focus,
+    select:focus {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px rgba(143,61,23,0.12);
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .btn {
+      border: 1px solid var(--accent);
+      background: var(--accent);
+      color: #fff;
+      border-radius: 12px;
+      padding: 10px 14px;
+      cursor: pointer;
+      transition: transform 120ms ease, background 120ms ease, opacity 120ms ease;
+    }
+
+    .btn:hover { background: var(--accent-2); }
+    .btn:active { transform: translateY(1px); }
+
+    .btn.secondary {
+      background: transparent;
+      color: var(--accent);
+    }
+
+    .btn.secondary:hover {
+      background: rgba(143,61,23,0.08);
+    }
+
+    .btn:disabled {
+      opacity: 0.45;
+      cursor: not-allowed;
+      transform: none;
+    }
+
+    .quiz {
+      padding: 22px 24px 24px;
+    }
+
+    .quiz-card {
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      background: #fff;
+      padding: 20px;
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.8);
+    }
+
+    .quiz-head {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      align-items: start;
+      margin-bottom: 18px;
+    }
+
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: rgba(143,61,23,0.08);
+      color: var(--accent);
       font-size: 0.82rem;
-      word-break: break-all;
-      margin-top: 4px;
+      white-space: nowrap;
+    }
+
+    .prompt {
+      margin: 0;
+      font-size: clamp(1.4rem, 2.4vw, 2rem);
+      line-height: 1.35;
+    }
+
+    .audio-btn {
+      background: none;
+      border: none;
+      color: var(--accent);
+      font-size: 1.2em;
+      cursor: pointer;
+      padding: 0;
+      transition: transform 120ms ease, opacity 120ms ease;
+      margin-left: 8px;
+    }
+
+    .audio-btn:hover { transform: scale(1.15); }
+    .audio-btn:active { transform: scale(0.95); }
+    .audio-btn:disabled { opacity: 0.45; cursor: not-allowed; }
+
+    .meta {
+      margin-top: 10px;
+      color: var(--muted);
+      line-height: 1.6;
+      font-size: 0.95rem;
+    }
+
+    .choices {
+      display: grid;
+      gap: 10px;
+      margin-top: 18px;
+    }
+
+    .choice {
+      border: 1px solid var(--border);
+      background: #fff;
+      color: var(--ink);
+      border-radius: 14px;
+      padding: 14px 16px;
+      text-align: left;
+      cursor: pointer;
+      transition: transform 120ms ease, border-color 120ms ease, background 120ms ease;
+      min-height: 56px;
+    }
+
+    .choice:hover {
+      border-color: var(--accent);
+      transform: translateY(-1px);
+    }
+
+    .choice.correct {
+      background: rgba(15,123,63,0.08);
+      border-color: rgba(15,123,63,0.5);
+    }
+
+    .choice.wrong {
+      background: rgba(180,35,24,0.08);
+      border-color: rgba(180,35,24,0.45);
+    }
+
+    .feedback {
+      margin-top: 16px;
+      min-height: 1.4em;
+      line-height: 1.6;
+      color: var(--muted);
+    }
+
+    .feedback strong { color: var(--ink); }
+
+    .feedback.good { color: var(--success); }
+    .feedback.bad { color: var(--danger); }
+
+    .list-panel {
+      padding: 0;
+    }
+
+    .list-head {
+      padding: 20px 20px 14px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .list-head h2 {
+      margin: 0 0 6px;
+      font-size: 1.2rem;
+    }
+
+    .list-head p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.92rem;
+      line-height: 1.6;
+    }
+
+    .ranking {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+    }
+
+    .ranking.expanded {
+      max-height: calc(100vh - 260px);
+      overflow: auto;
+    }
+
+    .ranking li {
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      gap: 10px;
+      align-items: start;
+      padding: 14px 20px;
+      border-bottom: 1px solid rgba(216,194,166,0.7);
+    }
+
+    .ranking li:last-child { border-bottom: 0; }
+
+    .ranking-toggle {
+      cursor: pointer;
+      user-select: none;
+      transition: opacity 0.2s ease;
+    }
+
+    .ranking-toggle:hover {
+      opacity: 0.7;
+    }
+
+    .rank-no {
+      min-width: 2.6em;
+      color: var(--accent);
+      font-weight: 700;
+      font-size: 0.95rem;
+    }
+
+    .rank-word {
+      display: grid;
+      gap: 4px;
+    }
+
+    .rank-word a {
+      color: var(--ink);
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    .rank-word a:hover { text-decoration: underline; }
+
+    .rank-word .detail {
+      color: var(--muted);
+      font-size: 0.88rem;
+      line-height: 1.5;
+    }
+
+    .rank-count {
+      text-align: right;
+      color: var(--accent);
+      font-weight: 700;
+      white-space: nowrap;
     }
 
     .empty {
-      color: #7b8794;
-      font-size: 0.95rem;
-      margin-top: 4px;
+      padding: 28px 20px;
+      color: var(--muted);
+      text-align: center;
     }
 
-    footer {
-      margin-top: 14px;
-      color: #5b6f82;
-      font-size: 0.86rem;
-      text-align: right;
-    }
+    @media (max-width: 1020px) {
+      .shell {
+        grid-template-columns: 1fr;
+      }
 
-    @keyframes reveal {
-      to {
-        opacity: 1;
-        transform: translateY(0);
+      .ranking {
+        max-height: 0;
+      }
+
+      .ranking.expanded {
+        max-height: 70vh;
       }
     }
 
-    @media (max-width: 640px) {
-      body { padding: 16px 10px 30px; }
-      .hero { padding: 16px; }
-      .panel { padding: 10px; }
-      .list { grid-template-columns: 1fr; }
+    @media (max-width: 780px) {
+      body { padding: 14px; }
+
+      .hero,
+      .controls,
+      .quiz {
+        padding-left: 16px;
+        padding-right: 16px;
+      }
+
+      .control-row,
+      .control-row.secondary,
+      .quiz-head {
+        grid-template-columns: 1fr;
+        display: grid;
+      }
+
+      .actions {
+        flex-direction: column;
+      }
+
+      .quiz-head {
+        gap: 8px;
+      }
     }
   </style>
 </head>
 <body>
-  <div class="wrap">
-    <section class="hero">
-      <h1>TOEFL Pronunciation Hub</h1>
-      <p class="sub">各分野の発音ページへ移動するためのルートページです。リンク先は既存の各フォルダ内 index.html で、音声は各ページの相対パスをそのまま使って再生されます。</p>
-      <div class="meta">
-        <span class="chip" id="totalCount">0 pages</span>
-        <span class="chip" id="visibleCount">0 visible</span>
+  <div class="shell">
+    <section class="panel">
+      <div class="hero">
+        <h1>TOEFL Frequency Quiz</h1>
+        <p class="sub">頻出語ランキングをもとに、意味の 4 択クイズを出します。間違えた単語は復習対象として localStorage に保存されます。</p>
+        <div class="stats">
+          <span class="chip" id="totalWords">0 words</span>
+          <span class="chip" id="filteredWords">0 filtered</span>
+          <span class="chip" id="reviewWords">0 review</span>
+          <span class="chip" id="scoreChip">0 correct / 0 wrong</span>
+        </div>
       </div>
-    </section>
 
-    <section class="panel" aria-label="pronunciation pages">
       <div class="controls">
-        <input id="search" type="search" placeholder="科目名 / words番号 / パスで絞り込み" aria-label="ページ検索" />
+        <div class="control-row">
+          <label>
+            モード
+            <select id="modeSelect">
+              <option value="frequency">頻出順</option>
+              <option value="random">ランダム</option>
+              <option value="review">復習</option>
+            </select>
+          </label>
+          <label>
+            科目
+            <select id="subjectSelect">
+              <option value="all">すべて</option>
+            </select>
+          </label>
+          <label>
+            問題数
+            <select id="problemCountInput">
+              <option value="10">10問</option>
+              <option value="20">20問</option>
+              <option value="30">30問</option>
+              <option value="50">50問</option>
+              <option value="100">100問</option>
+            </select>
+          </label>
+        </div>
+        <div class="actions">
+          <button class="btn" id="startBtn" type="button">出題開始</button>
+          <button class="btn secondary" id="nextBtn" type="button" disabled>次へ</button>
+          <button class="btn secondary" id="resetBtn" type="button">履歴をリセット</button>
+        </div>
       </div>
-      <ul class="list" id="linkList"></ul>
-      <p class="empty" id="emptyMessage" hidden>該当するページがありません。</p>
+
+      <div class="quiz">
+        <div class="quiz-card">
+          <div class="quiz-head">
+            <div>
+              <span class="tag" id="quizTag">未開始</span>
+              <div style="display: flex; align-items: baseline; gap: 10px;">
+                <h2 class="prompt" id="prompt">出題を開始してください。</h2>
+                <button class="audio-btn" id="audioBtn" type="button" hidden aria-label="発音を再生">🔊</button>
+              </div>
+              <div class="meta" id="metaText">頻出語をもとに意味を当てる 4 択問題です。</div>
+            </div>
+            <a class="tag" id="previewLink" href="#" target="_self" rel="noopener" hidden>発音ページへ</a>
+          </div>
+
+          <div class="choices" id="choices"></div>
+          <div class="feedback" id="feedback"></div>
+        </div>
+      </div>
     </section>
 
-    <footer>Generated for GitHub Pages navigation</footer>
+    <aside class="panel list-panel">
+      <div class="list-head">
+        <h2 id="rankingToggle" class="ranking-toggle">▶ 頻出ランキング</h2>
+        <p>フィルタ後の頻出単語ランキング</p>
+      </div>
+      <ol class="ranking" id="rankingList"></ol>
+      <div class="empty" id="emptyState" hidden>該当する単語がありません。</div>
+    </aside>
   </div>
 
   <script>
-    const pages = [
-      { label: "Frequency Quiz", path: "quiz/index.html" },
-      { label: "AmericanHistory 06", path: "AmericanHistory/06words_pronunciation/index.html" },
-      { label: "AmericanHistory 08", path: "AmericanHistory/08words_pronunciation/index.html" },
-      { label: "AmericanHistory 09", path: "AmericanHistory/09words_pronunciation/index.html" },
-      { label: "AmericanHistory 10", path: "AmericanHistory/10words_pronunciation/index.html" },
-      { label: "Archaeology 03", path: "Archaeology/03/03words_pronunciation/index.html" },
-      { label: "Archaeology 04", path: "Archaeology/04/04words_pronunciation/index.html" },
-      { label: "Art 23", path: "Art/23words_pronunciation/index.html" },
-      { label: "ArtHistory 05", path: "ArtHistory/05/05words_pronunciation/index.html" },
-      { label: "Astronomy 33", path: "Astronomy/33words_pronunciation/index.html" },
-      { label: "Astronomy 34", path: "Astronomy/34words_pronunciation/index.html" },
-      { label: "Biology 37", path: "Biology/37words_pronunciation/index.html" },
-      { label: "Biology 38", path: "Biology/38words_pronunciation/index.html" },
-      { label: "Biology 39", path: "Biology/39words_pronunciation/index.html" },
-      { label: "Biology 40", path: "Biology/40words_pronunciation/index.html" },
-      { label: "Biology 41", path: "Biology/41words_pronunciation/index.html" },
-      { label: "Biology 42", path: "Biology/42words_pronunciation/index.html" },
-      { label: "Biology 43", path: "Biology/43words_pronunciation/index.html" },
-      { label: "BusinessAsministration&Economics 11", path: "BusinessAsministration&Economics/11words_pronunciation/index.html" },
-      { label: "ComputerScience 44", path: "ComputerScience/44words_pronunciation/index.html" },
-      { label: "Crimiinology 19", path: "Crimiinology/19words_pronunciation/index.html" },
-      { label: "EarthScience 45", path: "EarthScience/45words_pronunciation/index.html" },
-      { label: "EarthScience 47", path: "EarthScience/47words_pronunciation/index.html" },
-      { label: "Ecology 49", path: "Ecology/49words_pronunciation/index.html" },
-      { label: "Economics 12", path: "Economics/12words_pronunciation/index.html" },
-      { label: "Environmentology 13", path: "Environmentology/13words_pronunciation/index.html" },
-      { label: "Geology 53", path: "Geology/53words_pronunciation/index.html" },
-      { label: "Geology 54", path: "Geology/54words_pronunciation/index.html" },
-      { label: "Geology 55", path: "Geology/55words_pronunciation/index.html" },
-      { label: "History 07", path: "History/07words_pronunciation/index.html" },
-      { label: "Law 18", path: "Law/18words_pronunciation/index.html" },
-      { label: "Law pronunciation", path: "Law/pronunciation/index.html" },
-      { label: "Linguistics 20", path: "Linguistics/20words_pronunciation/index.html" },
-      { label: "Linguistics 21", path: "Linguistics/21words_pronunciation/index.html" },
-      { label: "Literature 25", path: "Literature/25words_pronunciation/index.html" },
-      { label: "MediaStudies 52", path: "MediaStudies/52words_pronunciation/index.html" },
-      { label: "Medicine 56", path: "Medicine/56words_pronunciation/index.html" },
-      { label: "Medicine 57", path: "Medicine/57words_pronunciation/index.html" },
-      { label: "Medicine 58", path: "Medicine/58words_pronunciation/index.html" },
-      { label: "Optics 51", path: "Optics/51words_pronunciation/index.html" },
-      { label: "Philosophy 27", path: "Philosophy/27words_pronunciation/index.html" },
-      { label: "Physics 59", path: "Physics/59words_pronunciation/index.html" },
-      { label: "Physics 60", path: "Physics/60words_pronunciation/index.html" },
-      { label: "PoliticalScience 30", path: "PoliticalScience/30words_pronunciation/index.html" },
-      { label: "Psychology 29", path: "Psychology/29words_pronunciation/index.html" },
-      { label: "Sociology 32", path: "Sociology/32words_pronunciation/index.html" },
-      { label: "Theater 26", path: "Theater/26words_pronunciation/index.html" },
-      { label: "VeterinaryStudy 36", path: "VeterinaryStudy/36words_pronunciation/index.html" },
-      { label: "Women'sStudy 31", path: "Women'sStudy/31words_pronunciation/index.html" }
-    ];
+    const DATA_URL = "data/word_frequency.json";
+    const STORAGE_KEY = "toefl.frequencyQuiz.v1";
 
-    const listEl = document.getElementById("linkList");
-    const emptyEl = document.getElementById("emptyMessage");
-    const searchEl = document.getElementById("search");
-    const totalCountEl = document.getElementById("totalCount");
-    const visibleCountEl = document.getElementById("visibleCount");
+    const modeSelect = document.getElementById("modeSelect");
+    const subjectSelect = document.getElementById("subjectSelect");
+    const problemCountInput = document.getElementById("problemCountInput");
+    const startBtn = document.getElementById("startBtn");
+    const rankingToggle = document.getElementById("rankingToggle");
+    const rankingList = document.getElementById("rankingList");
+    const nextBtn = document.getElementById("nextBtn");
+    const resetBtn = document.getElementById("resetBtn");
+    const promptEl = document.getElementById("prompt");
+    const metaTextEl = document.getElementById("metaText");
+    const audioBtn = document.getElementById("audioBtn");
+    const quizTagEl = document.getElementById("quizTag");
+    const previewLinkEl = document.getElementById("previewLink");
+    const choicesEl = document.getElementById("choices");
+    const feedbackEl = document.getElementById("feedback");
+    const rankingListEl = document.getElementById("rankingList");
+    const emptyStateEl = document.getElementById("emptyState");
+    const totalWordsEl = document.getElementById("totalWords");
+    const filteredWordsEl = document.getElementById("filteredWords");
+    const reviewWordsEl = document.getElementById("reviewWords");
+    const scoreChipEl = document.getElementById("scoreChip");
 
-    function render(query) {
-      const q = query.trim().toLowerCase();
-      const filtered = pages.filter((p) => {
-        if (!q) return true;
-        return p.label.toLowerCase().includes(q) || p.path.toLowerCase().includes(q);
-      });
+    const state = {
+      data: [],
+      filtered: [],
+      current: null,
+      choices: [],
+      stats: loadStats(),
+      quizCount: 0,
+    };
 
-      listEl.innerHTML = "";
-      filtered.forEach((item, index) => {
-        const li = document.createElement("li");
-        li.className = "item";
-        li.style.animationDelay = `${Math.min(index * 20, 480)}ms`;
-
-        const a = document.createElement("a");
-        a.href = item.path;
-
-        const label = document.createElement("span");
-        label.className = "label";
-        label.textContent = item.label;
-
-        const path = document.createElement("span");
-        path.className = "path";
-        path.textContent = item.path;
-
-        a.appendChild(label);
-        a.appendChild(path);
-        li.appendChild(a);
-        listEl.appendChild(li);
-      });
-
-      emptyEl.hidden = filtered.length !== 0;
-      visibleCountEl.textContent = `${filtered.length} visible`;
+    function loadStats() {
+      try {
+        const parsed = JSON.parse(localStorage.getItem(STORAGE_KEY) || "{}");
+        return parsed && typeof parsed === "object" ? parsed : {};
+      } catch {
+        return {};
+      }
     }
 
-    totalCountEl.textContent = `${pages.length} pages`;
-    searchEl.addEventListener("input", (event) => {
-      render(event.target.value || "");
+    function saveStats() {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(state.stats));
+    }
+
+    function getStat(key) {
+      const entry = state.stats[key];
+      return entry || { correct: 0, wrong: 0, attempts: 0, lastAt: "" };
+    }
+
+    function setStat(key, updater) {
+      const current = getStat(key);
+      state.stats[key] = updater({ ...current });
+      saveStats();
+    }
+
+    function normalize(text) {
+      return String(text || "").trim().toLowerCase();
+    }
+
+    function escapeHtml(text) {
+      return String(text)
+        .replaceAll("&", "&amp;")
+        .replaceAll("<", "&lt;")
+        .replaceAll(">", "&gt;")
+        .replaceAll('"', "&quot;")
+        .replaceAll("'", "&#39;");
+    }
+
+    function reviewScore(item) {
+      const stats = getStat(item.normalized_word);
+      return stats.wrong - stats.correct * 0.25;
+    }
+
+    function sortableByMode(a, b) {
+      const mode = modeSelect.value;
+      if (mode === "random") return Math.random() - 0.5;
+      if (mode === "review") {
+        const scoreA = reviewScore(a);
+        const scoreB = reviewScore(b);
+        if (scoreA !== scoreB) return scoreB - scoreA;
+        if (a.count !== b.count) return b.count - a.count;
+        return a.word.localeCompare(b.word, "ja");
+      }
+      if (a.count !== b.count) return b.count - a.count;
+      const scoreA = reviewScore(a);
+      const scoreB = reviewScore(b);
+      if (scoreA !== scoreB) return scoreB - scoreA;
+      return a.word.localeCompare(b.word, "ja");
+    }
+
+    function buildPreviewHref(item) {
+      const path = item.preview_path || item.first_seen;
+      if (/^(https?:)?\/\//.test(path) || path.startsWith("/")) {
+        return path;
+      }
+      return `../${path}`;
+    }
+
+    function buildAudioHref(item) {
+      const audioPath = item.audio_path || "";
+      if (!audioPath) return "";
+      if (/^(https?:)?\/\//.test(audioPath) || audioPath.startsWith("/")) {
+        return audioPath;
+      }
+      return `../${audioPath}`;
+    }
+
+    async function playAudio(href) {
+      if (!href) return;
+      try {
+        const audio = new Audio(href);
+        await audio.play();
+      } catch (error) {
+        console.warn("Failed to play audio:", error);
+      }
+    }
+
+    function prettySubjects(subjects) {
+      return subjects.join(", ");
+    }
+
+    function getDisplayMeaning(item) {
+      return item.meaning || item.details || item.word;
+    }
+
+    function filterData() {
+      const subject = subjectSelect.value;
+
+      const base = state.data.filter((item) => {
+        if (subject !== "all" && !item.subjects.includes(subject)) return false;
+        return true;
+      });
+
+      let filtered = base;
+      if (modeSelect.value === "review") {
+        filtered = base.filter((item) => getStat(item.normalized_word).wrong > 0);
+      }
+
+      const problemCount = Number(problemCountInput.value) || 10;
+      state.filtered = filtered.slice(0, problemCount);
+      return state.filtered;
+    }
+
+    function updateSummary() {
+      const reviewCount = state.data.filter((item) => getStat(item.normalized_word).wrong > 0).length;
+      const correctTotal = Object.values(state.stats).reduce((sum, stat) => sum + (stat.correct || 0), 0);
+      const wrongTotal = Object.values(state.stats).reduce((sum, stat) => sum + (stat.wrong || 0), 0);
+
+      totalWordsEl.textContent = `${state.data.length} words`;
+      filteredWordsEl.textContent = `${state.filtered.length} filtered`;
+      reviewWordsEl.textContent = `${reviewCount} review`;
+      scoreChipEl.textContent = `${correctTotal} correct / ${wrongTotal} wrong`;
+    }
+
+    function renderRanking() {
+      const visible = state.filtered.slice().sort(sortableByMode).slice(0, 80);
+      rankingListEl.innerHTML = "";
+      emptyStateEl.hidden = visible.length > 0;
+
+      visible.forEach((item, index) => {
+        const stats = getStat(item.normalized_word);
+        const reviewBadge = stats.wrong > 0 ? ` / review ${stats.wrong}` : "";
+        const li = document.createElement("li");
+        li.innerHTML = `
+          <div class="rank-no">${item.rank}</div>
+          <div class="rank-word">
+            <div style="font-weight: 500; color: var(--accent);">${escapeHtml(item.word)}</div>
+            <div class="detail">${escapeHtml(getDisplayMeaning(item))}</div>
+            <div class="detail">${escapeHtml(prettySubjects(item.subjects))} / count ${item.count}${reviewBadge}</div>
+          </div>
+          <div class="rank-count">#${index + 1}</div>
+        `;
+
+        rankingListEl.appendChild(li);
+      });
+    }
+
+    function getQuestionPool() {
+      if (modeSelect.value === "review") {
+        const reviewPool = state.filtered.filter((item) => getStat(item.normalized_word).wrong > 0);
+        return reviewPool.length > 0 ? reviewPool : state.filtered;
+      }
+
+      return state.filtered;
+    }
+
+    function pickQuestion() {
+      const pool = getQuestionPool();
+      if (pool.length === 0) return null;
+
+      if (modeSelect.value === "random") {
+        return pool[Math.floor(Math.random() * pool.length)];
+      }
+
+      if (modeSelect.value === "review") {
+        return pool.slice().sort((a, b) => reviewScore(b) - reviewScore(a))[0];
+      }
+
+      // Return question at current quiz count index
+      if (state.quizCount >= pool.length) return null;
+      return pool[state.quizCount];
+    }
+
+    function shuffle(array) {
+      const copy = array.slice();
+      for (let index = copy.length - 1; index > 0; index -= 1) {
+        const randomIndex = Math.floor(Math.random() * (index + 1));
+        [copy[index], copy[randomIndex]] = [copy[randomIndex], copy[index]];
+      }
+      return copy;
+    }
+
+    function buildChoices(correctItem) {
+      const distractorPool = state.filtered
+        .filter((item) => item.normalized_word !== correctItem.normalized_word)
+        .filter((item) => getDisplayMeaning(item).trim());
+
+      const unique = [];
+      const seen = new Set([normalize(getDisplayMeaning(correctItem))]);
+
+      for (const item of shuffle(distractorPool)) {
+        const meaning = normalize(getDisplayMeaning(item));
+        if (!meaning || seen.has(meaning)) continue;
+        seen.add(meaning);
+        unique.push(item);
+        if (unique.length >= 3) break;
+      }
+
+      const choiceItems = shuffle([correctItem, ...unique]);
+      return choiceItems.map((item) => ({
+        key: item.normalized_word,
+        word: item.word,
+        meaning: getDisplayMeaning(item),
+        item,
+      }));
+    }
+
+    function setQuestion(item) {
+      state.current = item;
+      state.choices = buildChoices(item);
+      state.quizCount += 1;
+
+      quizTagEl.textContent = `${modeSelect.options[modeSelect.selectedIndex].text} / Q${state.quizCount}`;
+      promptEl.textContent = item.word;
+      metaTextEl.textContent = `出現回数 ${item.count} 回 / ${prettySubjects(item.subjects)} / ${item.preview_path}`;
+      previewLinkEl.hidden = false;
+      previewLinkEl.href = buildPreviewHref(item);
+      previewLinkEl.textContent = item.preview_path === item.first_seen ? "元ファイル" : "発音ページへ";
+
+      const audioHref = buildAudioHref(item);
+      audioBtn.hidden = !audioHref;
+      if (audioHref) {
+        audioBtn.disabled = false;
+        audioBtn.onclick = () => playAudio(audioHref);
+      }
+
+      choicesEl.innerHTML = "";
+      feedbackEl.textContent = "";
+      feedbackEl.className = "feedback";
+      nextBtn.disabled = true;
+
+      state.choices.forEach((choice, index) => {
+        const button = document.createElement("button");
+        button.className = "choice";
+        button.type = "button";
+        button.dataset.word = choice.key;
+        button.dataset.meaning = choice.meaning;
+        button.innerHTML = `<strong>${index + 1}.</strong> ${escapeHtml(choice.meaning)}`;
+        button.addEventListener("click", () => answerChoice(choice, button));
+        choicesEl.appendChild(button);
+      });
+    }
+
+    function answerChoice(choice, button) {
+      const currentKey = state.current.normalized_word;
+      const isCorrect = choice.key === currentKey;
+      const now = new Date().toISOString();
+
+      setStat(currentKey, (stat) => {
+        stat.attempts += 1;
+        stat.lastAt = now;
+        if (isCorrect) {
+          stat.correct += 1;
+        } else {
+          stat.wrong += 1;
+        }
+        return stat;
+      });
+
+      [...choicesEl.querySelectorAll(".choice")].forEach((el) => {
+        el.disabled = true;
+        if (el.dataset.word === currentKey) el.classList.add("correct");
+        if (el === button && !isCorrect) el.classList.add("wrong");
+      });
+
+      feedbackEl.className = `feedback ${isCorrect ? "good" : "bad"}`;
+      feedbackEl.innerHTML = isCorrect
+        ? `<strong>正解</strong> ${escapeHtml(state.current.word)} = ${escapeHtml(getDisplayMeaning(state.current))}`
+        : `<strong>不正解</strong> 正しい答えは ${escapeHtml(state.current.word)} = ${escapeHtml(getDisplayMeaning(state.current))}`;
+
+      nextBtn.disabled = false;
+      updateSummary();
+      renderRanking();
+    }
+
+    function startQuiz() {
+      const next = pickQuestion();
+      if (!next) {
+        quizTagEl.textContent = "対象なし";
+        promptEl.textContent = "条件に合う単語がありません。";
+        metaTextEl.textContent = "フィルタ条件を見直してください。";
+        previewLinkEl.hidden = true;
+        choicesEl.innerHTML = "";
+        feedbackEl.className = "feedback";
+        feedbackEl.textContent = "";
+        nextBtn.disabled = true;
+        return;
+      }
+
+      setQuestion(next);
+    }
+
+    function beginQuiz() {
+      state.quizCount = 0;
+      filterData();
+      state.filtered = state.filtered.sort(sortableByMode);
+      startQuiz();
+    }
+
+    function refresh() {
+      state.filtered = filterData().sort(sortableByMode);
+      updateSummary();
+      renderRanking();
+
+      if (!state.current || !state.filtered.some((item) => item.normalized_word === state.current.normalized_word)) {
+        startQuiz();
+      }
+    }
+
+    function resetHistory() {
+      if (!confirm("復習履歴を削除しますか?")) return;
+      state.stats = {};
+      saveStats();
+      refresh();
+    }
+
+    async function loadData() {
+      const response = await fetch(DATA_URL, { cache: "no-store" });
+      if (!response.ok) throw new Error(`Failed to load ${DATA_URL}`);
+      const payload = await response.json();
+      state.data = payload.items || [];
+
+      const subjects = Array.from(new Set(state.data.flatMap((item) => item.subjects))).sort((a, b) => a.localeCompare(b, "ja"));
+      subjects.forEach((subject) => {
+        const option = document.createElement("option");
+        option.value = subject;
+        option.textContent = subject;
+        subjectSelect.appendChild(option);
+      });
+
+      refresh();
+      startQuiz();
+    }
+
+    startBtn.addEventListener("click", beginQuiz);
+    nextBtn.addEventListener("click", startQuiz);
+    resetBtn.addEventListener("click", resetHistory);
+    modeSelect.addEventListener("change", refresh);
+    subjectSelect.addEventListener("change", refresh);
+    problemCountInput.addEventListener("change", refresh);
+    rankingToggle.addEventListener("click", () => {
+      rankingList.classList.toggle("expanded");
+      rankingToggle.textContent = rankingList.classList.contains("expanded")
+        ? "▼ 頻出ランキング"
+        : "▶ 頻出ランキング";
     });
 
-    render("");
+    loadData().catch((error) => {
+      quizTagEl.textContent = "読み込み失敗";
+      promptEl.textContent = "集計データを読み込めませんでした。";
+      metaTextEl.textContent = error.message;
+      feedbackEl.className = "feedback bad";
+      feedbackEl.textContent = "data/word_frequency.json の取得に失敗しました。ローカルファイル直開きではなく、サーバー経由で開いてください。";
+      emptyStateEl.hidden = false;
+      emptyStateEl.textContent = "データ読み込みに失敗しました。";
+    });
   </script>
 </body>
 </html>

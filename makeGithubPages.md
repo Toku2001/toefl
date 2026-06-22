@@ -8,8 +8,7 @@
 
 ```
 toefl/
-├── quiz/
-│   └── index.html                 # クイズページ（GitHub Pages で公開）
+├── index.html                     # クイズページ（GitHub Pages で公開）
 ├── data/
 │   └── word_frequency.json        # 頻度ランキングデータ（自動生成）
 ├── scripts/
@@ -27,7 +26,7 @@ toefl/
 2. **Build and deployment** で以下を設定：
    - Source: `Deploy from a branch`
    - Branch: `main` / `root`
-3. URL: `https://[username].github.io/toefl/quiz/index.html`
+3. URL: `https://[username].github.io/toefl/`
 
 ---
 
@@ -197,7 +196,7 @@ cd /Users/tokuhisa/git/toefl
 python3 -m http.server 8000
 
 # ブラウザで開く
-open http://localhost:8000/quiz/index.html
+open http://localhost:8000/
 ```
 
 ---
