@@ -1,0 +1,301 @@
+# Episode 5: The City That Remembers Your Name
+
+## Story (~400 words)
+
+In the final episode, Mina entered the oldest district, where buildings stored personal memories in their walls. Locals called it the City That Remembers Your Name. Doors opened only when spoken to kindly; streetlights brightened when neighbors greeted one another. The entire district ran on social rituals as much as electricity.
+
+But memory walls had begun to fail. Names disappeared overnight, and with them, access to medicine cabinets, legal files, and family letters. Rumors spread that a private firm wanted to replace the district with luxury towers. Mina assembled a repair circle: archivists, electricians, grandparents, and teenagers fluent in legacy code.
+
+They discovered the core issue was not sabotage but neglected maintenance. Updates had been postponed for years because officials assumed old systems would somehow endure forever. Mina's team divided the district into blocks, trained local stewards, and created a public log where every repair action was visible. Trust started returning one porch at a time.
+
+On the final night, residents gathered in the plaza for a naming ceremony. Children read restored family names; elders told migration stories; musicians played songs once thought lost. When Mina stepped to the microphone, she refused to take credit. "Infrastructure is memory," she said, "and memory survives when responsibility is shared."
+
+At midnight, every streetlight turned gold. The walls responded to thousands of voices speaking names together, not perfectly, but with care. Mina looked around and understood the project had never been about nostalgia. It was about designing systems that help people stay visible to one another.
+
+She left one last chalk line on the city gate, a study trail for anyone who wanted to continue: avoid, cooperation, interactions, arrange, dairy, essential, molting, prepare, substance, urgent, absolutely, allocate, appropriate, attract, calm, composition, confirmation, convection, despite, dominant, enabling, equally, expected, facilities.
+
+Before going home, Mina opened her notebook and wrote three review questions for tomorrow: Which decision was based on evidence? Which conflict became easier after people shared precise language? Which small routine should be repeated even when no one is watching? She answered each question in two lines, circled one mistake she wanted to avoid, and chose one action she could complete in less than ten minutes. That quiet ritual, repeated nightly, made the story practical instead of decorative.
+
+## Vocabulary Used in This Episode
+
+<details>
+<summary>Open vocabulary list (276 items)</summary>
+
+- avoid : 避ける
+- cooperation : 協力；連携
+- interactions : 相互作用；交流
+- arrange : 手配する；整える
+- dairy : 乳製品；酪農の
+- essential : 必要不可欠な；本質的な
+- molting : 脱皮
+- prepare : 準備する
+- substance : 物質；実体
+- urgent : 緊急の；差し迫った
+- absolutely : 絶対に、完全に
+- allocate : 割り当てる；配分する
+- appropriate : 適切な；ふさわしい
+- attract : 引きつける；誘引する
+- calm : 落ち着いた；冷静な
+- composition : 構成、構図、作文
+- confirmation : 確認、確証
+- convection : 対流
+- despite : 〜にもかかわらず；〜を無視して
+- dominant : 支配的な、優勢な
+- enabling : 可能にしている；実現させる
+- equally : 等しく、均等に
+- expected : 予期された、当然の
+- facilities : 設備、施設
+- feathery : 羽毛のような；ふさふさした
+- firsthand : 直接の；じかに
+- generate : 生み出す；発生させる
+- handouts : 配布資料
+- in charge : 担当して、責任を持って
+- inferred : 推論した、推測した
+- insulators : 絶縁体
+- investigating : 調査している
+- moisture : 湿気；水分
+- Observe : 観察する；気づく；守る
+- perspective : 視点；見方
+- predators : 捕食者
+- proper : 適切な；正しい
+- reasoning : 推論、論理的思考
+- relatives : 親戚
+- reproduction : 生殖、繁殖
+- scarce : 不足している；乏しい
+- shaped by : 〜によって形作られる
+- soil erosion : 土壌侵食
+- take place : 起こる；開催される
+- tissue : 組織；薄い紙
+- underlying : 根底にある；基礎となる
+- wheat : 小麦
+- - : （未記入）
+- abandon otherwise productive : 本来は生産的な〜を放棄する
+- accommodate : 収容する；便宜を図る
+- accumulation : 蓄積；堆積
+- adaptation : 適応；適応形質
+- adjustment : 調整；適応
+- aesthetic : 美的な；美学
+- aim to : 〜することを目指す
+- allergy : アレルギー
+- Alpine : 高山の；アルプスの
+- ancient : 古代の；非常に古い
+- anywhere : どこでも、どこかに
+- application of color : 色の使い方、色彩の適用
+- approved : 承認された；認可された
+- arrangements : 取り決め；配置
+- As it turns out : 結果的に；実際のところ
+- aspect of : 〜の側面
+- atoms : 原子
+- attire : 服装；衣装
+- baking soda : 重曹
+- base(塩基) : 塩基；アルカリ性物質
+- be part of : 〜の一部である；〜に参加している
+- belongings : 所持品；持ち物
+- biodiversity : 生物多様性
+- bring people together : 人々を結びつける
+- built-in : 内蔵の；組み込みの
+- by combining : 組み合わせることで；〜を組み合わせて
+- canals : 運河；水路
+- carpool : 相乗り；相乗りする
+- celebrity : 有名人、著名人
+- cemented : 固められた；結びつきを強めた
+- channels : 水路；通路；経路
+- chrysalis : さなぎ
+- circumstances : 状況；事情
+- clarify : 明確にする；はっきりさせる
+- climates : 気候（複数）；気候帯
+- coastal : 沿岸の
+- cold symptom : 風邪の症状
+- combining with : 〜と組み合わせること；〜と併用して
+- committee : 委員会
+- complex : 複雑な
+- comprehending : 理解している；把握している
+- conduct or resist : 伝導するか抵抗するか
+- confident : 自信のある；確信している
+- confuse : 混乱させる、混同する
+- conserve : 保全する、節約する
+- considering just wearing : ただ着るだけにしようかと考えて
+- containers : 容器；入れ物
+- Continental drift : 大陸移動説
+- conventional : 従来の、慣習的な
+- coordination : 調整；連携
+- crop yields : 作物収量
+- crustaceans : 甲殻類
+- current pass : 電流が流れること
+- day trip : 日帰り旅行
+- decipher : 解読する；読み解く
+- deepen : 深める
+- demand : 需要；要求
+- depart : 出発する；去る
+- depicting : 描写している
+- destination : 目的地
+- dig : 掘る
+- disagreement : 意見の不一致；対立
+- dispersal : 拡散；分散
+- disruption : 混乱；中断
+- distinctive : 独特の；際立った
+- distributed : 分散した；配布された
+- division : 分割；部門
+- draw : 描く；引く；惹きつける
+- drinking water : 飲み水；飲用水
+- durability : 耐久性
+- ecdysis : 脱皮
+- efficiently : 効率的に
+- elements : 要素；元素
+- emissions : 排出物；排出
+- enable : 可能にする；できるようにする
+- engraving : 彫刻；彫り込み
+- enormous amounts of : 莫大な量の
+- enzymes : 酵素
+- essential for growing crops : 作物の栽培に不可欠な
+- eventually : 最終的に；やがて
+- exactly : 正確に、まさに
+- exchange : 交換する；やり取り
+- existing : 既存の；現存する
+- expectation : 期待；予想
+- experts : 専門家たち
+- exposure : さらされること；露出；接触
+- extracurricular : 課外の；課外活動の
+- facilities office : 施設管理室
+- fairer : より公平な、より公正な
+- feedback : フィードバック；意見
+- fethers (feathers) : 羽；羽毛
+- find out : 見つけ出す；知る
+- flooding : 洪水；浸水
+- for more info : 詳細は；詳しくは
+- forest plants : 森林植物
+- fostered trust : 信頼を育んだ
+- fragments : 破片；断片
+- fuel savings : 燃料節約
+- gain certificate : 証明書を取得する
+- geological : 地質学の；地質の
+- govern : 支配する；左右する
+- groceries : 食料品
+- half past : 〜時30分（半）
+- harm : 害；危害を加える
+- have it handled : それを対応してもらう；処理してもらう
+- heart rate : 心拍数
+- highlights : 強調する、目立たせる
+- hormones : ホルモン
+- humidity : 湿度；湿気
+- I wish I could : できればそうしたいのですが（実際は難しい）
+- impede : 妨げる；阻害する
+- in order to : ～するために
+- incorrect : 正しくない；不正確な
+- infancy : 乳児期、初期段階
+- ingestion : 摂取；飲み込み
+- initiate : 開始する；引き起こす
+- insight for : 〜への洞察；〜に関する理解
+- instead of : 〜の代わりに
+- insulating : 断熱する；絶縁する
+- interaction : 相互作用；交流
+- introduce : 導入する；紹介する
+- invited : 招待した；招いた
+- iron : 鉄
+- jet-lagged : 時差ぼけの
+- kinetic : 運動の；動的な；運動エネルギーの
+- last(続く) : 続く；持続する
+- latest : 最新の；直近の
+- Leaves : 葉
+- lie : 横たわる；位置する；うそをつく；うそ
+- light exposure : 光への曝露；光を浴びること
+- lipid : 脂質；油脂
+- look into : 調査する；詳しく調べる
+- made mainly of : 主に〜でできている
+- make an appointment : 予約を取る；約束を取りつける
+- manipulate : 操る；操作する
+- matter : 問題である；重要である；事柄
+- melt : 溶ける；溶かす
+- Meteorologists : 気象学者たち
+- molecule : 分子
+- mortar : モルタル；接着材
+- musical notes : 音符；音階上の音
+- neutralize : 中和する；無効化する
+- not up for : 〜する気がない；〜する元気がない
+- notified : 通知された；知らされた
+- obligations : 義務；責任；恩義
+- often leading to reduced : しばしば減少した〜につながる
+- opportunite (opportunity) : 機会
+- order : 順序；命令；秩序
+- organized : 組織化された；整然とした
+- outer shell : 外殻；外側の殻
+- oversee : 監督する；管理する
+- paper jams : 紙詰まり
+- parlor : 応接室；店（〜パーラー）
+- pass from : 〜から受け継がれる；〜から移る
+- payment for : 〜への支払い
+- peripheral : 周辺の；末梢の
+- petals : 花びら
+- photosynthesis : 光合成
+- planting : 植えること；植栽
+- plenty of : たくさんの
+- Political : 政治の；政治的な
+- polystyrene : ポリスチレン
+- practices(実際に行う) : 実践する；実際に行う
+- predating : 〜より前に存在すること；先行すること
+- prepare for : 〜に備える；準備する
+- prevailing : 一般的な、優勢な
+- principle : 原理；原則；主義
+- process : 過程；処理する
+- prominent : 著名な；目立つ
+- prosperity : 繁栄；成功
+- pulp : 果肉；やわらかい繊維質
+- pursuit : 追求；遂行
+- reach : 到達する；届く
+- receptive : 受け入れやすい；受容性のある
+- recognizing : 認識している；見分けている
+- regeneration : 再生；再生能力
+- reinforcing : 強化すること；補強すること
+- relocated : 移転した；移された
+- remarkable navigation : 驚くべき航行能力
+- replaced : 置き換えられた；補充された
+- required : 必要とされる、必須の
+- resilient : 回復力のある；しなやかな
+- restoration : 復元；回復
+- reveals : 明らかにする；示す
+- rigid : 硬い；硬直した
+- rodents : げっ歯類
+- rusts : さびる
+- scents : 香り；におい
+- seek to do : 〜しようと努める
+- sense of belonging : 所属感
+- series（直列） : 系列；連続；（電気）直列
+- several : いくつかの；数人の
+- shed : 脱ぎ捨てる；落とす
+- signaled : 合図した、信号を送った
+- slot(時間枠) : 時間枠；予約枠
+- soil : 土壌；土
+- span(貫通) : 貫通する；またがる
+- spinal cord : 脊髄
+- states : 述べる；国家；状態
+- sticks(ひっつく) : くっつく；貼りつく
+- strangers : 見知らぬ人々
+- student union : 学生自治会；学生組合
+- subtly : 微妙に；それとなく
+- surroundings : 周囲の環境
+- sustain : 維持する；支える
+- tail : 尾部；末端
+- taken together : 総合すると
+- terms and conditions : 利用規約；契約条件
+- the upper layer of soil : 土壌の上層
+- threat : 脅威、脅し
+- tie to : ～に結びつける；～に関連づける
+- tips : ヒント；助言
+- too busy to : ～するには忙しすぎる
+- transaction : 取引
+- trap(出て来れなくする、閉じ込める) : 閉じ込める；わなにかける
+- ultraviolet radiation : 紫外線放射
+- uneven : 不均一な；でこぼこの
+- unplug : プラグを抜く
+- urban : 都市の；都会の
+- variables : 変数；変動要因
+- verified : 検証された、確認された
+- visible : 目に見える；明らかな
+- voting : 投票（行為）
+- watch out for : 〜に注意する、警戒する
+- wear light(軽装) : 軽装をする；薄着をする
+- When wind or water : 風または水が〜するとき
+- without involving : 〜を伴わずに；〜を関与させずに
+- wound : 傷；負傷
+
+</details>

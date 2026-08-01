@@ -1,0 +1,302 @@
+# Episode 2: The Museum of Borrowed Futures
+
+## Story (~400 words)
+
+The next week, Mina was hired by the Museum of Borrowed Futures, a strange place where broken inventions from the future were displayed with warning labels. The director believed failed prototypes were the best teachers because they showed exactly where confidence had outrun caution.
+
+Exhibit Hall A contained a climate mirror that could cool one neighborhood while overheating another. Hall B held a language headset that translated perfectly but erased regional accents. School groups toured the museum daily, and Mina guided them through each machine's origin story. She asked students not just what a device could do, but who might be excluded, priced out, or silently harmed.
+
+One afternoon, a sponsor demanded that the museum remove "negative narratives" to protect investment. The director hesitated; funding was thin. Mina proposed a compromise: keep the exhibits, add public design labs, and invite sponsors to solve the flaws in open workshops. Surprisingly, the sponsor agreed, partly because cameras were present, partly because students were already cheering.
+
+Within a month, engineers, artists, and local residents built safer versions of old prototypes. The climate mirror gained fairness rules; the language headset kept accent diversity; an autonomous ferry added emergency manual controls. The museum changed from a warning space into a collaboration engine.
+
+At closing time, Mina updated the blackboard near the exit with a rotating study list. "Technology is policy in hardware form," she told the last visitors. "If you can name the risk, you can redesign the system." They copied the list into their notebooks and promised to return next weekend.
+
+Tonight's board words were: absorb, certain, encourage, perception, beneath, distribute, harsh, over time, relieved, supply, weathering, advertising, annual, arrangement, belonging, collide, conduct, considerable, define, discomfort, drowsy, encourages, evoke, express.
+
+Before going home, Mina opened her notebook and wrote three review questions for tomorrow: Which decision was based on evidence? Which conflict became easier after people shared precise language? Which small routine should be repeated even when no one is watching? She answered each question in two lines, circled one mistake she wanted to avoid, and chose one action she could complete in less than ten minutes. That quiet ritual, repeated nightly, made the story practical instead of decorative.
+
+## Vocabulary Used in This Episode
+
+<details>
+<summary>Open vocabulary list (277 items)</summary>
+
+- absorb : 吸収する
+- certain : ある特定の；確かな
+- encourage : 励ます；促す
+- perception : 知覚；認識
+- beneath : 〜の下に
+- distribute : 配布する；分配する
+- harsh : 厳しい；過酷な
+- over time : 時間とともに
+- relieved : 安心した；ほっとした
+- supply : 供給；供給する
+- weathering : 風化
+- advertising : 広告；広告活動
+- annual : 年1回の；毎年の
+- arrangement : 取り決め；配置
+- belonging : 所属感；持ち物
+- collide : 衝突する
+- conduct : 伝導する；実施する
+- considerable : かなりの；相当な
+- define : 定義する；明確にする
+- discomfort : 不快感；苦痛
+- drowsy : 眠い、うとうとした
+- encourages : 促す；奨励する
+- evoke : 呼び起こす、喚起する
+- express : 表現する；急行の；急行便
+- fairness : 公平さ；公正
+- fertilizer : 肥料
+- foundation : 基礎、土台
+- grasses : 草類；イネ科植物
+- illustrate : 説明する；図解する
+- inconspicuous : 目立たない
+- infrared radiation : 赤外線放射
+- interact with : 〜と相互作用する；交流する
+- make sure : 必ず〜する；確認する
+- mutual : 相互の；共通の
+- oversimplified : 単純化しすぎた
+- podium : 演壇；表彰台
+- prevents : 防ぐ；妨げる
+- psychological : 心理学の；心理的な
+- refers : 言及する、示す
+- renewable : 再生可能な；更新できる
+- resist : 抵抗する；妨げる
+- Seed dispersal : 種子散布；種が広がること
+- side effect : 副作用
+- subjective : 主観的な
+- thoughtfully : 思慮深く；丁寧に
+- turn in : 提出する
+- vaccination : 予防接種
+- while(一方で) : 一方で；〜する間
+- a major step : 大きな一歩；重要な進展
+- abrupt : 急な；突然の
+- accompanying : 付随する；同行する
+- accurate : 正確な
+- addressing the problem : 問題に取り組むこと
+- adolescence : 青年期、思春期
+- after crossing time zones : 複数の時間帯をまたいだ後に
+- align with : 〜と一致する；足並みをそろえる
+- along familiar pathways : 慣れた経路に沿って
+- amplifying : 増幅すること；強めること
+- antacids : 制酸剤；胃酸中和剤
+- appearance : 外見；出現
+- appreciate : 感謝する；正しく理解する
+- Archaeologists : 考古学者たち
+- artworks : 芸術作品
+- as we go : 進みながら、その都度
+- assessment : 評価；査定
+- attend : 参加する、出席する
+- attracting : 引きつけている
+- ballot : 投票用紙；投票
+- be equipped with : 〜を備えている
+- be responsible for : 〜に責任がある；〜の原因となる
+- beyond : 〜を越えて；〜の向こうに
+- breathable : 通気性のある
+- budget : 予算
+- bury : 埋める
+- cactus : サボテン
+- cardio machine : 有酸素運動マシン
+- caterpillar : イモムシ；毛虫
+- celestial bodies : 天体
+- centers on : 〜に焦点を当てる
+- checkups : 健診；定期検診
+- circuit : 回路；周回
+- civilizations : 文明；文明社会
+- clarity : 明快さ；明瞭さ
+- cloud of : たくさんの；雲のような塊の
+- coastlines : 海岸線
+- collide with : ～と衝突する
+- come up : 起こる；持ち上がる
+- compassion : 思いやり；慈悲
+- complication(面倒なこと) : 面倒なこと；複雑化
+- concerns : 懸念；心配事
+- conductor : 導体；伝導体
+- confine : 制限する；閉じ込める
+- consciousness : 意識；自覚
+- consider with : 〜を一緒に検討する
+- constraints : 制約（複数）；制限
+- contents(整理する) : 整理する；中身
+- controversial : 論争の的となる
+- conversing : 会話していること
+- copper : 銅
+- crossed arms : 腕を組んだ状態
+- cultivating : 耕作している；育てている
+- custom(習慣) : 習慣；慣習
+- decay : 腐敗する；衰える
+- Decompose : 分解する；腐敗する
+- definitely : 確かに；間違いなく
+- democratic : 民主的な
+- depend on : 〜に依存する；〜次第である
+- description : 説明、描写
+- device : 装置；機器
+- digest the pulp : 果肉を消化する
+- disconfort : 不快感；居心地の悪さ
+- dispute : 論争；異議を唱える
+- dissuade : ～を思いとどまらせる；～を説得して諦めさせる
+- distracting : 気を散らす；注意をそらす
+- divided : 分割された；意見が分かれた
+- donates : 与える；提供する
+- drawn : 引かれた；引きつけられた
+- droppings : 糞；排せつ物
+- duty : 義務；責務
+- effective : 効果的な、有効な
+- electrical : 電気の；電気に関する
+- emerged : 現れた；生じた
+- emphasized : 強調された（形容詞）；強調した（動詞の過去形・過去分詞）
+- enduring : 永続する；耐え抜く
+- enhances : 高める；向上させる
+- ensuring sustainable land management. : 持続可能な土地管理を確保すること
+- equivalence : 同等性；等価
+- essentials : 必需品；欠かせないもの
+- ever-stricter : ますます厳しい
+- excavate : 発掘する；掘削する
+- exhibit : 示す；展示する
+- exoskeleton : 外骨格
+- expenses : 費用（複数）；経費
+- exploration : 探検、探究
+- extension : 延長、延期
+- eye out for : 注意して探す；目を配る
+- factor : 要因；要素
+- fauna : 動物相；動物群
+- fellow : 仲間；同僚
+- fill in the form : 用紙に記入する
+- first come : 先着の
+- flower boxes : プランター；花箱
+- force farmers : 農家に〜を強いる
+- forth : 前へ；先へ
+- fosters : 育む；促進する
+- frequently : 頻繁に；しばしば
+- funded : 資金提供された
+- gathering : 集まり、会合；集めること
+- get involved in : 〜に関わる；参加する
+- grasshoppers : バッタ
+- grooming : 身づくろい；手入れ；毛づくろい
+- hang(吊るす) : 吊るす；掛ける
+- harness : 活用する；利用する
+- head to : 〜へ向かう
+- heavily : 大いに、重く
+- home(家庭) : 家庭；家庭環境
+- how + adjective + S + V : どれほど〜か（感嘆構文）
+- hydrogen ions : 水素イオン
+- illustrating : 説明している；図示している
+- imprinted : 刻み込まれた、刷り込まれた
+- in search of : 〜を探して；〜を求めて
+- indicate : 示す、指し示す
+- inflammation : 炎症
+- inhabit : 住む；生息する
+- initiative(新しい取り組み) : 新しい取り組み；主導権
+- inspection : 検査；点検
+- instructed : 指示した；教えた
+- insurance : 保険
+- interest rates : 金利
+- invisible : 目に見えない
+- involvement : 関与；参加
+- irrigate : 灌漑する；水を引く
+- just past : ちょうど過ぎたところの
+- lack : 欠如；欠けている
+- lasting : 長続きする、永続的な
+- leading to : 〜につながって
+- let A B : AにBさせる
+- lies in : 〜にある、〜に起因する
+- limit to : 〜に制限する
+- literal : 文字どおりの
+- lot : 多く；区画；くじ
+- maintaining : 維持すること
+- make sense of : 〜を理解する；意味をつかむ
+- marked : 特徴づけられた；目立った
+- matters : 重要である；事柄
+- mentioned : 言及した
+- minor injury : 軽いけが
+- monarch : monarch butterfly（オオカバマダラ）
+- mulching : マルチング（覆土）すること
+- myths : 神話；誤った通念
+- Nonverbal : 非言語の；言葉によらない
+- notation : 表記法；記号法
+- nutrients essential : 必須栄養素
+- observing : 観察している
+- on time : 時間通りに
+- opposite : 反対の；向かい側
+- organ : 器官
+- orient themselves : 自分の位置や方向を把握する
+- overconfidence : 過信；自信過剰
+- pack : 詰める；荷造りする
+- papyrus : パピルス；パピルス紙
+- Participating : 参加していること
+- passive : 受動的な；自然任せの
+- peers : 同僚；同年代の人々
+- permanent : 永続的な；恒久的な
+- phospholipids : リン脂質
+- pine forest : 松林
+- plays a key role : 重要な役割を果たす
+- poem : 詩
+- pollen grain : 花粉粒
+- possess : 所有する；備えている
+- pre-existing : 既存の；以前から存在する
+- predicting : 予測している
+- prescriptions : 処方箋；処方薬の指示
+- preventable : 予防可能な；防げる
+- privilege : 特権；特別な権利
+- productivity : 生産性
+- prompt reply : 迅速な返信
+- provide : 提供する；与える
+- purchasing supplies : 備品を購入すること
+- rainfall : 降雨量、降雨
+- readiness : 準備ができている状態；即応性
+- reciprocal obligations : 相互の義務
+- refined : 洗練された、精製された
+- regularly : 定期的に；規則正しく
+- relaxed setting : リラックスした環境
+- rely on : 〜に頼る；〜を当てにする
+- repayment : 返済
+- replenished : 補充された；回復した
+- residence : 住居；居住
+- respond : 反応する；返答する
+- retention : 保持；維持
+- revising : 修正している；見直している
+- Rituals : 儀式；習慣化された行為
+- root : 根；起源
+- saying(〜と書かれている内容) : （掲示などに）〜と書かれている文言
+- sculpture : 彫刻；彫刻作品
+- self-assembly : 自己集合
+- sensing : 感知していること；察知
+- serves as : ～として機能する；～の役割を果たす
+- Severe erosion : 深刻な土壌侵食
+- sheltering : 守ること；避難させること
+- since : 〜以来；〜なので
+- snap judgments : 即断、早計な判断
+- someone upstairs : 上の階の人；上司（文脈による）
+- species : 種；種類
+- stability : 安定；安定性
+- stems : 茎；由来する
+- stigma(雌蕊の先端) : 柱頭；雌蕊の先端
+- strengthening : 強化すること
+- substances : 物質
+- suprachiasmatic : 視交叉上核の
+- survival rates : 生存率
+- symptoms : 症状
+- take part in : 参加する
+- tectonic : 地殻構造の；構造地質学の
+- that's why : だからこそ、そういうわけで
+- thermostat : サーモスタット；温度調節器
+- thus : したがって；このように
+- time-consuming : 時間がかかる
+- tissues(組織) : 組織；薄い膜状の細胞群
+- toward : 〜に向かって；〜に対して
+- transition : 移行；変遷
+- trust : 信頼；信頼する
+- undergo : 経験する；受ける
+- unity : 団結；統一
+- unwanted(不要な) : 不要な；望まれない
+- valid : 有効な；妥当な
+- vary : 異なる；変化する
+- vigorous : 激しい；活発な
+- vital to : 〜に不可欠な；〜にとって極めて重要な
+- walk-in hours : 予約不要の受付時間
+- water-loving : 親水性の；水を好む
+- weighing : 比較検討すること；重さを量ること
+- while I’m there : そこにいる間に
+- wonder if : 〜かどうかと思う
+- wrapping up : 締めくくっている；終わらせている
+
+</details>

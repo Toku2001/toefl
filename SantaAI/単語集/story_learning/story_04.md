@@ -1,0 +1,302 @@
+# Episode 4: The Trial of the Moon Market
+
+## Story (~400 words)
+
+When moon season opened, Harbor District hosted its annual Night Market Trial, a theatrical court where policy ideas were tested before real implementation. Teams performed mini-dramas to defend proposals: flood barriers, transport pricing, school calendars, and food distribution routes. Citizens voted not for charisma, but for evidence quality.
+
+Mina joined Team Lantern, a mixed group of elders, students, coders, cooks, and bus drivers. Their proposal was simple: convert abandoned parking towers into vertical gardens, emergency shelters, and after-school labs. Critics called it unrealistic. Team Lantern responded with maps, maintenance budgets, and a volunteer training schedule. They even brought a prototype irrigation wall built from recycled pipes.
+
+During cross-examination, a rival team claimed the plan would increase inequality. Mina conceded the risk and offered amendments: neighborhood governance quotas, transparent waiting lists, and independent audits every quarter. The crowd murmured approval. Not because the plan was perfect, but because the team showed how to correct failure before failure happened.
+
+After midnight, the judges announced results. Team Lantern won second place, yet their governance amendments won first place in public adoption. In the market square, teenagers started sketching their own versions for different districts. Policy had become a shared craft, not a distant spectacle.
+
+Before closing, Mina climbed the fountain steps and posted a giant revision checklist. "Argument is not war," she told the crowd. "Argument is maintenance for collective thinking." People clapped, laughed, and went back to debating stall by stall.
+
+The checklist ended with today's vocabulary ribbon: above, conservation, interact, abandon, crucial, equipment, maintain, perceive, significant, unless, withstand, align, Appreciating, assistance, boredom, complementary, conductivity, continents, describes, distorts, effort, ensure, expectations, expression.
+
+Before going home, Mina opened her notebook and wrote three review questions for tomorrow: Which decision was based on evidence? Which conflict became easier after people shared precise language? Which small routine should be repeated even when no one is watching? She answered each question in two lines, circled one mistake she wanted to avoid, and chose one action she could complete in less than ten minutes. That quiet ritual, repeated nightly, made the story practical instead of decorative.
+
+## Vocabulary Used in This Episode
+
+<details>
+<summary>Open vocabulary list (277 items)</summary>
+
+- above : 上に、上方に；上記の
+- conservation : 保全；保存
+- interact : 相互作用する；交流する
+- abandon : 放棄する
+- crucial : 極めて重要な；決定的な
+- equipment : 設備；機器
+- maintain : 維持する；保つ
+- perceive : 知覚する、認識する
+- significant : 重要な、かなりの
+- unless : 〜でない限り
+- withstand : 耐える；持ちこたえる
+- align : 一致させる；整列させる
+- Appreciating : 理解すること；認識すること
+- assistance : 援助；手助け
+- boredom : 退屈
+- complementary : 補完的な、補足し合う
+- conductivity : 伝導性；導電性
+- continents : 大陸
+- describes : 説明する；描写する
+- distorts : ゆがめる；歪曲する
+- effort : 努力；尽力
+- ensure : 確実にする、保証する
+- expectations : 期待；予想
+- expression : 表現；言い回し
+- fear : 恐れ；恐れる
+- file a complaint : 苦情を申し立てる；不満を訴える
+- gather : 集める；集まる
+- handle : 処理する、対応する
+- in advance : 前もって
+- inequalities : 不平等、不均衡
+- insulation : 断熱、絶縁
+- invention : 発明
+- milder : より穏やかな、より温暖な
+- observation : 観察；所見
+- pathway : 経路；通り道
+- practical : 実用的な；現実的な
+- promote : 促進する；推進する
+- re-emit : 再放出する
+- registration : 登録、申込
+- representation : 表現；表象
+- revised : 改訂された；修正された
+- settle : 決着をつける、解決する
+- sneeze : くしゃみをする
+- suitable : 適した；ふさわしい
+- throughout : 〜の至る所に；〜の間ずっと
+- uncover : 発見する；明らかにする
+- via : 〜を通じて；〜経由で
+- wrapped it up : それを終えた、まとめた
+- a set of symbols : 記号の集合；記号体系
+- accepted : 受け入れられた；認められた
+- acculturation : 文化変容；異文化適応
+- across : 〜を横切って；〜の向こう側に；〜全体にわたって
+- adjust : 調整する；慣れる
+- adulthood : 成人期
+- agreements : 合意；協定
+- all of which : そのすべてが
+- aloud : 声に出して
+- anatomical : 解剖学の；身体構造の
+- anther(雄蕊の先端) : 葯；雄蕊の先端
+- appliance : 電化製品；器具
+- approve : 承認する；賛成する
+- around now : 今ごろ、ちょうど今
+- As far as I can tell : 私が見たところでは；私の知る限り
+- aspect : 側面；観点
+- atom : 原子
+- attention to : 〜に注意を払うこと；〜への配慮
+- away from : 〜から離れて
+- banquet : 宴会；祝宴
+- be known for : 〜で知られている
+- belong to : 〜に属する；〜のものである
+- bins : ふた付き容器；ごみ箱
+- brick : れんが；れんが状の物
+- build trust : 信頼を築く
+- but also : しかしまた、〜だけでなく
+- can you make it at that time : その時間に来られますか
+- caring for : 世話をする；面倒を見る
+- cautious : 慎重な；用心深い
+- cell proliferation : 細胞増殖
+- certificate : 証明書；修了証
+- chitin : キチン
+- circulating fluids : 循環する流体
+- claim(受け取る・引き取る) : 受け取る；引き取る；請求する
+- clear away : 取り除く；片付ける
+- clues : 手がかり；ヒント
+- coincidence : 偶然の一致
+- combined : 組み合わせられた
+- commitment : 約束；責任；専念
+- compel : 強いる；強制する
+- compositions : 構成；作品
+- concrete problems : 具体的な問題
+- conferencing : 会議（特にオンライン会議）を行うこと
+- conform to : 〜に従う；一致する
+- consequences : 結果；影響
+- considering : 考慮している；〜を踏まえると
+- consumption : 消費；摂取
+- continental : 大陸の
+- convenience : 利便性；都合のよさ
+- coordinated : 連携した；調整された
+- cozy : 居心地のよい；くつろいだ
+- crucial time : 重大な時期；正念場
+- currency : 通貨；貨幣
+- cycle(洗濯機のボタン) : （洗濯機の）コース；サイクル
+- decide against : 〜しないことに決める
+- decomposition : 分解；腐敗
+- deli : デリカテッセン（惣菜・食料品店）
+- density : 密度
+- depending : 〜に応じて；依存して
+- deserts : 砂漠
+- dietary : 食事の；食事に関する
+- dine : 食事をする
+- disorient : 方向感覚を失わせる
+- disrupted(乱される) : 乱される；中断される
+- distinct : 明確に異なる；はっきりした
+- distractions : 注意をそらすもの；気晴らし
+- dividing : 分けること、分割
+- drainage : 排水；排水設備
+- drifts by : 漂って通り過ぎる
+- due to : 〜が原因で；〜のために
+- earlier today : 今日の少し前に；本日先ほど
+- efficient : 効率的な；有能な
+- electrons : 電子
+- emerging(現れつつある) : 現れつつある；新興の
+- empowering entrepreneur : 起業家に力を与えること
+- engineered : 設計された；工学的に作られた
+- enormous : 巨大な；莫大な
+- entire : 全体の；完全な
+- erosion : 侵食；浸食
+- evaporation : 蒸発
+- everyday items : 日用品；日常的な品物
+- excess : 過剰；余分
+- exhibition : 展示会；展覧会
+- expansion : 拡大；拡張
+- expertise : 専門知識；熟練
+- expose to : 〜にさらす
+- extra hours : 追加の時間；残業時間
+- facilitate : 促進する；容易にする
+- faded : 色あせた；弱まった
+- features : 特徴（複数）；機能（複数）
+- fertile : 肥沃な；多産の
+- finalize(完成) : 完成させる；最終決定する
+- fizz : 泡立つ音；発泡する
+- follow conversations : 会話についていく；会話を理解する
+- forest : 森林
+- fostered : 育てた；促進した；養われた
+- founded on : 〜に基づいた；〜を土台とした
+- From now on : 今後は、これからは
+- gain : 得る；増加
+- genre : ジャンル；様式
+- glasses : 眼鏡；グラス類
+- greater : より大きい、より偉大な
+- habits : 習慣
+- harden into : 〜へと硬化する；〜になるまで固まる
+- have control over : 〜を管理している；〜を支配している
+- healing : 治癒；回復
+- herbivores : 草食動物
+- hooks : フック；鉤
+- human diets : 人間の食生活；人の食性
+- I an open to : ～に前向きである；～を受け入れる姿勢がある
+- immediate : 即時の；差し迫った
+- in charge of : 〜を担当して；〜の責任者で
+- incorporate A into B : AをBに組み込む
+- inequality : 不平等；格差
+- informed : 知らされた；情報に通じた
+- initially : 当初は；最初に
+- insight : 洞察；深い理解
+- instead : その代わりに
+- instruments : 道具；器具；計器
+- intentions : 意図；意向
+- intriguing : 興味をそそる；魅力的な
+- invite : 招待する、誘う
+- involving : 含んでいる；伴う
+- is home to : ～が生息している；～の本拠地である
+- keep in touch with 人 : 人と連絡を取り合う
+- land or change farming strategies : 土地を手放す、または農業戦略を変える
+- later this weekend : 今週末の後半に
+- leaning : 傾向；傾いていること
+- levees : 堤防
+- light detection : 光の検知；光の感知
+- link to : 〜につながる；〜に結びつける
+- locate : 位置を特定する；見つける
+- lyrics : 歌詞
+- make A B : AをBにする
+- malfunction : 故障；不具合；故障する
+- mates : つがい；仲間
+- meet(間に合う) : （期限・条件に）間に合う；満たす
+- metamorphosis : 変態；変化
+- modified : 変更された；修正された
+- moral : 道徳的な；教訓
+- multicultural : 多文化の
+- neuroscience : 神経科学
+- not being collected : 回収されていない；集められていない
+- notification : 通知；連絡
+- obligation : 義務；責任
+- offspring : 子孫；子ども；子株
+- operates : 作動する、運営する
+- orbits : 軌道
+- organize(企画する) : 企画する；整理する
+- outage : 停止；供給中断
+- overlook : 見落とす；見渡す
+- paintbrush : 絵筆；ペイントブラシ
+- parcel : 小包；区画
+- pass down : 受け継ぐ；伝える
+- patterns of land use : 土地利用のパターン
+- periods : 期間；時代；句点（ピリオド）
+- persistent : しつこい；持続する；粘り強い
+- photons : 光子
+- plant reproduction : 植物の繁殖
+- pleasing : 心地よい、満足させる
+- policymakers : 政策立案者
+- pollution : 汚染
+- power(動力を与える) : 動力を与える；駆動する
+- preconception : 先入観、先入見
+- prehistoric : 先史時代の；有史以前の
+- preserved : 保持された；保存された
+- previously : 以前に；前もって
+- procedures : 手順；手続き
+- proliferation : 急増；拡散
+- property(性質) : 性質；特性；所有物
+- pull away : 離れる；引き離す
+- purity : 純粋さ；純度
+- rarely : めったに〜ない
+- reception : 受信；受付；反応
+- recognize familiar faces : 見慣れた顔を認識する；知った顔だと分かる
+- refund : 返金；払い戻す
+- reimbursements : 返金；払い戻し
+- relieve : 和らげる；軽減する
+- remains : 遺物；残り
+- repelling : はじく；反発する
+- represented : 表した；示した；代表した
+- resilience : 回復力；適応力
+- responsible : 責任がある；責任を負う
+- retrieval : 取り戻し、回収
+- rightful owner : 正当な所有者
+- rodent : げっ歯類
+- rubber : ゴム
+- scent of : 〜の香り
+- seek : 探し求める；追求する
+- sense of : 〜の感覚；〜という意識
+- separate : 分ける；分離した
+- set bricks : レンガを据える
+- shaping : 形成している、形作っている
+- sign-up sheet : 参加申込表
+- slippery : 滑りやすい；つるつるした
+- so far : これまでのところ
+- sour : 酸っぱい；酸性の
+- spin cycle(脱水のみのコース) : 脱水コース
+- stand for peace : 平和を象徴する；平和の立場を示す
+- stick with : 固執する；続ける
+- stop by : 立ち寄る
+- stud : ちりばめる；鋲
+- subtle changes : わずかな変化
+- surrounded : 囲まれた
+- suspended : 一時停止された；保留された
+- synchronize : 同期させる；同調させる
+- taken by : 〜によって撮られた／取られた
+- tendency : 傾向；性向
+- The human resources team : 人事部
+- thoughtful : 思慮深い、よく考えられた
+- tie : 絆；結びつける
+- tiny : とても小さい；わずかな
+- to represent : 表す；象徴する
+- traits : 特徴；特性
+- transportation logistics : 輸送物流
+- typically : 典型的には；通常は
+- underpins : 支える；基盤となる
+- unlocking : 解錠すること；解き明かすこと
+- upstairs : 上の階に；上の階の
+- variable : 変わりやすい；変数
+- venue : 会場；開催地
+- virtues : 美徳；徳
+- voter : 有権者；投票者
+- wasteful : 無駄の多い；浪費的な
+- watering : 水やり
+- What matters is the content : 重要なのは内容だ
+- wiring : 配線；配線工事
+- work(都合が良い) : 都合が良い；うまくいく
+- yield(生み出す) : 生み出す；産出する
+
+</details>

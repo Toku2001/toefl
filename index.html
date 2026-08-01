@@ -3,895 +3,625 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>TOEFL Frequency Quiz</title>
+  <title>TOEFL Story Immersion - 5 Episodes</title>
   <style>
     :root {
-      --bg1: #f5efe6;
-      --bg2: #ead7bf;
-      --card: #fffaf3;
-      --ink: #2d241c;
-      --muted: #6d5c49;
-      --accent: #8f3d17;
-      --accent-2: #5f2810;
-      --success: #0f7b3f;
-      --danger: #b42318;
-      --border: #d8c2a6;
-      --shadow: rgba(45, 36, 28, 0.14);
+      --bg-a: #f4f1ea;
+      --bg-b: #e6dfd2;
+      --ink: #1e2328;
+      --muted: #5f6973;
+      --panel: #fffdf8;
+      --line: #d9d1c2;
+      --accent: #0f5c74;
+      --accent-2: #0c495d;
+      --ok: #1f8f63;
+      --warn: #bf5a2a;
     }
 
     * { box-sizing: border-box; }
 
     body {
       margin: 0;
-      min-height: 100vh;
       color: var(--ink);
-      font-family: Georgia, "Times New Roman", serif;
+      font-family: "Avenir Next", "Hiragino Kaku Gothic ProN", sans-serif;
       background:
-        radial-gradient(circle at 15% 15%, rgba(255,255,255,0.55), transparent 30%),
-        radial-gradient(circle at 85% 80%, rgba(255,255,255,0.35), transparent 28%),
-        linear-gradient(135deg, var(--bg1), var(--bg2));
-      padding: 24px;
+        radial-gradient(900px 500px at 15% 0%, rgba(255,255,255,0.6), transparent 60%),
+        radial-gradient(800px 480px at 90% 100%, rgba(255,255,255,0.35), transparent 62%),
+        linear-gradient(140deg, var(--bg-a), var(--bg-b));
+      line-height: 1.68;
+      padding: 20px;
     }
 
-    .shell {
-      max-width: 1280px;
+    .wrap {
+      max-width: 1120px;
       margin: 0 auto;
       display: grid;
-      gap: 18px;
-      grid-template-columns: minmax(0, 1.6fr) minmax(320px, 0.9fr);
-      align-items: start;
+      gap: 14px;
     }
 
+    .hero,
     .panel {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 20px;
-      box-shadow: 0 18px 36px var(--shadow);
-      overflow: hidden;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(25, 35, 45, 0.08);
     }
 
     .hero {
-      padding: 24px 24px 18px;
-      border-bottom: 1px solid var(--border);
-      background: linear-gradient(135deg, rgba(143,61,23,0.09), rgba(255,255,255,0.45));
+      padding: 16px 18px;
+      background: linear-gradient(150deg, rgba(15,92,116,0.08), rgba(255,255,255,0.85));
     }
 
     h1 {
-      margin: 0 0 10px;
-      font-size: clamp(1.6rem, 3vw, 2.6rem);
-      letter-spacing: 0.03em;
+      margin: 0 0 6px;
+      font-size: clamp(1.4rem, 2.8vw, 2.2rem);
+      letter-spacing: 0.02em;
     }
 
     .sub {
       margin: 0;
       color: var(--muted);
-      line-height: 1.7;
+      font-size: 0.97rem;
     }
 
-    .stats {
+    .toolbar {
       display: flex;
       flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 14px;
+      gap: 8px;
+      margin-top: 12px;
     }
 
     .chip {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      padding: 8px 12px;
-      border-radius: 999px;
-      background: rgba(143,61,23,0.08);
-      border: 1px solid rgba(143,61,23,0.14);
-      font-size: 0.92rem;
-    }
-
-    .controls {
-      display: grid;
-      gap: 12px;
-      padding: 18px 24px 16px;
-      border-bottom: 1px solid var(--border);
-    }
-
-    .control-row {
-      display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
-      gap: 10px;
-    }
-
-    .control-row.secondary {
-      grid-template-columns: 1.2fr 0.8fr 0.8fr 0.8fr;
-    }
-
-    label {
-      display: grid;
-      gap: 6px;
-      font-size: 0.85rem;
-      color: var(--muted);
-    }
-
-    input,
-    select,
-    button {
-      font: inherit;
-    }
-
-    input,
-    select {
-      width: 100%;
-      border: 1px solid var(--border);
+      border: 1px solid var(--line);
       background: #fff;
-      color: var(--ink);
-      border-radius: 12px;
-      padding: 11px 12px;
-      outline: none;
+      border-radius: 999px;
+      padding: 6px 12px;
+      color: var(--muted);
+      font-size: 0.86rem;
     }
 
-    input:focus,
-    select:focus {
-      border-color: var(--accent);
-      box-shadow: 0 0 0 3px rgba(143,61,23,0.12);
-    }
-
-    .actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-    }
-
-    .btn {
+    button {
       border: 1px solid var(--accent);
       background: var(--accent);
       color: #fff;
-      border-radius: 12px;
-      padding: 10px 14px;
+      border-radius: 10px;
+      padding: 8px 12px;
+      font-weight: 600;
       cursor: pointer;
-      transition: transform 120ms ease, background 120ms ease, opacity 120ms ease;
     }
 
-    .btn:hover { background: var(--accent-2); }
-    .btn:active { transform: translateY(1px); }
+    button:hover { background: var(--accent-2); }
 
-    .btn.secondary {
-      background: transparent;
+    button.secondary {
+      background: #fff;
       color: var(--accent);
     }
 
-    .btn.secondary:hover {
-      background: rgba(143,61,23,0.08);
+    .panel {
+      padding: 14px;
     }
 
-    .btn:disabled {
-      opacity: 0.45;
-      cursor: not-allowed;
-      transform: none;
-    }
-
-    .quiz {
-      padding: 22px 24px 24px;
-    }
-
-    .quiz-card {
-      border: 1px solid var(--border);
-      border-radius: 18px;
+    .episode {
+      border: 1px solid var(--line);
+      border-radius: 14px;
       background: #fff;
-      padding: 20px;
-      box-shadow: inset 0 1px 0 rgba(255,255,255,0.8);
+      overflow: hidden;
+      margin-bottom: 12px;
     }
 
-    .quiz-head {
+    .episode:last-child { margin-bottom: 0; }
+
+    .ep-head {
+      padding: 12px 14px;
       display: flex;
+      align-items: center;
       justify-content: space-between;
-      gap: 12px;
-      align-items: start;
-      margin-bottom: 18px;
+      gap: 10px;
+      background: #f9f4ea;
+      border-bottom: 1px solid var(--line);
     }
 
-    .tag {
+    .ep-title {
+      margin: 0;
+      font-size: 1.04rem;
+      letter-spacing: 0.01em;
+    }
+
+    .badge {
+      border-radius: 999px;
+      padding: 4px 10px;
+      font-size: 0.8rem;
+      border: 1px solid var(--line);
+      color: var(--muted);
+      background: #fff;
+    }
+
+    .ep-controls {
+      padding: 10px 14px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      border-bottom: 1px dashed var(--line);
+      background: #fffefb;
+    }
+
+    .ep-body {
+      padding: 14px;
+      display: grid;
+      gap: 12px;
+    }
+
+    .english {
+      font-family: "Georgia", "Times New Roman", serif;
+      font-size: 1.03rem;
+      color: #1d2730;
+      letter-spacing: 0.005em;
+      background: #fff;
+      border: 1px solid #e6dece;
+      border-radius: 12px;
+      padding: 12px;
+    }
+
+    .jp {
+      display: none;
+      border: 1px solid #d9e6eb;
+      border-radius: 12px;
+      padding: 12px;
+      background: #f5fbfe;
+      color: #1d3f4d;
+      font-size: 0.96rem;
+    }
+
+    .jp.open { display: block; }
+
+    .check {
       display: inline-flex;
       align-items: center;
-      padding: 6px 10px;
-      border-radius: 999px;
-      background: rgba(143,61,23,0.08);
-      color: var(--accent);
-      font-size: 0.82rem;
-      white-space: nowrap;
-    }
-
-    .prompt {
-      margin: 0;
-      font-size: clamp(1.4rem, 2.4vw, 2rem);
-      line-height: 1.35;
-    }
-
-    .audio-btn {
-      background: none;
-      border: none;
-      color: var(--accent);
-      font-size: 1.2em;
-      cursor: pointer;
-      padding: 0;
-      transition: transform 120ms ease, opacity 120ms ease;
-      margin-left: 8px;
-    }
-
-    .audio-btn:hover { transform: scale(1.15); }
-    .audio-btn:active { transform: scale(0.95); }
-    .audio-btn:disabled { opacity: 0.45; cursor: not-allowed; }
-
-    .meta {
-      margin-top: 10px;
+      gap: 8px;
       color: var(--muted);
-      line-height: 1.6;
-      font-size: 0.95rem;
+      font-size: 0.9rem;
     }
 
-    .choices {
+    .footer {
+      color: var(--muted);
+      font-size: 0.9rem;
+      padding: 8px 4px;
+    }
+
+    .footer a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    .footer a:hover {
+      text-decoration: underline;
+    }
+
+    .vocab-panel {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 12px;
       display: grid;
       gap: 10px;
-      margin-top: 18px;
     }
 
-    .choice {
-      border: 1px solid var(--border);
+    .vocab-toolbar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      align-items: center;
+    }
+
+    .vocab-toolbar input,
+    .vocab-toolbar select {
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      padding: 8px 10px;
+      font: inherit;
       background: #fff;
       color: var(--ink);
-      border-radius: 14px;
-      padding: 14px 16px;
-      text-align: left;
-      cursor: pointer;
-      transition: transform 120ms ease, border-color 120ms ease, background 120ms ease;
-      min-height: 56px;
     }
 
-    .choice:hover {
-      border-color: var(--accent);
-      transform: translateY(-1px);
-    }
-
-    .choice.correct {
-      background: rgba(15,123,63,0.08);
-      border-color: rgba(15,123,63,0.5);
-    }
-
-    .choice.wrong {
-      background: rgba(180,35,24,0.08);
-      border-color: rgba(180,35,24,0.45);
-    }
-
-    .feedback {
-      margin-top: 16px;
-      min-height: 1.4em;
-      line-height: 1.6;
-      color: var(--muted);
-    }
-
-    .feedback strong { color: var(--ink); }
-
-    .feedback.good { color: var(--success); }
-    .feedback.bad { color: var(--danger); }
-
-    .list-panel {
-      padding: 0;
-    }
-
-    .list-head {
-      padding: 20px 20px 14px;
-      border-bottom: 1px solid var(--border);
-    }
-
-    .list-head h2 {
-      margin: 0 0 6px;
-      font-size: 1.2rem;
-    }
-
-    .list-head p {
-      margin: 0;
-      color: var(--muted);
-      font-size: 0.92rem;
-      line-height: 1.6;
-    }
-
-    .ranking {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height 0.3s ease;
-    }
-
-    .ranking.expanded {
-      max-height: calc(100vh - 260px);
+    .vocab-list {
+      display: grid;
+      gap: 6px;
+      max-height: 360px;
       overflow: auto;
+      padding-right: 4px;
     }
 
-    .ranking li {
+    .vocab-item {
       display: grid;
-      grid-template-columns: auto 1fr auto;
-      gap: 10px;
-      align-items: start;
-      padding: 14px 20px;
-      border-bottom: 1px solid rgba(216,194,166,0.7);
+      grid-template-columns: 1.2fr 1.6fr auto;
+      gap: 8px;
+      align-items: center;
+      border: 1px solid #e3dccd;
+      border-radius: 10px;
+      padding: 8px 10px;
+      background: #fffcf5;
+      font-size: 0.92rem;
     }
 
-    .ranking li:last-child { border-bottom: 0; }
+    .vocab-word { font-weight: 700; }
 
-    .ranking-toggle {
-      cursor: pointer;
+    .vocab-meaning.hide {
+      color: transparent;
+      text-shadow: 0 0 7px rgba(0, 0, 0, 0.35);
       user-select: none;
-      transition: opacity 0.2s ease;
     }
 
-    .ranking-toggle:hover {
-      opacity: 0.7;
-    }
-
-    .rank-no {
-      min-width: 2.6em;
-      color: var(--accent);
-      font-weight: 700;
-      font-size: 0.95rem;
-    }
-
-    .rank-word {
-      display: grid;
-      gap: 4px;
-    }
-
-    .rank-word a {
-      color: var(--ink);
-      text-decoration: none;
-      font-weight: 700;
-    }
-
-    .rank-word a:hover { text-decoration: underline; }
-
-    .rank-word .detail {
+    .mini {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 4px 8px;
+      background: #fff;
       color: var(--muted);
-      font-size: 0.88rem;
-      line-height: 1.5;
+      font-size: 0.8rem;
     }
 
-    .rank-count {
-      text-align: right;
-      color: var(--accent);
-      font-weight: 700;
-      white-space: nowrap;
+    .done .ep-head {
+      background: #ecf9f1;
     }
 
-    .empty {
-      padding: 28px 20px;
-      color: var(--muted);
-      text-align: center;
+    .done .badge {
+      border-color: #a7ddc3;
+      color: #1f8f63;
+      background: #f4fff9;
     }
 
-    @media (max-width: 1020px) {
-      .shell {
-        grid-template-columns: 1fr;
-      }
-
-      .ranking {
-        max-height: 0;
-      }
-
-      .ranking.expanded {
-        max-height: 70vh;
-      }
-    }
-
-    @media (max-width: 780px) {
-      body { padding: 14px; }
-
-      .hero,
-      .controls,
-      .quiz {
-        padding-left: 16px;
-        padding-right: 16px;
-      }
-
-      .control-row,
-      .control-row.secondary,
-      .quiz-head {
-        grid-template-columns: 1fr;
-        display: grid;
-      }
-
-      .actions {
-        flex-direction: column;
-      }
-
-      .quiz-head {
-        gap: 8px;
-      }
+    @media (max-width: 760px) {
+      body { padding: 12px; }
+      .english { font-size: 0.98rem; }
+      .ep-head { align-items: start; flex-direction: column; }
     }
   </style>
 </head>
 <body>
-  <div class="shell">
-    <section class="panel">
-      <div class="hero">
-        <h1>TOEFL Frequency Quiz</h1>
-        <p class="sub">頻出語ランキングをもとに、意味の 4 択クイズを出します。間違えた単語は復習対象として localStorage に保存されます。</p>
-        <div class="stats">
-          <span class="chip" id="totalWords">0 words</span>
-          <span class="chip" id="filteredWords">0 filtered</span>
-          <span class="chip" id="reviewWords">0 review</span>
-          <span class="chip" id="scoreChip">0 correct / 0 wrong</span>
-        </div>
-      </div>
-
-      <div class="controls">
-        <div class="control-row">
-          <label>
-            モード
-            <select id="modeSelect">
-              <option value="frequency">頻出順</option>
-              <option value="random">ランダム</option>
-              <option value="review">復習</option>
-            </select>
-          </label>
-          <label>
-            科目
-            <select id="subjectSelect">
-              <option value="all">すべて</option>
-            </select>
-          </label>
-          <label>
-            問題数
-            <select id="problemCountInput">
-              <option value="5">5問</option>
-              <option value="10">10問</option>
-              <option value="15">15問</option>
-              <option value="20">20問</option>
-              <option value="30">30問</option>
-            </select>
-          </label>
-        </div>
-        <div class="actions">
-          <button class="btn" id="startBtn" type="button">出題開始</button>
-          <button class="btn secondary" id="resetBtn" type="button">履歴をリセット</button>
-        </div>
-      </div>
-
-      <div class="quiz">
-        <div class="quiz-card">
-          <div class="quiz-head">
-            <div>
-              <span class="tag" id="quizTag">未開始</span>
-              <div style="display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap;">
-                <h2 class="prompt" id="prompt">出題を開始してください。</h2>
-                <button class="audio-btn" id="audioBtn" type="button" hidden aria-label="発音を再生">🔊</button>
-                <button class="btn" id="nextBtn" type="button" disabled hidden style="margin-left: auto; flex-shrink: 0;">次へ</button>
-              </div>
-              <div class="meta" id="metaText">頻出語をもとに意味を当てる 4 択問題です。</div>
-            </div>
-          </div>
-
-          <div class="choices" id="choices"></div>
-          <div class="feedback" id="feedback"></div>
-        </div>
+  <div class="wrap">
+    <section class="hero">
+      <h1>TOEFL Story Immersion - 5 Episodes</h1>
+      <p class="sub">最初は英語だけで読み、必要なときだけ和訳を開く設計です。1日1エピソードを目安に進めると、語彙に毎日触れやすくなります。</p>
+      <div class="toolbar">
+        <span class="chip" id="progressChip">Progress: 0 / 5</span>
+        <span class="chip" id="streakChip">Streak: 0 days</span>
+        <button id="openAllJp" class="secondary">和訳を全て開く</button>
+        <button id="closeAllJp" class="secondary">和訳を全て閉じる</button>
+        <button id="resetCheck" class="secondary">チェックを全リセット</button>
       </div>
     </section>
 
-    <aside class="panel list-panel">
-      <div class="list-head">
-        <h2 id="rankingToggle" class="ranking-toggle">▶ 頻出ランキング</h2>
-        <p>フィルタ後の頻出単語ランキング</p>
+    <section class="panel" id="episodes"></section>
+
+    <section class="panel">
+      <div class="vocab-panel">
+        <h2 style="margin:0; font-size:1.05rem;">Vocabulary Check (Word -> Japanese)</h2>
+        <div class="vocab-toolbar">
+          <input id="vocabSearch" type="search" placeholder="単語検索 (例: confirm)" />
+          <select id="chapterFilter">
+            <option value="all">All chapters</option>
+            <option value="1">Chapter 1</option>
+            <option value="2">Chapter 2</option>
+            <option value="3">Chapter 3</option>
+            <option value="4">Chapter 4</option>
+            <option value="5">Chapter 5</option>
+          </select>
+          <button id="toggleAllMeanings" class="secondary">意味を隠す</button>
+          <span class="chip" id="vocabCount">0 words</span>
+        </div>
+        <div class="vocab-list" id="vocabList"></div>
       </div>
-      <ol class="ranking" id="rankingList"></ol>
-      <div class="empty" id="emptyState" hidden>該当する単語がありません。</div>
-    </aside>
+    </section>
+
+    <div class="footer">
+      Vocabulary coverage:
+      <a href="SantaAI/%E5%8D%98%E8%AA%9E%E9%9B%86/story_learning/vocabulary_coverage.tsv" target="_blank" rel="noopener">SantaAI/単語集/story_learning/vocabulary_coverage.tsv</a>
+      /
+      Stories source:
+      <a href="SantaAI/%E5%8D%98%E8%AA%9E%E9%9B%86/story_learning/story_01.md" target="_blank" rel="noopener">story_01.md</a>
+      -
+      <a href="SantaAI/%E5%8D%98%E8%AA%9E%E9%9B%86/story_learning/story_05.md" target="_blank" rel="noopener">story_05.md</a>
+    </div>
   </div>
 
+  <script src="SantaAI/%E5%8D%98%E8%AA%9E%E9%9B%86/story_learning/vocabulary_data.js"></script>
+
   <script>
-    const DATA_URL = "data/word_frequency.json";
-    const STORAGE_KEY = "toefl.frequencyQuiz.v1";
+    const LS = "toefl_story_immersion_v1";
+    const today = new Date().toISOString().slice(0, 10);
+    let hideVocabMeaning = true;
 
-    const modeSelect = document.getElementById("modeSelect");
-    const subjectSelect = document.getElementById("subjectSelect");
-    const problemCountInput = document.getElementById("problemCountInput");
-    const startBtn = document.getElementById("startBtn");
-    const rankingToggle = document.getElementById("rankingToggle");
-    const rankingList = document.getElementById("rankingList");
-    const nextBtn = document.getElementById("nextBtn");
-    const resetBtn = document.getElementById("resetBtn");
-    const promptEl = document.getElementById("prompt");
-    const metaTextEl = document.getElementById("metaText");
-    const audioBtn = document.getElementById("audioBtn");
-    const quizTagEl = document.getElementById("quizTag");
-    const choicesEl = document.getElementById("choices");
-    const feedbackEl = document.getElementById("feedback");
-    const rankingListEl = document.getElementById("rankingList");
-    const emptyStateEl = document.getElementById("emptyState");
-    const totalWordsEl = document.getElementById("totalWords");
-    const filteredWordsEl = document.getElementById("filteredWords");
-    const reviewWordsEl = document.getElementById("reviewWords");
-    const scoreChipEl = document.getElementById("scoreChip");
+    const stories = [
+      {
+        id: 1,
+        title: "Episode 1: The Library Under Neon Rain",
+        english: `Neon rain blurred every sign in Harbor District when Mina received a paper ticket with no sender name. The ticket led her to an underground library where each book contained one erased memory from the city. A curator in a copper coat told her the library had a simple mission: recover true stories before false stories took over public life.
 
-    const state = {
-      data: [],
-      filtered: [],
-      current: null,
-      choices: [],
-      stats: loadStats(),
-      quizCount: 0,
-    };
+Mina started in Room Seven, where memories were stored as floating glass chips. She watched clips of teachers bargaining for solar batteries, nurses sharing medicine during a blackout, and students painting flood maps on school walls. The city was messy, tired, and brilliant. It had survived not because people agreed all the time, but because they kept meeting, arguing, and trying again.
 
-    function loadStats() {
+At midnight, the alarm rang. Someone was replacing verified records with polished fakes. In the central hall, Mina found a trail of silver ink that pointed to the old observatory. There she met a young engineer who confessed he had edited records to hide a budget scandal. "If people see the full report," he said, "they will lose hope." Mina answered, "Hope built on lies collapses faster than any bridge."
+
+They returned to the library and reopened the original archive. Volunteers arrived from every district, reading, translating, and cross-checking data until dawn. By sunrise, citizens had posted a public timeline that showed both mistakes and repairs. It was imperfect, but it was real.
+
+Before leaving, Mina pinned a training card on the wall: remember, discuss, verify, revise, repeat. The curator laughed and said, "Not glamorous, but powerful." Mina stepped into the rain feeling oddly light. Truth had not solved everything, yet it had given the city a direction.
+
+Before going home, Mina wrote three review questions for tomorrow. That quiet ritual, repeated nightly, made the story practical instead of decorative.`,
+        japanese: `港湾地区に降るネオン色の雨の夜、ミナは差出人不明の紙チケットを受け取る。案内されたのは地下図書館で、そこには「街から消えた記憶」が本として保存されていた。館長は、偽りの物語に街が飲み込まれる前に、本当の記録を取り戻すのが使命だと告げる。
+
+ミナは記憶チップの部屋で、停電時に薬を分け合った看護師や、洪水地図を描く学生たちの記録を見る。街が生き延びた理由は、完璧な合意ではなく、何度も対話し直したことだった。
+
+深夜、誰かが検証済み記録を偽造データに置き換えていることが判明する。観測所で若い技師は、予算不正を隠すため改ざんしたと告白する。ミナは「嘘の上の希望は、橋より早く崩れる」と返す。
+
+夜明けまでに市民ボランティアは原本を復旧し、失敗と修復の両方を含む公開年表を作成した。不完全でも本物であることが、次の一歩を生む。
+
+帰る前にミナは「記憶する・議論する・検証する・修正する・繰り返す」と壁に残す。さらに翌日の振り返り質問を3つ書く習慣が、物語を実践へ変えていく。`
+      },
+      {
+        id: 2,
+        title: "Episode 2: The Museum of Borrowed Futures",
+        english: `Mina joined the Museum of Borrowed Futures, where failed inventions from the future were displayed with warning labels. The director believed prototypes that failed were useful teachers, because they showed where confidence moved faster than caution.
+
+One hall contained a climate mirror that cooled one district while overheating another. Another hall showed a translation headset that performed perfectly but erased local accents. Mina guided students through each machine and asked the same question: not only what a device can do, but who might be excluded by it.
+
+A sponsor later demanded that "negative stories" be removed from exhibits. Funding was fragile, and the director hesitated. Mina proposed an open-design compromise: keep the flaws visible, and invite sponsors and citizens to fix them publicly. The cameras were on, students were watching, and the sponsor accepted.
+
+Within weeks, engineers and residents redesigned the prototypes. The climate mirror gained fairness rules, and the language headset preserved accent diversity. The museum changed from a warning chamber into a collaboration engine.
+
+At closing time, Mina wrote on the blackboard, "Technology is policy in hardware form." Visitors copied the line into notebooks and promised to return.
+
+Before going home, she completed a short reflection: evidence first, ego later, revision always.`,
+        japanese: `ミナは「借りものの未来博物館」で働き始める。そこには未来から来た失敗作が警告ラベル付きで展示され、館長は「失敗した試作機こそ最良の教師だ」と言う。
+
+ある展示は一地区を冷やす代わりに別地区を過熱させる気候ミラー、別の展示は翻訳精度は高いが方言を消してしまうヘッドセットだった。ミナは学生に「何ができるか」だけでなく「誰が排除されるか」を考えさせる。
+
+やがてスポンサーは「ネガティブな物語を消せ」と要求する。資金難の中、ミナは妥協案を出す。欠陥は隠さず公開し、スポンサーと市民が同じ場で修正する設計実験へ変えるのだ。
+
+数週間で機器は改善され、博物館は警告の場から共創の場へ変わる。閉館時、ミナは黒板に「技術はハードウェア化された政策」と書き、来館者はそれをメモして帰っていく。
+
+最後にミナは「証拠を先に、見栄は後に、改訂は常に」という反省メモを残す。`
+      },
+      {
+        id: 3,
+        title: "Episode 3: The Train That Runs Through Dreams",
+        english: `At midnight, the Dreamline crossed the city without fixed tracks. People boarded carrying one question they could not solve alone. Mina volunteered as a listener conductor, pairing strangers whose problems might unlock each other.
+
+A farmer worried about declining soil sat beside a game designer studying motivation loops. A public defender spoke with a biology teacher researching stress and memory. Unexpectedly, practical answers emerged from unlikely pairs.
+
+At Station Nine, the train lost power inside a tunnel. Screens went dark, voices rose, and panic spread quickly. Mina switched to a lantern session: one person names one challenge, another offers one action possible within twenty-four hours. No speeches, no heroes, only clear next steps.
+
+When power returned, the carriage felt calmer than before. The next morning, several passengers launched a public board called Next Step. Every post needed a measurable goal, one partner, and one review date. Within months, the board became a city habit.
+
+As dawn touched the river, Mina wrote a final prompt on the carriage wall: name the pattern, test the pattern, teach the pattern.
+
+Before sleeping, she reviewed the day and marked one tiny action she would repeat tomorrow.`,
+        japanese: `真夜中、固定線路を持たないドリームラインが街を横断する。乗客は「一人では解けない問い」を持ち込む。ミナは聞き手の車掌として、互いの問題を開けそうな他人同士を組み合わせる。
+
+土壌劣化に悩む農家と動機設計を研究するゲームデザイナー、公選弁護人と記憶研究の教師。意外な組み合わせから実践的な答えが生まれていく。
+
+第9駅付近で停電が起き、トンネル内で車内は不安に包まれる。ミナはランタン方式に切り替え、「課題を1つ言う」「24時間以内の行動を1つ返す」という最小手順で場を立て直す。
+
+復電後、乗客たちは翌朝「Next Step」掲示板を立ち上げる。投稿条件は、測定可能な目標・協力者1人・見直し日1つ。数か月で市民習慣になった。
+
+夜明けにミナは「パターンを名づけ、試し、教える」と壁に書く。就寝前には翌日繰り返す最小行動を1つだけ決める。`
+      },
+      {
+        id: 4,
+        title: "Episode 4: The Trial of the Moon Market",
+        english: `Moon season opened with the Night Market Trial, a public theater-court where policy ideas were tested before real adoption. Teams performed short cases on flood barriers, school calendars, transport pricing, and food distribution routes.
+
+Mina joined Team Lantern: elders, coders, students, cooks, and bus drivers. Their plan proposed turning abandoned parking towers into vertical gardens, emergency shelters, and after-school labs. Critics called it unrealistic.
+
+During cross-examination, Mina conceded real risks and presented amendments: governance quotas by neighborhood, transparent waiting lists, and independent quarterly audits. The audience did not cheer because the proposal sounded perfect; they cheered because the team showed how to correct failure early.
+
+After midnight, Team Lantern placed second overall. Yet their amendment package won first place in public adoption. Teenagers immediately sketched local versions for other districts.
+
+Before closing, Mina told the crowd, "Argument is not war. Argument is maintenance for collective thinking." People laughed, argued, and kept iterating in the square.
+
+That night she wrote one final note: good policy survives contact with criticism.`,
+        japanese: `ムーンシーズンの始まりに、政策を実装前に試す公開劇場裁判「ナイトマーケット・トライアル」が開かれる。洪水対策、学期暦、運賃、食料配送などを各チームが短編劇で弁論する。
+
+ミナのチーム・ランタンは、高齢者、学生、運転手、コーダー、料理人の混成。放棄された立体駐車場を、垂直農園・避難拠点・放課後ラボへ転換する案を提案する。
+
+反対尋問でミナはリスクを認めた上で、地区別の運営枠、透明な待機リスト、四半期ごとの独立監査を追加する。観客が評価したのは完璧さではなく、失敗を先回りして修正する設計だった。
+
+結果は総合2位。しかし修正パッケージは市民採択1位となり、若者たちは別地区向けの派生案を描き始める。
+
+閉会前、ミナは「議論は戦争ではない。共同思考の保守点検だ」と語る。夜、彼女は「良い政策は批判との接触に耐える」とノートに書いた。`
+      },
+      {
+        id: 5,
+        title: "Episode 5: The City That Remembers Your Name",
+        english: `In the oldest district, buildings stored personal memories in their walls. Locals called it the City That Remembers Your Name. Doors opened to polite voices, and streetlights brightened when neighbors greeted one another.
+
+Then names began disappearing. With each missing name, access failed: medicine cabinets, legal files, family letters. Rumors spread that a private firm wanted to replace the district with luxury towers.
+
+Mina assembled a repair circle of archivists, electricians, grandparents, and teenagers fluent in legacy code. The investigation found no grand sabotage. The real cause was neglected maintenance and postponed updates.
+
+They divided the district into blocks, trained local stewards, and published a transparent repair log. Trust returned gradually, porch by porch.
+
+On the final night, residents held a naming ceremony in the plaza. Children read restored names, elders told migration stories, and musicians played songs thought to be lost.
+
+At midnight, every streetlight turned gold as voices spoke together. Mina understood the project was never about nostalgia alone. It was about systems that keep people visible to one another.
+
+Before leaving, she wrote a simple line at the city gate: shared memory needs shared responsibility.`,
+        japanese: `最古の地区では、建物の壁が個人記憶を保存していた。住民はそこを「あなたの名前を覚える街」と呼ぶ。丁寧に呼びかけると扉が開き、挨拶が交わされると街灯が明るくなる。
+
+だが、名前が一つずつ消え始める。名前が失われるたび、薬庫、法務記録、家族の手紙へのアクセスが失敗する。再開発企業の噂が広がり、地区は不安定になる。
+
+ミナは記録係、電気技師、高齢住民、レガシーコードに強い若者で修復チームを編成する。調査の結論は破壊工作ではなく、長年の保守不足だった。
+
+地区をブロック分割し、地元管理者を育成し、修理ログを公開すると、信頼は玄関先ごとに少しずつ戻る。
+
+最後の夜、広場で命名式が開かれる。子どもは復元された名前を読み上げ、長老は移住の歴史を語り、失われたと思われた歌が再び演奏される。
+
+真夜中、街灯は一斉に金色へ変わる。ミナは悟る。これは懐古だけの計画ではない。人が互いを見失わないための制度設計なのだ。最後に門へ「共有記憶には共有責任が必要」と書き残す。`
+      }
+    ];
+
+    function loadState() {
       try {
-        const parsed = JSON.parse(localStorage.getItem(STORAGE_KEY) || "{}");
-        return parsed && typeof parsed === "object" ? parsed : {};
+        return JSON.parse(localStorage.getItem(LS) || "{}");
       } catch {
         return {};
       }
     }
 
-    function saveStats() {
-      localStorage.setItem(STORAGE_KEY, JSON.stringify(state.stats));
+    function saveState(state) {
+      localStorage.setItem(LS, JSON.stringify(state));
     }
 
-    function getStat(key) {
-      const entry = state.stats[key];
-      return entry || { correct: 0, wrong: 0, attempts: 0, lastAt: "" };
+    function ensureState() {
+      const s = loadState();
+      if (!s.checked) s.checked = {};
+      if (!s.jpOpen) s.jpOpen = {};
+      if (!s.completedDates) s.completedDates = [];
+      return s;
     }
 
-    function setStat(key, updater) {
-      const current = getStat(key);
-      state.stats[key] = updater({ ...current });
-      saveStats();
+    function updateStreak(state) {
+      const completedToday = stories.every((s) => !!state.checked[s.id]);
+      const set = new Set(state.completedDates || []);
+      if (completedToday) set.add(today);
+      else set.delete(today);
+      state.completedDates = Array.from(set).sort();
     }
 
-    function normalize(text) {
-      return String(text || "").trim().toLowerCase();
+    function streakCount(state) {
+      const set = new Set(state.completedDates || []);
+      let n = 0;
+      while (true) {
+        const d = new Date(today + "T00:00:00");
+        d.setDate(d.getDate() - n);
+        const key = d.toISOString().slice(0, 10);
+        if (!set.has(key)) break;
+        n += 1;
+      }
+      return n;
     }
 
-    function escapeHtml(text) {
-      return String(text)
+    function render() {
+      const state = ensureState();
+      const root = document.getElementById("episodes");
+      root.innerHTML = "";
+
+      for (const s of stories) {
+        const done = !!state.checked[s.id];
+        const jpOpen = !!state.jpOpen[s.id];
+
+        const ep = document.createElement("article");
+        ep.className = "episode" + (done ? " done" : "");
+        ep.innerHTML = `
+          <div class="ep-head">
+            <h2 class="ep-title">${s.title}</h2>
+            <span class="badge">${done ? "Completed" : "In Progress"}</span>
+          </div>
+          <div class="ep-controls">
+            <button class="toggle-jp" data-id="${s.id}">${jpOpen ? "和訳を閉じる" : "和訳を開く"}</button>
+            <label class="check"><input type="checkbox" class="done-check" data-id="${s.id}" ${done ? "checked" : ""} /> 今日この章を読んだ</label>
+          </div>
+          <div class="ep-body">
+            <div class="english">${escapeHtml(s.english).replace(/\n\n/g, "<br><br>")}</div>
+            <div class="jp ${jpOpen ? "open" : ""}">${escapeHtml(s.japanese).replace(/\n\n/g, "<br><br>")}</div>
+          </div>
+        `;
+        root.appendChild(ep);
+      }
+
+      for (const el of document.querySelectorAll(".toggle-jp")) {
+        el.addEventListener("click", () => {
+          const id = Number(el.dataset.id);
+          const s = ensureState();
+          s.jpOpen[id] = !s.jpOpen[id];
+          saveState(s);
+          render();
+        });
+      }
+
+      for (const el of document.querySelectorAll(".done-check")) {
+        el.addEventListener("change", () => {
+          const id = Number(el.dataset.id);
+          const s = ensureState();
+          s.checked[id] = el.checked;
+          updateStreak(s);
+          saveState(s);
+          render();
+        });
+      }
+
+      const checked = stories.filter((s) => !!state.checked[s.id]).length;
+      document.getElementById("progressChip").textContent = `Progress: ${checked} / ${stories.length}`;
+      document.getElementById("streakChip").textContent = `Streak: ${streakCount(state)} days`;
+    }
+
+    function renderVocab() {
+      const rows = Array.isArray(window.VOCAB_DATA) ? window.VOCAB_DATA : [];
+      const q = document.getElementById("vocabSearch").value.trim().toLowerCase();
+      const chapter = document.getElementById("chapterFilter").value;
+
+      const filtered = rows.filter((r) => {
+        if (chapter !== "all" && String(r.chapter) !== chapter) return false;
+        if (!q) return true;
+        return r.word.toLowerCase().includes(q) || r.meaning.toLowerCase().includes(q);
+      });
+
+      const root = document.getElementById("vocabList");
+      root.innerHTML = "";
+
+      for (const r of filtered) {
+        const item = document.createElement("div");
+        item.className = "vocab-item";
+        item.innerHTML = `
+          <div class="vocab-word">${escapeHtml(r.word)}</div>
+          <div class="vocab-meaning ${hideVocabMeaning ? "hide" : ""}">${escapeHtml(r.meaning)}</div>
+          <span class="mini">Ch ${r.chapter}</span>
+        `;
+        root.appendChild(item);
+      }
+
+      document.getElementById("vocabCount").textContent = `${filtered.length} words`;
+      document.getElementById("toggleAllMeanings").textContent = hideVocabMeaning ? "意味を表示" : "意味を隠す";
+    }
+
+    function escapeHtml(str) {
+      return str
         .replaceAll("&", "&amp;")
         .replaceAll("<", "&lt;")
         .replaceAll(">", "&gt;")
         .replaceAll('"', "&quot;")
-        .replaceAll("'", "&#39;");
+        .replaceAll("'", "&#039;");
     }
 
-    function reviewScore(item) {
-      const stats = getStat(item.normalized_word);
-      return stats.wrong - stats.correct * 0.25;
-    }
-
-    function sortableByMode(a, b) {
-      const mode = modeSelect.value;
-      if (mode === "random") return Math.random() - 0.5;
-      if (mode === "review") {
-        const scoreA = reviewScore(a);
-        const scoreB = reviewScore(b);
-        if (scoreA !== scoreB) return scoreB - scoreA;
-        if (a.count !== b.count) return b.count - a.count;
-        return a.word.localeCompare(b.word, "ja");
-      }
-      if (a.count !== b.count) return b.count - a.count;
-      const scoreA = reviewScore(a);
-      const scoreB = reviewScore(b);
-      if (scoreA !== scoreB) return scoreB - scoreA;
-      return a.word.localeCompare(b.word, "ja");
-    }
-
-    function buildPreviewHref(item) {
-      const path = item.preview_path || item.first_seen;
-      if (/^(https?:)?\/\//.test(path) || path.startsWith("/")) {
-        return path;
-      }
-      return `../${path}`;
-    }
-
-    function buildAudioHref(item) {
-      const audioPath = item.audio_path || "";
-      if (!audioPath) return "";
-      if (/^(https?:)?\/\//.test(audioPath) || audioPath.startsWith("/")) {
-        return audioPath;
-      }
-      return audioPath;
-    }
-
-    async function playAudio(href) {
-      if (!href) return;
-      try {
-        const audio = new Audio(href);
-        await audio.play();
-      } catch (error) {
-        console.warn("Failed to play audio:", error);
-      }
-    }
-
-    function prettySubjects(subjects) {
-      return subjects.join(", ");
-    }
-
-    function getDisplayMeaning(item) {
-      return item.meaning || item.details || item.word;
-    }
-
-    function filterData() {
-      const subject = subjectSelect.value;
-
-      const base = state.data.filter((item) => {
-        if (subject !== "all" && !item.subjects.includes(subject)) return false;
-        return true;
-      });
-
-      let filtered = base;
-      if (modeSelect.value === "review") {
-        filtered = base.filter((item) => getStat(item.normalized_word).wrong > 0);
-      }
-
-      const problemCount = Number(problemCountInput.value) || 10;
-      state.filtered = filtered.slice(0, problemCount);
-      return state.filtered;
-    }
-
-    function updateSummary() {
-      const reviewCount = state.data.filter((item) => getStat(item.normalized_word).wrong > 0).length;
-      const correctTotal = Object.values(state.stats).reduce((sum, stat) => sum + (stat.correct || 0), 0);
-      const wrongTotal = Object.values(state.stats).reduce((sum, stat) => sum + (stat.wrong || 0), 0);
-
-      totalWordsEl.textContent = `${state.data.length} words`;
-      filteredWordsEl.textContent = `${state.filtered.length} filtered`;
-      reviewWordsEl.textContent = `${reviewCount} review`;
-      scoreChipEl.textContent = `${correctTotal} correct / ${wrongTotal} wrong`;
-    }
-
-    function renderRanking() {
-      const visible = state.filtered.slice().sort(sortableByMode).slice(0, 80);
-      rankingListEl.innerHTML = "";
-      emptyStateEl.hidden = visible.length > 0;
-
-      visible.forEach((item, index) => {
-        const stats = getStat(item.normalized_word);
-        const reviewBadge = stats.wrong > 0 ? ` / review ${stats.wrong}` : "";
-        const li = document.createElement("li");
-        li.innerHTML = `
-          <div class="rank-no">${item.rank}</div>
-          <div class="rank-word">
-            <div style="font-weight: 500; color: var(--accent);">${escapeHtml(item.word)}</div>
-            <div class="detail">${escapeHtml(getDisplayMeaning(item))}</div>
-            <div class="detail">${escapeHtml(prettySubjects(item.subjects))} / count ${item.count}${reviewBadge}</div>
-          </div>
-          <div class="rank-count">#${index + 1}</div>
-        `;
-
-        rankingListEl.appendChild(li);
-      });
-    }
-
-    function getQuestionPool() {
-      if (modeSelect.value === "review") {
-        const reviewPool = state.filtered.filter((item) => getStat(item.normalized_word).wrong > 0);
-        return reviewPool.length > 0 ? reviewPool : state.filtered;
-      }
-
-      return state.filtered;
-    }
-
-    function pickQuestion() {
-      const pool = getQuestionPool();
-      if (pool.length === 0) return null;
-
-      if (modeSelect.value === "random") {
-        return pool[Math.floor(Math.random() * pool.length)];
-      }
-
-      if (modeSelect.value === "review") {
-        return pool.slice().sort((a, b) => reviewScore(b) - reviewScore(a))[0];
-      }
-
-      // Return question at current quiz count index
-      if (state.quizCount >= pool.length) return null;
-      return pool[state.quizCount];
-    }
-
-    function shuffle(array) {
-      const copy = array.slice();
-      for (let index = copy.length - 1; index > 0; index -= 1) {
-        const randomIndex = Math.floor(Math.random() * (index + 1));
-        [copy[index], copy[randomIndex]] = [copy[randomIndex], copy[index]];
-      }
-      return copy;
-    }
-
-    function buildChoices(correctItem) {
-      const distractorPool = state.filtered
-        .filter((item) => item.normalized_word !== correctItem.normalized_word)
-        .filter((item) => getDisplayMeaning(item).trim());
-
-      const unique = [];
-      const seen = new Set([normalize(getDisplayMeaning(correctItem))]);
-
-      for (const item of shuffle(distractorPool)) {
-        const meaning = normalize(getDisplayMeaning(item));
-        if (!meaning || seen.has(meaning)) continue;
-        seen.add(meaning);
-        unique.push(item);
-        if (unique.length >= 3) break;
-      }
-
-      const choiceItems = shuffle([correctItem, ...unique]);
-      return choiceItems.map((item) => ({
-        key: item.normalized_word,
-        word: item.word,
-        meaning: getDisplayMeaning(item),
-        item,
-      }));
-    }
-
-    function setQuestion(item) {
-      state.current = item;
-      state.choices = buildChoices(item);
-      state.quizCount += 1;
-
-      quizTagEl.textContent = `${modeSelect.options[modeSelect.selectedIndex].text} / Q${state.quizCount}`;
-      promptEl.textContent = item.word;
-      metaTextEl.textContent = `累計${item.count}回 / ${prettySubjects(item.subjects)}`;
-
-      const audioHref = buildAudioHref(item);
-      audioBtn.hidden = !audioHref;
-      if (audioHref) {
-        audioBtn.disabled = false;
-        audioBtn.onclick = () => playAudio(audioHref);
-      }
-      nextBtn.hidden = false;
-
-      choicesEl.innerHTML = "";
-      feedbackEl.textContent = "";
-      feedbackEl.className = "feedback";
-      nextBtn.disabled = true;
-
-      state.choices.forEach((choice, index) => {
-        const button = document.createElement("button");
-        button.className = "choice";
-        button.type = "button";
-        button.dataset.word = choice.key;
-        button.dataset.meaning = choice.meaning;
-        button.innerHTML = `<strong>${index + 1}.</strong> ${escapeHtml(choice.meaning)}`;
-        button.addEventListener("click", () => answerChoice(choice, button));
-        choicesEl.appendChild(button);
-      });
-    }
-
-    function answerChoice(choice, button) {
-      const currentKey = state.current.normalized_word;
-      const isCorrect = choice.key === currentKey;
-      const now = new Date().toISOString();
-
-      setStat(currentKey, (stat) => {
-        stat.attempts += 1;
-        stat.lastAt = now;
-        if (isCorrect) {
-          stat.correct += 1;
-        } else {
-          stat.wrong += 1;
-        }
-        return stat;
-      });
-
-      [...choicesEl.querySelectorAll(".choice")].forEach((el) => {
-        el.disabled = true;
-        if (el.dataset.word === currentKey) el.classList.add("correct");
-        if (el === button && !isCorrect) el.classList.add("wrong");
-      });
-
-      feedbackEl.className = `feedback ${isCorrect ? "good" : "bad"}`;
-      feedbackEl.innerHTML = isCorrect
-        ? `<strong>正解</strong> ${escapeHtml(state.current.word)} = ${escapeHtml(getDisplayMeaning(state.current))}`
-        : `<strong>不正解</strong> 正しい答えは ${escapeHtml(state.current.word)} = ${escapeHtml(getDisplayMeaning(state.current))}`;
-
-      nextBtn.disabled = false;
-      updateSummary();
-      renderRanking();
-    }
-
-    function startQuiz() {
-      const next = pickQuestion();
-      if (!next) {
-        // Check if all questions were answered or no questions match
-        if (state.quizCount > 0 && state.quizCount >= state.filtered.length) {
-          // All questions completed - show summary
-          const correctTotal = state.filtered.reduce((sum, item) => sum + (getStat(item.normalized_word).correct || 0), 0);
-          const totalQuestions = state.filtered.length;
-          const accuracy = totalQuestions > 0 ? Math.round((correctTotal / totalQuestions) * 100) : 0;
-          
-          quizTagEl.textContent = "完了";
-          promptEl.textContent = "全問が終了しました！";
-          metaTextEl.textContent = `正答率: ${correctTotal}/${totalQuestions} (${accuracy}%)`;
-          audioBtn.hidden = true;
-          nextBtn.hidden = true;
-          choicesEl.innerHTML = "";
-          feedbackEl.className = "feedback good";
-          feedbackEl.textContent = `おめでとう! ${accuracy}% の正答率です。`;
-          nextBtn.disabled = true;
-          return;
-        }
-        
-        // No matching questions
-        quizTagEl.textContent = "対象なし";
-        promptEl.textContent = "条件に合う単語がありません。";
-        metaTextEl.textContent = "フィルタ条件を見直してください。";
-        audioBtn.hidden = true;
-        nextBtn.hidden = true;
-        choicesEl.innerHTML = "";
-        feedbackEl.className = "feedback";
-        feedbackEl.textContent = "";
-        nextBtn.disabled = true;
-        return;
-      }
-
-      setQuestion(next);
-    }
-
-    function beginQuiz() {
-      state.quizCount = 0;
-      filterData();
-      state.filtered = state.filtered.sort(sortableByMode);
-      startQuiz();
-    }
-
-    function refresh() {
-      state.filtered = filterData().sort(sortableByMode);
-      updateSummary();
-      renderRanking();
-
-      if (!state.current || !state.filtered.some((item) => item.normalized_word === state.current.normalized_word)) {
-        startQuiz();
-      }
-    }
-
-    function resetHistory() {
-      if (!confirm("復習履歴を削除しますか?")) return;
-      state.stats = {};
-      saveStats();
-      refresh();
-    }
-
-    async function loadData() {
-      const response = await fetch(DATA_URL, { cache: "no-store" });
-      if (!response.ok) throw new Error(`Failed to load ${DATA_URL}`);
-      const payload = await response.json();
-      state.data = payload.items || [];
-
-      const subjects = Array.from(new Set(state.data.flatMap((item) => item.subjects))).sort((a, b) => a.localeCompare(b, "ja"));
-      subjects.forEach((subject) => {
-        const option = document.createElement("option");
-        option.value = subject;
-        option.textContent = subject;
-        subjectSelect.appendChild(option);
-      });
-
-      refresh();
-      startQuiz();
-    }
-
-    startBtn.addEventListener("click", beginQuiz);
-    nextBtn.addEventListener("click", startQuiz);
-    resetBtn.addEventListener("click", resetHistory);
-    modeSelect.addEventListener("change", refresh);
-    subjectSelect.addEventListener("change", refresh);
-    problemCountInput.addEventListener("change", refresh);
-    rankingToggle.addEventListener("click", () => {
-      rankingList.classList.toggle("expanded");
-      rankingToggle.textContent = rankingList.classList.contains("expanded")
-        ? "▼ 頻出ランキング"
-        : "▶ 頻出ランキング";
+    document.getElementById("openAllJp").addEventListener("click", () => {
+      const s = ensureState();
+      for (const st of stories) s.jpOpen[st.id] = true;
+      saveState(s);
+      render();
     });
 
-    loadData().catch((error) => {
-      quizTagEl.textContent = "読み込み失敗";
-      promptEl.textContent = "集計データを読み込めませんでした。";
-      metaTextEl.textContent = error.message;
-      feedbackEl.className = "feedback bad";
-      feedbackEl.textContent = "data/word_frequency.json の取得に失敗しました。ローカルファイル直開きではなく、サーバー経由で開いてください。";
-      emptyStateEl.hidden = false;
-      emptyStateEl.textContent = "データ読み込みに失敗しました。";
+    document.getElementById("closeAllJp").addEventListener("click", () => {
+      const s = ensureState();
+      for (const st of stories) s.jpOpen[st.id] = false;
+      saveState(s);
+      render();
     });
+
+    document.getElementById("resetCheck").addEventListener("click", () => {
+      const s = ensureState();
+      s.checked = {};
+      updateStreak(s);
+      saveState(s);
+      render();
+    });
+
+    document.getElementById("vocabSearch").addEventListener("input", renderVocab);
+    document.getElementById("chapterFilter").addEventListener("change", renderVocab);
+    document.getElementById("toggleAllMeanings").addEventListener("click", () => {
+      hideVocabMeaning = !hideVocabMeaning;
+      renderVocab();
+    });
+
+    render();
+    renderVocab();
   </script>
 </body>
 </html>

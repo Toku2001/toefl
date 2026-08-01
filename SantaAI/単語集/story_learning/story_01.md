@@ -1,0 +1,302 @@
+# Episode 1: The Library Under Neon Rain
+
+## Story (~400 words)
+
+Neon rain blurred every sign in Harbor District when Mina received a paper ticket with no sender name. The ticket led her to an underground library where each book contained one erased memory from the city. A curator in a copper coat told her the library had a simple mission: recover true stories before false stories took over public life.
+
+Mina started in Room Seven, where memories were stored as floating glass chips. She watched clips of teachers bargaining for solar batteries, nurses sharing medicine during a blackout, and students painting flood maps on school walls. The city was messy, tired, and brilliant. It had survived not because people agreed all the time, but because they kept meeting, arguing, and trying again.
+
+At midnight, the alarm rang. Someone was replacing verified records with polished fakes. In the central hall, Mina found a trail of silver ink that pointed to the old observatory. There she met a young engineer who confessed he had edited records to hide a budget scandal. "If people see the full report," he said, "they'll lose hope." Mina answered, "Hope built on lies collapses faster than any bridge."
+
+They returned to the library and reopened the original archive. Volunteers arrived from every district, reading, translating, and cross-checking data until dawn. By sunrise, citizens had posted a public timeline that showed both mistakes and repairs. It was imperfect, but it was real.
+
+Before leaving, Mina pinned a training card on the wall: remember, discuss, verify, revise, repeat. The curator laughed and said, "Not glamorous, but powerful." Mina stepped into the rain feeling oddly light. Truth had not solved everything, yet it had given the city a direction. And direction, she realized, was often enough to begin again.
+
+On the final board, she wrote today's key words so new volunteers could study while working. The board read: confirm, behavior, distribution, nutrients, assignment, describe, habitat, noticeable, reliable, supplies, vulnerable, acceptable, anemophily, approval, awareness, cognition, concern, consider, coordinating, detects, dove, encounter, Ethical, expires.
+
+Before going home, Mina opened her notebook and wrote three review questions for tomorrow: Which decision was based on evidence? Which conflict became easier after people shared precise language? Which small routine should be repeated even when no one is watching? She answered each question in two lines, circled one mistake she wanted to avoid, and chose one action she could complete in less than ten minutes. That quiet ritual, repeated nightly, made the story practical instead of decorative.
+
+## Vocabulary Used in This Episode
+
+<details>
+<summary>Open vocabulary list (277 items)</summary>
+
+- confirm : 確認する；裏付ける
+- behavior : 行動；ふるまい
+- distribution : 分配、流通、配布
+- nutrients : 栄養素
+- assignment : 課題、任務、割り当て
+- describe : 説明する；描写する
+- habitat : 生息地
+- noticeable : 目立つ；気づきやすい
+- reliable : 信頼できる；頼りになる
+- supplies : 供給品；供給する
+- vulnerable : 傷つきやすい；無防備な
+- acceptable : 受け入れられる；許容できる
+- anemophily : 風媒；風による受粉
+- approval : 承認、賛成、許可
+- awareness : 気づき；認識
+- cognition : 認知；認識
+- concern : 心配；懸念；関係する
+- consider : 考慮する、検討する
+- coordinating : 調整している、まとめている
+- detects : 検知する；発見する
+- dove : ハト（平和の象徴）
+- encounter : 出会う；遭遇する
+- Ethical : 倫理的な
+- expires : 期限が切れる；失効する
+- fair : 公平な
+- feed : 餌を与える；供給する
+- fluidity : 流動性
+- grain : 粒；穀物
+- harmful : 有害な
+- inclusive : 包括的な、包摂的な
+- inform : 知らせる；通知する
+- integrity : 完全性；健全性
+- leaky : 漏れやすい
+- molecules : 分子
+- otherwise : さもなければ；それ以外は
+- perspectives : 視点、観点
+- presence : 存在；出席
+- proposed : 提案した；提案された
+- recognize : 認識する；見分ける
+- remaining : 残っている
+- reserve : 予約する；確保する
+- seed : 種；種をまく
+- shipping : 出荷；配送
+- stiff : 硬い；こわばった
+- take turns : 交代で行う；順番にする
+- tropics : 熱帯地域
+- unsure : 確信がない；不安な
+- whether : 〜かどうか
+- a cascade of : 一連の；連鎖的な
+- abnormally : 異常に；正常でなく
+- accommodating : 配慮のある；融通の利く
+- accuracy : 正確さ；精度
+- additional : 追加の；さらなる
+- adjustments to : 〜への調整；〜の修正
+- affairs : 事柄；情勢
+- aiming : 狙っている、目指している
+- along : 〜に沿って；いっしょに
+- amounts of : 〜の量；多量の
+- annoying : いらいらさせる；うっとうしい
+- appear : 現れる；〜のように見える
+- appointment : 予約；約束
+- aquatic life : 水生生物
+- arranging : 整理すること；手配すること
+- as long as : 〜する限り、〜である限り
+- assemblies : 集会；議会；組み立て品
+- attach to : 〜に付着する；〜に取り付ける
+- attitude : 態度；考え方
+- balance A with B : AとBのバランスを取る
+- basement : 地下室
+- be required : 必要とされる；義務づけられる
+- benefits policies : 福利厚生方針；給付制度
+- boundaries : 境界；限界
+- brushwork : 筆致；筆づかい
+- buried : 埋められた；埋葬された
+- by following : 〜に従うことで
+- carbon dioxide gas : 二酸化炭素ガス
+- carve : 彫る；刻む
+- celestial : 天体の；天空の
+- centers : 中心を置く；集中させる
+- Charitable : 慈善の；寛大な
+- circadian rhythms : 概日リズム；体内時計の周期
+- civilization : 文明；文明社会
+- clarifying : 明確にしている、説明している
+- closer : より近い；より近く
+- coastline : 海岸線
+- colide : 衝突する
+- come to(段々するようになる) : 次第に〜するようになる
+- compaction : 圧密；圧縮
+- complicate : 複雑にする；ややこしくする
+- comprehension : 理解；把握
+- conducted : 伝導された；実施された
+- configure : 設定する；構成する
+- confusion : 混乱；困惑
+- conserve soil and protect remaining resources : 土壌を保全し、残りの資源を守る
+- consistent : 一貫した；矛盾しない
+- contemporary : 現代の；同時代の
+- contract : 契約（名詞）；契約する（動詞）
+- conversation tables : 会話テーブル；会話練習の場
+- cope : うまく対処する；切り抜ける
+- crops : 作物
+- cues(合図) : 合図；きっかけ
+- curved figures : 曲線的な図形
+- deal with : 対処する；扱う
+- decisions : 決定；判断
+- defecation : 排便；排泄
+- demands of : 〜の要求
+- depart from : 〜から逸脱する；〜を出発する
+- depth : 深さ；奥行き
+- detect : 検知する、見つける
+- digest : 消化する；理解する
+- disappointed : 失望した；がっかりした
+- dispersing : 分散させること；散らばること
+- dissolves : 溶ける；溶かす
+- distinguish : 区別する；見分ける
+- diversified : 多様化した
+- domesticate : 飼いならす；家畜化する
+- drawback : 欠点；不利な点
+- drives the process of : 〜の過程を進める；〜を動かしている
+- duties : 義務；職務
+- ecological : 生態学的な；環境の
+- efforts : 努力；取り組み
+- elevations : 標高；高度
+- emphasize : 強調する
+- encouraged : 励ました；促進した
+- enhance : 高める；向上させる
+- Enroll : 登録する；履修登録する
+- equips : 備えさせる；身につけさせる
+- essentially : 本質的に；要するに
+- ever since : それ以来ずっと
+- examining : 調査している；詳しく調べること
+- excitement : 興奮；わくわく感
+- existing beliefs : 既存の信念；すでに持っている思い込み
+- expense : 費用；出費
+- exploing : 探求すること（exploring の綴り揺れ）
+- extends : 広がる；及ぶ
+- extraordinary : 並外れた；非常に優れた
+- facility : 施設；設備
+- familiar phenomena : 身近な現象
+- feeding : 摂食、えさをとること
+- Fibroblasts : 線維芽細胞
+- find(感じる) : 感じる；〜と思う
+- flora : 植物相；植物群
+- force : 強いる
+- formal : 形式的な；正式な
+- fostering : 育むこと；促進すること
+- frequent : 頻繁な
+- fulfill : 果たす；実現する；満たす
+- gather data : データを収集する
+- geometric : 幾何学的な
+- gradually : 徐々に；少しずつ
+- grocery : 食料品；食料品店
+- hallway : 廊下
+- harms : 害；損害
+- head over : ～へ向かう
+- heartburn : 胸やけ
+- hinges on : 〜にかかっている
+- household : 家庭、世帯
+- Hydraulic : 水力の；液圧の
+- identification : 身元確認；識別
+- implications : 含意、影響、示唆
+- in person : 直接会って；対面で
+- increasingly : ますます；次第に
+- infection : 感染；感染症
+- ingredients : 成分；材料
+- initiative : 主導性；自発性
+- insomnia : 不眠症
+- instinctive : 本能的な；直感的な
+- insulation materials : 断熱材
+- interactive : 双方向の；対話的な
+- inventory : 在庫；目録
+- involve : 含む；伴う；巻き込む
+- irrelevant : 無関係な；重要でない
+- just in case : 念のため；万が一に備えて
+- Kinship : 親族関係；血縁
+- last-minute : 直前の；土壇場の
+- launching : 開始；立ち上げ
+- legal codes : 法典；法律の規定
+- lie in : 〜にある；〜に存する
+- likelihood : 可能性；見込み
+- lit(lightの過去分詞) : 明るくされた；照らされた
+- lost and found : 遺失物取扱所
+- mail carrier : 郵便配達員
+- make sense : 意味をなす；理にかなう
+- mark A as B : AをBとして記入する；AをBとみなして印を付ける
+- matter(重要である) : 重要である；問題になる
+- membranes : 膜
+- minimize : 最小限にする
+- momentarily : 一時的に；しばらくの間
+- mountain passes : 山道；峠道
+- mutuality : 相互関係；相互性
+- none of the bins : ごみ箱はどれもない；ごみ箱のいずれも
+- not up for it : それをする気がない、乗り気ではない
+- notify : 知らせる；通知する
+- observable : 観察可能な；目に見える
+- on the upside : 良い面では
+- opportunity : 機会；好機
+- ordinary : 普通の；ありふれた
+- organizing committee : 実行委員会；組織委員会
+- outsider : 部外者、外部の人
+- overtime : 時間外労働；残業
+- paperwork : 書類仕事；事務手続き
+- participate : 参加する
+- passing through : 通り抜ける、通過する
+- peer-led : 仲間主導の
+- perishable : 傷みやすい；腐りやすい
+- phospholipid : リン脂質；細胞膜の構成物質
+- physical laws : 物理法則
+- plaques : 歯垢（複数）；プラーク
+- pods(さや) : さや；豆果
+- pollen : 花粉
+- poses a problem : 問題を引き起こす
+- praise : 称賛する；称賛
+- predictable : 予測可能な
+- prescription : 処方箋、処方
+- prevent : 防ぐ；妨げる
+- principled : 信念のある；倫理に基づく
+- processed : 処理された；加工された
+- promoted : 昇進させた；促進した
+- proud : 誇りに思う；自尊心のある
+- punishments : 罰；処罰
+- quarterly : 四半期ごとの
+- reaching : 到達すること
+- reciprocal : 相互の；相手方の；逆数
+- refer to A as B : AをBと呼ぶ
+- regular : 規則的な；定期的な
+- reject : 拒絶する；却下する
+- rely : 頼る、依存する
+- repair person : 修理工、修理業者
+- replenish : 補充する；回復させる
+- requirements : 要件；必要条件
+- resists : 抵抗する；耐える
+- restrict : 制限する；限定する
+- revise : 修正する；見直す
+- rigorous : 厳格な；厳しい
+- roll out : 展開する；導入する
+- salmon : サケ
+- screening : 選考；上映；検査
+- seemingly : 一見すると、見たところ
+- sense of unity : 一体感、結束感
+- serves : 仕える；役立つ；提供する
+- several distinct : いくつかの明確に異なる
+- shells : 貝殻；殻
+- signatures : 特徴的なしるし、署名
+- snap : ぱちんと折れる；急に怒る；写真を撮る
+- solids : 固体
+- specialization : 専門化；専門分野
+- spontaneous : 自発的な；自然発生的な
+- steer : 操縦する、進路を取る
+- sticky : ねばつく；べたつく
+- strengthen : 強化する；強くする
+- Study cubicles : 個別学習ブース；仕切られた学習席
+- supply room : 備品室；物品保管室
+- survival : 生存
+- swapp : 交換する（swap の綴り違いの可能性）
+- tailored(条件に合わせられた) : 条件に合わせた；特注の
+- tastes : 好み；味覚
+- that could help : それが役に立つかもしれない
+- thermal : 熱の；温度に関する
+- Through this experience : この経験を通じて
+- time slot : 時間枠；予定された時間帯
+- tissue remodeling : 組織再構築
+- tossing : 投げること；放り込むこと
+- transcript : 成績証明書；記録文書
+- tropical forests : 熱帯林
+- uncertainty : 不確実性；不安
+- unexpected : 予期しない；不意の
+- unusual : 珍しい；普通でない
+- urbanization : 都市化
+- variations in : 〜における変動；〜の違い
+- verify : 検証する；確認する
+- vital : 極めて重要な；生命に関わる
+- wakeful : 目が覚めている；眠れない
+- water(水をかける) : 水をかける；水やりする
+- weekdays : 平日
+- whenever : 〜するときはいつでも
+- wonder : 不思議に思う；驚嘆する；驚異
+- wound healing : 創傷治癒
+
+</details>

@@ -1,0 +1,302 @@
+# Episode 3: The Train That Runs Through Dreams
+
+## Story (~400 words)
+
+Episode three began on the Dreamline, a midnight train that crossed the city without fixed tracks. Passengers boarded with one question they could not solve alone. The train's walls projected anonymous stories submitted by strangers: family conflicts, startup failures, research dead ends, and private fears that daylight conversations rarely allowed.
+
+Mina volunteered as a "listener conductor." Her job was to pair passengers whose questions could unlock each other. A tired farmer worried about soil decline sat beside a game designer studying motivation loops. A public defender met a biology teacher researching stress and memory. As conversations deepened, improbable connections appeared. Practical advice moved faster than any official program.
+
+At Station Nine, the train lost power in a tunnel. Phones dimmed, displays went black, and panic rose in waves. Mina organized a low-tech session by lantern light: one person shared a challenge, another offered one action they could take within twenty-four hours. No speeches, no saviors, only concrete next steps. By the time emergency crews restored electricity, the carriage felt calmer than before.
+
+The next morning, several passengers created a community channel called Next Step Board. Every post had to include a measurable goal, a partner, and a review date. In three months, the board became a city habit. People still struggled, but fewer struggled alone.
+
+As dawn painted the river silver, Mina wrote the Dreamline's study prompt in large block letters: "Name the pattern, test the pattern, teach the pattern." Commuters photographed it and smiled. Learning, she thought, is just courage repeated in public.
+
+Pinned beneath the prompt was today's keyword chain: represent, cohesion, gradual, procedure, colonize, emergency, inheritance, participants, reveal, thin, within, airborne, appliances, arthropods, bonds, commerce, conduction, constant, departure, disrupted, effectively, enriches, expect, express shipping.
+
+Before going home, Mina opened her notebook and wrote three review questions for tomorrow: Which decision was based on evidence? Which conflict became easier after people shared precise language? Which small routine should be repeated even when no one is watching? She answered each question in two lines, circled one mistake she wanted to avoid, and chose one action she could complete in less than ten minutes. That quiet ritual, repeated nightly, made the story practical instead of decorative.
+
+## Vocabulary Used in This Episode
+
+<details>
+<summary>Open vocabulary list (277 items)</summary>
+
+- represent : 表す；代表する
+- cohesion : 結束、まとまり
+- gradual : 徐々の；緩やかな
+- procedure : 手順；手続き
+- colonize : 植民する；定着する
+- emergency : 緊急事態
+- inheritance : 遺伝；相続
+- participants : 参加者
+- reveal : 明らかにする
+- thin : 薄い；細い；希薄な；薄くする
+- within : 〜以内に；〜の中で
+- airborne : 空中を運ばれる；空気中の
+- appliances : 電化製品；器具
+- arthropods : 節足動物
+- bonds : 絆；結びつき；債券
+- commerce : 商業；取引
+- conduction : 伝導
+- constant : 一定の；絶え間ない
+- departure : 出発；逸脱
+- disrupted : 乱された；中断された
+- effectively : 効果的に；うまく
+- enriches : 豊かにする、価値を高める
+- expect : 予期する；期待する
+- express shipping : 速達配送、特急配送
+- fascinating : とても興味深い；魅力的な
+- figure out : 理解する、解決する
+- fur : 毛皮；体毛
+- guess : 推測する；推測
+- immediately : すぐに；直ちに
+- indicates : 示す；指し示す
+- injury : けが；損傷
+- interrupt : 遮る、中断する
+- measurements : 測定値；計測
+- nectar : 花蜜
+- particles : 粒子、微粒子
+- pollination : 受粉
+- prior : 以前の；優先する
+- radiation : 放射；放熱
+- regarding : 〜に関して
+- replacement : 交換；取り替え
+- retain : 保持する；維持する
+- seek out : 探し出す；積極的に見つける
+- significance : 重要性；意義
+- suggest : 提案する；示唆する
+- thrive : 繁栄する；よく育つ
+- unconsciously : 無意識に
+- vast : 広大な、莫大な
+- worth : 価値；価値があること
+- a portion of : 〜の一部；〜の分量
+- absence of : 〜の不在；〜がないこと
+- according to : 〜によると、〜に従って
+- acid(酸) : 酸；酸性の物質
+- Addressing the problem of soil erosion : 土壌侵食の問題に対処すること
+- adoption : 採用；導入；養子縁組
+- agoutis : アグーチ類
+- all gone : すべてなくなった；全部消えた
+- along with(〜と一緒に) : 〜と一緒に；〜に加えて
+- analogous : 類似した、対応する
+- anther : 葯（やく）
+- appeared : 現れた；見えた
+- appreciation : 良さの理解、鑑賞
+- argue about : ～について口論する；議論する
+- As a consequence : その結果として
+- as well : 〜もまた；同様に
+- at the site : 現地で；その場所で
+- attendant : 係員；付き添いの
+- avenues : 手段；大通り
+- bamboo : 竹
+- be gone : 売り切れる；いなくなる
+- bees : ミツバチ；ハチ類
+- bilayer : 二重層
+- breeding : 繁殖
+- bug spray : 虫除けスプレー
+- business days : 営業日；平日換算の日数
+- campus identification card : 学生証；キャンパスIDカード
+- care about : 気にかける；大切に思う
+- cause(社会的価値のある行動) : （社会的）大義；公益的活動
+- celestial cues : 天体の手がかり
+- certain(ある一部の) : ある一部の；特定の
+- chemical bonds : 化学結合（複数）
+- circular : 円形の、循環的な
+- claim : 主張する；請求する
+- classified : 分類された；機密扱いの
+- clue : 手がかり；ヒント
+- cognitive : 認知の、認識の
+- combine to : ～するために結びつく；結合して～になる
+- come with : ～が付いてくる；～を伴う
+- compatible : 両立する；適合する
+- composites : 複合材料
+- conclude : 結論づける；締めくくる
+- conductors : 導体；指揮者たち
+- confined : 限定された；閉じ込められた
+- consensus(合意) : 合意；総意
+- considerations : 検討事項；考慮点
+- consume : 消費する；食べる；使い尽くす
+- context : 文脈；状況；背景
+- convected : 対流で運ばれた
+- cooperate : 協力する
+- covers : 覆う；対象に含む
+- crowded : 混雑した；込み合った
+- curious : 好奇心の強い；気になる
+- customs : 慣習；風習
+- deceived : だました、欺いた
+- Decomposers : 分解者
+- delayed : 遅れた；延期された
+- demonstrate : 実証する；示す
+- dependency : 依存；依存関係
+- desease : 病気
+- dialects : 方言
+- dilemmas : ジレンマ；板挟み
+- discourage : 思いとどまらせる；落胆させる
+- disrupt : 混乱させる；妨げる
+- distant : 遠い；よそよそしい
+- distraction : 注意散漫、気散じ
+- divider : 仕切り；分割するもの
+- downstairs : 階下で、下の階へ
+- drifting : 漂流する；漂う
+- due : 〜が原因で；期限の
+- eager to : 〜したがっている
+- efficacy : 効力；有効性
+- electronic transfer : 電子送金、電子振替
+- emerging markets : 新興市場
+- emphasizing : 強調すること
+- enforcing : 施行している；強制している
+- enhancing : 高めること；向上させること
+- ensuring that : 〜を確実にすること
+- erode : 浸食する；徐々に失わせる
+- etiquette : 礼儀作法；マナー
+- Everyday examples : 日常的な例
+- exceptional : 並外れた；例外的な
+- exhibit(示す) : 示す；表す
+- expand : 拡大する；広げる
+- expert : 専門家；熟練した
+- exploring : 探求している、探検している
+- extra hour : 追加の1時間
+- facial : 顔の；顔面の
+- faculty member : 教員、教職員
+- feature(動詞) : 特徴として含む；呼び物にする
+- fellow students : 学友；同じ学校の学生
+- fill up : いっぱいにする；満タンにする
+- first(副詞) : 最初に；まず
+- fluid : 流体；液体
+- forecasting : 予測すること；予報
+- Foster : 育成する；促進する
+- found on : 〜で見られる；〜に見つかる
+- frequentry : 頻繁に
+- fungi : 菌類；菌
+- gazebo : 東屋；あずまや
+- give it a shot : やってみる；試してみる
+- gravitational : 重力の
+- habitat loss : 生息地の喪失
+- happen : 起こる；（行事が）開催される
+- harnessing : 活用している；利用している
+- heading to : 〜へ向かって
+- help with : 〜を手伝う
+- honesty : 正直さ
+- hues : 色合い；色調
+- hypothesis : 仮説
+- imagine : 想像する；思い描く
+- impulsive : 衝動的な
+- incorporate : 組み込む；取り入れる
+- inefficient : 非効率な
+- influence : 影響；影響を与える
+- initial : 最初の；初期の
+- insects : 昆虫
+- inspiring : 感動させる、鼓舞する
+- instructions : 指示、説明
+- intends : 意図する；つもりである
+- interpret : 解釈する
+- invitation : 招待；招待状
+- involves : 含む；伴う
+- irrigation : 灌漑；洗浄
+- just to be sure : 確認のために；万が一に備えて
+- lack access to : 〜へのアクセスがない
+- lately : 最近
+- lean : 寄りかかる；傾く；引き締まった
+- lets : 〜させる；〜を可能にする
+- lifelike portraits : 本物そっくりの肖像画
+- lineage : 血統；系統
+- little or no : ほとんどない；わずかしかない
+- lunch(お弁当) : 昼食；弁当
+- maintaining agricultural productivity : 農業生産性を維持すること
+- male part of the flower : 花の雄性部分
+- marks(記念する) : 記念する；示す
+- means : 手段；方法；意味する
+- metabolic disease : 代謝性疾患
+- miss(欠席) : 欠席する；逃す
+- monetary : 金銭の
+- multi-layered : 多層の
+- negotiate : 交渉する；取り決める
+- norms : 規範；標準
+- notice board : 掲示板
+- nutritional : 栄養の；栄養学上の
+- obtain : 入手する；得る
+- online(副詞) : オンラインで；ネット上で
+- optimizing : 最適化している
+- organize : 整理する；計画する
+- orientation : オリエンテーション；適応指導
+- overlap : 重なる；重複する
+- packet : 小包；資料一式
+- paramount : 最も重要な
+- particle : 粒子；微小な一片
+- past : 過去；〜を過ぎて
+- per day : 1日あたり
+- permit : 許可する；許可証
+- photon : 光子
+- pitfall : 落とし穴、落としどころの悪い点
+- plaza : 広場
+- point to A as B : AをBだと指摘する
+- pollinators : 花粉媒介者；受粉を助ける生物
+- pottery : 陶器；陶芸
+- precise : 正確な；精密な
+- predictions : 予測、予言
+- presence of : 〜の存在
+- previous : 前の；以前の
+- privileges : 特権；優遇
+- profoundly : 深く；強く
+- proof : 証拠；証明
+- providing : 提供している；与えている
+- purely : 純粋に；全く
+- rapidly : 急速に
+- reassurance : 安心させること；安心材料
+- reciprocity : 相互性；互恵性
+- reflect on : ～について熟考する；振り返る
+- reimbursement : 払い戻し；償還
+- relevance : 関連性；妥当性
+- remain open : 開いたままでいる；営業を続ける
+- repel : はねつける；反発させる
+- representatives : 代表者；担当者
+- residents : 住民
+- responsibility : 責任；任務
+- retina : 網膜
+- revisions : 修正；改訂
+- road trip : 車での旅行
+- roughly : およそ；大まかに
+- scale : 規模；尺度；拡大する
+- secrete : 分泌する
+- self-awareness : 自己認識；自分自身への気づき
+- sensitive to : 〜に敏感な
+- serving as food : 食物として役立つ；餌になる
+- shade(色合い) : 色合い；濃淡
+- side by side : 並んで、隣り合って
+- sincerely : 心から；誠実に
+- snug : ぴったりした；心地よい
+- soundproof : 防音の
+- specifies : 指定する；明記する
+- stand for : 〜を表す；〜を支持する
+- stereotype : 固定観念、ステレオタイプ
+- stomach : 胃
+- strict : 厳しい
+- substitution : 代用；置き換え
+- surplus : 余剰；過剰な
+- survive and thrive : 生き残って繁栄する；成功する
+- sync : 同期；同調
+- take up : 取り込む；占める
+- tend to : 〜しがちである
+- the gulf stream : メキシコ湾流
+- though : 〜だけれども
+- tide : 潮；潮の満ち引き
+- timeline : 予定表、時間軸
+- to join me : 私と一緒に参加すること
+- track : 追跡する；記録する
+- transmit : 伝える；伝達する
+- turn up : 現れる；姿を見せる；音量を上げる
+- underperform : 実力以下の成果しか出せない
+- unlike : 〜と違って
+- up to : 〜まで；〜次第で
+- vanish : 消える；姿を消す
+- vehicle : 乗り物；車両
+- vinegar : 酢
+- volunteered : 自発的に申し出た；志願した
+- warranty claims : 保証請求；保証に関する申し立て
+- water-tailing : 疎水性の；水に不溶の
+- well-intentioned : 善意の；善かれと思った
+- wholeness : 全体性、完全性
+- wooden : 木製の；ぎこちない
+- yield : 収穫量、産出量
+
+</details>
